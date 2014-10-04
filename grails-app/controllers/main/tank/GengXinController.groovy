@@ -12,5 +12,5 @@ import grails.transaction.Transactional
 class GengXinController {
 
 	static scaffold = true
-	
+
 }

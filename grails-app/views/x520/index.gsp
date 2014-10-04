@@ -12,6 +12,16 @@
 			
 			<g:render template="/layouts/transition/${ ChangLiang.TRANSITION_INDEX }" />
 			
+			<div class="clearfix">
+				<div class="floatRight">
+					<g:render template="/layouts/plugin/yongHuIP" />
+				</div>
+				
+				<div class="floatLeft">
+					<g:render template="/layouts/plugin/qianZhiShengMing" />
+				</div>
+			</div>
+			
 			<h1>123456</h1>
 			<h1>123456</h1>
 			<h1>123456</h1>

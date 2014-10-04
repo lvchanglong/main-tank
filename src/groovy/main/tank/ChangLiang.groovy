@@ -18,6 +18,16 @@ class ChangLiang {
 	static String QQ = "417891235"
 	
 	/**
+	 * YOU_XIANG
+	 */
+	static String YOU_XIANG = "417891235@qq.com"
+	
+	/**
+	 * 手机
+	 */
+	static String SHOU_JI = "13478275273"
+	
+	/**
 	 * 网站作者
 	 */
 	static String WANG_ZHAN_ZUO_ZHE = "main-tank.com"

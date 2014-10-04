@@ -9,24 +9,14 @@
 			<li class="clearBoth"></li>
 			
 			<li>
-					${ ChangLiang.BEI_AN }
+				<g:link controller="x520" action="yongQianBiDu">
+					用前必读
+				</g:link>
 			</li>
 			<li><span class="separator">/</span></li>
 			<li>
 				<a href="javascript:void(0);">
-					版权声明
-				</a>
-			</li>
-			<li><span class="separator">/</span></li>
-			<li>
-				<a href="javascript:void(0);">
-					使用协议
-				</a>
-			</li>
-			<li><span class="separator">/</span></li>
-			<li>
-				<a href="javascript:void(0);">
-					联系站长
+					联系方式
 				</a>
 			</li>
 			<li><span class="separator">/</span></li>
@@ -34,6 +24,16 @@
 				<a href="javascript:void(0);">
 					关于网站
 				</a>
+			</li>
+			<li><span class="separator">/</span></li>
+			<li>
+				<a href="javascript:void(0);">
+					建议反馈
+				</a>
+			</li>
+			<li><span class="separator">/</span></li>
+			<li>
+					${ ChangLiang.BEI_AN }
 			</li>
 		</ul>
 	</nav>
