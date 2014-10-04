@@ -1,0 +1,39 @@
+/* 
+logoZaiXingDong
+*/
+@keyframes logoZaiXingDong
+{
+	0%  {
+		left:0px;
+	}
+	100% {
+		left:600px;
+	}
+}
+@-moz-keyframes logoZaiXingDong /* Firefox */
+{
+	0%  {
+		left:0px;
+	}
+	100% {
+		left:600px;
+	}
+}
+@-webkit-keyframes logoZaiXingDong /* Safari 和 Chrome */
+{
+	0%  {
+		left:0px;
+	}
+	100% {
+		left:600px;
+	}
+}
+@-o-keyframes logoZaiXingDong /* Opera */
+{
+	0%  {
+		left:0px;
+	}
+	100% {
+		left:600px;
+	}
+}

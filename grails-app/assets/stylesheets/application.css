@@ -1,0 +1,545 @@
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS file within this directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the top of the
+* compiled file, but it's generally better to create a new file per style scope.
+*
+*= require main
+*= require mobile
+*= require keyFrames
+*= require_self
+*/
+
+/*
+globle
+*/
+.borderBox {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.conWidth {
+	position:relative;
+	width:960px;
+	margin:0 auto;
+}
+.h_100p {
+	height:100%;
+}
+.floatLeft {
+	float:left;
+}
+.floatRight {
+	float:right;
+}
+.clearBoth {
+	clear:both;
+}
+.separator {
+	padding:0 7px;
+}
+.small {
+	font-size:12px;
+}
+.normal {
+	font-size:14px;
+}
+.large {
+	font-size:16px;
+}
+.wrapper {
+	position:relative;
+	width:100%;
+	height:100%;
+}
+.clearfix:after {
+	content:"";
+	display:block; 
+	height:0; 
+	visibility:hidden; 
+	clear:both;
+}
+.moHu {
+	color: transparent;
+	text-shadow: 0 0 4px #f36;
+}
+.rotate {
+	-webkit-transform: rotate(-90deg); 
+	-moz-transform: rotate(-90deg);	
+	-o-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+.miaoBian {
+	color: #c00; 
+	-webkit-text-stroke: 1px #000; 
+}
+.fuDiaoA {
+	color: #FFFFFF;
+	text-shadow: 0 -1px 0 #374683;
+}
+.fuDiaoB {
+	color: #737373;
+	text-shadow: 0px 1px 0px #e5e5ee;
+}
+.tuBan {
+	color: #222;
+	text-shadow: 0px 2px 3px #555;
+}
+.liTi {
+	color: #fff;
+	text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1),0 1px 3px rgba(0,0,0,0.3),0 3px 5px rgba(0,0,0,0.2),0 5px 10px rgba(0,0,0,0.25);
+}
+/*
+main
+*/
+#main {
+	min-height:100%;
+	-moz-box-shadow: 0 0 1em black;
+	-webkit-box-shadow: 0 0 1em black;
+	        box-shadow: 0 0 1em black;
+}
+#main-wrapper {
+	padding:30px 30px 120px 30px;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+/*
+header
+*/
+#header-0 {
+	height:38px;
+}
+#header-0 nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width:100%;
+	height: 38px;
+	line-height:38px;
+	color:white;
+	background: url("WangLuo/QiTa/header-bg-nav.png") 0px -38px repeat-x;
+	z-index:999;
+}
+#header-0-timer {
+	display:inline-block;
+	height:100%;
+}
+#header-0 nav ul {
+	position:absolute;
+	top:0;
+	right:0;
+	list-style-type:none;
+}
+#header-0 nav li {
+	float:left;
+	width:100px;
+	text-align:right;
+}
+#header-0 nav a {
+	color:white;
+}
+
+/*
+footer-0
+*/
+#footer-0 {
+	position:relative;
+	left:0;
+	bottom:0;
+	width:100%;
+	color:black;
+	text-align:center;
+	padding:0 30px;
+	font-size:14px;
+}
+#footer-0 nav {
+	border-top:5px solid black;
+	position:relative;
+	height:38px;
+	line-height:38px;
+}
+#footer-0 ul {
+	list-style-type:none;
+	margin:0 auto;
+	text-align:center;
+	display:inline-block;
+}
+#footer-0 ul li {
+	float:left;
+	text-align:right;
+	height:100%;
+	color: #222;
+	text-shadow: 0px 1px 1px #555;
+	-webkit-text-stroke: 1px #000;
+	text-stroke: 1px #000;
+}
+
+/*
+footer-1
+*/
+#footer-1 {
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:100%;
+	height:90px;
+	color:black;
+	text-align:center;
+	padding:0 30px;
+	font-size:16px;
+}
+#footer-1 nav {
+	border-width:3px;
+	border-style:outset;
+	box-shadow: 5px 5px 5px #888888;
+	position:relative;
+	height:70px;
+}
+#footer-1 ul {
+	list-style-type:none;
+	margin:0 auto;
+	text-align:center;
+	display:inline-block;
+	padding: 5px 0;
+}
+#footer-1 ul li {
+	float:left;
+	text-align:right;
+	height:100%;
+	color: white;
+	text-shadow: 0px 1px 1px #555;
+	-webkit-text-stroke: 1px #000;
+	text-stroke: 1px #000;
+	height:30px;
+	line-height:30px;
+}
+#footer-1 .rightHand {
+	position:absolute;
+	right:-198px;
+	bottom:0;
+}
+#footer-1 .leftHand {
+	position:absolute;
+	left:-201px;
+	bottom:0;
+}
+#footer-1 a {
+	color:white;
+}
+
+/*
+logo-0
+*/
+#logo-0 {
+	position:relative;
+	height:170px;
+	margin:15px 30px 0 30px;
+	border-bottom: 5px solid black;
+}
+#logo-0 .tank {
+	position:absolute;
+	left:0;
+	top:0;
+	height:170px;
+	width:274px;
+}
+#logo-0 .tank:hover {
+	1animation:logoZaiXingDong 2s ease;
+	1-moz-animation:logoZaiXingDong 2s ease; /* Firefox */
+	1-webkit-animation:logoZaiXingDong 2s ease; /* Safari and Chrome */
+	1-o-animation:logoZaiXingDong 2s ease; /* Opera */
+}
+#logo-0 ul {
+	list-style-type:none;
+	position:relative;
+	width:40%;
+	height:100%;
+	padding:1px 0 0 30px;
+	margin-left:auto;
+}
+#logo-0 h1 {
+	font-weight:bold;
+	font-size:46px;
+	text-align:center;
+	text-shadow: 0px 2px 3px #555;
+	letter-spacing:5px;
+	color: white; 
+	-webkit-text-stroke: 1px #000;
+	text-stroke: 1px #000;
+}
+#logo-0 h3 {
+	font-weight:normal;
+	font-size:20px;
+	text-align:center;
+	color: white;
+	text-shadow: 0px 2px 3px #555;
+	-webkit-text-stroke: 1px #000;
+	text-stroke: 1px #000;
+}
+
+/*
+logo-1
+*/
+#logo-1 {
+	position:relative;
+	height:170px;
+	margin:15px 30px 0 30px;
+	border-width:3px;
+	border-style:outset;
+	box-shadow: 5px 5px 5px #888888;
+}
+#logo-1 .tank {
+	position:absolute;
+	left:0;
+	top:0;
+	height:170px;
+	width:auto;
+}
+#logo-1 .tank:hover {
+	animation:logoZaiXingDong 7s ease;
+	-moz-animation:logoZaiXingDong 7s ease; /* Firefox */
+	-webkit-animation:logoZaiXingDong 7s ease; /* Safari and Chrome */
+	-o-animation:logoZaiXingDong 7s ease; /* Opera */
+}
+#logo-1 ul {
+	list-style-type:none;
+	position:relative;
+	width:40%;
+	height:100%;
+	padding:1px 0 0 0;
+	margin-left:auto;
+}
+#logo-1 li {
+	position:relative;
+}
+#logo-1 h1 {
+	font-weight:bold;
+	font-size:60px;
+	text-align:center;
+	text-shadow: 0px 2px 3px #555;
+	letter-spacing:5px;
+	color: white; 
+	-webkit-text-stroke: 1px #000;
+	text-stroke: 1px #000;
+	margin-top:26px;
+	margin-bottom:7px;
+}
+#logo-1 h3 {
+	font-weight:normal;
+	font-size:20px;
+	text-align:center;
+	color: white;
+	text-shadow: 0px 2px 3px #555;
+	-webkit-text-stroke: 1px #000;
+	text-stroke: 1px #000;
+}
+#logo-1 .hidden {
+	position:absolute;
+	left:0;
+	top:0;
+	width:270px;
+	height:170px;
+	text-align:center;
+	line-height:170px;
+	font-size:31px;
+}
+#logo-1 .haha {
+	position:absolute;
+	left:24px;
+	top:40px;
+	font-size:15px;
+	font-weight:bold;
+}
+
+/*
+transition-0
+*/
+#transition-0 {
+	height:90px;
+	border-bottom:3px ridge lightgray;
+	margin-bottom:15px;
+}
+#transition-0 .meinv {
+	position:absolute;
+	left:257px;
+	top:-183px;
+}
+#transition-0 ul {
+	list-style-type:none;
+	float:left;
+}
+#transition-0 li {
+	height:25px;
+}
+
+/*
+page
+*/
+#zhuYe {
+	position:relative;
+	padding:30px;
+	border-width: 3px;
+	border-style: outset;
+	box-shadow: 5px 5px 5px #888888;
+}
+
+#kongJian {
+	position:relative;
+	padding:30px;
+	border-width: 3px;
+	border-style: outset;
+	box-shadow: 5px 5px 5px #888888;
+}
+
+/*--------------------------------------------------------------------------------*/
+
+/*
+yonhu-kaPai-0
+*/
+#yonghu-kaPai-0 {
+	position:relative;
+	left:0;
+	top:0;
+	width:200px;
+	height:200px;
+	margin-left:auto;
+	1background-image:url("WangLuo/TouXiang/BeiJing/普通A.png");
+	1background-repeat:no-repeat;
+	1background-size:200px 200px;
+	1background-position:0 0;
+	margin-left:auto;
+}
+#yonghu-kaPai-0 .touXiang {
+	display:block;
+	width:180px;
+	height:180px;
+	padding:10px;
+}
+#yonghu-kaPai-0 .bianKuang {
+	position:absolute;
+	left:0;
+	top:0;
+}
+
+#yonghu-kaPai {
+	position:relative;
+	left:0;
+	top:0;
+	width:200px;
+	height:200px;
+	margin-left:auto;
+	background-image:url("WangLuo/TouXiang/BeiJing/右侧C.png");
+	background-repeat:no-repeat;
+	background-size:100px 200px;
+	background-position:100px 0;
+}
+#yonghu-kaPai .leftFrame {
+	position:absolute;
+	left:0;
+	top:0;
+	width:100px;
+	height:200px;
+}
+#yonghu-kaPai .touXiang {
+	display:block;
+	width:180px;
+	height:180px;
+	padding:10px;
+}
+
+/*yonhu-info*/
+#yonghu-info {
+	position:relative;
+	width:100%;
+	padding:90px 50px 90px 50px;
+}
+#yonghu-info .main {
+	border:7px solid black;
+	box-shadow: 5px 5px 5px #888888;
+}
+#yonghu-info .right {
+	position:absolute;
+	right:0;
+	top:0;
+	width:370px;
+	height:520px;
+	margin-left:auto;
+	background-image:url("WangLuo/TouXiang/KaPai/卡牌背景.png");
+	background-repeat:no-repeat;
+	background-size:370px 520px;
+	background-position:0 0;
+}
+#yonghu-info .right img {
+	display:block;
+	width:180px;
+	height:180px;
+	margin:0 auto 0 auto;
+	position:relative;
+	top:100px;
+	left:0;
+}
+#yonghu-info .right .dengji {
+	position:absolute;
+	left:132px;
+	top:60px;
+	width:170px;
+	color:black;
+	font-size:16px;
+	text-align:right;
+}
+#yonghu-info .right .shuoshuo {
+	position:absolute;
+	left:80px;
+	top:290px;
+	color:black;
+	font-size:16px;
+	text-align:justify;
+	border-top:5px solid black;
+	width:219px;
+	height:160px;
+	padding:15px 15px 0 15px;
+	line-height:27px;
+}
+#yonghu-info .left {
+	position:relative;
+	height:520px;
+	margin-right:370px;
+	padding:50px;
+}
+#yonghu-info .left ul {
+	list-style-type:none;
+}
+#yonghu-info .left ul li {
+	line-height:33px;
+}
+#yonghu-info .ignore {
+	color:lightgray;
+}
+
+/*shuoShuo*/
+#shuoShuo {
+	position:relative;
+	width:100%;
+	height:150px;
+	padding:30px;
+	border-bottom:1px dashed lightgray;
+}
+.test {
+		transform:rotateY(1deg);
+	-webkit-transform:rotateY(1deg); /* Safari and Chrome */
+	-moz-transform:rotateY(1deg); /* Firefox */
+	
+	transition: transform 2s;
+	-moz-transition: -moz-transform 2s;	/* Firefox 4 */
+	-webkit-transition: -webkit-transform 2s;	/* Safari 和 Chrome */
+}
