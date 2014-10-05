@@ -469,12 +469,7 @@ page-yongQianBiDu
 	margin-bottom:30px;
 }
 #yongQianBiDu .biaoTi {
-	margin:35px 0 25px 0;
-}
-#yongQianBiDu p {
-	line-height:30px;
-	text-indent:2em;
-	margin-bottom:30px;
+	margin:47px 0 25px 0;
 }
 #yongQianBiDu .lianXiFangShi {
 	margin-left:40px;
@@ -486,8 +481,8 @@ page-yongQianBiDu
 	float:right;
 	font-weight:bold;
 	text-align:right;
-	font-size:16px;
-	padding:5px;
+	font-size:14px;
+	padding:7px;
 	border:3px solid black;
 	-webkit-transform: rotate(-30deg); 
 	-moz-transform: rotate(-30deg);	
@@ -495,6 +490,66 @@ page-yongQianBiDu
 	-ms-transform: rotate(-30deg);
 	transform: rotate(-30deg);
 	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+#yongQianBiDu h1 {
+	font-size:41px;
+	margin-bottom:47px;
+	color:black;
+	text-align:center;
+	font-weight:bold;
+}
+#yongQianBiDu .key {
+	margin-left:10px;
+}
+
+/*
+page-lianXiFangShi
+*/
+#lianXiFangShi {
+	position:relative;
+	padding:30px 30px 170px 30px;
+	background-color:white;
+	border-width:3px;
+	border-style:outset;
+	box-shadow: 5px 5px 5px #888888;
+}
+#lianXiFangShi li {
+	line-height:23px;
+	margin-bottom:15px;
+}
+#lianXiFangShi .xiangQing {
+	margin:0 40px 90px 40px;
+	list-style-type:none;
+	position:relative;
+	border:3px solid black;
+	min-height:180px;
+	padding:15px;
+}
+#lianXiFangShi .touXiang {
+	position:absolute;
+	right:30px;
+	top:15px;
+}
+#lianXiFangShi .tuZhang {
+	float:right;
+	font-weight:bold;
+	text-align:right;
+	font-size:14px;
+	padding:7px;
+	border:3px solid black;
+	-webkit-transform: rotate(-30deg); 
+	-moz-transform: rotate(-30deg);	
+	-o-transform: rotate(-30deg);
+	-ms-transform: rotate(-30deg);
+	transform: rotate(-30deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+#lianXiFangShi h1 {
+	font-size:41px;
+	margin-bottom:47px;
+	color:black;
+	text-align:center;
+	font-weight:bold;
 }
 
 /*--------------------------------------------------------------------------------*/

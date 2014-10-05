@@ -11,6 +11,7 @@
 		
 			<g:render template="/layouts/transition/1" />
 		
+			<h1>用前必读</h1>
 			<h3>使用协议</h3>
 			<ol>
 				<li>
@@ -51,12 +52,12 @@
 			
 			<h3 class="biaoTi">联系站长</h3>
 			<ul class="lianXiFangShi">
-				<li>站长：${ ChangLiang.XING_MING }<span class="lightgray"><span class="separator">/</span>我是一个卑微的站长，上帝不高兴，就是我最大的不幸。</span></li>
-				<li><strong>邮箱</strong>：${ ChangLiang.YOU_XIANG }<span class="separator lightgray">/</span><strong>QQ</strong>，你懂的</li>
-				<li><strong>手机</strong>：${ ChangLiang.SHOU_JI }</li>
+				<li><strong>姓名</strong>：<span class="key">${ ChangLiang.XING_MING }</span><span class="separator">/</span>我是一个卑微的站长，上帝不高兴，就是我最大的不幸</li>
+				<li><strong>邮箱</strong>：<span class="key">${ ChangLiang.YOU_XIANG }</span><span class="separator lightgray">/</span><strong>QQ</strong>，你懂的</li>
+				<li><strong>手机</strong>：<span class="key">${ ChangLiang.SHOU_JI }</span></li>
 			</ul>
 			
-			<div class="tuZhang">同一片天空下，追逐各自的梦，愿梦终能成真</div>
+			<div class="tuZhang">在同一片天空，追逐各自的梦</div>
 			
 		</div>
 	</body>

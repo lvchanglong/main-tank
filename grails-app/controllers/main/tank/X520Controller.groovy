@@ -30,6 +30,13 @@ class X520Controller {
 	}
 	
 	/**
+	 * 联系方式
+	 */
+	def lianXiFangShi() {
+		
+	}
+	
+	/**
 	 * ip详情
 	 * @param ip
 	 */
