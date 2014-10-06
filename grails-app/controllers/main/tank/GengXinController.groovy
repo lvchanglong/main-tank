@@ -1,6 +1,7 @@
 package main.tank
 
 import static org.springframework.http.HttpStatus.*
+import grails.rest.RestfulController
 import grails.transaction.Transactional
 
 /**
@@ -9,8 +10,9 @@ import grails.transaction.Transactional
  *
  */
 @Transactional(readOnly = true)
-class GengXinController {
-
-	static scaffold = true
-
+class GengXinController extends RestfulController {
+	static responseFormats = ['json', 'xml']
+	GengXinController() {
+		super(GengXin)
+	}
 }

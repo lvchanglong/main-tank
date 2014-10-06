@@ -1,8 +1,10 @@
 <div id="yongHuIP">
 	<ul>
+		<%--
 		<li>
 			 您可能想知道：
 		</li>
+		--%>
 		<li>
 			公网IP：${ request.getRemoteAddr() }
 		</li>

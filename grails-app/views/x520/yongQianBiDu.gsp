@@ -7,7 +7,7 @@
 		<title>主坦克-用前必读</title>
 	</head>
 	<body>
-		<div id="yongQianBiDu" class="borderBox clearfix">
+		<div id="yongQianBiDu" class="borderBox clearfix defaultPage">
 		
 			<%--
 			<g:render template="/layouts/transition/1" />

@@ -7,26 +7,40 @@ package main.tank
  */
 class ZhuangTai {
 
+	/**
+	 * 正常->修改成功
+	 */
+	static Integer ZHENG_CHANG = 200 //200 (OK/正常)
+	/**
+	 * 已创建->添加成功
+	 */
+	static Integer YI_CHUANG_JIAN = 201 //201 (Created/已创建)
+	/**
+	 * 无内容->删除成功
+	 */
+	static Integer WU_NEI_RONG = 204 //204 (No Content/无内容)
+	/**
+	 * 未找到->不存在
+	 */
+	static Integer WEI_ZHAO_DAO = 404 //404 (Not Found/未找到)
+	/**
+	 * 无法访问->未通过验证
+	 */
+	static Integer WU_FA_FANG_WEN = 406 //406 (Not Acceptable/无法访问)
+	
+	
+	
 	//100 (Continue/继续)
 	//101 (Switching Protocols/转换协议)
 	
 	/**
-	 * 正常
-	 */
-	static Integer ZHENG_CHANG = 200 //200 (OK/正常)
-	/**
-	 * 已创建
-	 */
-	static Integer YI_CHUANG_JIAN = 201 //201 (Created/已创建)
-	/**
 	 * 接受
 	 */
 	static Integer JIE_SHOU = 202 //202 (Accepted/接受)
-	
 	//203 (Non-Authoritative Information/非官方信息)
-	//204 (No Content/无内容)
 	//205 (Reset Content/重置内容)
 	//206 (Partial Content/局部内容)
+	
 	//300 (Multiple Choices/多重选择)
 	//301 (Moved Permanently)
 	//302 (Found/找到)
@@ -47,13 +61,8 @@ class ZhuangTai {
 	 * 禁止
 	 */
 	static Integer JIN_ZHI = 403 //403 (Forbidden/禁止)
-	/**
-	 * 未找到
-	 */
-	static Integer WEI_ZHAO_DAO = 404 //404 (Not Found/未找到)
-
+	
 	//405 (Method Not Allowed/方法未允许)
-	//406 (Not Acceptable/无法访问)
 	//407 (Proxy Authentication Required/代理服务器认证要求)
 	//408 (Request Timeout/请求超时)
 	//409 (Conflict/冲突)

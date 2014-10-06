@@ -7,7 +7,7 @@ package main.tank
  */
 class GengXin {
 
-	String neiRong //更新内容
+	String neiRong //内容
 	
 	Date dateCreated //创建时间
 	Date lastUpdated //更新时间

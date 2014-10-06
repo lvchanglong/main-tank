@@ -8,42 +8,17 @@
 	</head>
 	<body>
 		
-		<div id="zhuYe" class="borderBox">
+		<div id="zhuYe" class="borderBox defaultPage">
 			
 			<g:render template="/layouts/transition/${ ChangLiang.TRANSITION_INDEX }" />
 			
-			<div class="clearfix">
-				<div class="floatRight">
-					<g:render template="/layouts/plugin/yongHuIP" />
-				</div>
-				
-				<div class="floatLeft">
-					<g:render template="/layouts/plugin/qianZhiShengMing" />
-				</div>
+			<div style="position:absolute;right:73px;top:30px;min-width:201px;">
+				<g:render template="/layouts/plugin/yongHuIP" />
 			</div>
 			
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
+			<g:each in="${ yongHuInstanceList }" status="i" var="yongHuInstance">
+				<g:render template="/layouts/other/yonghu/info" model="[yonghu:yongHuInstance]" />
+			</g:each>
 
 		</div>
 		

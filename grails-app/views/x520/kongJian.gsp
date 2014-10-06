@@ -7,7 +7,7 @@
 		<title>主坦克-空间</title>
 	</head>
 	<body>
-		<div id="kongJian" class="borderBox">
+		<div id="kongJian" class="borderBox defaultPage">
 		
 			<g:render template="/layouts/transition/${ ChangLiang.TRANSITION_INDEX }" />
 			

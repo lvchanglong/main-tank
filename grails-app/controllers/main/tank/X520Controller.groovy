@@ -11,8 +11,9 @@ class X520Controller {
 
 	static defaultAction = "index" //默认方法
 	
-	def index() {
-		
+	def index(Integer max) {
+		params.max = Math.min(max ?: 10, 100)
+		respond YongHu.list(params), model:[yongHuInstanceCount:YongHu.count()]
 	}
 	
 	/**

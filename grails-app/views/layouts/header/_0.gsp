@@ -6,10 +6,22 @@
 			</span>
 			<ul>
 				<li>
-					<a href="javascript:void(0);" onclick="alert('(^ _ ^) 就知道你会上当... 期待下个版本吧');">登录</a>
+					<g:link uri="/" style="font-weight:bold;">首页</g:link>
 				</li>
 				<li>
-					<a href="javascript:void(0);" onclick="alert('(^ _ ^) 就知道你会上当...期待下个版本吧');">注册</a>
+					<g:link uri="/1/lvchanglong" style="font-weight:bold;">站长</g:link>
+				</li>
+				<li>
+					<g:link uri="/1/test" style="font-weight:bold;">测试</g:link>
+				</li>
+				<li>
+					<a href="javascript:void(0);" onclick="shouCang(window.location,document.title);" style="font-weight:bold;">收藏</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" onclick="alert('由于一些原因，暂时不开放，请耐心等待');">登录</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" onclick="alert('由于一些原因，暂时不开放，请耐心等待');">注册</a>
 				</li>
 			</ul>
 		</div>

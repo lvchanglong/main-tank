@@ -7,7 +7,7 @@
 		<title>主坦克-联系方式</title>
 	</head>
 	<body>
-		<div id="lianXiFangShi" class="borderBox clearfix">
+		<div id="lianXiFangShi" class="borderBox clearfix defaultPage">
 		
 			<%--
 			<g:render template="/layouts/transition/1" />

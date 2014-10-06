@@ -7,7 +7,7 @@
 	<div class="hidden">
 		o(¯ □ ¯)o
 		<div class="haha">
-			“魂淡，请叫我站长大人！”
+			“哈哈，请叫我站长大人！”
 		</div>
 	</div>
 	

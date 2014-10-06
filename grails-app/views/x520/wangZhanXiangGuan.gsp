@@ -7,7 +7,7 @@
 		<title>主坦克-网站相关</title>
 	</head>
 	<body>
-		<div id="wangZhanXiangGuan" class="borderBox clearfix">
+		<div id="wangZhanXiangGuan" class="borderBox clearfix defaultPage">
 		
 			<%--
 			<g:render template="/layouts/transition/1" />
