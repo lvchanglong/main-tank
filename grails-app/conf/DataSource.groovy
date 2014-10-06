@@ -28,8 +28,8 @@ environments {
             //dbCreate = "create-drop" //one of 'create', 'create-drop', 'update', 'validate', ''
             //url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
 			
-			dbCreate = "create-drop"
-			url = "jdbc:mysql://localhost/database?useUnicode=true&characterEncoding=utf8"
+			dbCreate = "update"
+			url = "jdbc:mysql://localhost/database?useUnicode=true&characterEncoding=utf8&autoReconnect=true"
         }
     }
     test {
@@ -38,7 +38,7 @@ environments {
             //url = "jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
 			
 			dbCreate = "update"
-			url = "jdbc:mysql://localhost/database?useUnicode=true&characterEncoding=utf8"
+			url = "jdbc:mysql://localhost/database?useUnicode=true&characterEncoding=utf8&autoReconnect=true"
         }
     }
     production {
@@ -47,7 +47,7 @@ environments {
             //url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
 			
 			dbCreate = "update"
-			url = "jdbc:mysql://localhost/database?useUnicode=true&characterEncoding=utf8"
+			url = "jdbc:mysql://localhost/database?useUnicode=true&characterEncoding=utf8&autoReconnect=true"
             properties {
                // See http://grails.org/doc/latest/guide/conf.html#dataSource for documentation
                jmxEnabled = true

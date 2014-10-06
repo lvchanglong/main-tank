@@ -483,13 +483,13 @@ page-yongQianBiDu
 	text-align:right;
 	font-size:14px;
 	padding:7px;
-	border:3px solid black;
+	border:3px ridge lightgray;
 	-webkit-transform: rotate(-30deg); 
 	-moz-transform: rotate(-30deg);	
 	-o-transform: rotate(-30deg);
 	-ms-transform: rotate(-30deg);
 	transform: rotate(-30deg);
-	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
 }
 #yongQianBiDu h1 {
 	font-size:41px;
@@ -518,17 +518,24 @@ page-lianXiFangShi
 	margin-bottom:15px;
 }
 #lianXiFangShi .xiangQing {
-	margin:0 40px 90px 40px;
+	margin:0 0 71px 0;
 	list-style-type:none;
 	position:relative;
-	border:3px solid black;
+	border:3px ridge lightgray;
 	min-height:180px;
 	padding:15px;
+}
+#lianXiFangShi .zhuangTai {
+	margin-bottom:0;
+}
+#lianXiFangShi .zhuangTai .xianZai {
+	font-size:21px;
 }
 #lianXiFangShi .touXiang {
 	position:absolute;
 	right:30px;
 	top:15px;
+	margin:0;
 }
 #lianXiFangShi .tuZhang {
 	float:right;
@@ -536,13 +543,13 @@ page-lianXiFangShi
 	text-align:right;
 	font-size:14px;
 	padding:7px;
-	border:3px solid black;
-	-webkit-transform: rotate(-30deg); 
-	-moz-transform: rotate(-30deg);	
-	-o-transform: rotate(-30deg);
-	-ms-transform: rotate(-30deg);
-	transform: rotate(-30deg);
-	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	border:3px ridge lightgray;
+	-webkit-transform: rotate(-23deg); 
+	-moz-transform: rotate(-23deg);	
+	-o-transform: rotate(-23deg);
+	-ms-transform: rotate(-23deg);
+	transform: rotate(-23deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
 }
 #lianXiFangShi h1 {
 	font-size:41px;
@@ -550,6 +557,121 @@ page-lianXiFangShi
 	color:black;
 	text-align:center;
 	font-weight:bold;
+}
+
+/*
+page-wangZhanXiangGuan
+*/
+#wangZhanXiangGuan {
+	position:relative;
+	padding:30px 30px 170px 30px;
+	background-color:white;
+	border-width:3px;
+	border-style:outset;
+	box-shadow: 5px 5px 5px #888888;
+}
+#wangZhanXiangGuan .xiangQing {
+	margin:0 0 71px 0;
+	list-style-type:none;
+	position:relative;
+}
+#wangZhanXiangGuan .tuZhang {
+	float:right;
+	font-weight:bold;
+	text-align:right;
+	font-size:14px;
+	padding:7px;
+	border:3px ridge lightgray;
+	-webkit-transform: rotate(-30deg); 
+	-moz-transform: rotate(-30deg);	
+	-o-transform: rotate(-30deg);
+	-ms-transform: rotate(-30deg);
+	transform: rotate(-30deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+}
+#wangZhanXiangGuan h1 {
+	font-size:41px;
+	margin-bottom:47px;
+	color:black;
+	text-align:center;
+	font-weight:bold;
+}
+#wangZhanXiangGuan ul {
+	margin:0 0 71px 0;
+	list-style-type:none;
+	position:relative;
+}
+#wangZhanXiangGuan li {
+	line-height:41px;
+	margin-bottom:91px;
+}
+#wangZhanXiangGuan ol li {
+	line-height:44px;
+	margin-bottom:0;
+}
+#wangZhanXiangGuan .renWu {
+	position:absolute;
+	right:129px;
+	top:171px;
+	margin-top:90px;
+}
+#wangZhanXiangGuan strong {
+	font-size:21px;
+}
+#wangZhanXiangGuan h3 {
+	font-size:21px;
+	font-weight:normal;
+	margin-bottom:21px;
+}
+#wangZhanXiangGuan p {
+	font-size:16px;
+}
+
+/*
+page-jianYiFanKui
+*/
+#jianYiFanKui {
+	position:relative;
+	padding:30px 30px 170px 30px;
+	background-color:white;
+	border-width:3px;
+	border-style:outset;
+	box-shadow: 5px 5px 5px #888888;
+}
+#jianYiFanKui .xiangQing {
+	margin:0 0 71px 0;
+	list-style-type:none;
+	position:relative;
+}
+#jianYiFanKui .tuZhang {
+	float:right;
+	font-weight:bold;
+	text-align:right;
+	font-size:14px;
+	padding:7px;
+	border:3px ridge lightgray;
+	-webkit-transform: rotate(-30deg); 
+	-moz-transform: rotate(-30deg);	
+	-o-transform: rotate(-30deg);
+	-ms-transform: rotate(-30deg);
+	transform: rotate(-30deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+}
+#jianYiFanKui h1 {
+	font-size:41px;
+	margin-bottom:47px;
+	color:black;
+	text-align:center;
+	font-weight:bold;
+}
+#jianYiFanKui ul {
+	margin:0 0 71px 0;
+	list-style-type:none;
+	position:relative;
+}
+#jianYiFanKui li {
+	line-height:41px;
+	margin-bottom:91px;
 }
 
 /*--------------------------------------------------------------------------------*/

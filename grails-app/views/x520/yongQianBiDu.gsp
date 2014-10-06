@@ -9,7 +9,9 @@
 	<body>
 		<div id="yongQianBiDu" class="borderBox clearfix">
 		
+			<%--
 			<g:render template="/layouts/transition/1" />
+			--%>
 		
 			<h1>用前必读</h1>
 			<h3>使用协议</h3>

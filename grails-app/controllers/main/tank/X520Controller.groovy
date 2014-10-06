@@ -23,6 +23,21 @@ class X520Controller {
 	}
 	
 	/**
+	 * ip详情
+	 * @param ip地址
+	 */
+	def ipXiangQing(String ip) {
+		def url = new URL("http://wap.ip138.com/ip138.asp?ip=" + ip)
+		def text = url.getText()
+		//println text
+		render text.find(/(?<=<b>).*?(?=<\/b>)/)
+	}
+	
+	def test() {
+	   println "test"
+	}
+	
+	/**
 	 * 用前必读
 	 */
 	def yongQianBiDu() {
@@ -37,18 +52,17 @@ class X520Controller {
 	}
 	
 	/**
-	 * ip详情
-	 * @param ip
+	 * 网站相关
 	 */
-	def ipXiangQing(String ip) {
-		def url = new URL("http://wap.ip138.com/ip138.asp?ip=" + ip)
-		def text = url.getText()
-		//println text
-		render text.find(/(?<=<b>).*?(?=<\/b>)/)
+	def wangZhanXiangGuan() {
+		
 	}
 	
-	def test() {
-	   println "test"
+	/**
+	 * 建议反馈
+	 */
+	def jianYiFanKui() {
+		
 	}
 	
 }

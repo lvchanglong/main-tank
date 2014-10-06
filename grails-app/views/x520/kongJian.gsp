@@ -11,30 +11,8 @@
 		
 			<g:render template="/layouts/transition/${ ChangLiang.TRANSITION_INDEX }" />
 			
-			<g:render template="/layouts/other/yonghu/kaPai/0" model="[yonghu:yonghu]" />
-			
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
-			<h1>123456</h1>
+			<g:render template="/layouts/other/yonghu/info" model="[yonghu:yonghu]" />
+		
 		</div>
 	</body>
 </html>

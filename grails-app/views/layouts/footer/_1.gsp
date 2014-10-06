@@ -15,21 +15,21 @@
 			</li>
 			<li><span class="separator">/</span></li>
 			<li>
+				<g:link controller="x520" action="wangZhanXiangGuan">
+					网站相关
+				</g:link>
+			</li>
+			<li><span class="separator">/</span></li>
+			<li>
 				<g:link controller="x520" action="lianXiFangShi">
 					联系方式
 				</g:link>
 			</li>
 			<li><span class="separator">/</span></li>
 			<li>
-				<a href="javascript:void(0);">
-					关于网站
-				</a>
-			</li>
-			<li><span class="separator">/</span></li>
-			<li>
-				<a href="javascript:void(0);">
+				<g:link controller="x520" action="jianYiFanKui">
 					建议反馈
-				</a>
+				</g:link>
 			</li>
 			<li><span class="separator">/</span></li>
 			<li>

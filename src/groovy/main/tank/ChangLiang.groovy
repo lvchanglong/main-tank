@@ -80,7 +80,7 @@ class ChangLiang {
 	/**
 	 * 过渡
 	 */
-	static String TRANSITION_INDEX = "0"
+	static String TRANSITION_INDEX = "1"
 	
 	/**
 	 * 助手
