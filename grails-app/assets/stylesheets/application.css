@@ -27,12 +27,15 @@ globle
 	background-color:white;
 	border-width:3px;
 	border-style:outset;
-	box-shadow: 5px 5px 5px #888888;
+	box-shadow: 0px 3px 7px #888888;
 }
 .conWidth {
 	position:relative;
 	width:960px;
 	margin:0 auto;
+}
+.defaultBoxShadow {
+	box-shadow: 3px 3px 7px #888888;
 }
 .h_100p {
 	height:100%;
@@ -47,7 +50,7 @@ globle
 	clear:both;
 }
 .separator {
-	padding:0 7px;
+	padding:0 11px;
 }
 .small {
 	font-size:12px;
@@ -108,6 +111,7 @@ globle
 	color: #fff;
 	text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1),0 1px 3px rgba(0,0,0,0.3),0 3px 5px rgba(0,0,0,0.2),0 5px 10px rgba(0,0,0,0.25);
 }
+
 /*
 main
 */
@@ -217,7 +221,7 @@ footer-1
 #footer-1 nav {
 	border-width:3px;
 	border-style:outset;
-	box-shadow: 5px 5px 5px #888888;
+	box-shadow: 0px 3px 7px #888888;
 	position:relative;
 	height:73px;
 }
@@ -226,31 +230,31 @@ footer-1
 	margin:0 auto;
 	text-align:center;
 	display:inline-block;
-	padding: 5px 0;
+	padding: 10px 0 0 0;
 }
 #footer-1 ul li {
 	float:left;
 	text-align:right;
 	height:100%;
-	color: white;
+	color: black;
 	text-shadow: 0px 1px 1px #555;
 	-webkit-text-stroke: 1px #000;
 	text-stroke: 1px #000;
-	height:30px;
-	line-height:30px;
+	height:25px;
+	line-height:25px;
 }
 #footer-1 .rightHand {
 	position:absolute;
-	right:-198px;
+	right:-134px;
 	bottom:0;
 }
 #footer-1 .leftHand {
 	position:absolute;
-	left:-201px;
+	left:-122px;
 	bottom:0;
 }
 #footer-1 a {
-	color:white;
+	color:black;
 	-webkit-text-stroke: 1px #000;
 	text-stroke: 1px #000;
 }
@@ -314,7 +318,7 @@ logo-1
 	margin:15px 30px 0 30px;
 	border-width:3px;
 	border-style:outset;
-	box-shadow: 5px 5px 5px #888888;
+	box-shadow: 0px 3px 7px #888888;
 }
 #logo-1 .tank {
 	position:absolute;
@@ -433,20 +437,6 @@ plugin-qianZhiShengMing
 }
 #transition-0 ul li {
 	height:25px;
-}
-
-/*
-page-zhuYe
-*/
-#zhuYe {
-	
-}
-
-/*
-page-kongJian
-*/
-#kongJian {
-	
 }
 
 /*
@@ -673,7 +663,8 @@ page-jianYiFanKui
 	right:0;
 	bottom:0;
 	background-color:#333;
-	color:#acacac;
+	color:lavender;
+	font-weight:bold;
 }
 #jianYiFanKui .submit:hover {
 	cursor:pointer;
@@ -685,93 +676,37 @@ page-jianYiFanKui
 	width:77%;
 	padding-left:10px;
 	color:black;
-	font-size:16px;
+	font-size:14px;
 	text-align:left;
 	border:3px ridge lightgray;
 }
 #jianYiFanKui p {
-	font-size:17px;
+	font-size:16px;
 }
 
-/*--------------------------------------------------------------------------------*/
-
-/*
-yonhu-kaPai-0
-*/
-#yonghu-kaPai-0 {
-	position:relative;
-	left:0;
-	top:0;
-	width:200px;
-	height:200px;
-	margin-left:auto;
-	1background-image:url("WangLuo/TouXiang/BeiJing/普通A.png");
-	1background-repeat:no-repeat;
-	1background-size:200px 200px;
-	1background-position:0 0;
-	margin-left:auto;
-}
-#yonghu-kaPai-0 .touXiang {
-	display:block;
-	width:180px;
-	height:180px;
-	padding:10px;
-}
-#yonghu-kaPai-0 .bianKuang {
-	position:absolute;
-	left:0;
-	top:0;
-}
-
-#yonghu-kaPai {
-	position:relative;
-	left:0;
-	top:0;
-	width:200px;
-	height:200px;
-	margin-left:auto;
-	background-image:url("WangLuo/TouXiang/BeiJing/右侧C.png");
-	background-repeat:no-repeat;
-	background-size:100px 200px;
-	background-position:100px 0;
-}
-#yonghu-kaPai .leftFrame {
-	position:absolute;
-	left:0;
-	top:0;
-	width:100px;
-	height:200px;
-}
-#yonghu-kaPai .touXiang {
-	display:block;
-	width:180px;
-	height:180px;
-	padding:10px;
-}
-
-/*yonhu-info*/
-#yonghu-info {
+/*yonghu-kapian-0*/
+#yonghu-kapian-0 {
 	position:relative;
 	width:100%;
 	padding:90px 50px 90px 50px;
 }
-#yonghu-info .main {
+#yonghu-kapian-0 .main {
 	border:7px solid black;
-	box-shadow: 5px 5px 5px #888888;
+	box-shadow: 0px 3px 7px #888888;
 }
-#yonghu-info .right {
+#yonghu-kapian-0 .right {
 	position:absolute;
 	right:0;
 	top:0;
 	width:370px;
 	height:520px;
 	margin-left:auto;
-	background-image:url("WangLuo/TouXiang/KaPai/卡牌背景.png");
+	background-image:url("WangLuo/TouXiang/kongjian/卡牌背景.png");
 	background-repeat:no-repeat;
 	background-size:370px 520px;
 	background-position:0 0;
 }
-#yonghu-info .right img {
+#yonghu-kapian-0 .right img {
 	display:block;
 	width:180px;
 	height:180px;
@@ -780,7 +715,7 @@ yonhu-kaPai-0
 	top:100px;
 	left:0;
 }
-#yonghu-info .right .dengji {
+#yonghu-kapian-0 .right .dengji {
 	position:absolute;
 	left:132px;
 	top:60px;
@@ -789,7 +724,7 @@ yonhu-kaPai-0
 	font-size:16px;
 	text-align:right;
 }
-#yonghu-info .right .shuoshuo {
+#yonghu-kapian-0 .right .shuoshuo {
 	position:absolute;
 	left:80px;
 	top:290px;
@@ -802,21 +737,111 @@ yonhu-kaPai-0
 	padding:15px 15px 0 15px;
 	line-height:27px;
 }
-#yonghu-info .left {
+#yonghu-kapian-0 .left {
 	position:relative;
 	height:520px;
 	margin-right:370px;
 	padding:50px;
 }
-#yonghu-info .left ul {
+#yonghu-kapian-0 .left ul {
 	list-style-type:none;
 }
-#yonghu-info .left ul li {
+#yonghu-kapian-0 .left ul li {
 	line-height:33px;
 }
-#yonghu-info .ignore {
+#yonghu-kapian-0 .ignore {
 	color:lightgray;
 }
+
+/*
+page-yonghu-kongjian-0
+*/
+#yonghu-kongjian-0 {
+	
+}
+#yonghu-kongjian-0 .touXiangQv {
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:234px;
+	height:100%;
+	border-right: 3px ridge lightgray;
+	margin:0;
+	text-align:left;
+}
+#yonghu-kongjian-0 .touXiang {
+	width:180px;
+	height:180px;
+	margin:0 auto;
+	display:block;
+}
+#yonghu-kongjian-0 .touXiangQv h3 {
+	font-size:24px;
+	font-weight:bold;
+	display:block;
+	margin-top:15px;
+	padding:0 15px;
+}
+#yonghu-kongjian-0 .touXiangQv h4 {
+	display:block;
+	padding:0 15px;
+	margin-top:5px;
+}
+#yonghu-kongjian-0 .main-ul {
+	position:relative;
+	list-style-type:none;
+	padding-left:234px;
+	width:600px;
+	min-height:255px;
+	border-bottom: 3px ridge lightgray;
+}
+#yonghu-kongjian-0 .main-li {
+	float:left;
+	width:100px;
+	height:100px;
+	margin:10px;
+}
+#yonghu-kongjian-0 .main-li .aList {
+	width:100px;
+	height:100px;
+	display:block;
+}
+#yonghu-kongjian-0 .aMain {
+	display:block;
+	text-decoration: none;
+	color:black;
+	height:100%;
+}
+#yonghu-kongjian-0 .main-li:hover, #yonghu-kongjian-0 .touXiangQv:hover {
+	cursor:pointer;
+	box-shadow: 3px 3px 7px #888888;
+}
+#yonghu-kongjian-0-wrapper {
+	padding:30px;
+	min-height:300px;
+}
+#yonghu-kongjian-0-wrapper .main-h1 {
+	font-size:70px;
+	font-weight:bold;
+	text-align:center;
+	margin-top:181px;
+}
+
+/*
+page-zhuYe
+*/
+#zhuYe {
+	
+}
+
+/*
+page-geRenKongJian
+*/
+#geRenKongJian {
+	
+}
+
+/*--------------------------------------------------------------------------------*/
 
 /*shuoShuo*/
 #shuoShuo {

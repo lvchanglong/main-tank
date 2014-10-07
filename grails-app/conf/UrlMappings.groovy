@@ -9,7 +9,7 @@ class UrlMappings {
 
 		"/"(controller:"x520", action:"index") // 首页
 		
-		"/1/$zhangHao"(controller:"x520", action:"kongJian") //1：个人空间
+		"/kongjian/$zhangHao"(controller:"x520", action:"geRenKongJian") //kongjian：个人空间
 		
 		"/admin"(view:'/index')
         "500"(view:'/error')

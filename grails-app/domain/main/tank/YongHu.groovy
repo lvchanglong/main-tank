@@ -20,11 +20,11 @@ class YongHu {
 	String shouJi = "xxxxxxxxxxx" //手机
 	String jianJie = "暂无" //简介
 	
-	String shuoShuo = "不知道该说些什么" //说说
-	Integer zhanDouLi = 1 //战斗力
-	
 	Date dateCreated //创建时间
 	Date lastUpdated //更新时间
+	
+	String shuoShuo = "不知道该说些什么" //说说
+	Integer zhanDouLi = 1 //战斗力
 	
 	static transients = ["miMaYanZheng", "gongWangIP", "sessionID"] //属性集合（不会出现在数据库中）
 	
@@ -66,12 +66,12 @@ class YongHu {
 		youXiang column: 'YOU_XIANG'
 		shouJi column: 'SHOU_JI'
 		jianJie column: 'JIAN_JIE'
-		
-		shuoShuo column: 'SHUO_SHUO'
-		zhanDouLi column: 'ZHAN_DOU_LI'
 
 		dateCreated column: 'CHUANG_JIAN_SHI_JIAN'
 		lastUpdated column: 'GENG_XIN_SHI_JIAN'
+		
+		shuoShuo column: 'SHUO_SHUO'
+		zhanDouLi column: 'ZHAN_DOU_LI'
 	}
 	
 	String toString() {

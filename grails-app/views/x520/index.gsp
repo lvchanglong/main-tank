@@ -17,7 +17,7 @@
 			</div>
 			
 			<g:each in="${ yongHuInstanceList }" status="i" var="yongHuInstance">
-				<g:render template="/layouts/other/yonghu/info" model="[yonghu:yongHuInstance]" />
+				<g:render template="/layouts/other/yonghu/kapian/0" model="[yongHuInstance:yongHuInstance]" />
 			</g:each>
 
 		</div>

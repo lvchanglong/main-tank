@@ -17,10 +17,14 @@ class X520Controller {
 	}
 	
 	/**
-	 * 1：个人空间
+	 * 个人空间
 	 */
-	def kongJian(String zhangHao) {
-		[yonghu: YongHu.findByZhangHao(zhangHao)]
+	def geRenKongJian(String zhangHao) {
+		[yongHuInstance: YongHu.findByZhangHao(zhangHao)]
+	}
+	
+	def test(YongHu yongHuInstance) {
+		render(template:"/layouts/other/yonghu/kapian/0", model:[yongHuInstance: yongHuInstance])
 	}
 	
 	/**
@@ -32,10 +36,6 @@ class X520Controller {
 		def text = url.getText()
 		//println text
 		render text.find(/(?<=<b>).*?(?=<\/b>)/)
-	}
-	
-	def test() {
-	   println "test"
 	}
 	
 	/**

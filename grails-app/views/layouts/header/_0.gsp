@@ -9,19 +9,19 @@
 					<g:link uri="/" style="font-weight:bold;">首页</g:link>
 				</li>
 				<li>
-					<g:link uri="/1/lvchanglong" style="font-weight:bold;">站长</g:link>
+					<g:link uri="/kongjian/lvchanglong" style="font-weight:bold;">站长</g:link>
 				</li>
 				<li>
-					<g:link uri="/1/test" style="font-weight:bold;">测试</g:link>
+					<g:link uri="/kongjian/test" style="font-weight:bold;">测试</g:link>
 				</li>
 				<li>
 					<a href="javascript:void(0);" onclick="shouCang(window.location,document.title);" style="font-weight:bold;">收藏</a>
 				</li>
 				<li>
-					<a href="javascript:void(0);" onclick="alert('由于一些原因，暂时不开放，请耐心等待');">登录</a>
+					<a href="javascript:void(0);" onclick="alert('由于一些原因，暂时不开放，但底部的反馈功能已经开启，期待您的吐槽');">登录</a>
 				</li>
 				<li>
-					<a href="javascript:void(0);" onclick="alert('由于一些原因，暂时不开放，请耐心等待');">注册</a>
+					<a href="javascript:void(0);" onclick="alert('由于一些原因，暂时不开放，但底部的反馈功能已经开启，期待您的吐槽');">注册</a>
 				</li>
 			</ul>
 		</div>
