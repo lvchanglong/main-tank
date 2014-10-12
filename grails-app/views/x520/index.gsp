@@ -15,7 +15,7 @@
 			<div style="position:absolute;right:73px;top:30px;min-width:201px;">
 				<g:render template="/layouts/plugin/yongHuIP" />
 			</div>
-			
+
 			<g:each in="${ yongHuInstanceList }" status="i" var="yongHuInstance">
 				<g:render template="/layouts/other/yonghu/kapian/0" model="[yongHuInstance:yongHuInstance]" />
 			</g:each>

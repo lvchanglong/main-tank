@@ -17,16 +17,18 @@
 			
 			<ul class="xiangQing">
 				<li><strong>姓名</strong>：${ ChangLiang.XING_MING }<span class="separator lightgray">/</span>站长</li>
-				<li><strong>邮箱</strong>：${ ChangLiang.YOU_XIANG }<span class="separator lightgray">/</span><strong>QQ</strong>，你懂的</li>
+				<li><strong>ＱＱ</strong>：${ ChangLiang.QQ }</li>
+				<li><strong>邮箱</strong>：${ ChangLiang.YOU_XIANG }</li>
 				<li><strong>手机</strong>：${ ChangLiang.SHOU_JI }</li>
-				<li><strong>信仰</strong>：用实践更新认识，用认识指导实践</li>
+				<li><strong>信仰</strong>：${ ChangLiang.WANG_ZHAN_KOU_HAO }</li>
 				<li class="zhuangTai"><strong>状态</strong>：<span class="xianZai">已</span></li>
 				<li class="touXiang"><asset:image src="WangLuo/TouXiang/ChengYuan/吕常龙.png"/></li>
 			</ul>
 			
 			<ul class="xiangQing">
 				<li><strong>姓名</strong>：？？？<span class="separator lightgray">/</span>？？</li>
-				<li><strong>邮箱</strong>：?????????@qq.com<span class="separator lightgray">/</span><strong>QQ</strong>，你懂的</li>
+				<li><strong>ＱＱ</strong>：?????????</li>
+				<li><strong>邮箱</strong>：?????????@qq.com</li>
 				<li><strong>手机</strong>：???????????</li>
 				<li><strong>信仰</strong>：这家伙很懒，什么都没留下</li>
 				<li class="zhuangTai"><strong>状态</strong>：<span class="xianZai">未</span></li>
@@ -35,7 +37,8 @@
 			
 			<ul class="xiangQing">
 				<li><strong>姓名</strong>：？？？<span class="separator lightgray">/</span>？？</li>
-				<li><strong>邮箱</strong>：?????????@qq.com<span class="separator lightgray">/</span><strong>QQ</strong>，你懂的</li>
+				<li><strong>ＱＱ</strong>：?????????</li>
+				<li><strong>邮箱</strong>：?????????@qq.com</li>
 				<li><strong>手机</strong>：???????????</li>
 				<li><strong>信仰</strong>：这家伙很懒，什么都没留下</li>
 				<li class="zhuangTai"><strong>状态</strong>：<span class="xianZai">未</span></li>

@@ -20,9 +20,17 @@ class X520Controller {
 	 * 个人空间
 	 */
 	def geRenKongJian(String zhangHao) {
-		[yongHuInstance: YongHu.findByZhangHao(zhangHao)]
+		def yongHuInstance = YongHu.findByZhangHao(zhangHao)
+		if (!yongHuInstance) {
+			render status: ZhuangTai.WEI_ZHAO_DAO
+		}
+		[yongHuInstance: yongHuInstance]
 	}
 	
+	/**
+	 * 测试
+	 * @param yongHuInstance
+	 */
 	def test(YongHu yongHuInstance) {
 		render(template:"/layouts/other/yonghu/kapian/0", model:[yongHuInstance: yongHuInstance])
 	}

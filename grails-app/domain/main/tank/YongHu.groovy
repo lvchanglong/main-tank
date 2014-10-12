@@ -22,13 +22,9 @@ class YongHu {
 	
 	Date dateCreated //创建时间
 	Date lastUpdated //更新时间
+
+	static transients = ["gongWangIP", "sessionID"] //属性集合（不会出现在数据库中）
 	
-	String shuoShuo = "不知道该说些什么" //说说
-	Integer zhanDouLi = 1 //战斗力
-	
-	static transients = ["miMaYanZheng", "gongWangIP", "sessionID"] //属性集合（不会出现在数据库中）
-	
-	String miMaYanZheng //密码验证
 	String gongWangIP //公网-IP
 	String sessionID //session-ID
 	
@@ -44,9 +40,6 @@ class YongHu {
 		youXiang(nullable: true, blank: true, email: true)
 		shouJi(nullable: true, blank: true)
 		jianJie(nullable: true, blank: true)
-		
-		shuoShuo(nullable: true, blank: true)
-		zhanDouLi(nullable: true, blank: true)
 	}
 	
 	static mapping = {
@@ -69,9 +62,6 @@ class YongHu {
 
 		dateCreated column: 'CHUANG_JIAN_SHI_JIAN'
 		lastUpdated column: 'GENG_XIN_SHI_JIAN'
-		
-		shuoShuo column: 'SHUO_SHUO'
-		zhanDouLi column: 'ZHAN_DOU_LI'
 	}
 	
 	String toString() {
@@ -79,7 +69,11 @@ class YongHu {
 	}
 	
 	def beforeInsert() {
-		
+		this.miMa = this.miMa.encodeAsMD5()
+	}
+	
+	def beforeUpdate() {
+		this.miMa = this.miMa.encodeAsMD5()
 	}
 	
 	/**
@@ -109,9 +103,7 @@ class YongHu {
 				shengRi: "19880305",
 				youXiang: "417891235@qq.com",
 				shouJi: "13478275273",
-				jianJie: "用实践更新认识、用认识指导实践",
-				shuoShuo: "强者不需要等待机遇",
-				zhanDouLi: 1
+				jianJie: "用实践更新认识、用认识指导实践"
 			]
 			yonghu = new YongHu(map)
 			if (yonghu.hasErrors()) {

@@ -33,7 +33,9 @@
 			</li>
 			<li><span class="separator">/</span></li>
 			<li>
+				<a href="http://www.miitbeian.gov.cn" target="_blank" rel="nofollow">
 					${ ChangLiang.BEI_AN }
+				</a>
 			</li>
 		</ul>
 	</nav>

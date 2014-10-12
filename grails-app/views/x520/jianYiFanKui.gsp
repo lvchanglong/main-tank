@@ -16,7 +16,7 @@
 			<h1>建议反馈</h1>
 			
 			<div class="xiangQing clearfix">
-				<g:formRemote name="fanKui-save" url="[controller:'fanKui', action:'save']" onSuccess="fanKuiSaveSuccess(data,textStatus)" onFailure="fanKuiSaveFailure(XMLHttpRequest,textStatus,errorThrown)">
+				<g:formRemote name="fanKui-save" url="[controller:'fanKuiRestful', action:'save']" onSuccess="fanKuiSaveSuccess(data,textStatus)" onFailure="fanKuiSaveFailure(XMLHttpRequest,textStatus,errorThrown)">
 					<ul class="clearfix">
 						<li>
 							<p>您能够访问这个网站，我们万分感谢；您能够来到这个页面，我们无限感激。也许您还没有察觉，您的到来，已是我们几世修来的福气。也许您在这里留下的，不经意的一句话，甚至一个字，却能够让我们的未来，产生巨大改变。</p>

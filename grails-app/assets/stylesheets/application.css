@@ -16,6 +16,30 @@
 /*
 globle
 */
+[help] {
+	cursor:pointer;
+}
+#spinner {
+	background-color:white;
+	border:7px solid black;
+    position: fixed;
+	top: 0;
+	left:0;
+	bottom:0;
+	right: 0;
+	width:360px;
+	height:180px;
+	margin:auto;
+}
+#spinner .tiShi{
+	position:absolute;
+	right:0;
+	top:0;
+	width:180px;
+	height:180px;
+	line-height:180px;
+	font-size:33px;
+}
 .borderBox {
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
@@ -440,6 +464,28 @@ plugin-qianZhiShengMing
 }
 
 /*
+plugin-kaTong
+*/
+#kaTong {
+	width:200px;
+	height:125px;
+	margin:0 auto;
+}
+#kaTong .zhuangShi {
+	position:absolute;
+	left:100px;
+	top:0;
+	height:100px;
+	width:auto;
+}
+#kaTong .dialog {
+	position:absolute;left:61px;top:3px;display:none;
+}
+#kaTong .hanHua {
+	position:absolute;left:21px;top:13px;font-weight:bold;
+}
+
+/*
 page-yongQianBiDu
 */
 #yongQianBiDu {
@@ -515,7 +561,7 @@ page-lianXiFangShi
 #lianXiFangShi .touXiang {
 	position:absolute;
 	right:30px;
-	top:15px;
+	top:30px;
 	margin:0;
 }
 #lianXiFangShi .tuZhang {
@@ -684,6 +730,83 @@ page-jianYiFanKui
 	font-size:16px;
 }
 
+/*--------------------------------------------------------------------------------*/
+
+/*
+page-yonghu-kongjian-0
+*/
+#yonghu-kongjian-0 {
+	
+}
+#yonghu-kongjian-0 .touXiangQv {
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:234px;
+	height:100%;
+	border-right: 3px ridge lightgray;
+	margin:0;
+	text-align:left;
+}
+#yonghu-kongjian-0 .touXiang {
+	width:180px;
+	height:180px;
+	margin:0 auto;
+	display:block;
+}
+#yonghu-kongjian-0 .touXiangQv h3 {
+	font-size:24px;
+	font-weight:bold;
+	display:block;
+	margin-top:15px;
+	padding:0 15px;
+}
+#yonghu-kongjian-0 .touXiangQv h4 {
+	display:block;
+	padding:0 15px;
+	margin-top:5px;
+}
+#yonghu-kongjian-0 .main-ul {
+	position:relative;
+	list-style-type:none;
+	padding-left:234px;
+	width:600px;
+	min-height:255px;
+	border-bottom: 3px ridge lightgray;
+}
+#yonghu-kongjian-0 .main-li {
+	float:left;
+	width:100px;
+	height:100px;
+	margin:10px;
+}
+#yonghu-kongjian-0 .main-li .aList {
+	width:100px;
+	height:100px;
+	display:block;
+}
+#yonghu-kongjian-0 .aMain {
+	display:block;
+	text-decoration: none;
+	color:black;
+	height:100%;
+}
+#yonghu-kongjian-0 .main-li:hover, #yonghu-kongjian-0 .touXiangQv:hover {
+	cursor:pointer;
+	box-shadow: 3px 3px 7px #888888;
+}
+#yonghu-kongjian-0-wrapper {
+	padding:30px;
+	min-height:300px;
+}
+#yonghu-kongjian-0-wrapper-h1 {
+	font-size:27px;
+	font-weight:bold;
+	text-align:center;
+	margin-top:161px;
+	margin-bottom:30px;
+}
+
 /*yonghu-kapian-0*/
 #yonghu-kapian-0 {
 	position:relative;
@@ -754,80 +877,6 @@ page-jianYiFanKui
 }
 
 /*
-page-yonghu-kongjian-0
-*/
-#yonghu-kongjian-0 {
-	
-}
-#yonghu-kongjian-0 .touXiangQv {
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:234px;
-	height:100%;
-	border-right: 3px ridge lightgray;
-	margin:0;
-	text-align:left;
-}
-#yonghu-kongjian-0 .touXiang {
-	width:180px;
-	height:180px;
-	margin:0 auto;
-	display:block;
-}
-#yonghu-kongjian-0 .touXiangQv h3 {
-	font-size:24px;
-	font-weight:bold;
-	display:block;
-	margin-top:15px;
-	padding:0 15px;
-}
-#yonghu-kongjian-0 .touXiangQv h4 {
-	display:block;
-	padding:0 15px;
-	margin-top:5px;
-}
-#yonghu-kongjian-0 .main-ul {
-	position:relative;
-	list-style-type:none;
-	padding-left:234px;
-	width:600px;
-	min-height:255px;
-	border-bottom: 3px ridge lightgray;
-}
-#yonghu-kongjian-0 .main-li {
-	float:left;
-	width:100px;
-	height:100px;
-	margin:10px;
-}
-#yonghu-kongjian-0 .main-li .aList {
-	width:100px;
-	height:100px;
-	display:block;
-}
-#yonghu-kongjian-0 .aMain {
-	display:block;
-	text-decoration: none;
-	color:black;
-	height:100%;
-}
-#yonghu-kongjian-0 .main-li:hover, #yonghu-kongjian-0 .touXiangQv:hover {
-	cursor:pointer;
-	box-shadow: 3px 3px 7px #888888;
-}
-#yonghu-kongjian-0-wrapper {
-	padding:30px;
-	min-height:300px;
-}
-#yonghu-kongjian-0-wrapper .main-h1 {
-	font-size:70px;
-	font-weight:bold;
-	text-align:center;
-	margin-top:181px;
-}
-
-/*
 page-zhuYe
 */
 #zhuYe {
@@ -841,16 +890,19 @@ page-geRenKongJian
 	
 }
 
-/*--------------------------------------------------------------------------------*/
-
-/*shuoShuo*/
-#shuoShuo {
-	position:relative;
-	width:100%;
-	height:150px;
-	padding:30px;
-	border-bottom:1px dashed lightgray;
+#helper-0 {
+	position:fixed;
+	left:0;
+	top:0;
+	width:300px;
+	height:100px;
+	line-height:100px;
+	text-align:center;
+	font-size:16px;
+	background-color:white;
+	border:7px solid black;
 }
+
 .test {
 		transform:rotateY(1deg);
 	-webkit-transform:rotateY(1deg); /* Safari and Chrome */

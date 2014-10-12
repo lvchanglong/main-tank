@@ -55,10 +55,10 @@
 		<div class="right borderBox" >
 			<asset:image src="${ yongHuInstance.touXiang }"/>
 			<div class="dengji">
-				${ yongHuInstance.zhanDouLi }&nbsp;级
+				1&nbsp;级
 			</div>
 			<div class="shuoshuo borderBox">
-				${ yongHuInstance.shuoShuo }
+				暂无
 			</div>
 		</div>
 			

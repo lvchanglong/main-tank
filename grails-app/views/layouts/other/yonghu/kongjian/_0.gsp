@@ -1,11 +1,11 @@
 <div id="yonghu-kongjian-0">
 	<ul class="main-ul clearfix">
 		<li class="touXiangQv borderBox">
-			<a href="javascript:void(0);" class="aMain">
+			<g:link uri="/kongjian/${ yongHuInstance.zhangHao }" class="aMain">
 				<asset:image src="${ yongHuInstance.touXiang }" class="touXiang"/>
 				<h3>${ yongHuInstance.xingMing }</h3>
 				<h4>${ yongHuInstance.zhangHao }</h4>
-			</a>
+			</g:link>
 		</li>
 		<li class="main-li">
 			<g:remoteLink controller="x520" action="test" update="yonghu-kongjian-0-wrapper" id="${ yongHuInstance.id }" class="aList">
@@ -55,6 +55,14 @@
 	</ul>
 	
 	<div id="yonghu-kongjian-0-wrapper">
-		<h1 class="main-h1">强者不需要等待机遇</h1>
+		<h1 id="yonghu-kongjian-0-wrapper-h1">强者不需要等待机遇</h1>
+		<g:render template="/layouts/plugin/kaTong" />
 	</div>
 </div>
+
+<script type="text/javascript">
+	var source = new EventSource("${ createLink(controller:"tuiSong", action:"jinQiGongGao") }");
+	source.onmessage = function(event) {
+		jQuery("#yonghu-kongjian-0-wrapper-h1").html(event.data);//近期公告
+	};
+</script>

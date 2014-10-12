@@ -49,7 +49,14 @@
 			<section id="main-helper">
 				<g:pageProperty name="page.ex-helper" default="${ render(template:"/layouts/helper/" + ChangLiang.HELPER_INDEX) }"/>
 			</section>
+			
 		</section>
+
+		<%--等待--%>
+		<div id="spinner" style="display:none;">
+			<asset:image src="WangLuo/SuCai/奔跑.png"/>
+			<div class="tiShi">处理中...</div>
+		</div>
 		
 		<noscript>不支持 JavaScript</noscript>
 	</body>
