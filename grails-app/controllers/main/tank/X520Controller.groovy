@@ -32,7 +32,7 @@ class X520Controller {
 	 * @param yongHuInstance
 	 */
 	def test(YongHu yongHuInstance) {
-		render(template:"/layouts/other/yonghu/kapian/0", model:[yongHuInstance: yongHuInstance])
+		render(template:"/layouts/other/yonghu/ziliao/1", model:[yongHuInstance: yongHuInstance])
 	}
 	
 	/**

@@ -730,6 +730,88 @@ page-jianYiFanKui
 	font-size:16px;
 }
 
+/*yonghu-ziliao-0*/
+#yonghu-ziliao-0 {
+	position:relative;
+	width:100%;
+	padding:90px 50px 90px 50px;
+}
+#yonghu-ziliao-0 .main {
+	border:7px solid black;
+	box-shadow: 0px 3px 7px #888888;
+}
+#yonghu-ziliao-0 .right {
+	position:absolute;
+	right:0;
+	top:0;
+	width:370px;
+	height:520px;
+	margin-left:auto;
+	background-image:url("WangLuo/TouXiang/kongjian/卡牌背景.png");
+	background-repeat:no-repeat;
+	background-size:370px 520px;
+	background-position:0 0;
+}
+#yonghu-ziliao-0 .right img {
+	display:block;
+	width:180px;
+	height:180px;
+	margin:0 auto 0 auto;
+	position:relative;
+	top:100px;
+	left:0;
+}
+#yonghu-ziliao-0 .right .dengji {
+	position:absolute;
+	left:132px;
+	top:60px;
+	width:170px;
+	color:black;
+	font-size:16px;
+	text-align:right;
+}
+#yonghu-ziliao-0 .right .shuoshuo {
+	position:absolute;
+	left:80px;
+	top:290px;
+	color:black;
+	font-size:16px;
+	text-align:justify;
+	border-top:5px solid black;
+	width:219px;
+	height:160px;
+	padding:15px 15px 0 15px;
+	line-height:27px;
+}
+#yonghu-ziliao-0 .left {
+	position:relative;
+	height:520px;
+	margin-right:370px;
+	padding:50px;
+}
+#yonghu-ziliao-0 .left ul {
+	list-style-type:none;
+}
+#yonghu-ziliao-0 .left ul li {
+	line-height:33px;
+}
+#yonghu-ziliao-0 .ignore {
+	color:lightgray;
+}
+
+#helper-0 {
+	position:fixed;
+	left:0;
+	top:0;
+	width:300px;
+	height:100px;
+	line-height:100px;
+	text-align:center;
+	font-size:16px;
+	background-color:white;
+	border:7px solid black;
+}
+
 /*--------------------------------------------------------------------------------*/
 
 /*
@@ -807,73 +889,39 @@ page-yonghu-kongjian-0
 	margin-bottom:30px;
 }
 
-/*yonghu-kapian-0*/
-#yonghu-kapian-0 {
+/*yonghu-ziliao-1*/
+#yonghu-ziliao-1 {
 	position:relative;
 	width:100%;
-	padding:90px 50px 90px 50px;
+	margin-top:30px;
 }
-#yonghu-kapian-0 .main {
-	border:7px solid black;
-	box-shadow: 0px 3px 7px #888888;
-}
-#yonghu-kapian-0 .right {
+#yonghu-ziliao-1 img {
+	width:256px;
+	height:256px;
 	position:absolute;
 	right:0;
 	top:0;
-	width:370px;
-	height:520px;
-	margin-left:auto;
-	background-image:url("WangLuo/TouXiang/kongjian/卡牌背景.png");
-	background-repeat:no-repeat;
-	background-size:370px 520px;
-	background-position:0 0;
 }
-#yonghu-kapian-0 .right img {
-	display:block;
-	width:180px;
-	height:180px;
-	margin:0 auto 0 auto;
-	position:relative;
-	top:100px;
-	left:0;
-}
-#yonghu-kapian-0 .right .dengji {
-	position:absolute;
-	left:132px;
-	top:60px;
-	width:170px;
-	color:black;
-	font-size:16px;
-	text-align:right;
-}
-#yonghu-kapian-0 .right .shuoshuo {
-	position:absolute;
-	left:80px;
-	top:290px;
-	color:black;
-	font-size:16px;
-	text-align:justify;
-	border-top:5px solid black;
-	width:219px;
-	height:160px;
-	padding:15px 15px 0 15px;
-	line-height:27px;
-}
-#yonghu-kapian-0 .left {
-	position:relative;
-	height:520px;
-	margin-right:370px;
-	padding:50px;
-}
-#yonghu-kapian-0 .left ul {
+#yonghu-ziliao-1 ul {
 	list-style-type:none;
+	margin-right:256px;
+	min-height:256px;
+	padding:15px;
+	font-size:15px;
 }
-#yonghu-kapian-0 .left ul li {
-	line-height:33px;
+#yonghu-ziliao-1 li {
+	line-height:30px;
 }
-#yonghu-kapian-0 .ignore {
+#yonghu-ziliao-1 li .ignore {
+	line-height:30px;
 	color:lightgray;
+}
+#yonghu-ziliao-1 h1 {
+	font-size:70px;
+	font-weight:bold;
+	text-align:center;
+	margin-bottom:50px;
+	margin-top:0px;
 }
 
 /*
@@ -890,25 +938,17 @@ page-geRenKongJian
 	
 }
 
-#helper-0 {
-	position:fixed;
-	left:0;
-	top:0;
-	width:300px;
-	height:100px;
-	line-height:100px;
-	text-align:center;
-	font-size:16px;
-	background-color:white;
-	border:7px solid black;
-}
-
 .test {
-		transform:rotateY(1deg);
+	transform:rotateY(1deg);
 	-webkit-transform:rotateY(1deg); /* Safari and Chrome */
 	-moz-transform:rotateY(1deg); /* Firefox */
 	
 	transition: transform 2s;
 	-moz-transition: -moz-transform 2s;	/* Firefox 4 */
 	-webkit-transition: -webkit-transform 2s;	/* Safari 和 Chrome */
+	
+	
+	background-repeat:no-repeat;
+	background-size:256px 256px;
+	background-position:0 0;
 }

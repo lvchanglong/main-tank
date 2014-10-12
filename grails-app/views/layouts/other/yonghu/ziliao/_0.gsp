@@ -1,4 +1,4 @@
-<div id="yonghu-kapian-0" class="borderBox">
+<div id="yonghu-ziliao-0" class="borderBox">
 	<div class="main wrapper borderBox">
 	
 		<div class="left borderBox">
