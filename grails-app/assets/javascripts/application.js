@@ -19,21 +19,23 @@ if (typeof jQuery !== 'undefined') {
 	})(jQuery);
 }
 
+//远程分页
+function remotePagination(wrapperClass) {
+	jQuery(".pagination a").click(function() {
+		jQuery(this).parents(wrapperClass + ":eq(0)").load(this.href);
+		return false;
+	});
+}
+
 //加入收藏
 function shouCang(sURL, sTitle)
 {
-  try
-  {
+  try {
       window.external.addFavorite(sURL, sTitle);
-  }
-  catch (e)
-  {
-      try
-      {
+  } catch(e) {
+      try {
           window.sidebar.addPanel(sTitle, sURL, "");
-      }
-      catch (e)
-      {
+      } catch (e) {
           alert("加入收藏失败，请使用Ctrl+D进行添加");
       }
   }

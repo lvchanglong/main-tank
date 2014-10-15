@@ -7,10 +7,11 @@
 /* FONT STACK */
 body,
 input, select, textarea {
-	font-family: "黑体", "宋体", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "黑体", "微软雅黑", "宋体", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-size: 14px;
 	color:black;
 	letter-spacing:1px;
+	line-height:1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -483,10 +484,10 @@ th:hover, tr:hover {
 	margin: 0;
 	padding: 0.3em 0.2em;
 	text-align: center;
-	   -moz-box-shadow: 0 0 3px 1px #AAAAAA;
-	-webkit-box-shadow: 0 0 3px 1px #AAAAAA;
-	        box-shadow: 0 0 3px 1px #AAAAAA;
-	background-color: #EFEFEF;
+	1   -moz-box-shadow: 0 0 3px 1px #AAAAAA;
+	1-webkit-box-shadow: 0 0 3px 1px #AAAAAA;
+	1        box-shadow: 0 0 3px 1px #AAAAAA;
+	1background-color: #EFEFEF;
 }
 
 .pagination a,

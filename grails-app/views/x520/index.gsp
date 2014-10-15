@@ -12,14 +12,14 @@
 			
 			<g:render template="/layouts/transition/${ ChangLiang.TRANSITION_INDEX }" />
 			
-			<div style="position:absolute;right:73px;top:30px;min-width:201px;">
+			<div style="position:absolute;left:30px;top:38px;min-width:201px;">
 				<g:render template="/layouts/plugin/yongHuIP" />
 			</div>
-
-			<g:each in="${ yongHuInstanceList }" status="i" var="yongHuInstance">
-				<g:render template="/layouts/other/yonghu/ziliao/1" model="[yongHuInstance:yongHuInstance]" />
-			</g:each>
-
+			
+			<div style="margin-top:30px;">
+				<h2>网站更新日志</h2>
+				<g:applyLayout controller="gengXin" action="index" params="[offset:params.offset, max:params.max, gengXinInstanceList:gengXinInstanceList,gengXinInstanceCount:gengXinInstanceCount]" />
+			</div>
 		</div>
 		
 		<content tag="header">

@@ -13,7 +13,7 @@ class X520Controller {
 	
 	def index(Integer max) {
 		params.max = Math.min(max ?: 10, 100)
-		respond YongHu.list(params), model:[yongHuInstanceCount:YongHu.count()]
+		respond GengXin.list(params), model:[gengXinInstanceCount:GengXin.count()]
 	}
 	
 	/**

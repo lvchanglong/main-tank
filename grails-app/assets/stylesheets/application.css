@@ -360,7 +360,7 @@ logo-1
 #logo-1 ul {
 	list-style-type:none;
 	position:relative;
-	width:40%;
+	width:50%;
 	height:100%;
 	padding:1px 0 0 0;
 	margin-left:auto;
@@ -431,7 +431,7 @@ transition-1
 }
 #transition-1 .xiongYing {
 	position:absolute;
-	left:276px;
+	left:300px;
 	top:-133px;
 }
 
@@ -812,7 +812,7 @@ page-jianYiFanKui
 	border:7px solid black;
 }
 
-/*--------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------*/
 
 /*
 page-yonghu-kongjian-0
@@ -951,4 +951,17 @@ page-geRenKongJian
 	background-repeat:no-repeat;
 	background-size:256px 256px;
 	background-position:0 0;
+}
+
+/*
+section-gengXin-index
+*/
+#gengXin-index ul {
+	list-style-type:none;
+}
+#gengXin-index ul li {
+	padding:15px 0;
+	border-bottom: 1px solid lightgray;
+	font-size:16px;
+	margin-bottom:15px;
 }

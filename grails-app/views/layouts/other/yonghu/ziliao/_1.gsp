@@ -7,9 +7,9 @@
 		<ul class="clearfix borderBox">
 			<li>
 				<span class="ignore">姓名：</span>
-				<strong>
+				<span>
 					${ yongHuInstance.xingMing }
-				</strong>
+				</span>
 			</li>
 			<li>
 				<span class="ignore">性别：</span>

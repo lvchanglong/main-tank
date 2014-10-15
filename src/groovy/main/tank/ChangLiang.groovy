@@ -40,7 +40,7 @@ class ChangLiang {
 	/**
 	 * 网站口号
 	 */
-	static String WANG_ZHAN_KOU_HAO = "一切都是资源，一切都有用处"
+	static String WANG_ZHAN_KOU_HAO = "一切都是资源，一切都在被用，一切都有价值"
 	
 	/**
 	 * 网站目标
