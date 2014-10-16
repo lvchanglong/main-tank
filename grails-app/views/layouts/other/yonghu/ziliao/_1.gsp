@@ -6,44 +6,44 @@
 	
 		<ul class="clearfix borderBox">
 			<li>
-				<span class="ignore">姓名：</span>
+				<strong class="ignore">姓名：</strong>
 				<span>
 					${ yongHuInstance.xingMing }
 				</span>
 			</li>
 			<li>
-				<span class="ignore">性别：</span>
+				<strong class="ignore">性别：</strong>
 				<span>
 					${ yongHuInstance.xingBie }
 				</span>
 			</li>
 			<li>
-				<span class="ignore">生日：</span>
+				<strong class="ignore">生日：</strong>
 				<span>
 					${ yongHuInstance.shengRi }
 				</span>
 			</li>
 			<li>
-				<span class="ignore">所在：</span>
+				<strong class="ignore">所在：</strong>
 				<span>
 					${ yongHuInstance.suoZai }
 				</span>
 			</li>
 			<li>
-				<span class="ignore">手机：</span>
+				<strong class="ignore">手机：</strong>
 				<span>
 					${ yongHuInstance.shouJi }
 				</span>
 			</li>
 			<li>
-				<span class="ignore">邮箱：</span>
+				<strong class="ignore">邮箱：</strong>
 				<span>
 					${ yongHuInstance.youXiang }
 				</span>
 			</li>
 			<li>
 				<div style="margin-top:5px;">
-					<span class="ignore">简介：</span>
+					<strong class="ignore">简介：</strong>
 					<span>
 						${ yongHuInstance.jianJie }
 					</span>

@@ -80,6 +80,7 @@ function Motion(id, imageSrc, w, h, maxColumn, fromRow, toRow, ms, callFun, call
 			var ctx = inst.ctx;
 			var image = inst.image;
 			
+			ctx.fillStyle="#ffffff";
 			ctx.fillRect(0, 0, w, h);
 			ctx.drawImage(image, x, y, w, h, 0, 0, w, h);
 
@@ -109,7 +110,6 @@ function Motion(id, imageSrc, w, h, maxColumn, fromRow, toRow, ms, callFun, call
 	canvas.width = w;
     canvas.height = h;
     this.ctx = canvas.getContext("2d");//上下文
-	this.ctx.fillStyle="ffffff";
 	
 	this.image = new Image();//图片
 	this.image.src = imageSrc;

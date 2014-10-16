@@ -9,6 +9,11 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		
+		<meta name="Keywords" content="主坦克,吕常龙,lvchanglong" />
+		<meta name="Description" content="一切都是资源，一切都在被用，一切都有价值" />
+		<meta name="Author" Content="吕常龙">
+		
 		<title><g:layoutTitle default="主坦克"/></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="${assetPath(src: 'favicon.ico')}" type="image/x-icon">
