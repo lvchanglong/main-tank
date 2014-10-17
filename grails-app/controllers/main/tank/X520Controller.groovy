@@ -2,6 +2,8 @@ package main.tank
 
 import java.text.DateFormat
 
+import javax.servlet.http.HttpSession;
+
 /**
  * 系统前台
  * @author lvchanglong
@@ -17,12 +19,36 @@ class X520Controller {
 	}
 	
 	/**
+	 * 登录
+	 * @param zhangHao 账号
+	 * @param miMa 密码
+	 */
+	def dengLu(String zhangHao, String miMa) {
+		def yonghu = YongHu.findByZhangHaoAndMiMa(zhangHao, miMa.encodeAsMD5())
+		if (yonghu) {
+			session.uid = yonghu.id
+			render status: ZhuangTai.ZHENG_CHANG
+		} else {
+			render status: ZhuangTai.WU_FA_FANG_WEN
+		}
+	}
+	
+	/**
+	 * 用户注销
+	 */
+	def zhuXiao() {
+		session.invalidate()
+		render status: ZhuangTai.ZHENG_CHANG
+	}
+	
+	/**
 	 * 个人空间
 	 */
 	def geRenKongJian(String zhangHao) {
 		def yongHuInstance = YongHu.findByZhangHao(zhangHao)
 		if (!yongHuInstance) {
 			render status: ZhuangTai.WEI_ZHAO_DAO
+			return
 		}
 		[yongHuInstance: yongHuInstance]
 	}

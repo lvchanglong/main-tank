@@ -166,8 +166,8 @@ header
 	top: 0;
 	left: 0;
 	width:100%;
-	height: 38px;
-	line-height:38px;
+	height: 40px;
+	line-height:40px;
 	color:white;
 	1background: url("WangLuo/QiTa/header-bg-nav.png") 0px -38px repeat-x;
 	background-color:black;
@@ -175,22 +175,72 @@ header
 	box-shadow: 0 8px 9px #888888;
 }
 #header-0-timer {
+	position:absolute;
+	top:0;
+	right:0;
 	display:inline-block;
 	height:100%;
 }
 #header-0 nav ul {
-	position:absolute;
-	top:0;
-	right:0;
 	list-style-type:none;
 }
 #header-0 nav li {
 	float:left;
 	width:100px;
-	text-align:right;
+	text-align:center;
+	position:relative;
+	height:100%;
 }
 #header-0 nav a {
-	color:white;
+	color:white;	
+}
+#header-0 .wrapperBox:hover {
+	background-color:white;
+	color:black;
+}
+#header-0 .wrapperBox .link {
+	display:block;
+	border-left:1px solid black;
+	border-right:1px solid black;
+	1text-decoration:underline;
+	1cursor:pointer;
+}
+#header-0 .hiddenBox {
+	position:absolute;
+	left:0px;
+	bottom:-300px;
+	width:300px;
+	height:300px;
+	border-bottom:1px solid black;
+	border-left:1px solid black;
+	border-right:1px solid black;
+	z-index:999;
+	background-color:white;
+	padding:30px;
+	text-align:left;
+}
+#dengLu-hidden form {
+	position:relative;
+	height:100%;
+	width:100%;
+}
+#dengLu-hidden [type=text]{
+	width:100%;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	border:1px solid black;
+	margin-top:10px;
+}
+#dengLu-hidden [type=submit]{
+	cursor:pointer;
+	padding:5px 15px;
+	border:1px solid black;
+	margin-top:15px;
+}
+#dengLu-hidden [type=submit]:hover{
+	color: black;
+	font-weight:bold;
 }
 
 /*

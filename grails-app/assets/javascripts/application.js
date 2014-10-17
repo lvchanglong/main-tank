@@ -19,6 +19,30 @@ if (typeof jQuery !== 'undefined') {
 	})(jQuery);
 }
 
+//浮动显示
+function responseToHover(wrapper, target) {
+	jQuery(wrapper).hover(
+		function () {
+			jQuery(target).show();
+		},
+		function () {
+			jQuery(target).hide();
+		}
+	);
+}
+
+//错误处理
+function failure(XMLHttpRequest,textStatus,errorThrown, selector) {
+	switch(errorThrown) {
+		case "Not Found":
+			jQuery(selector).html("资源未找到");
+			break;
+		case "Not Acceptable":
+			jQuery(selector).html("请求未接受");
+			break;
+	}
+}
+
 //远程分页
 function remotePagination(wrapperClass) {
 	jQuery(".pagination a").click(function() {
