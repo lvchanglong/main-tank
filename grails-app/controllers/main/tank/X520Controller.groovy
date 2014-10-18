@@ -19,29 +19,6 @@ class X520Controller {
 	}
 	
 	/**
-	 * 登录
-	 * @param zhangHao 账号
-	 * @param miMa 密码
-	 */
-	def dengLu(String zhangHao, String miMa) {
-		def yonghu = YongHu.findByZhangHaoAndMiMa(zhangHao, miMa.encodeAsMD5())
-		if (yonghu) {
-			session.uid = yonghu.id
-			render status: ZhuangTai.ZHENG_CHANG
-		} else {
-			render status: ZhuangTai.WU_FA_FANG_WEN
-		}
-	}
-	
-	/**
-	 * 用户注销
-	 */
-	def zhuXiao() {
-		session.invalidate()
-		render status: ZhuangTai.ZHENG_CHANG
-	}
-	
-	/**
 	 * 个人空间
 	 */
 	def geRenKongJian(String zhangHao) {
@@ -59,6 +36,45 @@ class X520Controller {
 	 */
 	def test(YongHu yongHuInstance) {
 		render(template:"/layouts/other/yonghu/ziliao/1", model:[yongHuInstance: yongHuInstance])
+	}
+	
+	/**
+	 * 修改密码
+	 */
+	def miMaXiuGai(YongHu yongHuInstance, String yuanMiMa, String xinMiMa) {
+		if (yongHuInstance) {
+			if (yongHuInstance.miMa == yuanMiMa.encodeAsMD5()) {//原始密码验证
+				yongHuInstance.miMa = xinMiMa //更新密码
+				yongHuInstance.save(flush: true)
+				println yongHuInstance.errors
+				render status: ZhuangTai.ZHENG_CHANG
+				return
+			}
+		}
+		render status: ZhuangTai.WU_FA_FANG_WEN
+	}
+	
+	/**
+	 * 用户登录
+	 * @param zhangHao 账号
+	 * @param miMa 密码
+	 */
+	def yongHuDengLu(String zhangHao, String miMa) {
+		def yonghu = YongHu.findByZhangHaoAndMiMa(zhangHao, miMa.encodeAsMD5())
+		if (yonghu) {
+			session.uid = yonghu.id
+			render status: ZhuangTai.ZHENG_CHANG
+		} else {
+			render status: ZhuangTai.WU_FA_FANG_WEN
+		}
+	}
+	
+	/**
+	 * 用户注销
+	 */
+	def yongHuZhuXiao() {
+		session.invalidate()
+		render status: ZhuangTai.ZHENG_CHANG
 	}
 	
 	/**

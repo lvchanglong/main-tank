@@ -23,12 +23,21 @@ if (typeof jQuery !== 'undefined') {
 function responseToHover(wrapper, target) {
 	jQuery(wrapper).hover(
 		function () {
-			jQuery(target).show();
+			jQuery(this).find(target).show();
 		},
 		function () {
-			jQuery(target).hide();
+			jQuery(this).find(target).hide();
 		}
 	);
+}
+
+//成功处理
+function success(data,textStatus, selector) {
+	switch(textStatus) {
+		case "success":
+			jQuery(selector).html("操作成功");
+			break;
+	}
 }
 
 //错误处理

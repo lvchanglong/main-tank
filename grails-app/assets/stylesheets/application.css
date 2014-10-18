@@ -219,26 +219,32 @@ header
 	padding:30px;
 	text-align:left;
 }
-#dengLu-hidden form {
+#header-0 .hiddenBox form {
 	position:relative;
 	height:100%;
 	width:100%;
 }
-#dengLu-hidden [type=text]{
+#header-0 .hiddenBox .xmessage {
+	margin-bottom:10px;
+	font-size: 1em;
+	line-height: 2;
+	1color: #006dba;
+}
+#header-0 .hiddenBox [type=text], #header-0 .hiddenBox [type=password]{
 	width:100%;
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
-	border:1px solid black;
+	border:1px solid lightgray;
 	margin-top:10px;
+	text-align:left;
 }
-#dengLu-hidden [type=submit]{
+#header-0 .hiddenBox [type=submit]{
 	cursor:pointer;
 	padding:5px 15px;
-	border:1px solid black;
 	margin-top:15px;
 }
-#dengLu-hidden [type=submit]:hover{
+#header-0 .hiddenBox [type=submit]:hover{
 	color: black;
 	font-weight:bold;
 }
@@ -977,6 +983,11 @@ page-geRenKongJian
 	
 	
 	text-shadow: 0px 1px 1px #555;
+	
+		border: 1px solid #b2d1ff;
+	   -moz-box-shadow: 0 0 0.25em #b2d1ff;
+	-webkit-box-shadow: 0 0 0.25em #b2d1ff;
+	        box-shadow: 0 0 0.25em #b2d1ff;
 }
 
 /*
