@@ -19,19 +19,110 @@ if (typeof jQuery !== 'undefined') {
 	})(jQuery);
 }
 
-//浮动显示
+//文件上传
+function wenJianShangChuan(files, url, path) {
+
+	try {//修复谷歌浏览器sendAsBinary()异常
+	  if (typeof XMLHttpRequest.prototype.sendAsBinary == 'undefined') {
+	    XMLHttpRequest.prototype.sendAsBinary = function(text){
+	      var data = new ArrayBuffer(text.length);
+	      var ui8a = new Uint8Array(data, 0);
+	      for (var i = 0; i < text.length; i++) ui8a[i] = (text.charCodeAt(i) & 0xff);
+	      this.send(ui8a);
+	    }
+	  }
+	} catch (e) {}
+		
+	for(var i = 0; i < files.length; i++) {
+        var file = files[i];//当前文件
+        var reader = new FileReader();
+
+        reader.onloadstart = function() {
+			console.log("读取开始:" + file.size);
+		}
+		
+		reader.onprogress = function(p) {
+			console.log("读取进行中:" + p.loaded);
+		}
+		
+		reader.onload = function() {
+			console.log("读取完成"); 
+		}
+		
+		reader.onloadend = function(e) {
+			if (reader.error) {//失败
+				console.log(reader.error);
+			} else {//成功
+				var xhr = new XMLHttpRequest();
+				xhr.open("POST", url + "?fileName=" + file.name + "&path=" + path);
+          		xhr.overrideMimeType("application/octet-stream");
+				xhr.sendAsBinary(this.result);
+				
+				xhr.onreadystatechange = function() {
+					if (xhr.readyState == 4) {
+						if (xhr.status == 200) {
+							console.log("上传成功");
+							console.log("response: " + xhr.responseText);
+						}
+					}
+				}
+			}
+		}
+		reader.readAsBinaryString(file);
+    }
+	//console.log(files);
+	
+}
+
+//图片查看
+function tuPianChaKan(files, selector) {
+	
+	for(var i = 0; i < files.length; i++) {
+         var tuPian = files[i];//图片
+         var reader = new FileReader();
+         reader.readAsDataURL(tuPian);
+         reader.onload=function(e){
+             //console.log(e.target.result);
+             jQuery(selector).html("<img src='"+e.target.result+"' width='100%' height='100%' alt=''/>");
+         };
+    }
+    
+    //console.log(files);
+}
+
+//浮动响应
 function responseToHover(wrapper, target) {
 	jQuery(wrapper).hover(
 		function () {
 			jQuery(this).find(target).show();
 		},
 		function () {
-			jQuery(this).find(target).hide();
+			//jQuery(this).find(target).hide();
 		}
 	);
 }
 
 //成功处理
+function chengGongChuLi(data,textStatus,key,selector) {
+	switch(textStatus) {
+		case "success":
+			jQuery("#" + key).find(selector).html("操作成功");
+			break;
+	}
+}
+
+//错误处理
+function shiBaiChuLi(XMLHttpRequest,textStatus,errorThrown,key,selector) {
+	switch(errorThrown) {
+		case "Not Found":
+			jQuery("#" + key).find(selector).html("资源未找到");
+			break;
+		case "Not Acceptable":
+			jQuery("#" + key).find(selector).html("请求未接受");
+			break;
+	}
+}
+
 function success(data,textStatus, selector) {
 	switch(textStatus) {
 		case "success":
@@ -40,8 +131,7 @@ function success(data,textStatus, selector) {
 	}
 }
 
-//错误处理
-function failure(XMLHttpRequest,textStatus,errorThrown, selector) {
+function failure(XMLHttpRequest,textStatus,errorThrown,selector) {
 	switch(errorThrown) {
 		case "Not Found":
 			jQuery(selector).html("资源未找到");

@@ -73,7 +73,7 @@ class YongHu {
 	}
 	
 	def beforeUpdate() {
-		this.miMa = this.miMa.encodeAsMD5()
+		
 	}
 	
 	/**

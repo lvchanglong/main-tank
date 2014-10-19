@@ -198,6 +198,10 @@ header
 	background-color:white;
 	color:black;
 }
+#header-0 .WhiteAndBlack {
+	background-color:white;
+	color:black;
+}
 #header-0 .wrapperBox .link {
 	display:block;
 	border-left:1px solid black;
@@ -207,17 +211,40 @@ header
 }
 #header-0 .hiddenBox {
 	position:absolute;
-	left:0px;
-	bottom:-300px;
-	width:300px;
-	height:300px;
 	border-bottom:1px solid black;
 	border-left:1px solid black;
 	border-right:1px solid black;
 	z-index:999;
-	background-color:white;
-	padding:30px;
 	text-align:left;
+	background-color:white;
+}
+#header-0 .normalBox {
+	left:0px;
+	bottom:-300px;
+	width:400px;
+	height:300px;
+	padding:30px 50px;
+}
+#header-0 .largeBox {
+	left:0px;
+	bottom:-500px;
+	width:500px;
+	height:500px;
+	padding:30px 50px;
+}
+#header-0 .customBox {
+	left:0px;
+	bottom:-500px;
+	width:700px;
+	height:500px;
+	padding:30px 350px 30px 50px;
+}
+#header-0 .touXiangKongJian {
+	position:absolute;
+	right:50px;
+	top:30px;
+	width:256px;
+	height:auto;
 }
 #header-0 .hiddenBox form {
 	position:relative;
@@ -230,14 +257,18 @@ header
 	line-height: 2;
 	1color: #006dba;
 }
-#header-0 .hiddenBox [type=text], #header-0 .hiddenBox [type=password]{
+#header-0 .hiddenBox [type=text], #header-0 .hiddenBox [type=password], #header-0 .hiddenBox [type=email]{
 	width:100%;
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
 	border:1px solid lightgray;
-	margin-top:10px;
 	text-align:left;
+	margin-top:12px;
+	padding-left:10px;
+}
+#header-0 .hiddenBox select {
+	padding-left:10px;
 }
 #header-0 .hiddenBox [type=submit]{
 	cursor:pointer;
@@ -246,7 +277,47 @@ header
 }
 #header-0 .hiddenBox [type=submit]:hover{
 	color: black;
-	font-weight:bold;
+	   -moz-box-shadow: 0 0 1em #b2d1ff;
+	-webkit-box-shadow: 0 0 1em #b2d1ff;
+	        box-shadow: 0 0 1em #b2d1ff;
+}
+#header-0 .hiddenBox .touXiangKongJian form {
+	position:relative;
+}
+#header-0 .hiddenBox .touXiangKongJian [type=file] {
+	position:absolute;
+	left:0;
+	top:0;
+	width:256px;
+	height:40px;
+	padding:0;
+	margin:0;
+	opacity:0.0;
+	filter:Alpha(opacity=0);
+	z-index:999;
+	cursor:pointer;
+}
+#header-0 .hiddenBox .touXiangKongJian .preview, #header-0 .hiddenBox .touXiangKongJian .shangChuan {
+	display:block;
+	width:256px;
+	height:40px;
+	line-height:40px;
+	text-align:center;
+	padding:0;
+	margin:0 0 10px 0;
+	font-size: 1em;
+	color:black;
+	border: 1px solid #cccccc;
+}
+#header-0 .hiddenBox .touXiangKongJian .preview {
+	background-color: ghostwhite;
+}
+#header-0 .hiddenBox .touXiangKongJian .shangChuan {
+	background-color: ghostwhite;
+}
+#touXiangWrapper {
+	width:256px;
+	height:256px;
 }
 
 /*

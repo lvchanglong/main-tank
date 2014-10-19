@@ -1,5 +1,6 @@
 package main.tank
 
+import java.nio.CharBuffer
 import java.text.DateFormat
 
 import javax.servlet.http.HttpSession;
@@ -13,6 +14,11 @@ class X520Controller {
 
 	static defaultAction = "index" //默认方法
 	
+	/**
+	 * 网站首页
+	 * @param max
+	 * @return
+	 */
 	def index(Integer max) {
 		params.max = Math.min(max ?: 10, 100)
 		respond GengXin.list(params), model:[gengXinInstanceCount:GengXin.count()]
@@ -39,16 +45,43 @@ class X520Controller {
 	}
 	
 	/**
+	 * 头像上传
+	 */
+	def touXiangShangChuan(String fileName, String userID) {
+		YongHu.get(userID)
+		BufferedInputStream fileIn = new BufferedInputStream(request.getInputStream())
+		byte[] buf = new byte[1024]
+		
+		File file = ZiYuanGuanLi.getFile("web-app/space/${path}/${fileName}")
+		BufferedOutputStream fileOut = new BufferedOutputStream(new FileOutputStream(file))
+		while (true) {
+		   int bytesIn = fileIn.read(buf, 0, 1024)
+		   //System.out.println(bytesIn)
+		   if (bytesIn == -1) {
+			  break
+		   } else {
+			  fileOut.write(buf, 0, bytesIn)
+		   }
+		}
+		fileOut.flush()
+		fileOut.close()
+		
+		render file.getPath()
+	}
+	
+	/**
 	 * 修改密码
 	 */
-	def miMaXiuGai(YongHu yongHuInstance, String yuanMiMa, String xinMiMa) {
-		if (yongHuInstance) {
-			if (yongHuInstance.miMa == yuanMiMa.encodeAsMD5()) {//原始密码验证
-				yongHuInstance.miMa = xinMiMa //更新密码
-				yongHuInstance.save(flush: true)
-				println yongHuInstance.errors
-				render status: ZhuangTai.ZHENG_CHANG
-				return
+	def miMaXiuGai(YongHu yongHuInstance, String yuanMiMa, String xinMiMa, String queRenMiMa) {
+		if (xinMiMa == queRenMiMa) {//确认密码一致性
+			if (yongHuInstance) {
+				if (yongHuInstance.miMa == yuanMiMa.encodeAsMD5()) {//原始密码验证
+					yongHuInstance.miMa = xinMiMa.encodeAsMD5() //更新密码
+					yongHuInstance.save(flush: true)
+					//println yongHuInstance.errors
+					render status: ZhuangTai.ZHENG_CHANG
+					return
+				}
 			}
 		}
 		render status: ZhuangTai.WU_FA_FANG_WEN
