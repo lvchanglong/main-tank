@@ -932,12 +932,13 @@ page-yonghu-kongjian-0
 	height:180px;
 	margin:0 auto;
 	display:block;
+	padding-top:5px;
 }
 #yonghu-kongjian-0 .touXiangQv h3 {
 	font-size:32px;
 	font-weight:bold;
 	display:block;
-	margin-top:15px;
+	margin-top:8px;
 	padding:0 15px;
 }
 #yonghu-kongjian-0 .touXiangQv h4 {
