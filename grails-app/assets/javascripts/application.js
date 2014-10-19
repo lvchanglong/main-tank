@@ -97,7 +97,7 @@ function responseToHover(wrapper, target) {
 			jQuery(this).find(target).show();
 		},
 		function () {
-			//jQuery(this).find(target).hide();
+			jQuery(this).find(target).hide();
 		}
 	);
 }

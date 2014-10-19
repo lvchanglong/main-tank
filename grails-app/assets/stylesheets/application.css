@@ -30,6 +30,7 @@ globle
 	width:360px;
 	height:180px;
 	margin:auto;
+	z-index:1000;
 }
 #spinner .tiShi{
 	position:absolute;
@@ -264,11 +265,12 @@ header
 	        box-sizing: border-box;
 	border:1px solid lightgray;
 	text-align:left;
-	margin-top:12px;
+	margin-bottom:10px;
 	padding-left:10px;
 }
 #header-0 .hiddenBox select {
 	padding-left:10px;
+	margin-bottom: 10px;
 }
 #header-0 .hiddenBox [type=submit]{
 	cursor:pointer;
@@ -289,22 +291,21 @@ header
 	left:0;
 	top:0;
 	width:256px;
-	height:40px;
+	height:30px;
 	padding:0;
 	margin:0;
 	opacity:0.0;
 	filter:Alpha(opacity=0);
-	z-index:999;
 	cursor:pointer;
 }
 #header-0 .hiddenBox .touXiangKongJian .preview, #header-0 .hiddenBox .touXiangKongJian .shangChuan {
 	display:block;
 	width:256px;
-	height:40px;
-	line-height:40px;
+	height:30px;
+	line-height:30px;
 	text-align:center;
 	padding:0;
-	margin:0 0 10px 0;
+	margin:0 0 11px 0;
 	font-size: 1em;
 	color:black;
 	border: 1px solid #cccccc;
@@ -318,6 +319,7 @@ header
 #touXiangWrapper {
 	width:256px;
 	height:256px;
+	margin-bottom:10px;
 }
 
 /*

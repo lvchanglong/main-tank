@@ -26,7 +26,7 @@
 					<li class="wrapperBox">
 						<span class="link">${ dangQianYongHu.xingMing }</span>
 						<div class="hiddenBox customBox borderBox" style="display:none;">
-							<g:formRemote name="xinXiXiuGai" url="[controller:'yongHu', action:'update', id:dangQianYongHu.id]" onSuccess="chengGongChuLi(data,textStatus,'xinXiXiuGai','.message-content')" onFailure="shiBaiChuLi(XMLHttpRequest,textStatus,errorThrown,'xinXiXiuGai','.message-content')" >
+							<g:formRemote name="xinXiXiuGai" url="[controller:'yongHuRestful', action:'update', id:dangQianYongHu.id]" onSuccess="chengGongChuLi(data,textStatus,'xinXiXiuGai','.message-content')" onFailure="shiBaiChuLi(XMLHttpRequest,textStatus,errorThrown,'xinXiXiuGai','.message-content')" >
 								<div class="xmessage borderBox">
 									(￣﹃￣ )<span class="separator">/</span><span class="message-content">信息修改</span>
 								</div>
@@ -48,12 +48,12 @@
 								<div id="touXiangWrapper">
 									<asset:image src="${ dangQianYongHu.touXiang }" width="256px;" height="256px"/>
 								</div>
-								<g:uploadForm controller="x520" action="touXiangShangChuan" onsubmit="touXiangShangChuan(jQuery(this).find([type=file])[0].files, '${ createLink(controller:"x520", action:"touXiangShangChuan") }', '${ dangQianYongHu.id }');return false">									
-									<input type="file" name="file" onchange="tuPianChaKan(this.files, '#touXiangWrapper');" multiple="false" class="borderBox"/>
-									<div class="preview borderBox">
-										文件预览
+								<g:uploadForm controller="x520" action="touXiangShangChuan" onsubmit="touXiangShangChuan(jQuery(this).find([type=file])[0].files, '${ createLink(controller:"x520", action:"touXiangShangChuan") }', '${ dangQianYongHu.id }', '#kaiShiShangChuan');return false">									
+									<input type="file" name="file" onchange="touXiangChaKan(this.files, '#touXiangWrapper', '#tuPianXuanZe', '#kaiShiShangChuan');" multiple="false" class="borderBox"/>
+									<div id="tuPianXuanZe"class="preview borderBox">
+										选择图片
 									</div>
-									<g:submitButton name="shangChuan" value="文件上传" class="shangChuan"/>
+									<g:submitButton id="kaiShiShangChuan" name="shangChuan" value="开始上传" class="shangChuan"/>
 								</g:uploadForm>
 							</div>
 						</div>
@@ -109,8 +109,9 @@
 	};
 
 	responseToHover(".wrapperBox", ".hiddenBox");//浮动响应
-	
-	function chengGongDengLu(data,textStatus,key,selector) {//登录成功
+
+	//登录成功
+	function chengGongDengLu(data,textStatus,key,selector) {
 		switch(textStatus) {
 			case "success":
 				jQuery("#" + key).find(selector).html("操作成功，初始化...");
@@ -119,9 +120,41 @@
 		}
 	}
 
-	//文件上传
-	function touXiangShangChuan(files, url, userID) {
+	//头像预览
+	function touXiangChaKan(files, wrapperSelector, xuanZeSelector, shangChuanSelector) {
 
+		$xuanZe = jQuery(xuanZeSelector);//上传按钮
+		
+		if (files.length < 1) {
+			$xuanZe.html("选择图片");
+			return false;
+		}
+		
+		for(var i = 0; i < files.length; i++) {
+	         var tuPian = files[i];//图片
+	         var reader = new FileReader();
+	         reader.readAsDataURL(tuPian);
+	         reader.onload=function(e){
+	             //console.log(e.target.result);
+	             jQuery(wrapperSelector).html("<img src='"+e.target.result+"' width='100%' height='100%' alt=''/>");
+	             $xuanZe.html("已选择");
+	             jQuery(shangChuanSelector).val("开始上传");
+	         };
+	    }
+	    
+	    //console.log(files);
+	}
+	
+	//文件上传
+	function touXiangShangChuan(files, url, userID, shangChuanSelector) {
+
+		$shangChuan = jQuery(shangChuanSelector);//上传按钮
+
+		if (files.length < 1) {
+			$shangChuan.val("( ↑ _ ↑ )");
+			return false;
+		}
+		
 		try {//修复谷歌浏览器sendAsBinary()异常
 		  if (typeof XMLHttpRequest.prototype.sendAsBinary == 'undefined') {
 		    XMLHttpRequest.prototype.sendAsBinary = function(text){
@@ -132,24 +165,30 @@
 		    }
 		  }
 		} catch (e) {}
-			
+		
 		for(var i = 0; i < files.length; i++) {
 	        var file = files[i];//当前文件
 	        var reader = new FileReader();
 
 	        reader.onloadstart = function() {
-				console.log("读取开始:" + file.size);
+				console.log("读取开始");
+				$shangChuan.val("读取开始");
 			}
 			
 			reader.onprogress = function(p) {
-				console.log("读取进行中:" + p.loaded);
+				var loaded = p.loaded;
+				var total = p.total;
+				var baiFenBi = loaded / total * 100;
+				console.log("读取进行中:" + baiFenBi + "%");
+				$shangChuan.val("读取进行中:" + baiFenBi + "%");
 			}
 			
 			reader.onload = function() {
 				console.log("读取完成"); 
+				$shangChuan.val("读取完成");
 			}
 			
-			reader.onloadend = function(e) {
+			reader.onloadend = function() {
 				if (reader.error) {//失败
 					console.log(reader.error);
 				} else {//成功
@@ -162,7 +201,10 @@
 						if (xhr.readyState == 4) {
 							if (xhr.status == 200) {
 								console.log("上传成功");
-								console.log("response: " + xhr.responseText);
+								//console.log("response: " + xhr.responseText);
+								$shangChuan.val("上传成功");
+
+								$shangChuan.css("background-color", "lightslategray");
 							}
 						}
 					}

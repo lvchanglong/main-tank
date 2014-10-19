@@ -48,25 +48,32 @@ class X520Controller {
 	 * 头像上传
 	 */
 	def touXiangShangChuan(String fileName, String userID) {
-		YongHu.get(userID)
-		BufferedInputStream fileIn = new BufferedInputStream(request.getInputStream())
-		byte[] buf = new byte[1024]
-		
-		File file = ZiYuanGuanLi.getFile("web-app/space/${path}/${fileName}")
-		BufferedOutputStream fileOut = new BufferedOutputStream(new FileOutputStream(file))
-		while (true) {
-		   int bytesIn = fileIn.read(buf, 0, 1024)
-		   //System.out.println(bytesIn)
-		   if (bytesIn == -1) {
-			  break
-		   } else {
-			  fileOut.write(buf, 0, bytesIn)
-		   }
+		def yongHuInstance = YongHu.get(userID)
+		if (yongHuInstance) {
+			def xiangDuiLuJing = "space/${yongHuInstance.zhangHao}/${fileName}"//相对路径
+			BufferedInputStream fileIn = new BufferedInputStream(request.getInputStream())
+			byte[] buf = new byte[1024]
+			File file = ZiYuanGuanLi.getFile("grails-app/assets/images/${xiangDuiLuJing}")
+			BufferedOutputStream fileOut = new BufferedOutputStream(new FileOutputStream(file))
+			while (true) {
+			   int bytesIn = fileIn.read(buf, 0, 1024)
+			   //System.out.println(bytesIn)
+			   if (bytesIn == -1) {
+				  break
+			   } else {
+				  fileOut.write(buf, 0, bytesIn)
+			   }
+			}
+			fileOut.flush()
+			fileOut.close()
+			
+			yongHuInstance.touXiang = xiangDuiLuJing
+			yongHuInstance.save(flush: true)//更新路径
+			
+			render xiangDuiLuJing
+		} else {
+			render status: ZhuangTai.WU_FA_FANG_WEN
 		}
-		fileOut.flush()
-		fileOut.close()
-		
-		render file.getPath()
 	}
 	
 	/**
