@@ -14,7 +14,7 @@
 						<div class="hiddenBox normalBox borderBox" style="display:none;">
 							<g:formRemote name="miMaXiuGai" url="[controller:'x520', action:'miMaXiuGai', id:dangQianYongHu.id]" onSuccess="chengGongChuLi(data,textStatus,'miMaXiuGai','.message-content')" onFailure="shiBaiChuLi(XMLHttpRequest,textStatus,errorThrown,'miMaXiuGai','.message-content')">
 								<div class="xmessage borderBox">
-									(￣﹃￣ )<span class="separator">/</span><span class="message-content">密码修改</span>
+									(￣﹃￣ )<span class="separator">/</span><span class="message-content">修改密码</span>
 								</div>
 								<g:passwordField name="yuanMiMa" value="" placeholder="原始密码"/>
 								<g:passwordField name="xinMiMa" value="" placeholder="新的密码"/>
@@ -28,7 +28,7 @@
 						<div class="hiddenBox customBox borderBox" style="display:none;">
 							<g:formRemote name="xinXiXiuGai" url="[controller:'yongHuRestful', action:'update', id:dangQianYongHu.id]" onSuccess="chengGongChuLi(data,textStatus,'xinXiXiuGai','.message-content')" onFailure="shiBaiChuLi(XMLHttpRequest,textStatus,errorThrown,'xinXiXiuGai','.message-content')" >
 								<div class="xmessage borderBox">
-									(￣﹃￣ )<span class="separator">/</span><span class="message-content">信息修改</span>
+									(￣﹃￣ )<span class="separator">/</span><span class="message-content">修改信息</span>
 								</div>
 								
 								<g:hiddenField name="_method" value="PUT"/>
@@ -68,7 +68,7 @@
 						<div class="hiddenBox normalBox borderBox" style="display:none;">
 							<g:formRemote name="yongHuDengLu" url="[controller:'x520', action:'yongHuDengLu']" onSuccess="chengGongDengLu(data,textStatus,'yongHuDengLu','.message-content')" onFailure="shiBaiChuLi(XMLHttpRequest,textStatus,errorThrown,'yongHuDengLu','.message-content')">
 								<div class="xmessage borderBox">
-									(￣﹃￣ )<span class="separator">/</span><span class="message-content">请输入账号、密码</span>
+									(￣﹃￣ )<span class="separator">/</span><span class="message-content">账号、密码</span>
 								</div>
 								<g:textField name="zhangHao" value="" placeholder="账号"/>
 								<g:passwordField name="miMa" value="" placeholder="密码"/>
@@ -79,16 +79,21 @@
 					<li class="wrapperBox">
 						<span class="link">注册</span>
 						<div class="hiddenBox normalBox borderBox" style="display:none;">
-							未开放
+							<g:formRemote name="yongHuZhuCe" url="[controller:'x520', action:'yongHuZhuCe']" onSuccess="chengGongChuLi(data,textStatus,'yongHuZhuCe','.message-content')" onFailure="shiBaiChuLi(XMLHttpRequest,textStatus,errorThrown,'yongHuZhuCe','.message-content')">
+								<div class="xmessage borderBox">
+									(￣﹃￣ )<span class="separator">/</span><span class="message-content">账号、密码、确认</span>
+								</div>
+								<g:textField name="zhangHao" value="" placeholder="账号"/>
+								<g:passwordField name="miMa" value="" placeholder="密码"/>
+								<g:passwordField name="queRenMiMa" value="" placeholder="确认"/>
+								<g:submitButton name="zhuCe" value="注册"/>
+							</g:formRemote>
 						</div>
 					</li>
 				</g:else>
 				
 				<li>
 					<g:link uri="/kongjian/lvchanglong">测试</g:link>
-				</li>
-				<li>
-					<g:link uri="/">首页</g:link>
 				</li>
 				<li>
 					<a href="javascript:void(0);" onclick="shouCang(window.location,document.title);">收藏</a>

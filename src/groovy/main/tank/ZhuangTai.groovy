@@ -28,7 +28,10 @@ class ZhuangTai {
 	 */
 	static Integer WU_FA_FANG_WEN = 406 //406 (Not Acceptable/无法访问)
 	
-	
+	/**
+	 * 冲突->已存在
+	 */
+	static Integer CHONG_TU = 409 //409 (Conflict/冲突)
 	
 	//100 (Continue/继续)
 	//101 (Switching Protocols/转换协议)
@@ -65,7 +68,7 @@ class ZhuangTai {
 	//405 (Method Not Allowed/方法未允许)
 	//407 (Proxy Authentication Required/代理服务器认证要求)
 	//408 (Request Timeout/请求超时)
-	//409 (Conflict/冲突)
+	
 	//410 (Gone/已经不存在)
 	//411 (Length Required/需要数据长度)
 	//412 (Precondition Failed/先决条件错误)

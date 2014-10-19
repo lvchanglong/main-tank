@@ -120,6 +120,9 @@ function shiBaiChuLi(XMLHttpRequest,textStatus,errorThrown,key,selector) {
 		case "Not Acceptable":
 			jQuery("#" + key).find(selector).html("请求未接受");
 			break;
+		case "Conflict":
+			jQuery("#" + key).find(selector).html("已存在");
+			break;
 	}
 }
 

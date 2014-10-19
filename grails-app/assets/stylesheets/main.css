@@ -504,12 +504,14 @@ th:hover, tr:hover {
 
 .pagination a:hover, .pagination a:focus,
 .pagination .currentStep {
-	background-color: #999999;
-	color: #ffffff;
+	color: black;
 	outline: none;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
 }
-
+.pagination .currentStep {
+	font-weight:bold;
+	font-size:22px;
+}
 .no-borderradius .pagination a:hover, .no-borderradius .pagination a:focus,
 .no-borderradius .pagination .currentStep {
 	background-color: transparent;
