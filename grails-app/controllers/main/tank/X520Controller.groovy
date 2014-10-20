@@ -20,8 +20,11 @@ class X520Controller {
 	 * @return
 	 */
 	def index(Integer max) {
-		params.max = Math.min(max ?: 10, 100)
-		respond GengXin.list(params), model:[gengXinInstanceCount:GengXin.count()]
+		params.max = Math.min(max ?: 3, 100)
+		[
+			gengXinInstanceList:GengXin.list(params), gengXinInstanceCount:GengXin.count(),
+			yongHuInstanceList:YongHu.list(params), yongHuInstanceCount:YongHu.count()
+		]
 	}
 	
 	/**

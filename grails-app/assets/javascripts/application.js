@@ -148,7 +148,10 @@ function failure(XMLHttpRequest,textStatus,errorThrown,selector) {
 //远程分页
 function remotePagination(wrapperClass) {
 	jQuery(".pagination a").click(function() {
-		jQuery(this).parents(wrapperClass + ":eq(0)").load(this.href);
+		$wrapper = jQuery(this).parents(wrapperClass + ":eq(0)");
+		jQuery.get(this.href, function(html){
+			$wrapper.replaceWith(html);
+		});
 		return false;
 	});
 }

@@ -75,7 +75,7 @@ class ChangLiang {
 	/**
 	 * LOGO
 	 */
-	static String LOGO_INDEX = "1"
+	static String LOGO_INDEX = "2"
 	
 	/**
 	 * 过渡

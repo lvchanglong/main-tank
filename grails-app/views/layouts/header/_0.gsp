@@ -59,6 +59,9 @@
 						</div>
 					</li>
 					<li>
+						<g:link uri="/kongjian/${ dangQianYongHu.zhangHao }">空间</g:link>
+					</li>
+					<li>
 						<g:remoteLink controller="x520" action="yongHuZhuXiao" onSuccess="window.location.reload()">注销</g:remoteLink>
 					</li>
 				</g:if>
@@ -91,10 +94,7 @@
 						</div>
 					</li>
 				</g:else>
-				
-				<li>
-					<g:link uri="/kongjian/lvchanglong">测试</g:link>
-				</li>
+
 				<li>
 					<a href="javascript:void(0);" onclick="shouCang(window.location,document.title);">收藏</a>
 				</li>
