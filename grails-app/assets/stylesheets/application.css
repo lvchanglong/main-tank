@@ -49,11 +49,7 @@ globle
 .defaultPage {
 	position:relative;
 	padding:30px 30px 170px 30px;
-	background-color:white;
-	border-width:3px;
-	border-style:outset;
-	box-shadow: 0px 3px 7px #888888;
-	font-size:14px;
+	box-shadow: 0px 3px 6px #888888;
 }
 .conWidth {
 	position:relative;
@@ -142,12 +138,9 @@ main
 */
 #main {
 	min-height:100%;
-	-moz-box-shadow: 0 0 1em black;
-	-webkit-box-shadow: 0 0 1em black;
-	        box-shadow: 0 0 1em black;
 }
 #main-wrapper {
-	padding:30px 30px 120px 30px;
+	padding:30px 0 100px 0;
 	position: relative;
 	width: 100%;
 	height: 100%;
@@ -160,7 +153,7 @@ main
 header
 */
 #header-0 {
-	height:50px;
+	height:40px;
 }
 #header-0 nav {
 	position: fixed;
@@ -169,11 +162,13 @@ header
 	width:100%;
 	height: 40px;
 	line-height:40px;
-	color:white;
-	1background: url("WangLuo/QiTa/header-bg-nav.png") 0px -38px repeat-x;
-	background-color:black;
+	color:#fff;
+	background-color:#435766;
+	box-shadow: 0 3px 3px #888888;
+	text-align: center;
+	font-weight: 700;
+	font-size:14px;
 	z-index:999;
-	box-shadow: 0 8px 9px #888888;
 }
 #header-0-timer {
 	position:absolute;
@@ -205,18 +200,19 @@ header
 }
 #header-0 .wrapperBox .link {
 	display:block;
-	border-left:1px solid black;
-	border-right:1px solid black;
-	1text-decoration:underline;
-	1cursor:pointer;
+	border-left:1px solid #435766;
+	border-right:1px solid #435766;
+	text-align: center;
+	font-weight: 700;
 }
 #header-0 .hiddenBox {
 	position:absolute;
-	border-bottom:1px solid black;
-	border-left:1px solid black;
-	border-right:1px solid black;
+	border-bottom:1px solid #435766;
+	border-left:1px solid #435766;
+	border-right:1px solid #435766;
 	z-index:999;
 	text-align:left;
+	font-size:12px;
 	background-color:white;
 }
 #header-0 .hiddenBox:after {
@@ -262,10 +258,7 @@ header
 	width:100%;
 }
 #header-0 .hiddenBox .xmessage {
-	margin-bottom:10px;
-	font-size: 1em;
-	line-height: 2;
-	1color: #006dba;
+	margin-bottom:0;
 }
 #header-0 .hiddenBox [type=text], #header-0 .hiddenBox [type=password], #header-0 .hiddenBox [type=email]{
 	width:100%;
@@ -298,7 +291,9 @@ header
 #header-0 .hiddenBox [type=submit]{
 	cursor:pointer;
 	padding:5px 15px;
-	margin:10px 0 5px 0;
+	margin:10px 0 0 0;
+	font-weight:bold;
+	font-size:14px;
 }
 #header-0 .hiddenBox [type=submit]:hover{
 	color: black;
@@ -384,17 +379,13 @@ footer-1
 	left:0;
 	bottom:0;
 	width:100%;
-	height:90px;
 	color:black;
 	text-align:center;
-	padding:0 30px;
 }
 #footer-1 nav {
-	border-width:3px;
-	border-style:outset;
-	box-shadow: 0px 3px 7px #888888;
+	box-shadow: 0px 3px 6px #888888;
 	position:relative;
-	height:73px;
+	height:70px;
 }
 #footer-1 ul {
 	list-style-type:none;
@@ -478,7 +469,7 @@ logo-1
 	margin:15px 30px 0 30px;
 	border-width:3px;
 	border-style:outset;
-	box-shadow: 0px 3px 7px #888888;
+	box-shadow: 0px 3px 6px #888888;
 }
 #logo-1 .tank {
 	position:absolute;
@@ -545,10 +536,8 @@ logo-2
 #logo-2 {
 	position:relative;
 	height:183px;
-	margin:15px 30px 0 30px;
-	border-width:3px;
-	border-style:outset;
-	box-shadow: 0px 3px 7px #888888;
+	margin-top:21px;
+	box-shadow: 0px 3px 6px #888888;
 }
 #logo-2 .tank {
 	position:absolute;
@@ -670,8 +659,8 @@ page-yongQianBiDu
 	font-weight:bold;
 }
 #yongQianBiDu li {
-	line-height:23px;
-	margin-bottom:30px;
+	line-height:2;
+	margin-bottom:15px;
 }
 #yongQianBiDu .biaoTi {
 	margin:47px 0 25px 0;
@@ -721,7 +710,7 @@ page-lianXiFangShi
 	margin:0 0 70px 0;
 	list-style-type:none;
 	position:relative;
-	border:3px ridge lightgray;
+	border: 1px solid #dcdfe2;
 	min-height:180px;
 	padding:15px;
 }
@@ -902,7 +891,7 @@ page-jianYiFanKui
 }
 #yonghu-ziliao-0 .main {
 	border:7px solid black;
-	box-shadow: 0px 3px 7px #888888;
+	box-shadow: 0px 3px 6px #888888;
 }
 #yonghu-ziliao-0 .right {
 	position:absolute;
@@ -1159,7 +1148,7 @@ section-yongHu-index
 	width:160px;
 	height:160px;
 	display:block;
-	padding:20px 0;
+	padding:24px;
 }
 #yongHu-index .touXiangQv {
 	position: absolute;
@@ -1171,7 +1160,7 @@ section-yongHu-index
 	text-align: left;
 }
 #yongHu-index h3 {
-	font-size:32px;
+	font-size:20px;
 	font-weight:bold;
 	display:block;
 	margin-bottom:15px;
@@ -1180,6 +1169,9 @@ section-yongHu-index
 	color:lightgray;
 	font-size:20px;
 	text-decoration: none;
+}
+#yongHu-index h3 .separator {
+	font-size: 12px;
 }
 #yongHu-index p .separator {
 	color:lightgray;
@@ -1190,7 +1182,7 @@ section-yongHu-index
 #yongHu-index .youJianTou {
 	font-size:30px;
 	position:absolute;
-	right:0;
+	right:-14px;
 	top:0;
 	height:200px;
 	line-height:200px;
@@ -1205,7 +1197,9 @@ section-yongHu-index
 }
 #yongHu-index ul li {
 	position: relative;
-	1border-bottom: 1px dashed lightgray;
+	border: 1px solid #e5e5e5;
+	background-color: #fff;
+	margin-bottom:15px;
 }
 #yongHu-index .content {
 	position: relative;

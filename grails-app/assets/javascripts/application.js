@@ -180,9 +180,9 @@ function shouCang(sURL, sTitle)
  * formRow:起始行
  * toRow:终止行
  * ms:延迟执行时间
- * 
+ * bkColor:背景色
  */
-function Motion(id, imageSrc, w, h, maxColumn, fromRow, toRow, ms, callFun, callIdx) {
+function Motion(id, imageSrc, w, h, maxColumn, fromRow, toRow, ms, callFun, callIdx, bkColor) {
 
 	//载入图像
 	this.loadImage = function() {
@@ -209,7 +209,12 @@ function Motion(id, imageSrc, w, h, maxColumn, fromRow, toRow, ms, callFun, call
 			var ctx = inst.ctx;
 			var image = inst.image;
 			
-			ctx.fillStyle="#ffffff";
+			if (inst.bkColor) {
+				ctx.fillStyle=inst.bkColor;
+			} else {
+				ctx.fillStyle='transparent';
+			}
+			
 			ctx.fillRect(0, 0, w, h);
 			ctx.drawImage(image, x, y, w, h, 0, 0, w, h);
 
@@ -238,6 +243,7 @@ function Motion(id, imageSrc, w, h, maxColumn, fromRow, toRow, ms, callFun, call
 	var canvas = jQuery("#" + id)[0];//画布
 	canvas.width = w;
     canvas.height = h;
+    
     this.ctx = canvas.getContext("2d");//上下文
 	
 	this.image = new Image();//图片
@@ -257,7 +263,7 @@ function Motion(id, imageSrc, w, h, maxColumn, fromRow, toRow, ms, callFun, call
 
 	this.ms = ms;
 	this.callIdx = callIdx;
-	
+	this.bkColor = bkColor;
 	this.loadImage();
 }
 

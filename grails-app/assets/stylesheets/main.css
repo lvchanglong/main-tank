@@ -7,11 +7,9 @@
 /* FONT STACK */
 body,
 input, select, textarea {
-	font-family: "微软雅黑", "黑体", "宋体", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	font-size: 12px;
-	color:black;
 	letter-spacing:1px;
-	line-height:1.5;
+	font: 12px/1.5 "微软雅黑", "黑体", "宋体";
+	color:#333;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -43,6 +41,7 @@ html * {
 body {
 	min-width:960px;
 	overflow-x: hidden; /* prevents box-shadow causing a horizontal scrollbar in firefox when viewport < 960px wide */
+	background-color:#f8f8f9;
 }
 
 #grailsLogo {

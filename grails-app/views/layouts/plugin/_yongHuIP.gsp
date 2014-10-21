@@ -6,7 +6,7 @@
 		</li>
 		--%>
 		<li>
-			公网IP：${ request.getRemoteAddr() }
+			公网ＩＰ：${ request.getRemoteAddr() }
 		</li>
 		<li id="yongHuIP-ip138">
 			<script type="text/javascript">

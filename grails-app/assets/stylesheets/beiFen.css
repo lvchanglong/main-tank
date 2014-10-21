@@ -1,0 +1,15 @@
+.hello-world {
+	font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	background: url("WangLuo/QiTa/header-bg-nav.png") 0px -38px repeat-x;
+	
+	border-width:3px;
+	border-style:outset;
+	
+	
+	border-color:#99c3f7;
+	background-color:#f5f8fa;
+	box-shadow:1px 1px 2px #b3e8fe;
+	
+	
+	border:3px ridge lightgray;
+}

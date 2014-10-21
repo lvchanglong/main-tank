@@ -51,18 +51,20 @@ class X520Controller {
 	 * 用户注册
 	 */
 	def yongHuZhuCe(String zhangHao, String miMa, String queRenMiMa) {
-		if (miMa == queRenMiMa) {//确认密码一致性
-			def yongHuInstance = YongHu.findByZhangHao(zhangHao)
-			if (yongHuInstance) {//账号冲突
-				render status: ZhuangTai.CHONG_TU
-				return
-			}
-
-			def yonghu = new YongHu([zhangHao: zhangHao, miMa: miMa])//注册用户
-			if (!yonghu.hasErrors()) {
-				yonghu.save flush:true
-				render status: ZhuangTai.ZHENG_CHANG
-				return
+		if (zhangHao) {
+			if (miMa == queRenMiMa) {//确认密码一致性
+				def yongHuInstance = YongHu.findByZhangHao(zhangHao)
+				if (yongHuInstance) {//账号冲突
+					render status: ZhuangTai.CHONG_TU
+					return
+				}
+	
+				def yonghu = new YongHu([zhangHao: zhangHao, miMa: miMa])//注册用户
+				if (!yonghu.hasErrors()) {
+					yonghu.save flush:true
+					render status: ZhuangTai.ZHENG_CHANG
+					return
+				}
 			}
 		}
 		render status: ZhuangTai.WU_FA_FANG_WEN
