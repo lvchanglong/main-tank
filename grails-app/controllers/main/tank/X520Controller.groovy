@@ -20,10 +20,14 @@ class X520Controller {
 	 * @return
 	 */
 	def index(Integer max) {
+		ArrayList daTuList = ["seth.jpg", "yeshou.jpg", "gen.jpg", "sakura.jpg", "vega.jpg", "ken.jpg", "jingcha.jpg"]
+		ArrayList xiaoTuList = ["fruit1.png", "fruit2.png", "fruit3.png", "fruit4.png", "fruit5.png", "fruit6.png", "fruit7.png", "fruit8.png", "fruit9.png"]
+		
 		params.max = Math.min(max ?: 3, 100)
 		[
 			gengXinInstanceList:GengXin.list(params), gengXinInstanceCount:GengXin.count(),
-			yongHuInstanceList:YongHu.list(params), yongHuInstanceCount:YongHu.count()
+			yongHuInstanceList:YongHu.list(params), yongHuInstanceCount:YongHu.count(),
+			daTuList:daTuList, xiaoTuList:xiaoTuList
 		]
 	}
 	
@@ -72,11 +76,12 @@ class X520Controller {
 	
 	/**
 	 * 头像上传
+	 * grails-app/assets/images/KongJian/${yongHuInstance.zhangHao}/${fileName}
 	 */
 	def touXiangShangChuan(String fileName, String userID) {
 		def yongHuInstance = YongHu.get(userID)
 		if (yongHuInstance) {
-			def xiangDuiLuJing = "space/${yongHuInstance.zhangHao}/${fileName}"//相对路径
+			def xiangDuiLuJing = "KongJian/${yongHuInstance.zhangHao}/${fileName}"//相对路径
 			BufferedInputStream fileIn = new BufferedInputStream(request.getInputStream())
 			byte[] buf = new byte[1024]
 			File file = ZiYuanGuanLi.getFile("grails-app/assets/images/${xiangDuiLuJing}")
