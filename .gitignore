@@ -44,3 +44,4 @@ Temporary Items
 
 target/work/resources/web.xml
 target/work/tomcat/work/Tomcat/localhost/_/SESSIONS.ser
+*.class
