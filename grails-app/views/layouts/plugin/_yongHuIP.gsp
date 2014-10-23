@@ -1,7 +1,7 @@
 <div id="yongHuIP">
 	<ul>
 		<li>
-			公网ＩＰ：${ request.getRemoteAddr() }
+			您的ＩＰ：${ request.getRemoteAddr() }
 		</li>
 		<li id="yongHuIP-ip138">
 			<script type="text/javascript">

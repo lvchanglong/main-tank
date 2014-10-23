@@ -9,29 +9,25 @@
 	</head>
 	<body>
 
-		<div id="zhuYe" class="borderBox defaultPage">
+		<div id="zhuYe" class="borderBox">
 			
-			<div style="position:relative;margin-bottom:30px;border-bottom: 1px dashed #d3e3f5;">
-				<g:render template="/layouts/plugin/huanDengXiaZhui" model="[fileNameList: daTuList]"/>
-			</div>
+			<section class="decoration">
+				<g:render template="/layouts/plugin/huanDengXiaZhui" model="[fileNameList: daTuList, width:'960px', height:'372px']"/>
+			</section>
 			
-			<div style="position:relative;margin-bottom:30px;border-bottom: 1px dashed #d3e3f5;">
+			<section class="decoration">
 				<g:render template="/layouts/transition/${ ChangLiang.TRANSITION_INDEX }" />
-				
-				<div style="position:absolute;right:0;top:0;min-width:201px;">
-					<g:render template="/layouts/plugin/yongHuIP" />
-				</div>
-			</div>
+			</section>
 			  
-			<div style="margin-bottom:30px;border-bottom: 1px dashed #d3e3f5;">
+			<section class="decorationWidthPadding">
 				<h2>更新日志</h2>
 				<g:applyLayout controller="gengXin" action="index" params="[offset:params.offset, max:params.max, gengXinInstanceList:gengXinInstanceList,gengXinInstanceCount:gengXinInstanceCount]" />
-			</div>
+			</section>
 			
-			<div style="margin-bottom:30px;border-bottom: 1px dashed #d3e3f5;">
+			<section class="decorationWidthPadding">
 				<h2>用户信息</h2>
 				<g:applyLayout controller="yongHu" action="index" params="[offset:params.offset, max:params.max, yongHuInstanceList:yongHuInstanceList, yongHuInstanceCount:yongHuInstanceCount]" />
-			</div>
+			</section>
 			
 			<%--
 			<div style="position:relative;margin-bottom:30px;border-bottom: 1px dashed #d3e3f5;">

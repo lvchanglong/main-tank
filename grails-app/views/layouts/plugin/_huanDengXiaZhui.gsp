@@ -5,11 +5,11 @@
 <div id="huanDengXiaZhui">
     <div class="cycleslider-wrap">
        
-       <div id="slider" class="cycleslider" style="position: relative; width: 880px; height: 372px;">
+       <div id="slider" class="cycleslider" style="position:relative; width:${width}; height:${ height };margin:0 auto;">
 	       	 <g:each in="${fileNameList}" status="i" var="fileName">
 				  <div class="cycle-slider">
 	             	<a href="javascript:void(0);">
-	             		<asset:image src="SanFang/HuanDengPian/images/${ fileName }" width="100%" height="372px" alt=""/>
+	             		<asset:image src="SanFang/HuanDengPian/images/${ fileName }" width="${width}" height="${ height }" alt=""/>
 	             	</a>
 	              </div>
 			 </g:each>

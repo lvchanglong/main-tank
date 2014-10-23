@@ -20,7 +20,8 @@
 	1-webkit-animation:logoZaiXingDong 7s ease; /* Safari and Chrome */
 	1-o-animation:logoZaiXingDong 7s ease; /* Opera */
 	
-	
+	border-bottom: 1px dashed #d3e3f5;
+	1border: 1px solid #e5e5e5;
 }
 
 /* HTML5 */
@@ -35,4 +36,16 @@
 	1-moz-animation:rightToLeft 7s ease; /* Firefox */
 	1-webkit-animation:rightToLeft 7s ease; /* Safari and Chrome */
 	1-o-animation:rightToLeft 7s ease; /* Opera */
+}
+
+#clock:after{
+	content:'';
+	position:absolute;
+	width:415px;
+	height:20px;
+	border-radius:100%;
+	left:50%;
+	margin-left:-200px;
+	bottom:2px;
+	z-index:-1;
 }

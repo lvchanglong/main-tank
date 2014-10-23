@@ -87,7 +87,7 @@ grails.hibernate.osiv.readonly = false
 
 grails.app.context  = "/"
 
-grails.assets.bundle=true
+//grails.assets.bundle=true
 
 environments {
     development {

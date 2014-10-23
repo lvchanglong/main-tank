@@ -94,25 +94,19 @@
 						</div>
 					</li>
 				</g:else>
-
+				
+			</ul>
+			
+			<ol>
 				<li>
 					<a href="javascript:void(0);" onclick="shouCang(window.location,document.title);">收藏</a>
 				</li>
-			</ul>
-			
-			<span id="header-0-timer">
-			
-			</span>
+			</ol>
 		</div>
 	</nav>
 </div>
 
 <script type="text/javascript">
-	var source = new EventSource("${ createLink(controller:"tuiSong", action:"dangQianShiJian") }");
-	source.onmessage = function(event) {
-		jQuery("#header-0-timer").html(event.data);//更新时间
-	};
-
 	responseToHover(".wrapperBox", ".hiddenBox");//浮动响应
 
 	//登录成功
@@ -150,7 +144,7 @@
 	    //console.log(files);
 	}
 	
-	//文件上传
+	//头像上传
 	function touXiangShangChuan(files, url, userID, shangChuanSelector) {
 
 		$shangChuan = jQuery(shangChuanSelector);//上传按钮
