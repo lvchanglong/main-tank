@@ -1,7 +1,7 @@
-<asset:stylesheet src="SanFang/HuanDengPian/XiaZhui/slider.css"/>
-<asset:javascript src="SanFang/HuanDengPian/XiaZhui/jquery.slider.pack.js"/>
-<asset:javascript src="SanFang/HuanDengPian/XiaZhui/jquery.easing.js"/>
-		
+<asset:stylesheet src="SanFang/HuanDengPian/stylesheets/slider.css"/>
+<asset:javascript src="SanFang/HuanDengPian/javascripts/jquery.slider.pack.js"/>
+<asset:javascript src="SanFang/HuanDengPian/javascripts/jquery.easing.js"/>
+
 <div id="huanDengXiaZhui">
     <div class="cycleslider-wrap">
        
@@ -9,7 +9,7 @@
 	       	 <g:each in="${fileNameList}" status="i" var="fileName">
 				  <div class="cycle-slider">
 	             	<a href="javascript:void(0);">
-	             		<asset:image src="SanFang/HuanDengPian/XiaZhui/${ fileName }" width="100%" height="372px" alt=""/>
+	             		<asset:image src="SanFang/HuanDengPian/images/${ fileName }" width="100%" height="372px" alt=""/>
 	             	</a>
 	              </div>
 			 </g:each>
