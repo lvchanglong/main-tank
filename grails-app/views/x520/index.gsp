@@ -25,7 +25,7 @@
 			
 			<section class="decorationWidthPadding">
 				<h2>用户信息</h2>
-				<g:applyLayout controller="yongHu" action="index" params="[offset:0, max:3, yongHuInstanceList:yongHuInstanceList, yongHuInstanceCount:yongHuInstanceCount]" />
+				<g:applyLayout controller="yongHu" action="index" params="[offset:0, max:5, yongHuInstanceList:yongHuInstanceList, yongHuInstanceCount:yongHuInstanceCount]" />
 			</section>
 			
 			<%--
@@ -35,7 +35,7 @@
 			--%>
 			
 		</div>
-			
+		
 		<content tag="header">
 			Default Header
 		</content>
@@ -51,5 +51,6 @@
 		<content tag="helper">
 			Default Helper
 		</content>
+		
 	</body>
 </html>

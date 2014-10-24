@@ -1,7 +1,12 @@
 <asset:javascript src="SanFang/LazyLoad/javascripts/jquery.lazyload.js" />
 
+<img data-original="${ assetPath(src:yongHuInstance.touXiang) }" class="touXiang" alt="">
+	
 <script type="text/javascript">
-  jQuery(function() {
-	  jQuery("img.lazy").lazyload();
-  });
+	jQuery(function() {
+		jQuery("img.lazy").lazyload({//延时加载
+	         effect : "fadeIn",
+	         threshold : 200
+	    });
+	});
 </script>
