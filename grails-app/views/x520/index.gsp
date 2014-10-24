@@ -5,28 +5,27 @@
 	<head>
 		<meta name="layout" content="main"/>
 		<title>主坦克</title>
-		
 	</head>
 	<body>
 
 		<div id="zhuYe" class="borderBox">
 			
 			<section class="decoration">
-				<g:render template="/layouts/plugin/huanDengXiaZhui" model="[fileNameList: daTuList, width:'960px', height:'372px']"/>
+				<g:render template="/layouts/plugin/huanDengXiaZhui" model="[instanceList: slideList, width:'960px', height:'372px']"/>
 			</section>
 			
-			<section class="decoration">
-				<g:render template="/layouts/transition/${ ChangLiang.TRANSITION_INDEX }" />
-			</section>
-			  
 			<section class="decorationWidthPadding">
 				<h2>更新日志</h2>
-				<g:applyLayout controller="gengXin" action="index" params="[offset:params.offset, max:params.max, gengXinInstanceList:gengXinInstanceList,gengXinInstanceCount:gengXinInstanceCount]" />
+				<g:applyLayout controller="gengXin" action="index" params="[offset:0, max:5, gengXinInstanceList:gengXinInstanceList,gengXinInstanceCount:gengXinInstanceCount]" />
+			</section>
+			
+			<section class="decorationWidthPadding">
+				<g:render template="/layouts/transition/${ ChangLiang.TRANSITION_INDEX }" />
 			</section>
 			
 			<section class="decorationWidthPadding">
 				<h2>用户信息</h2>
-				<g:applyLayout controller="yongHu" action="index" params="[offset:params.offset, max:params.max, yongHuInstanceList:yongHuInstanceList, yongHuInstanceCount:yongHuInstanceCount]" />
+				<g:applyLayout controller="yongHu" action="index" params="[offset:0, max:3, yongHuInstanceList:yongHuInstanceList, yongHuInstanceCount:yongHuInstanceCount]" />
 			</section>
 			
 			<%--

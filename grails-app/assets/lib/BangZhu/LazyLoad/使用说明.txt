@@ -1,0 +1,7 @@
+<asset:javascript src="SanFang/LazyLoad/javascripts/jquery.lazyload.js" />
+
+<script type="text/javascript">
+  jQuery(function() {
+	  jQuery("img.lazy").lazyload();
+  });
+</script>

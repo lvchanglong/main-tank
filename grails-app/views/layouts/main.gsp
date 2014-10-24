@@ -14,6 +14,16 @@
 		<meta name="Description" content="一切都是资源，一切都在被用，一切都有价值" />
 		<meta name="Author" Content="吕常龙">
 		
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "//hm.baidu.com/hm.js?68c2fb57a6f059f2f5bb543a0a25b7be";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+		
 		<title><g:layoutTitle default="主坦克"/></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="${assetPath(src: 'favicon.ico')}" type="image/x-icon">

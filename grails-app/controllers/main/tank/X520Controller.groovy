@@ -19,15 +19,17 @@ class X520Controller {
 	 * @param max
 	 * @return
 	 */
-	def index(Integer max) {
-		ArrayList daTuList = ["seth.jpg", "yeshou.jpg", "gen.jpg", "sakura.jpg", "vega.jpg", "ken.jpg", "jingcha.jpg"]
+	def index() {
+		ArrayList slideList = [
+			new TuPian("seth.jpg"), new TuPian("yeshou.jpg"), new TuPian("gen.jpg"), new TuPian("sakura.jpg"), new TuPian("vega.jpg"), new TuPian("ken.jpg"), new TuPian("jingcha.jpg")
+		]
+		
 		ArrayList xiaoTuList = ["fruit1.png", "fruit2.png", "fruit3.png", "fruit4.png", "fruit5.png", "fruit6.png", "fruit7.png", "fruit8.png", "fruit9.png"]
 		
-		params.max = Math.min(max ?: 3, 100)
 		[
 			gengXinInstanceList:GengXin.list(params), gengXinInstanceCount:GengXin.count(),
 			yongHuInstanceList:YongHu.list(params), yongHuInstanceCount:YongHu.count(),
-			daTuList:daTuList, xiaoTuList:xiaoTuList
+			slideList:slideList, xiaoTuList:xiaoTuList
 		]
 	}
 	
