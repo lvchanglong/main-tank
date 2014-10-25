@@ -24,12 +24,12 @@ class X520Controller {
 			new TuPian("seth.jpg"), new TuPian("yeshou.jpg"), new TuPian("gen.jpg"), new TuPian("sakura.jpg"), new TuPian("vega.jpg"), new TuPian("ken.jpg"), new TuPian("jingcha.jpg")
 		]
 		
-		ArrayList xiaoTuList = ["fruit1.png", "fruit2.png", "fruit3.png", "fruit4.png", "fruit5.png", "fruit6.png", "fruit7.png", "fruit8.png", "fruit9.png"]
+		ArrayList fileNameList = ["1.jpg", "2.jpg", "3.jpg", "4.jpg"]
 		
 		[
 			gengXinInstanceList:GengXin.list(params), gengXinInstanceCount:GengXin.count(),
 			yongHuInstanceList:YongHu.list(params), yongHuInstanceCount:YongHu.count(),
-			slideList:slideList, xiaoTuList:xiaoTuList
+			slideList:slideList, fileNameList:fileNameList
 		]
 	}
 	

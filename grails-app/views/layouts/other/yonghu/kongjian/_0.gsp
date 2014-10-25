@@ -1,5 +1,5 @@
 <div id="yonghu-kongjian-0">
-	<ul class="main-ul clearfix">
+	<ul class="main-ul borderBox clearfix">
 		<li class="touXiangQv borderBox">
 			<g:link uri="/kongjian/${ yongHuInstance.zhangHao }" class="aMain">
 				<asset:image src="${ yongHuInstance.touXiang }" class="touXiang"/>

@@ -23,6 +23,7 @@
 				<li><span class="leibie">信仰：</span>${ ChangLiang.WANG_ZHAN_KOU_HAO }</li>
 				<li class="zhuangTai"><span class="leibie">状态：</span><span class="xianZai">已</span></li>
 				<li class="touXiang"><asset:image src="WangLuo/TouXiang/ChengYuan/吕常龙.png"/></li>
+				<li class="separator-image"></li>
 			</ul>
 			
 			<ul class="xiangQing">

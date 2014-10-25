@@ -2,7 +2,7 @@
 <asset:javascript src="SanFang/HuanDengPian/javascripts/jquery.slider.pack.js"/>
 <asset:javascript src="SanFang/HuanDengPian/javascripts/jquery.easing.js"/>
 
-<div id="huanDengXiaZhui">
+<div id="huanDengPian">
     <div class="cycleslider-wrap">
        
        <div id="slider" class="cycleslider" style="position:relative; width:${width}; height:${ height };margin:0 auto;">
