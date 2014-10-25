@@ -19,6 +19,22 @@ globle
 [help] {
 	cursor:pointer;
 }
+.leftToRight, .rightToLeft {
+	display:block;
+	position:absolute;
+}
+.leftToRight:hover {
+	animation:leftToRight 7s ease;
+	-moz-animation:leftToRight 7s ease; /* Firefox */
+	-webkit-animation:leftToRight 7s ease; /* Safari and Chrome */
+	-o-animation:leftToRight 7s ease; /* Opera */
+}
+.rightToLeft:hover {
+	animation:rightToLeft 7s ease;
+	-moz-animation:rightToLeft 7s ease; /* Firefox */
+	-webkit-animation:rightToLeft 7s ease; /* Safari and Chrome */
+	-o-animation:rightToLeft 7s ease; /* Opera */
+}
 #spinner {
 	background-color:white;
 	border:7px solid black;
@@ -564,7 +580,7 @@ logo-2
 #logo-2 ul {
 	list-style-type:none;
 	position:relative;
-	width:42%;
+	width:43%;
 	height:100%;
 	padding:1px 0 0 0;
 	margin-left:auto;
@@ -599,7 +615,6 @@ plugin-yongHuIP
 	list-style-type:none;
 	text-align:left;
 	padding:10px;
-	border: 1px solid lightgray;
 }
 #yongHuIP ul li {
 	height:25px;
@@ -642,6 +657,76 @@ plugin-kaTong
 }
 #kaTong .hanHua {
 	position:absolute;left:21px;top:10px;font-weight:bold;
+}
+
+/*
+plugin-shengXiao
+*/
+#shengXiao {
+	position:relative;
+	width:210px;
+	height:180px;
+}
+#shengXiao-wrapper {
+	position:relative;
+	width:150px;
+	height:150px;
+	line-height:150px;
+	text-align:center;
+	font-size:12px;
+}
+#shengXiao .wenHao {
+	font-size:110px;
+	font-weight:700;
+}
+#shengXiao .shengXiao {
+	background-image: url("WangLuo/SuCai/十二生肖.png");
+	width:150px;
+	height:150px;
+}
+#shengXiao .zhongWen {
+	position:absolute;
+	right:-40px;
+	top:0;
+	font-weight:bold;
+	font-size:30px;
+	display:block;
+}
+#shengXiao .shengXiao.shu {
+	background-position:0 0;
+}
+#shengXiao .shengXiao.niu {
+	background-position:-150px 0;
+}
+#shengXiao .shengXiao.hu {
+	background-position:-300px 0;
+}
+#shengXiao .shengXiao.tu {
+	background-position:-450px 0;
+}
+#shengXiao .shengXiao.long {
+	background-position:0 -150px;
+}
+#shengXiao .shengXiao.she {
+	background-position:-150px -150px;
+}
+#shengXiao .shengXiao.ma {
+	background-position:-300px -150px;
+}
+#shengXiao .shengXiao.yang {
+	background-position:-450px -150px;
+}
+#shengXiao .shengXiao.hou {
+	background-position:0 -300px;
+}
+#shengXiao .shengXiao.ji {
+	background-position:-150px -300px;
+}
+#shengXiao .shengXiao.gou {
+	background-position:-300px -300px;
+}
+#shengXiao .shengXiao.zhu {
+	background-position:-450px -300px;
 }
 
 /*
@@ -986,7 +1071,7 @@ page-yonghu-kongjian-0
 	position:absolute;
 	left:0px;
 	top:0px;
-	width:250px;
+	min-width:250px;
 	height:100%;
 	border-right: 3px ridge lightgray;
 	margin:0;
@@ -1254,7 +1339,7 @@ transition-IP
 	margin-bottom:7px;
 }
 #transition-IP ul p {
-	font-size:16px;
+	font-size:14px;
 }
 
 /*

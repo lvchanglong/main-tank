@@ -1,5 +1,6 @@
 package main.tank
 
+import grails.converters.JSON
 import java.nio.CharBuffer
 import java.text.DateFormat
 
@@ -51,6 +52,18 @@ class X520Controller {
 	 */
 	def test(YongHu yongHuInstance) {
 		render(template:"/layouts/other/yonghu/ziliao/1", model:[yongHuInstance: yongHuInstance])
+	}
+	
+	/**
+	 * 生肖查询
+	 * @param nian 年份
+	 */
+	def shengXiaoChaXun(Integer nian) {
+		if (nian && nian >= 0) {
+			render BangZhu.getShengXiao(nian) as JSON
+			return
+		}
+		render status: ZhuangTai.WU_FA_FANG_WEN
 	}
 	
 	/**

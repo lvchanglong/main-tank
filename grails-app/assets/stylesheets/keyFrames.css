@@ -7,7 +7,7 @@ logoZaiXingDong
 		left:0px;
 	}
 	100% {
-		left:600px;
+		left:100%;
 	}
 }
 @-moz-keyframes logoZaiXingDong /* Firefox */
@@ -16,7 +16,7 @@ logoZaiXingDong
 		left:0px;
 	}
 	100% {
-		left:600px;
+		left:100%;
 	}
 }
 @-webkit-keyframes logoZaiXingDong /* Safari 和 Chrome */
@@ -25,7 +25,7 @@ logoZaiXingDong
 		left:0px;
 	}
 	100% {
-		left:600px;
+		left:100%;
 	}
 }
 @-o-keyframes logoZaiXingDong /* Opera */
@@ -34,7 +34,7 @@ logoZaiXingDong
 		left:0px;
 	}
 	100% {
-		left:600px;
+		left:100%;
 	}
 }
 
@@ -47,7 +47,7 @@ rightToLeft
 		right:0px;
 	}
 	100% {
-		right:600px;
+		right:100%;
 	}
 }
 @-moz-keyframes rightToLeft /* Firefox */
@@ -56,7 +56,7 @@ rightToLeft
 		right:0px;
 	}
 	100% {
-		right:600px;
+		right:100%;
 	}
 }
 @-webkit-keyframes rightToLeft /* Safari 和 Chrome */
@@ -65,7 +65,7 @@ rightToLeft
 		right:0px;
 	}
 	100% {
-		right:600px;
+		right:100%;
 	}
 }
 @-o-keyframes rightToLeft /* Opera */
@@ -74,7 +74,7 @@ rightToLeft
 		right:0px;
 	}
 	100% {
-		right:600px;
+		right:100%;
 	}
 }
 
@@ -87,7 +87,7 @@ leftToRight
 		left:0px;
 	}
 	100% {
-		left:600px;
+		left:100%;
 	}
 }
 @-moz-keyframes leftToRight /* Firefox */
@@ -96,7 +96,7 @@ leftToRight
 		left:0px;
 	}
 	100% {
-		left:600px;
+		left:100%;
 	}
 }
 @-webkit-keyframes leftToRight /* Safari 和 Chrome */
@@ -105,7 +105,7 @@ leftToRight
 		left:0px;
 	}
 	100% {
-		left:600px;
+		left:100%;
 	}
 }
 @-o-keyframes leftToRight /* Opera */
@@ -114,6 +114,6 @@ leftToRight
 		left:0px;
 	}
 	100% {
-		left:600px;
+		left:100%;
 	}
 }
