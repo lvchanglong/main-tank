@@ -46,6 +46,12 @@ globle
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
 }
+.textAlignLeft {
+	text-align:left !important;
+}
+.textAlignRight {
+	text-align:right !important;
+}
 .defaultPage {
 	position:relative;
 	padding:30px;
@@ -558,7 +564,7 @@ logo-2
 #logo-2 ul {
 	list-style-type:none;
 	position:relative;
-	width:50%;
+	width:45%;
 	height:100%;
 	padding:1px 0 0 0;
 	margin-left:auto;
@@ -572,32 +578,18 @@ logo-2
 }
 #logo-2 h1 {
 	font-weight:bold;
-	font-size:70px;
+	font-size:66px;
 	text-align:center;
 	letter-spacing:5px;
 	color: black;
-	margin-top:27px;
+	margin-top:36px;
 	margin-bottom:12px;
 }
 #logo-2 h3 {
 	font-weight:normal;
-	font-size:20px;
+	font-size:18px;
 	text-align:center;
 	color: black;
-}
-
-/*
-transition-0
-*/
-#transition-0 {
-	height:90px;
-	border-bottom:3px ridge lightgray;
-	margin-bottom:15px;
-}
-#transition-0 .meinv {
-	position:absolute;
-	left:257px;
-	top:-183px;
 }
 
 /*
@@ -605,12 +597,14 @@ plugin-yongHuIP
 */
 #yongHuIP ul {
 	list-style-type:none;
+	text-align:left;
+	padding:10px;
+	border: 1px solid lightgray;
 }
 #yongHuIP ul li {
 	height:25px;
 }
 #yongHuIP ul li:first-child {
-	font-weight:bold;
 	margin-bottom:5px;
 }
 
@@ -1094,29 +1088,6 @@ page-yonghu-kongjian-0
 	margin-top:0px;
 }
 
-.test {
-	transform:rotateY(1deg);
-	-webkit-transform:rotateY(1deg); /* Safari and Chrome */
-	-moz-transform:rotateY(1deg); /* Firefox */
-	
-	transition: transform 2s;
-	-moz-transition: -moz-transform 2s;	/* Firefox 4 */
-	-webkit-transition: -webkit-transform 2s;	/* Safari 和 Chrome */
-	
-	
-	background-repeat:no-repeat;
-	background-size:256px 256px;
-	background-position:0 0;
-	
-	
-	text-shadow: 0px 1px 1px #555;
-	
-		border: 1px solid #b2d1ff;
-	   -moz-box-shadow: 0 0 0.25em #b2d1ff;
-	-webkit-box-shadow: 0 0 0.25em #b2d1ff;
-	        box-shadow: 0 0 0.25em #b2d1ff;
-}
-
 /*
 page-zhuYe
 */
@@ -1131,6 +1102,10 @@ page-zhuYe
 #zhuYe > section {
 	position:relative;
 	margin-bottom:50px;
+}
+#zhuYe > section.end {
+	position:relative;
+	margin-bottom:0;
 }
 
 #zhuYe .decoration {
@@ -1174,7 +1149,7 @@ section-yongHu-index
 	width:160px;
 	height:160px;
 	display:block;
-	padding:24px;
+	padding:12px 24px 24px 0;
 	
 	filter:alpha(opacity=80);  
     -moz-opacity:0.8;  
@@ -1246,34 +1221,51 @@ section-yongHu-index
 }
 
 /*
-transition-1
+transition-liangMei
 */
-#transition-1 {
-	height:300px;
-	position:relative;
+#transition-liangMei {
+	height:90px;
+	border-bottom:3px ridge lightgray;
+	margin-bottom:15px;
 }
-#transition-1 .xiongYing {
+#transition-liangMei .meinv {
 	position:absolute;
-	right:0;
-	bottom:0;
+	left:257px;
+	top:-183px;
 }
-#transition-1 .xiongYing:hover {
 
+/*
+transition-IP
+*/
+#transition-IP {
+	position:relative;
+	font-size:14px;
 }
-#transition-1 ul {
+#transition-IP ul {
 	width:270px;
-	height:100%;
 	text-align:center;
 }
-#transition-1 li {
-	font-size:16px;
+#transition-IP li {
 	display:inline-block;
 	margin-top:5px;
 }
-#transition-1 ul h3 {
+#transition-IP ul h3 {
 	font-size:32px;
 	margin-bottom:7px;
 }
-#transition-1 ul p {
+#transition-IP ul p {
 	font-size:16px;
+}
+
+/*
+transition-shiZhong
+*/
+#transition-shiZhong {
+	position:relative;
+}
+#transition-shiZhong .xiongYing {
+	position:absolute;left:0;bottom:0;
+}
+#transition-shiZhong .xiongYing:hover {
+
 }

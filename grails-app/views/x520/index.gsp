@@ -15,7 +15,7 @@
 			</section>
 			
 			<section class="decorationWidthPadding">
-				<g:render template="/layouts/transition/${ ChangLiang.TRANSITION_INDEX }" />
+				<g:render template="/layouts/transition/IP" />
 			</section>
 			
 			<section class="decorationWidthPadding">
@@ -23,13 +23,17 @@
 				<g:applyLayout controller="gengXin" action="index" params="[offset:0, max:5, gengXinInstanceList:gengXinInstanceList,gengXinInstanceCount:gengXinInstanceCount]" />
 			</section>
 			
-			<section class="decorationWidthPadding">
-				<g:render template="/layouts/plugin/liuShuiXian" model="[fileNameList: fileNameList]"/>
+			<section class="decoration">
+				<g:render template="/layouts/transition/shiZhong" />
 			</section>
 			
 			<section class="decorationWidthPadding">
 				<h2>用户信息</h2>
 				<g:applyLayout controller="yongHu" action="index" params="[offset:0, max:5, yongHuInstanceList:yongHuInstanceList, yongHuInstanceCount:yongHuInstanceCount]" />
+			</section>
+			
+			<section class="decorationWidthPadding end">
+				<g:render template="/layouts/plugin/liuShuiXian" model="[instanceList: cardList]"/>
 			</section>
 			
 		</div>

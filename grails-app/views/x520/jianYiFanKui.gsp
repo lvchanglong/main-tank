@@ -8,10 +8,6 @@
 	</head>
 	<body>
 		<div id="jianYiFanKui" class="borderBox clearfix defaultPage">
-		
-			<%--
-			<g:render template="/layouts/transition/1" />
-			--%>
 			
 			<h1>建议反馈</h1>
 			

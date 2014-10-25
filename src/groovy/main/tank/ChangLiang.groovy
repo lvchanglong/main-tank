@@ -78,11 +78,6 @@ class ChangLiang {
 	static String LOGO_INDEX = "2"
 	
 	/**
-	 * 过渡
-	 */
-	static String TRANSITION_INDEX = "1"
-	
-	/**
 	 * 助手
 	 */
 	static String HELPER_INDEX = "0"

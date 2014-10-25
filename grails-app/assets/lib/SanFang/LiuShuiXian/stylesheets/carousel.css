@@ -1,6 +1,7 @@
-#carousel img {
+#carousel .imageWrapper {
 	display: block;
 	float: left;
 	border: none;
 	position: relative;
+	border:1px solid #dcdfe2;
 }

@@ -5,7 +5,7 @@
 <div id="logo-2">
 	
 	<g:link uri="/">
-		<asset:image src="WangLuo/Logo/坦克.png" class="tank"/>
+		<asset:image src="WangLuo/Logo/图标.png" class="tank"/>
 	</g:link>
 	
 	<ul class="borderBox">

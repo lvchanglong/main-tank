@@ -4,8 +4,6 @@
 
 #clock{
 	width:415px;
-	margin:15px;
-	border: 1px solid gray;
 	position:relative;
 }
 
@@ -44,7 +42,7 @@
 }
 
 #clock.light .display{
-	box-shadow:0 1px 1px rgba(0,0,0,0.08) inset, 0 1px 1px #fafafa;
+	/* box-shadow:0 1px 1px rgba(0,0,0,0.08) inset, 0 1px 1px #fafafa; */
 }
 
 /*-------------------------

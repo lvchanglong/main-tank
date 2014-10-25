@@ -9,10 +9,6 @@
 	<body>
 		<div id="wangZhanXiangGuan" class="borderBox clearfix defaultPage">
 		
-			<%--
-			<g:render template="/layouts/transition/1" />
-			--%>
-			
 			<h1>网站相关</h1>
 			
 			<div class="xiangQing clearfix">

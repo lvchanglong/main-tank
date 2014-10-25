@@ -3,8 +3,12 @@
 		
 <div id="liuShuiXian">
 	<div id="carousel">
-		<g:each in="${fileNameList}" status="i" var="fileName">
-			<asset:image src="SanFang/LiuShuiXian/images/${ fileName }" alt=""/>
+		<g:each in="${instanceList}" status="i" var="instance">
+			<div class="imageWrapper borderBox">
+				<a href="${ instance.url }">
+					<asset:image src="SanFang/LiuShuiXian/images/${ instance.fileName }" alt="" width="100%" height="100%"/>
+				</a>
+			</div>
 		</g:each>
 	</div>
 </div>
@@ -46,7 +50,7 @@
 			marginTop: 200,
 			marginRight: 50
 		};
-		$('#carousel').carouFredSel({
+		jQuery('#carousel').carouFredSel({
 			width: 900,
 			height: 400,
 			align: false,

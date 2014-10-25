@@ -9,10 +9,6 @@
 	<body>
 		<div id="lianXiFangShi" class="borderBox clearfix defaultPage">
 		
-			<%--
-			<g:render template="/layouts/transition/1" />
-			--%>
-		
 			<h1>联系方式</h1>
 			
 			<ul class="xiangQing">
