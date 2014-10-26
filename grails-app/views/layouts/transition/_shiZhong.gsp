@@ -1,7 +1,7 @@
 <%@ page import="main.tank.ChangLiang" %>
 
 <div id="transition-shiZhong">
-	<div style="padding-left:500px;">
+	<div style="width:415px;margin-left:auto;padding-right:30px;">
 		<g:render template="/layouts/plugin/shiZhong"/>
 	</div>
 		

@@ -25,7 +25,7 @@ class X520Controller {
 			new TuPian("seth.jpg"), new TuPian("yeshou.jpg"), new TuPian("gen.jpg"), new TuPian("sakura.jpg"), new TuPian("vega.jpg"), new TuPian("ken.jpg"), new TuPian("jingcha.jpg")
 		]
 		
-		ArrayList cardList = [new TuPian("1.jpg"), new TuPian("2.jpg"), new TuPian("3.jpg"), new TuPian("4.jpg")]
+		ArrayList cardList = [new TuPian("1.jpg"), new TuPian("2.jpg"), new TuPian("3.jpg"), new TuPian("4.png")]
 		
 		[
 			gengXinInstanceList:GengXin.list(params), gengXinInstanceCount:GengXin.count(),
@@ -47,7 +47,7 @@ class X520Controller {
 	}
 	
 	/**
-	 * 测试
+	 * 测试(个人资料)
 	 * @param yongHuInstance
 	 */
 	def test(YongHu yongHuInstance) {
