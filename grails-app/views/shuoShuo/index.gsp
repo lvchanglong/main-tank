@@ -1,5 +1,15 @@
 <div id="shuoShuo-index" class="index">
 	<ul>
+			<li style="display:none;">
+				<strong class="yongHu">
+					匿名
+				</strong>
+				<span class="separator">/</span>
+				<span class="shiJian">
+					yyyy-MM-dd HH:mm:ss
+				</span>
+				<p class="neiRong">内容</p>
+			</li>
 		<g:each in="${shuoShuoInstanceList}" status="i" var="shuoShuoInstance">
 			<li>
 				<strong class="yongHu">
@@ -9,7 +19,6 @@
 				<span class="shiJian">
 					<g:formatDate date="${shuoShuoInstance.dateCreated}" format="yyyy-MM-dd HH:mm:ss" />
 				</span>
-				
 				<p class="neiRong">${fieldValue(bean: shuoShuoInstance, field: "neiRong")}</p>
 			</li>
 		</g:each>

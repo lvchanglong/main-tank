@@ -27,7 +27,7 @@ class ShuoShuoRestfulController extends RestfulController {
 		shuoShuoInstance.save flush:true
 		
 		def map = new HashMap([
-			"yongHu":shuoShuoInstance.yongHu,
+			"yongHu":shuoShuoInstance.yongHu.xingMing,
 			"dateCreated":formatDate(date:shuoShuoInstance.dateCreated,format:"yyyy-MM-dd HH:mm:ss"),
 			"neiRong":shuoShuoInstance.neiRong
 		])

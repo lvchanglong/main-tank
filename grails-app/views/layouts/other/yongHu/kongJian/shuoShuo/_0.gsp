@@ -2,9 +2,7 @@
 
 <div id="yonghu-shuoshuo-0" class="borderBox">
 	<h1>个人说说</h1>
-	
-	<g:set var="yongHuInstance" value="${YongHu.get(1)}"></g:set>
-	
+
 	<div class="wrapper borderBox">
 
 		<g:if test="${ session.uid && session.uid == yongHuInstance.id }">
@@ -19,6 +17,7 @@
 		
 		<script type="text/javascript">
 			function shuoShuoSaveSuccess(data,textStatus, selector) {
+				//console.log(data);
 				switch(textStatus) {
 					case "success":
 						jQuery(selector).html("操作成功");
@@ -28,10 +27,11 @@
 						var $ul =  $wrapper.find("ul:first");
 						var $clone = $ul.find("li:first").clone();
 
+						$clone.find(".yongHu").html(data.yongHu);
 						$clone.find(".shiJian").html(data.dateCreated);
 						$clone.find(".neiRong").html(data.neiRong);
 
-						$ul.prepend($clone);
+						$ul.prepend($clone.show());
 						break;
 				}
 			}

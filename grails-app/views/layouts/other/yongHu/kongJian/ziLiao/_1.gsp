@@ -2,7 +2,7 @@
 	<h1>个人资料</h1>
 	
 	<div class="wrapper borderBox">
-		<div style="position:relative;margin-left:60px;">
+		<div style="position:relative;">
 		
 			<asset:image src="WangLuo/SuCai/${ yongHuInstance.xingBie }.png"/>
 		
@@ -17,20 +17,22 @@
 			
 			<ul class="clearfix borderBox">
 				<li>
+					生日<span class="separator">/</span>${ yongHuInstance.shengRi }
+					<%--
 					${ yongHuInstance.xingBie }
-					<span class="separator">/</span>
-					${ yongHuInstance.shengRi }
-					<span class="separator">/</span>
-					${ yongHuInstance.suoZai }
+					--%>
 				</li>
 				<li>
-					${ yongHuInstance.shouJi }
+					所在<span class="separator">/</span>${ yongHuInstance.suoZai }
 				</li>
 				<li>
-					${ yongHuInstance.youXiang }
+					手机<span class="separator">/</span>${ yongHuInstance.shouJi }
 				</li>
 				<li>
-					${ yongHuInstance.jianJie }
+					邮箱<span class="separator">/</span>${ yongHuInstance.youXiang }
+				</li>
+				<li>
+					简介<span class="separator">/</span>${ yongHuInstance.jianJie }
 				</li>
 			</ul>
 			
