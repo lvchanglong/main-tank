@@ -7,6 +7,8 @@ package main.tank
  */
 class YongHu {
 
+	static hasMany = [shuoShuos: ShuoShuo] //说说
+	
 	String zhangHao //账号
 	String miMa //密码
 	
@@ -47,7 +49,6 @@ class YongHu {
 		
 		id column:'ID'
 		version column:'BAN_BEN'
-		
 		zhangHao column: 'ZHANG_HAO'
 		miMa column: 'MI_MA'
 		xingMing column: 'XING_MING'

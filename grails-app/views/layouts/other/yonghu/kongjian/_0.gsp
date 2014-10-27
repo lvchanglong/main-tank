@@ -8,14 +8,14 @@
 			</g:link>
 		</li>
 		<li class="main-li">
-			<g:remoteLink controller="x520" action="test" update="yonghu-kongjian-0-wrapper" id="${ yongHuInstance.id }" class="aList">
+			<g:remoteLink controller="yongHuRestful" action="geRenZiLiao" update="yonghu-kongjian-0-wrapper" id="${ yongHuInstance.id }" class="aList">
 				<asset:image src="WangLuo/SuCai/个人资料.png"/>
 			</g:remoteLink>
 		</li>
 		<li class="main-li">
-			<a href="javascript:void(0);" class="aList">
+			<g:remoteLink controller="yongHuRestful" action="geRenShuoShuo" update="yonghu-kongjian-0-wrapper" id="${ yongHuInstance.id }" class="aList">
 				<asset:image src="WangLuo/SuCai/个人说说.png"/>
-			</a>
+			</g:remoteLink>
 		</li>
 		<li class="main-li">
 			<a href="javascript:void(0);" class="aList">

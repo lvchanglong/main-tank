@@ -37,8 +37,9 @@
 	<div class="pagination">
 		<g:paginate total="${yongHuInstanceCount ?: 0}" />
 	</div>
+	
+	<script type="text/javascript">
+		remotePagination(".index");
+	</script>
 </div>
 
-<script type="text/javascript">
-	remotePagination(".index");
-</script>

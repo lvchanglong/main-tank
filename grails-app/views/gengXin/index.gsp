@@ -12,8 +12,9 @@
 	<div class="pagination">
 		<g:paginate total="${gengXinInstanceCount ?: 0}" />
 	</div>
+	
+	<script type="text/javascript">
+		remotePagination(".index");
+	</script>
 </div>
 
-<script type="text/javascript">
-	remotePagination(".index");
-</script>

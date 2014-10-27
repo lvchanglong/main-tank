@@ -9,7 +9,7 @@
 	<body>
 		<div id="kongJian" class="borderBox defaultPage">
 			
-			<g:render template="/layouts/other/yonghu/kongjian/0" model="[yongHuInstance:yongHuInstance]" />
+			<g:render template="/layouts/other/yongHu/kongJian/0" model="[yongHuInstance:yongHuInstance]" />
 		
 		</div>
 	</body>

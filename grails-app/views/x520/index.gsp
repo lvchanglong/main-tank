@@ -10,7 +10,7 @@
 	<body>
 
 		<div id="zhuYe" class="borderBox">
-			
+
 			<section class="decoration">
 				<g:render template="/layouts/plugin/huanDengPian" model="[instanceList: slideList, width:'960px', height:'372px']"/>
 			</section>
@@ -25,7 +25,7 @@
 			
 			<section class="decorationWidthPadding">
 				<h2>更新日志</h2>
-				<g:applyLayout controller="gengXin" action="index" params="[offset:0, max:5, gengXinInstanceList:gengXinInstanceList,gengXinInstanceCount:gengXinInstanceCount]" />
+				<g:applyLayout controller="gengXin" action="index" params="[offset:0, max:5]" />
 			</section>
 			
 			<section class="decorationWidthPadding">
@@ -35,7 +35,7 @@
 			
 			<section class="decorationWidthPadding">
 				<h2>用户信息</h2>
-				<g:applyLayout controller="yongHu" action="index" params="[offset:0, max:5, yongHuInstanceList:yongHuInstanceList, yongHuInstanceCount:yongHuInstanceCount]" />
+				<g:applyLayout controller="yongHu" action="index" params="[offset:0, max:5]" />
 			</section>
 			
 			<section class="decorationWidthPadding end">

@@ -1,6 +1,8 @@
 package main.tank
 
 import grails.converters.JSON
+import grails.transaction.Transactional;
+
 import java.nio.CharBuffer
 import java.text.DateFormat
 
@@ -28,8 +30,6 @@ class X520Controller {
 		ArrayList cardList = [new TuPian("1.jpg"), new TuPian("2.jpg"), new TuPian("3.jpg"), new TuPian("4.png")]
 		
 		[
-			gengXinInstanceList:GengXin.list(params), gengXinInstanceCount:GengXin.count(),
-			yongHuInstanceList:YongHu.list(params), yongHuInstanceCount:YongHu.count(),
 			slideList:slideList, cardList:cardList
 		]
 	}
@@ -47,11 +47,11 @@ class X520Controller {
 	}
 	
 	/**
-	 * 测试(个人资料)
+	 * 测试
 	 * @param yongHuInstance
 	 */
 	def test(YongHu yongHuInstance) {
-		render(template:"/layouts/other/yonghu/ziliao/1", model:[yongHuInstance: yongHuInstance])
+		
 	}
 	
 	/**
@@ -69,6 +69,7 @@ class X520Controller {
 	/**
 	 * 用户注册
 	 */
+	@Transactional
 	def yongHuZhuCe(String zhangHao, String miMa, String queRenMiMa) {
 		if (zhangHao) {
 			if (miMa == queRenMiMa) {//确认密码一致性
@@ -93,6 +94,7 @@ class X520Controller {
 	 * 头像上传
 	 * grails-app/assets/images/KongJian/${yongHuInstance.zhangHao}/${fileName}
 	 */
+	@Transactional
 	def touXiangShangChuan(String fileName, String userID) {
 		def yongHuInstance = YongHu.get(userID)
 		if (yongHuInstance) {
@@ -125,6 +127,7 @@ class X520Controller {
 	/**
 	 * 修改密码
 	 */
+	@Transactional
 	def miMaXiuGai(YongHu yongHuInstance, String yuanMiMa, String xinMiMa, String queRenMiMa) {
 		if (xinMiMa == queRenMiMa) {//确认密码一致性
 			if (yongHuInstance) {

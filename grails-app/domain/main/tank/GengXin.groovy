@@ -13,7 +13,7 @@ class GengXin {
 	Date lastUpdated //更新时间
 	
     static constraints = {
-		neiRong(nullable: false, blank: false, unique: true)
+		neiRong(nullable: false, blank: false)
     }
 	
 	static mapping = {

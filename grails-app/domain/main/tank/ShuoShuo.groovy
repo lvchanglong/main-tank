@@ -2,13 +2,10 @@ package main.tank
 
 import java.util.Date;
 
-/**
- * 建议反馈
- * @author lvchanglong
- *
- */
-class FanKui {
-
+class ShuoShuo {
+	
+	static belongsTo = [yongHu: YongHu] //用户
+	
 	String neiRong //内容
 	
 	Date dateCreated //创建时间
@@ -19,13 +16,14 @@ class FanKui {
 	}
 	
 	static mapping = {
-		table 'JIAN_YI_FAN_KUI'
+		table 'SHUO_SHUO'
 		
 		id column:'ID'
 		version column:'BAN_BEN'
 		
 		neiRong column: 'NEI_RONG'
-
+		yongHu column: 'YONG_HU_ID'
+		
 		dateCreated column: 'CHUANG_JIAN_SHI_JIAN'
 		lastUpdated column: 'GENG_XIN_SHI_JIAN'
 		
@@ -35,4 +33,5 @@ class FanKui {
 	String toString() {
 		return "${this.neiRong}"
 	}
+
 }

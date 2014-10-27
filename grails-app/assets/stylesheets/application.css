@@ -35,6 +35,12 @@ globle
 	-webkit-animation:rightToLeft 7s ease; /* Safari and Chrome */
 	-o-animation:rightToLeft 7s ease; /* Opera */
 }
+[type=submit]:hover {
+	cursor:pointer;
+	   -moz-box-shadow: 0 0 1em #b2d1ff;
+	-webkit-box-shadow: 0 0 1em #b2d1ff;
+	        box-shadow: 0 0 1em #b2d1ff;
+}
 #spinner {
 	background-color:white;
 	border:7px solid black;
@@ -198,7 +204,6 @@ header
 	right:0;
 	display:inline-block;
 	height:100%;
-	list-style-type:none;
 }
 #header-0 ol li {
 	float:right;
@@ -207,12 +212,9 @@ header
 	position:relative;
 	height:100%;
 }
-#header-0 nav ul {
-	list-style-type:none;
-}
 #header-0 nav li {
 	float:left;
-	width:100px;
+	width:110px;
 	text-align:center;
 	position:relative;
 	height:100%;
@@ -381,7 +383,6 @@ footer-1
 	height:70px;
 }
 #footer-1 ul {
-	list-style-type:none;
 	margin:0 auto;
 	text-align:center;
 	display:inline-block;
@@ -431,7 +432,6 @@ logo-0
 	-o-animation:logoZaiXingDong 7s ease; /* Opera */
 }
 #logo-0 ul {
-	list-style-type:none;
 	position:relative;
 	width:40%;
 	height:100%;
@@ -477,7 +477,6 @@ logo-1
 	-o-animation:logoZaiXingDong 7s ease; /* Opera */
 }
 #logo-1 ul {
-	list-style-type:none;
 	position:relative;
 	width:50%;
 	height:100%;
@@ -541,7 +540,6 @@ logo-2
 	
 }
 #logo-2 ul {
-	list-style-type:none;
 	position:relative;
 	width:43%;
 	height:100%;
@@ -575,9 +573,7 @@ logo-2
 plugin-yongHuIP
 */
 #yongHuIP ul {
-	list-style-type:none;
 	text-align:left;
-	padding:10px;
 }
 #yongHuIP ul li {
 	height:25px;
@@ -589,9 +585,6 @@ plugin-yongHuIP
 /*
 plugin-qianZhiShengMing
 */
-#qianZhiShengMing ul {
-	list-style-type:none;
-}
 #transition-0 ul li {
 	height:25px;
 }
@@ -752,7 +745,6 @@ page-lianXiFangShi
 }
 #lianXiFangShi .xiangQing {
 	margin:0 0 30px 0;
-	list-style-type:none;
 	position:relative;
 	border-bottom: 1px dashed #dcdfe2;
 	min-height:180px;
@@ -804,7 +796,6 @@ page-wangZhanXiangGuan
 }
 #wangZhanXiangGuan .xiangQing {
 	margin:0 0 71px 0;
-	list-style-type:none;
 	position:relative;
 }
 #wangZhanXiangGuan .tuZhang {
@@ -830,7 +821,6 @@ page-wangZhanXiangGuan
 }
 #wangZhanXiangGuan ul {
 	margin:0 0 71px 0;
-	list-style-type:none;
 	position:relative;
 }
 #wangZhanXiangGuan li {
@@ -864,7 +854,6 @@ page-jianYiFanKui
 }
 #jianYiFanKui .xiangQing {
 	margin:0 0 71px 0;
-	list-style-type:none;
 	position:relative;
 }
 #jianYiFanKui .tuZhang {
@@ -890,7 +879,6 @@ page-jianYiFanKui
 }
 #jianYiFanKui ul {
 	margin:0 0 121px 0;
-	list-style-type:none;
 	position:relative;
 }
 #jianYiFanKui li {
@@ -984,7 +972,6 @@ page-yonghu-kongjian-0
 }
 #yonghu-kongjian-0 .main-ul {
 	position:relative;
-	list-style-type:none;
 	padding-left:250px;
 	width:100%;
 	min-height:290px;
@@ -1061,9 +1048,6 @@ page-geRenKongJian
 /*
 section-gengXin-index
 */
-#gengXin-index ul {
-	list-style-type:none;
-}
 #gengXin-index ul li {
 	padding:12px 0;
 }
@@ -1096,14 +1080,12 @@ section-yongHu-index
 	text-align: left;
 }
 #yongHu-index h3 {
-	font-size:30px;
+	font-size:28px;
 	display:block;
 	margin-bottom:15px;
 }
 #yongHu-index h3 a:hover {
-	color: #333;
-	outline: none;
-	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
 }
 #yongHu-index h1 .separator {
 	color:lightgray;
@@ -1131,9 +1113,6 @@ section-yongHu-index
 #yongHu-index .fuBiaoTi {
 	font-size:20px;
 }
-#yongHu-index ul {
-	list-style-type: none;
-}
 #yongHu-index ul li {
 	position: relative;
 	border-bottom: 1px dashed #dcdfe2;
@@ -1141,7 +1120,6 @@ section-yongHu-index
 }
 #yongHu-index .content {
 	position: relative;
-	list-style-type: none;
 	width: 100%;
 	height: 200px;
 	padding:45px 30px 0 255px;
@@ -1235,7 +1213,6 @@ transition-shiZhong
 	right:0;
 	top:0;
 	width:310px;
-	list-style-type:none;
 	min-height:256px;
 	padding:0 0 0 50px; 
 	font-size:14px;
@@ -1250,6 +1227,53 @@ transition-shiZhong
 	font-size:52px;
 	font-weight:bold;
 	text-align:center;
-	margin-bottom:60px;
+	margin-bottom:70px;
 	margin-top:0px;
+}
+
+/*yonghu-shuoshuo-0*/
+#yonghu-shuoshuo-0 {
+	margin-top:30px;
+}
+#yonghu-shuoshuo-0 h1 {
+	font-size: 52px;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 70px;
+	margin-top: 0px;
+}
+#yonghu-shuoshuo-0 textarea {
+	width:100%;
+	margin-bottom:10px;
+}
+#yonghu-shuoshuo-0 [type=submit] {
+	padding: 10px 61px;
+	background-color: black;
+	color: lavender;
+	float:right;
+}
+#yonghu-shuoshuo-0 .tiShi{
+	line-height: 34px;
+	height: 34px;
+	width: 77%;
+	padding-left: 10px;
+	text-align: left;
+	border: 3px ridge lightgray;
+}
+
+/*shuoshuo-index*/
+#shuoShuo-index li {
+	margin-bottom:5px;
+	border-bottom: 1px dashed #dcdfe2;
+}
+#shuoShuo-index strong {
+	font-size:20px;
+}
+#shuoShuo-index .separator, #shuoShuo-index .shiJian {
+	font-size:12px;
+}
+#shuoShuo-index p {
+	margin-top:10px;
+	padding-left:1px;
+	padding-bottom:10px;
 }
