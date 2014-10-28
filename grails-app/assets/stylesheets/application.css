@@ -1176,7 +1176,11 @@ transition-shiZhong
 	position:relative;
 }
 #transition-shiZhong .xiongYing {
-	position:absolute;left:30px;bottom:0;
+	position:absolute;
+	left:30px;
+	bottom:0;
+	width:250px;
+	height:180px;
 }
 #transition-shiZhong .xiongYing:hover {
 

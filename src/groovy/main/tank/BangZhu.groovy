@@ -36,8 +36,16 @@ class BangZhu {
 		}
 	}
 	
-	static main(args) {
+	/**
+	 * 通过文件名获得文件类型
+	 * @param fileName 文件名
+	 */
+	static String getFileType(String fileName) {
+		return fileName.find(/(?<=\.).*$/)
+	}
 	
+	static main(args) {
+		println BangZhu.getFileType("fileName.txt")
 	}
 
 }

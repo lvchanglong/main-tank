@@ -27,7 +27,7 @@ class X520Controller {
 			new TuPian("seth.jpg"), new TuPian("yeshou.jpg"), new TuPian("gen.jpg"), new TuPian("sakura.jpg"), new TuPian("vega.jpg"), new TuPian("ken.jpg"), new TuPian("jingcha.jpg")
 		]
 		
-		ArrayList cardList = [new TuPian("1.jpg"), new TuPian("2.jpg"), new TuPian("3.jpg"), new TuPian("4.png")]
+		ArrayList cardList = [new TuPian("1.jpg"), new TuPian("2.jpg"), new TuPian("3.jpg"), new TuPian("4.jpg")]
 		
 		[
 			slideList:slideList, cardList:cardList
@@ -133,6 +133,8 @@ class X520Controller {
 			
 			yongHuInstance.touXiang = xiangDuiLuJing
 			yongHuInstance.save(flush: true)//更新路径
+			
+			TuPian.yaSuo(file, 180, 180)//图片压缩处理
 			
 			render xiangDuiLuJing
 		} else {

@@ -3,7 +3,7 @@
 <div id="transition-shengXiao">
 	<div class="wrapper">
 		<div style="position:absolute;left:0;top:0;width:450px;">
-			<asset:image src="WangLuo/SuCai/腾云驾雾.png" class="leftToRight"/>
+			<asset:image src="WangLuo/SuCai/腾云驾雾.png" class="leftToRight" width="239px" height="180px"/>
 		</div>
 		<div style="width:210px;margin-left:auto;">
 			<g:render template="/layouts/plugin/shengXiao"/>
