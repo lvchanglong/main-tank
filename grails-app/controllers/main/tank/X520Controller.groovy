@@ -64,10 +64,62 @@ class X520Controller {
 	
 	/**
 	 * 测试
-	 * @param yongHuInstance
 	 */
-	def test(YongHu yongHuInstance) {
+	def test() {
 		
+	}
+	
+	/**
+	 * 图片压缩
+	 * @param fileName 文件名
+	 * @param width 宽度限定
+	 * @param height 高度限定
+	 */
+	def tuPianYaSuo(String fileName, Integer width, Integer height) {
+		if ((width == null && height == null) || (width && width <= 0) || (height && height <= 0)) {//错误数据处理
+			width = 180
+			height = 180
+		} else if (width != null && height == null) {//宽度限定，高度自适
+			height = 0
+		} else if (width == null && height != null) {//高度限定，宽度自适
+			width = 0
+		}
+		
+		def xiangDuiLuJing = "images/LinShi/${fileName}"//相对路径
+		BufferedInputStream fileIn = new BufferedInputStream(request.getInputStream())
+		byte[] buf = new byte[1024]
+		File file = ZiYuanGuanLi.getFile("grails-app/assets/${xiangDuiLuJing}")
+		BufferedOutputStream fileOut = new BufferedOutputStream(new FileOutputStream(file))
+		while (true) {
+			int bytesIn = fileIn.read(buf, 0, 1024)
+			if (bytesIn == -1) {
+				  break
+			} else {
+				  fileOut.write(buf, 0, bytesIn)
+			}
+		}
+		fileOut.flush()
+		fileOut.close()
+		
+		TuPian.yaSuo(file, width, height)//图片压缩处理
+		
+		render createLink(controller:"x520", action:"xiaZai", params:["filePath":xiangDuiLuJing])
+	}
+	
+	/**
+	 * 下载
+	 * @param filePath 文件路径
+	 */
+	def xiaZai(String filePath) {
+		File file = new File("grails-app/assets/${filePath}")
+		def fileName = file.getName()
+		def fileType = BangZhu.getFileType(fileName)
+		response.contentType = grailsApplication.config.grails.mime.types[fileType]
+		response.setHeader("Content-Disposition", "attachment; filename=" + URLEncoder.encode(fileName, "UTF-8"))
+		def out = response.getOutputStream()
+		out << file.getBytes()
+		out.flush()
+		out.close()
 	}
 	
 	/**

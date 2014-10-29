@@ -28,7 +28,16 @@ grails.mime.types = [ // the first one is the default format
     rss:           'application/rss+xml',
     text:          'text/plain',
     hal:           ['application/hal+json','application/hal+xml'],
-    xml:           ['text/xml', 'application/xml']
+    xml:           ['text/xml', 'application/xml'],
+	
+	zip:		   'application/x-zip-compressed',
+	rar:		   'application/x-rar-compressed',
+	pdf:		   'application/pdf',
+	txt:		   'text/plain',
+	png:		   'image/png',
+	gif:		   'image/gif',
+	jpeg:		   'image/jpeg',
+	jpg:		   'image/jpg'
 ]
 
 // URL Mapping Cache Max Size, defaults to 5000

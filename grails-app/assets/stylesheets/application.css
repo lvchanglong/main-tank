@@ -1283,3 +1283,74 @@ transition-shiZhong
 	padding-left:1px;
 	padding-bottom:10px;
 }
+/*plugin-tuPianYaSuo*/
+#tuPianYaSuo form {
+	position:relative;
+	min-height:256px;
+	width:256px;
+	margin-left:auto;
+}
+#tuPianYaSuo [type=file] {
+	position:absolute;
+	left:0;
+	top:0;
+	width:255px;
+	height:30px;
+	padding:0;
+	margin:0;
+	opacity:0.0;
+	filter:Alpha(opacity=0);
+	cursor:pointer;
+}
+#tuPianYaSuo .tuPianXuanZe, #tuPianYaSuo .tuPianShangChuan, #tuPianYaSuo .tuPianXiaZai {
+	display:block;
+	width:255px;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	padding:0;
+	margin:0 0 11px 0;
+	font-size: 1em;
+	border: 1px solid #cccccc;
+	background-color: ghostwhite;
+}
+#tuPianYaSuo .tuPianWrapper {
+	position:absolute;
+	left:0;
+	top:0;
+	width:625px;
+	height: 100%;
+	line-height:303px;
+	font-size:20px;
+	text-align:center;
+	border: 1px solid #cccccc;
+}
+#tuPianYaSuo .tuPianWrapper img {
+	width:256px;
+	height:256px;
+	display:block;
+	margin:22px auto 0 auto;
+}
+#tuPianYaSuo [type=text] {
+	width:109px;
+	margin-bottom:10px;
+}
+#tuPianYaSuo ul {
+	width:100%;
+	margin-left:auto;
+	border: 1px solid #cccccc;
+	padding:25px 0 15px 0;
+}
+#tuPianYaSuo li span {
+	display:inline-block;
+	width:62px;
+	margin-bottom:10px;
+	text-align:center;
+}
+#tuPianYaSuo li span.long {
+	width:105px;
+}
+#tuPianYaSuo .tuPianXiaZai {
+	background-color:cadetblue;
+	text-decoration:none;
+}

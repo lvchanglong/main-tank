@@ -16,6 +16,11 @@
 			</section>
 			
 			<section class="decorationWidthPadding">
+				<h2>图片压缩</h2>
+				<g:render template="/layouts/plugin/tuPianYaSuo" />
+			</section>
+			
+			<section class="decorationWidthPadding">
 				<g:render template="/layouts/transition/IP" />
 			</section>
 			

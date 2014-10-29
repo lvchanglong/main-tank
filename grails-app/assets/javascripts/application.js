@@ -19,9 +19,41 @@ if (typeof jQuery !== 'undefined') {
 	})(jQuery);
 }
 
-//文件上传
-function wenJianShangChuan(files, url, path) {
+//头像预览
+function tuPianChaKan(files, wrapperSelector, xuanZeSelector, shangChuanSelector) {
 
+	$xuanZe = jQuery(xuanZeSelector);//上传按钮
+	
+	if (files.length < 1) {
+		$xuanZe.html("选择图片");
+		return false;
+	}
+	
+	for(var i = 0; i < files.length; i++) {
+         var tuPian = files[i];//图片
+         var reader = new FileReader();
+         reader.readAsDataURL(tuPian);
+         reader.onload=function(e){
+             //console.log(e.target.result);
+             jQuery(wrapperSelector).html("<img src='"+e.target.result+"' width='100%' height='100%' alt=''/>");
+             $xuanZe.html("已选择");
+             jQuery(shangChuanSelector).val("开始上传");
+         };
+    }
+    
+    //console.log(files);
+}
+
+//图片上传
+function tuPianShangChuan(files, url, shangChuanSelector) {
+
+	$shangChuan = jQuery(shangChuanSelector);//上传按钮
+
+	if (files.length < 1) {
+		$shangChuan.val("( ↑ _ ↑ )");
+		return false;
+	}
+	
 	try {//修复谷歌浏览器sendAsBinary()异常
 	  if (typeof XMLHttpRequest.prototype.sendAsBinary == 'undefined') {
 	    XMLHttpRequest.prototype.sendAsBinary = function(text){
@@ -32,29 +64,36 @@ function wenJianShangChuan(files, url, path) {
 	    }
 	  }
 	} catch (e) {}
-		
+	
 	for(var i = 0; i < files.length; i++) {
         var file = files[i];//当前文件
         var reader = new FileReader();
 
         reader.onloadstart = function() {
-			console.log("读取开始:" + file.size);
+			console.log("读取开始");
+			$shangChuan.val("读取开始");
 		}
 		
 		reader.onprogress = function(p) {
-			console.log("读取进行中:" + p.loaded);
+			var loaded = p.loaded;
+			var total = p.total;
+			var baiFenBi = loaded / total * 100;
+			console.log("读取进行中:" + baiFenBi + "%");
+			$shangChuan.val("读取进行中:" + baiFenBi + "%");
 		}
 		
 		reader.onload = function() {
 			console.log("读取完成"); 
+			$shangChuan.val("读取完成");
 		}
 		
-		reader.onloadend = function(e) {
+		reader.onloadend = function() {
 			if (reader.error) {//失败
 				console.log(reader.error);
+				$shangChuan.val("上传失败");
 			} else {//成功
 				var xhr = new XMLHttpRequest();
-				xhr.open("POST", url + "?fileName=" + file.name + "&path=" + path);
+				xhr.open("POST", url + "?fileName=" + file.name);
           		xhr.overrideMimeType("application/octet-stream");
 				xhr.sendAsBinary(this.result);
 				
@@ -62,7 +101,10 @@ function wenJianShangChuan(files, url, path) {
 					if (xhr.readyState == 4) {
 						if (xhr.status == 200) {
 							console.log("上传成功");
-							console.log("response: " + xhr.responseText);
+							//console.log("response: " + xhr.responseText);
+							$shangChuan.val("上传成功");
+
+							$shangChuan.css("background-color", "lightslategray");
 						}
 					}
 				}
@@ -70,24 +112,6 @@ function wenJianShangChuan(files, url, path) {
 		}
 		reader.readAsBinaryString(file);
     }
-	//console.log(files);
-	
-}
-
-//图片查看
-function tuPianChaKan(files, selector) {
-	
-	for(var i = 0; i < files.length; i++) {
-         var tuPian = files[i];//图片
-         var reader = new FileReader();
-         reader.readAsDataURL(tuPian);
-         reader.onload=function(e){
-             //console.log(e.target.result);
-             jQuery(selector).html("<img src='"+e.target.result+"' width='100%' height='100%' alt=''/>");
-         };
-    }
-    
-    //console.log(files);
 }
 
 //浮动响应
@@ -286,4 +310,87 @@ function Talk(dialogID, sayID, array) {
 			$dialog.hide();
 		}
 	}
+}
+
+//------------------------------------------------------------------------------------------
+
+//文件上传
+function wenJianShangChuan_backup(files, url, path) {
+
+	if (files.length < 1) {
+		console.log("请选择文件");
+		return false;
+	}
+	
+	try {//修复谷歌浏览器sendAsBinary()异常
+	  if (typeof XMLHttpRequest.prototype.sendAsBinary == 'undefined') {
+	    XMLHttpRequest.prototype.sendAsBinary = function(text){
+	      var data = new ArrayBuffer(text.length);
+	      var ui8a = new Uint8Array(data, 0);
+	      for (var i = 0; i < text.length; i++) ui8a[i] = (text.charCodeAt(i) & 0xff);
+	      this.send(ui8a);
+	    }
+	  }
+	} catch (e) {}
+		
+	for(var i = 0; i < files.length; i++) {
+        var file = files[i];//当前文件
+        var reader = new FileReader();
+
+        reader.onloadstart = function() {
+			console.log("读取开始:" + file.size);
+		}
+		
+		reader.onprogress = function(p) {
+			console.log("读取进行中:" + p.loaded);
+		}
+		
+		reader.onload = function() {
+			console.log("读取完成"); 
+		}
+		
+		reader.onloadend = function(e) {
+			if (reader.error) {//失败
+				console.log(reader.error);
+			} else {//成功
+				var xhr = new XMLHttpRequest();
+				xhr.open("POST", url + "?fileName=" + file.name + "&path=" + path);
+          		xhr.overrideMimeType("application/octet-stream");
+				xhr.sendAsBinary(this.result);
+				
+				xhr.onreadystatechange = function() {
+					if (xhr.readyState == 4) {
+						if (xhr.status == 200) {
+							console.log("上传成功");
+							console.log("response: " + xhr.responseText);
+						}
+					}
+				}
+			}
+		}
+		reader.readAsBinaryString(file);
+    }
+	//console.log(files);
+	
+}
+
+//图片查看
+function tuPianChaKan_backup(files, selector) {
+	
+	if (files.length < 1) {
+		console.log("请选择图片");
+		return false;
+	}
+	
+	for(var i = 0; i < files.length; i++) {
+         var tuPian = files[i];//图片
+         var reader = new FileReader();
+         reader.readAsDataURL(tuPian);
+         reader.onload=function(e){
+             //console.log(e.target.result);
+             jQuery(selector).html("<img src='"+e.target.result+"' width='100%' height='100%' alt=''/>");
+         };
+    }
+    
+    //console.log(files);
 }
