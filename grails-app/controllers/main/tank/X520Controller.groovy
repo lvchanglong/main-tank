@@ -85,7 +85,7 @@ class X520Controller {
 			width = 0
 		}
 		
-		def xiangDuiLuJing = "images/LinShi/${fileName}"//相对路径
+		def xiangDuiLuJing = "resources/LinShi/${fileName}"//相对路径
 		BufferedInputStream fileIn = new BufferedInputStream(request.getInputStream())
 		byte[] buf = new byte[1024]
 		File file = ZiYuanGuanLi.getFile("grails-app/assets/${xiangDuiLuJing}")
@@ -160,16 +160,16 @@ class X520Controller {
 	
 	/**
 	 * 头像上传
-	 * grails-app/assets/images/KongJian/${yongHuInstance.zhangHao}/${fileName}
+	 * grails-app/assets/resources/KongJian/${yongHuInstance.zhangHao}/TuPian/${fileName}
 	 */
 	@Transactional
 	def touXiangShangChuan(String fileName, String userID) {
 		def yongHuInstance = YongHu.get(userID)
 		if (yongHuInstance) {
-			def xiangDuiLuJing = "KongJian/${yongHuInstance.zhangHao}/${fileName}"//相对路径
+			def xiangDuiLuJing = "KongJian/${yongHuInstance.zhangHao}/TuPian/${fileName}"//相对路径
 			BufferedInputStream fileIn = new BufferedInputStream(request.getInputStream())
 			byte[] buf = new byte[1024]
-			File file = ZiYuanGuanLi.getFile("grails-app/assets/images/${xiangDuiLuJing}")
+			File file = ZiYuanGuanLi.getFile("grails-app/assets/resources/${xiangDuiLuJing}")
 			BufferedOutputStream fileOut = new BufferedOutputStream(new FileOutputStream(file))
 			while (true) {
 			   int bytesIn = fileIn.read(buf, 0, 1024)
