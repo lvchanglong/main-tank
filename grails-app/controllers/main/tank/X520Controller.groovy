@@ -26,11 +26,8 @@ class X520Controller {
 		ArrayList slideList = [
 			new TuPian("seth.jpg"), new TuPian("yeshou.jpg"), new TuPian("gen.jpg"), new TuPian("sakura.jpg"), new TuPian("vega.jpg"), new TuPian("ken.jpg"), new TuPian("jingcha.jpg")
 		]
-		
-		ArrayList cardList = [new TuPian("1.jpg"), new TuPian("2.jpg"), new TuPian("3.jpg"), new TuPian("4.jpg")]
-		
 		[
-			slideList:slideList, cardList:cardList
+			slideList:slideList
 		]
 	}
 	
@@ -60,6 +57,14 @@ class X520Controller {
 	 */
 	def geRenShuoShuo(YongHu yongHuInstance) {
 		render(template:"/layouts/other/yongHu/kongJian/shuoShuo/0", model:[yongHuInstance: yongHuInstance])
+	}
+	
+	/**
+	 * 个人空间-个人文章
+	 * @param yongHuInstance 被查看用户
+	 */
+	def geRenWenZhang(YongHu yongHuInstance) {
+		render(template:"/layouts/other/yongHu/kongJian/wenZhang/0", model:[yongHuInstance: yongHuInstance])
 	}
 	
 	/**

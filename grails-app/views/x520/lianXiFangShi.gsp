@@ -18,7 +18,7 @@
 				<li><span class="leibie">手机：</span>${ ChangLiang.SHOU_JI }</li>
 				<li><span class="leibie">信仰：</span>${ ChangLiang.WANG_ZHAN_KOU_HAO }</li>
 				<li class="zhuangTai"><span class="leibie">状态：</span><span class="xianZai">已</span></li>
-				<li class="touXiang"><asset:image src="WangLuo/TouXiang/ChengYuan/吕常龙.png"/></li>
+				<li class="touXiang"><asset:image src="WangLuo/TouXiang/ChengYuan/吕常龙.png" style="width:135px;"/></li>
 				<li class="separator-image"></li>
 			</ul>
 			
@@ -29,7 +29,7 @@
 				<li><span class="leibie">手机：</span>???????????</li>
 				<li><span class="leibie">信仰：</span>这家伙很懒，什么都没留下</li>
 				<li class="zhuangTai"><span class="leibie">状态：</span><span class="xianZai">未</span></li>
-				<li class="touXiang"><asset:image src="WangLuo/TouXiang/ChengYuan/谜.png"/></li>
+				<li class="touXiang"><asset:image src="WangLuo/TouXiang/ChengYuan/谜.png" style="width:135px;"/></li>
 			</ul>
 			
 			<ul class="xiangQing">
@@ -39,7 +39,7 @@
 				<li><span class="leibie">手机：</span>???????????</li>
 				<li><span class="leibie">信仰：</span>这家伙很懒，什么都没留下</li>
 				<li class="zhuangTai"><span class="leibie">状态：</span><span class="xianZai">未</span></li>
-				<li class="touXiang"><asset:image src="WangLuo/TouXiang/ChengYuan/谜.png"/></li>
+				<li class="touXiang"><asset:image src="WangLuo/TouXiang/ChengYuan/谜.png" style="width:135px;"/></li>
 			</ul>
 			
 			<div class="tuZhang">你来了，我们欢迎你。你走了，也到过这里</div>

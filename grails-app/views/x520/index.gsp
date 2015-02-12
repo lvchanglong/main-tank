@@ -43,13 +43,9 @@
 				<g:applyLayout controller="yongHu" action="index" params="[offset:0, max:5]" />
 			</section>
 			
-			<section class="decorationWidthPadding">
+			<section class="decorationWidthPadding end">
 				<h2>说说信息</h2>
 				<g:applyLayout controller="shuoShuo" action="index" params="[offset:0, max:5]" />
-			</section>
-			
-			<section class="decorationWidthPadding end">
-				<g:render template="/layouts/plugin/liuShuiXian" model="[instanceList: cardList]"/>
 			</section>
 			
 		</div>
