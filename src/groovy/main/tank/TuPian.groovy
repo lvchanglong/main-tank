@@ -21,7 +21,7 @@ class TuPian {
 	/**
 	 * URL(href)
 	 */
-	String url = "javascript:void(0)"
+	String url = "javascript:void(0);"
 	
 	TuPian(String fileName) {
 		this.fileName = fileName

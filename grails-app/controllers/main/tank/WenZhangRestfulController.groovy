@@ -27,7 +27,6 @@ class WenZhangRestfulController extends RestfulController {
 		wenZhangInstance.save flush:true
 		
 		def map = new HashMap([
-			"id":wenZhangInstance.id,
 			"yongHu":wenZhangInstance.yongHu.xingMing,
 			"dateCreated":formatDate(date:wenZhangInstance.dateCreated,format:"yyyy-MM-dd HH:mm:ss"),
 			"biaoTi":"<a href='${createLink(controller:'wenZhang', action:'show', id:wenZhangInstance.id)}' target='_blank'>${wenZhangInstance.biaoTi}</a>"

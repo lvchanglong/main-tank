@@ -99,6 +99,18 @@
 			
 			<ol>
 				<li>
+					<g:link uri="/">主页</g:link>
+				</li>
+				<li>
+					<g:link controller="x520" action="yongHu">用户</g:link>
+				</li>
+				<li>
+					<g:link controller="x520" action="fuWu">服务</g:link>
+				</li>
+				<li>
+					<g:link controller="x520" action="liShi">历史</g:link>
+				</li>
+				<li>
 					<a href="javascript:void(0);" onclick="shouCang(window.location,document.title);">收藏</a>
 				</li>
 			</ol>

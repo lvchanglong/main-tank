@@ -205,16 +205,9 @@ header
 	display:inline-block;
 	height:100%;
 }
-#header-0 ol li {
-	float:right;
-	width:110px;
-	text-align:center;
-	position:relative;
-	height:100%;
-}
 #header-0 nav li {
 	float:left;
-	width:110px;
+	width:100px;
 	text-align:center;
 	position:relative;
 	height:100%;
@@ -424,9 +417,6 @@ logo-2
 	height:170px;
 	width:auto;
 }
-#logo-2 .tank:hover {
-	
-}
 #logo-2 ul {
 	position:relative;
 	width:43%;
@@ -443,18 +433,26 @@ logo-2
 }
 #logo-2 h1 {
 	font-weight:bold;
-	font-size:66px;
+	font-size:54px;
 	text-align:center;
 	letter-spacing:5px;
 	color: black;
 	margin-top:36px;
-	margin-bottom:12px;
+	margin-bottom:6px;
 }
 #logo-2 h3 {
 	font-weight:normal;
 	font-size:16px;
 	text-align:center;
 	color: black;
+	line-height:24px;
+}
+
+#logo-2 h4 {
+	font-weight:normal;
+	font-size:12px;
+	text-align:center;
+	color: gray;
 	line-height:24px;
 }
 
@@ -824,11 +822,33 @@ page-jianYiFanKui
 /*---------------------------------------------------------------------------------------------------------------------*/
 
 /*
+page
+*/
+.page h2 {
+	font-size:52px;
+	margin-bottom:35px;
+}
+
+.page > section {
+	position:relative;
+	margin-bottom:50px;
+}
+.page > section.end {
+	position:relative;
+	margin-bottom:0;
+}
+
+.page .decoration {
+	box-shadow: 0 0 30px #333;
+}
+.page .decorationWidthPadding {
+	padding:30px;
+	box-shadow: 0 0 30px #333;
+}
+
+/*
 page-kongjian
 */
-#kongjian {
-	
-}
 #kongjian .touXiangQv {
 	position:absolute;
 	left:0px;
@@ -897,41 +917,6 @@ page-kongjian
 	margin-top:161px;
 	margin-bottom:30px;
 	font-weight:700;
-}
-
-/*
-page-zhuYe
-*/
-#zhuYe {
-	
-}
-#zhuYe h2 {
-	font-size:52px;
-	margin-bottom:35px;
-}
-
-#zhuYe > section {
-	position:relative;
-	margin-bottom:50px;
-}
-#zhuYe > section.end {
-	position:relative;
-	margin-bottom:0;
-}
-
-#zhuYe .decoration {
-	box-shadow: 0 0 30px #333;
-}
-#zhuYe .decorationWidthPadding {
-	padding:30px;
-	box-shadow: 0 0 30px #333;
-}
-
-/*
-page-geRenKongJian
-*/
-#geRenKongJian {
-	
 }
 
 /*

@@ -17,7 +17,10 @@
 			</h1>
 		</li>
 		<li>
-			<h3>${ ChangLiang.WANG_ZHAN_KOU_HAO }</h3>
+			<h3>${ ChangLiang.WANG_ZHAN_GUAN_JIAN_CI }</h3>
+		</li>
+		<li>
+			<h4>${ ChangLiang.WANG_ZHAN_KOU_HAO }</h4>
 		</li>
 	</ul>
 	

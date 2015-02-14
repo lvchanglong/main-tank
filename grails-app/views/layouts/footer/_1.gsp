@@ -4,7 +4,7 @@
 <div id="footer-1" class="borderBox">
 	<nav>
 		<ul class="clearfix">
-			<li style="width:100%;text-align:center;">©&nbsp;${ new RiQi().getNian() }&nbsp;${ ChangLiang.WANG_ZHAN_ZUO_ZHE }&nbsp;版权所有</li>
+			<li style="width:100%;text-align:center;">©&nbsp;${ new RiQi().getNian() }&nbsp;&nbsp;&nbsp;<g:link controller="x520" action="yongQianBiDu">${ ChangLiang.WANG_ZHAN_ZUO_ZHE }</g:link>&nbsp;&nbsp;&nbsp;版权所有</li>
 			
 			<li class="clearBoth"></li>
 			
@@ -39,6 +39,8 @@
 			</li>
 		</ul>
 	</nav>
+	<%--
 	<asset:image src="WangLuo/3D/左手.png" class="leftHand"/>
 	<asset:image src="WangLuo/3D/右手.png" class="rightHand"/>
+	--%>
 </div>

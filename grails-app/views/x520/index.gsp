@@ -9,15 +9,10 @@
 	</head>
 	<body>
 
-		<div id="zhuYe" class="borderBox">
+		<div id="zhuYe" class="page borderBox">
 			
 			<section class="decoration">
 				<g:render template="/layouts/plugin/huanDengPian" model="[instanceList: slideList, width:'960px', height:'372px']"/>
-			</section>
-			
-			<section class="decorationWidthPadding">
-				<h2>图片压缩</h2>
-				<g:render template="/layouts/plugin/tuPianYaSuo" />
 			</section>
 			
 			<section class="decorationWidthPadding">
@@ -25,22 +20,12 @@
 			</section>
 			
 			<section class="decorationWidthPadding">
-				<h2>更新日志</h2>
-				<g:applyLayout controller="gengXin" action="index" params="[offset:0, max:5]" />
+				<h2>解决方案</h2>
+				<g:applyLayout controller="wenZhang" action="index" params="[offset:0, max:5]" />
 			</section>
 			
 			<section class="decoration">
 				<g:render template="/layouts/transition/shiZhong" />
-			</section>
-			
-			<section class="decorationWidthPadding">
-				<h2>生肖查询</h2>
-				<g:render template="/layouts/transition/shengXiao" />
-			</section>
-			
-			<section class="decorationWidthPadding">
-				<h2>用户空间</h2>
-				<g:applyLayout controller="yongHu" action="index" params="[offset:0, max:5]" />
 			</section>
 			
 			<section class="decorationWidthPadding end">

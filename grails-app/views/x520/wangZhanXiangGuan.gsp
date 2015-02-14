@@ -22,6 +22,9 @@
 						
 						<ol>
 							<li>
+								真<span class="separator lightgray">/</span>亲身经历，解决方案，贵在真实
+							</li>
+							<li>
 								杂<span class="separator lightgray">/</span>广泛涉猎，兼并融合
 							</li>
 							<li>

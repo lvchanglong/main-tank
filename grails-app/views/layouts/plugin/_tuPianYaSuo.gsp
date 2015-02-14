@@ -13,7 +13,7 @@
 		
 		<g:submitButton name="shangChuan" value="开始上传" class="tuPianShangChuan"/>
 		
-		<a href="javascript:void(0)" class="tuPianXiaZai" style="display:none;">点此下载</a>
+		<a href="javascript:void(0);" class="tuPianXiaZai" style="display:none;">点此下载</a>
 		
 		<g:textField name="width" placeholder="限定宽度(px)" value=""/>
 		<g:textField name="height" placeholder="限定高度(px)" value=""/>

@@ -33,13 +33,13 @@
 				//console.log(data);
 				switch(textStatus) {
 					case "success":
-						jQuery(selector).html("操作成功");
+						jQuery(selector).html("操作成功");//更新状态
 						
-						jQuery("#yonghu-wenzhang-0-biaoTi").val("");
+						jQuery("#yonghu-wenzhang-0-biaoTi").val("");//清空文本
 						jQuery("#yonghu-wenzhang-0-neiRong").val("");
 						keditor.html('');
 
-						var $wrapper = jQuery("#yonghu-wenzhang-0-wrapper");
+						var $wrapper = jQuery("#yonghu-wenzhang-0-wrapper");//追加文本(复制、修改、追加)
 						var $ul =  $wrapper.find("ul:first");
 						var $clone = $ul.find("li:first").clone();
 

@@ -30,7 +30,7 @@ class ChangLiang {
 	/**
 	 * 网站作者
 	 */
-	static String WANG_ZHAN_ZUO_ZHE = "main-tank.com"
+	static String WANG_ZHAN_ZUO_ZHE = "吕常龙"
 	
 	/**
 	 * 网站名称
@@ -40,12 +40,12 @@ class ChangLiang {
 	/**
 	 * 网站口号
 	 */
-	static String WANG_ZHAN_KOU_HAO = "为生活中遇到的各种问题，提供确实的解决方案，不但有图更有真相"
+	static String WANG_ZHAN_KOU_HAO = "我的经历，您可借鉴"
 	
 	/**
 	 * 网站关键词
 	 */
-	static String WANG_ZHAN_GUAN_JIAN_CI = "生活问题，解决方案， 贵在真实"
+	static String WANG_ZHAN_GUAN_JIAN_CI = "亲身经历，解决方案，贵在真实"
 	
 	/**
 	 * 网站目标

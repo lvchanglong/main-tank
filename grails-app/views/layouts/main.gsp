@@ -10,11 +10,21 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		
-		<meta name="Keywords" content="生活问题,解决方案,贵在真实"/>
-		<meta name="Description" content="为生活中遇到的各种问题,提供确实的解决方案,不但有图更有真相"/>
+		<meta name="Keywords" content="亲身经历,解决方案,贵在真实"/>
+		<meta name="Description" content="我的经历,您可借鉴"/>
 		<meta name="Author" Content="吕常龙">
 		
 		<meta name="baidu-site-verification" content="UsUpQQNOBg"/>
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "//hm.baidu.com/hm.js?68c2fb57a6f059f2f5bb543a0a25b7be";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+		
 		<title><g:layoutTitle default="主坦克"/></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="${assetPath(src: 'favicon.ico')}" type="image/x-icon">

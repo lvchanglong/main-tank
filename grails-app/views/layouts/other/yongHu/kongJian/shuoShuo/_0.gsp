@@ -20,10 +20,10 @@
 				//console.log(data);
 				switch(textStatus) {
 					case "success":
-						jQuery(selector).html("操作成功");
-						jQuery("#yonghu-shuoshuo-0-neiRong").val("");
+						jQuery(selector).html("操作成功");//更新状态
+						jQuery("#yonghu-shuoshuo-0-neiRong").val("");//清空文本
 
-						var $wrapper = jQuery("#yonghu-shuoshuo-0-wrapper");
+						var $wrapper = jQuery("#yonghu-shuoshuo-0-wrapper");//追加项目(复制、修改、追加)
 						var $ul =  $wrapper.find("ul:first");
 						var $clone = $ul.find("li:first").clone();
 

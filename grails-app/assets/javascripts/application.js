@@ -19,7 +19,13 @@ if (typeof jQuery !== 'undefined') {
 	})(jQuery);
 }
 
-//头像预览
+/**
+ * 头像预览
+ * wrapperSelector:用于更新头像
+ * tuPianXuanZe:用于更新选择(按钮)状态
+ * shangChuanSelector:用于更新上传(按钮)状态
+ * <input type="file" name="file" onchange="tuPianChaKan(this.files, '#touXiangWrapper', '#tuPianXuanZe', '#kaiShiShangChuan');" multiple="false" class="borderBox"/>
+ */
 function tuPianChaKan(files, wrapperSelector, xuanZeSelector, shangChuanSelector) {
 
 	$xuanZe = jQuery(xuanZeSelector);//上传按钮
@@ -44,7 +50,13 @@ function tuPianChaKan(files, wrapperSelector, xuanZeSelector, shangChuanSelector
     //console.log(files);
 }
 
-//图片上传
+/**
+ * 图片上传
+ * files:jQuery(this).find([type=file])[0].files
+ * url:${ createLink(controller:"x520", action:"touXiangShangChuan") }
+ * shangChuanSelector:上传按钮
+ * <g:uploadForm controller="x520" action="touXiangShangChuan" onsubmit="touXiangShangChuan(jQuery(this).find([type=file])[0].files, '${ createLink(controller:"x520", action:"touXiangShangChuan") }', '${ dangQianYongHu.id }', '#kaiShiShangChuan');return false">
+ */
 function tuPianShangChuan(files, url, shangChuanSelector) {
 
 	$shangChuan = jQuery(shangChuanSelector);//上传按钮
@@ -114,7 +126,11 @@ function tuPianShangChuan(files, url, shangChuanSelector) {
     }
 }
 
-//浮动响应
+/**
+ * 浮动响应
+ * wrapper:顶层
+ * target:浮动框
+ */
 function responseToHover(wrapper, target) {
 	jQuery(wrapper).hover(
 		function () {
@@ -126,7 +142,13 @@ function responseToHover(wrapper, target) {
 	);
 }
 
-//成功处理
+/**
+ * 成功处理
+ * @param data
+ * @param textStatus
+ * @param key 上层唯一id，用于解决重复问题
+ * @param selector 用于更新成功信息
+ */
 function chengGongChuLi(data,textStatus,key,selector) {
 	switch(textStatus) {
 		case "success":
@@ -135,7 +157,14 @@ function chengGongChuLi(data,textStatus,key,selector) {
 	}
 }
 
-//错误处理
+/**
+ * 失败处理
+ * @param XMLHttpRequest
+ * @param textStatus
+ * @param errorThrown
+ * @param key 上层唯一id，用于解决重复问题
+ * @param selector 用于更新失败信息
+ */
 function shiBaiChuLi(XMLHttpRequest,textStatus,errorThrown,key,selector) {
 	switch(errorThrown) {
 		case "Not Found":
@@ -150,6 +179,12 @@ function shiBaiChuLi(XMLHttpRequest,textStatus,errorThrown,key,selector) {
 	}
 }
 
+/**
+ * 简单成功处理
+ * @param data
+ * @param textStatus
+ * @param selector 用于更新成功信息
+ */
 function success(data,textStatus, selector) {
 	switch(textStatus) {
 		case "success":
@@ -158,6 +193,13 @@ function success(data,textStatus, selector) {
 	}
 }
 
+/**
+ * 简单失败处理
+ * @param XMLHttpRequest
+ * @param textStatus
+ * @param errorThrown
+ * @param selector 用于更新失败信息
+ */
 function failure(XMLHttpRequest,textStatus,errorThrown,selector) {
 	switch(errorThrown) {
 		case "Not Found":
@@ -169,7 +211,10 @@ function failure(XMLHttpRequest,textStatus,errorThrown,selector) {
 	}
 }
 
-//远程分页
+/**
+ * 远程分页
+ * wrapperClass:用于整体内容更新
+ */
 function remotePagination(wrapperClass) {
 	jQuery(".pagination a").click(function() {
 		$wrapper = jQuery(this).parents(wrapperClass + ":eq(0)");
@@ -180,7 +225,9 @@ function remotePagination(wrapperClass) {
 	});
 }
 
-//加入收藏
+/**
+ * 加入收藏
+ */
 function shouCang(sURL, sTitle)
 {
   try {
@@ -194,9 +241,9 @@ function shouCang(sURL, sTitle)
   }
 }
 
-/*
+/**
  * 连续动画
- * id:更新至id
+ * id:canvas id（更新画布）
  * imageSrc:image的src
  * w:单个图片宽度
  * h:单个图片高度
@@ -291,7 +338,12 @@ function Motion(id, imageSrc, w, h, maxColumn, fromRow, toRow, ms, callFun, call
 	this.loadImage();
 }
 
-//说点什么
+/**
+ * 说点什么
+ * dialogID:话框
+ * sayID:用于更新话内容
+ * array:话列表
+ */
 function Talk(dialogID, sayID, array) {
 	this.dialogID = dialogID;
 	this.sayID = sayID;

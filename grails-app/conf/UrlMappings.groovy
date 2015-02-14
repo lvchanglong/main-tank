@@ -11,7 +11,8 @@ class UrlMappings {
 		
 		"/kongjian/$zhangHao"(controller:"x520", action:"geRenKongJian") //kongjian：个人空间
 		
-		"/admin"(view:'/index')
+		"/admin"(view:'/index')//管理界面
+		
         "500"(view:'/error')
 	}
 	
