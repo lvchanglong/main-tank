@@ -33,4 +33,5 @@ class WenZhangRestfulController extends RestfulController {
 		])
 		respond map, [status: CREATED]
 	}
+	
 }

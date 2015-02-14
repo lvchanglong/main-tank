@@ -1,41 +1,68 @@
 <%@ page import="main.tank.WenZhang" %>
+<%@ page import="main.tank.WenZhang" %>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta name="layout" content="main">
-		<g:set var="entityName" value="${message(code: 'wenZhang.label', default: 'WenZhang')}" />
-		<title><g:message code="default.edit.label" args="[entityName]" /></title>
+		<title>主坦克-文章查看</title>
+		<asset:stylesheet src="YinYong/kindeditor-4.1.10/themes/default/default.css"/>
+		<asset:javascript src="YinYong/kindeditor-4.1.10/kindeditor-min.js"/>
+		<asset:javascript src="YinYong/kindeditor-4.1.10/lang/zh_CN.js"/>
 	</head>
 	<body>
-		<a href="#edit-wenZhang" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
-			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-			</ul>
-		</div>
-		<div id="edit-wenZhang" class="content scaffold-edit" role="main">
-			<h1><g:message code="default.edit.label" args="[entityName]" /></h1>
-			<g:if test="${flash.message}">
-			<div class="message" role="status">${flash.message}</div>
+		<g:form url="[resource:wenZhangInstance, action:'update']" method="PUT" onsubmit="keditorE.sync();">
+		
+			<g:hiddenField name="version" value="${wenZhangInstance?.version}" />
+			
+			<div id="edit-wenZhang" class="borderBox defaultPage">
+		
+				<g:if test="${flash.message}">
+					<div class="message" role="status">${flash.message}</div>
+				</g:if>
+				
+				<g:hasErrors bean="${wenZhangInstance}">
+					<ul class="errors" role="alert">
+						<g:eachError bean="${wenZhangInstance}" var="error">
+						<li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
+						</g:eachError>
+					</ul>
+				</g:hasErrors>
+				
+				<ol class="property-list wenZhang">
+					
+					<g:if test="${wenZhangInstance?.biaoTi}">
+						<li class="fieldcontain ${hasErrors(bean: wenZhangInstance, field: 'biaoTi', 'error')} required">
+							<g:textField name="biaoTi" required="" value="${wenZhangInstance?.biaoTi}" placeholder="标题" class="borderBox" style="width:100%;"/>
+						</li>
+					</g:if>
+					
+					<g:if test="${wenZhangInstance?.neiRong}">
+						<li class="fieldcontain ${hasErrors(bean: wenZhangInstance, field: 'neiRong', 'error')} required">
+							<g:textField id="yonghu-wenzhang-edit-neiRong" name="neiRong" required="" value="${wenZhangInstance?.neiRong}" placeholder="内容" class="borderBox"/>
+							
+							<script type="text/javascript">
+								var keditorE = KindEditor.create("#yonghu-wenzhang-edit-neiRong", {
+									minHeight : "700",
+									width : "100%",
+									syncType : "form",
+									uploadJson : "${createLink(controller:'kindEditor', action:'uploadJson')}"
+								});
+							</script>
+						</li>
+					</g:if>
+				
+				</ol>
+				
+			</div>
+		
+			<g:if test="${ session.uid && session.uid == wenZhangInstance.yongHu.id }">
+				<div style="position:relative;margin-top:23px;">
+					<fieldset class="buttons">
+						<g:actionSubmit class="save" action="update" value="${message(code: 'default.button.update.label', default: 'Update')}" />
+					</fieldset>
+				</div>
 			</g:if>
-			<g:hasErrors bean="${wenZhangInstance}">
-			<ul class="errors" role="alert">
-				<g:eachError bean="${wenZhangInstance}" var="error">
-				<li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
-				</g:eachError>
-			</ul>
-			</g:hasErrors>
-			<g:form url="[resource:wenZhangInstance, action:'update']" method="PUT" >
-				<g:hiddenField name="version" value="${wenZhangInstance?.version}" />
-				<fieldset class="form">
-					<g:render template="form"/>
-				</fieldset>
-				<fieldset class="buttons">
-					<g:actionSubmit class="save" action="update" value="${message(code: 'default.button.update.label', default: 'Update')}" />
-				</fieldset>
-			</g:form>
-		</div>
+			
+		</g:form>
 	</body>
 </html>

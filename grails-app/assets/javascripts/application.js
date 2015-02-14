@@ -151,6 +151,9 @@ function responseToHover(wrapper, target) {
  */
 function chengGongChuLi(data,textStatus,key,selector) {
 	switch(textStatus) {
+		case "nocontent":
+			jQuery("#" + key).find(selector).html("删除成功");
+			break;
 		case "success":
 			jQuery("#" + key).find(selector).html("操作成功");
 			break;
@@ -187,6 +190,9 @@ function shiBaiChuLi(XMLHttpRequest,textStatus,errorThrown,key,selector) {
  */
 function success(data,textStatus, selector) {
 	switch(textStatus) {
+		case "nocontent":
+			jQuery(selector).html("删除成功");
+			break;
 		case "success":
 			jQuery(selector).html("操作成功");
 			break;

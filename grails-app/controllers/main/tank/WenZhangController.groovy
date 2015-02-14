@@ -11,7 +11,7 @@ class WenZhangController {
 
 	/**
 	 * 某人的文章列表
-	 * @param yongHuInstance 被查看人
+	 * @param yongHuInstance 被查看人(id:YongHu)
 	 */
 	def index(YongHu yongHuInstance, Integer max) {
 		params.max = Math.min(max ?: 10, 100)

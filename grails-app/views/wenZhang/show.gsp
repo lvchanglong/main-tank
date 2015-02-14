@@ -5,26 +5,6 @@
 	<head>
 		<meta name="layout" content="main">
 		<title>主坦克-文章查看</title>
-		<style type="text/css">
-			#show-wenZhang .biaoTi {
-				font-size: 52px;
-				margin-bottom: 40px;
-				text-align: center;
-				font-weight: bold;
-				display:block;
-			}
-			#show-wenZhang .neiRong {
-				line-height:24px;
-				margin:30px 0 80px 0;
-				padding:10px;
-				border:1px dotted lightgray;
-			}
-			#show-wenZhang .fuBiaoTi {
-				display:inline-block;
-				color:darkblue;
-				font-weight:bold;
-			}
-		</style>
 	</head>
 	<body>
 		<div id="show-wenZhang" class="borderBox defaultPage">
@@ -61,15 +41,23 @@
 				</g:if>
 			
 			</ol>
+			
 		</div>
 		
-		<%--
-		<g:form url="[resource:wenZhangInstance, action:'delete']" method="DELETE">
-			<fieldset class="buttons">
-				<g:link class="edit" action="edit" resource="${wenZhangInstance}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
-				<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
-			</fieldset>
-		</g:form>
-		--%>
+		<g:if test="${ session.uid && session.uid == wenZhangInstance.yongHu.id }">
+			<div style="position:relative;margin-top:23px;">
+				<g:formRemote name="wenzhang-delete" url="[controller:'wenZhangRestful', action:'delete', id:wenZhangInstance.id]" method="DELETE" onSuccess="success(data,textStatus,'#yonghu-wenzhang-caozuo-message')" onFailure="failure(XMLHttpRequest,textStatus,errorThrown,'#yonghu-wenzhang-caozuo-message')" >
+					<fieldset class="buttons">
+						<g:link class="edit" action="edit" resource="${wenZhangInstance}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
+						<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
+					</fieldset>
+				</g:formRemote>
+				
+				<div style="position:absolute;right:0;bottom:0;line-height:30px;padding:0 1em;">	
+					(￣﹃￣ )：<span id="yonghu-wenzhang-caozuo-message">操作状态</span>
+				</div>
+			</div>
+		</g:if>
+		
 	</body>
 </html>
