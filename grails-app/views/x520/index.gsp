@@ -16,16 +16,12 @@
 			</section>
 			
 			<section class="decorationWidthPadding">
-				<g:render template="/layouts/transition/IP" />
-			</section>
-			
-			<section class="decorationWidthPadding">
 				<h2>解决方案</h2>
 				<g:applyLayout controller="wenZhang" action="index" params="[offset:0, max:5]" />
 			</section>
 			
-			<section class="decoration">
-				<g:render template="/layouts/transition/shiZhong" />
+			<section class="decorationWidthPadding">
+				<g:render template="/layouts/transition/IP" />
 			</section>
 			
 			<section class="decorationWidthPadding end">
