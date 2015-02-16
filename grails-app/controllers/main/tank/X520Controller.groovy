@@ -24,11 +24,12 @@ class X520Controller {
 	 */
 	def index() {
 		ArrayList slideList = [
-			new TuPian("yeshou.jpg"), new TuPian("sakura.jpg"), new TuPian("vega.jpg")
+			new TuPian("http://ww1.sinaimg.cn/mw690/b21a3a8dtw1epbminr3cdj20nc0ac3zh.jpg"), 
+			new TuPian("http://ww1.sinaimg.cn/mw690/b21a3a8dtw1epbmilisccj20nc0ac0to.jpg"), 
+			new TuPian("http://ww2.sinaimg.cn/mw690/b21a3a8dtw1epbmin9zayj20nc0ac758.jpg")
 		]
-		[
-			slideList:slideList
-		]
+		
+		[slideList:slideList]
 	}
 	
 	/**

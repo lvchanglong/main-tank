@@ -14,22 +14,24 @@ import com.sun.image.codec.jpeg.JPEGCodec
 class TuPian {
 
 	/**
-	 * 文件名
+	 * 图片地址
+	 * ${assetPath(src: 'SanFang/HuanDengPian/images/yeshou.jpg')}
+	 * http://ww1.sinaimg.cn/mw690/b21a3a8dtw1epbminr3cdj20nc0ac3zh.jpg
 	 */
-	String fileName
+	String url = ""
 	
 	/**
-	 * URL(href)
+	 * 超链接
 	 */
-	String url = "javascript:void(0);"
+	String href = "javascript:void(0);"
 	
-	TuPian(String fileName) {
-		this.fileName = fileName
+	TuPian(String url) {
+		this.url = url
 	}
 	
-	TuPian(String fileName, String url) {
-		this.fileName = fileName
+	TuPian(String url, String href) {
 		this.url = url
+		this.href = href
 	}
 	
 	/**
