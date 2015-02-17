@@ -5,7 +5,7 @@
 	<head>
 		<meta name="layout" content="main"/>
 		<title>主坦克-空间</title>
-		<asset:stylesheet src="YinYong/kindeditor-4.1.10/themes/default/default.css"/>
+		<asset:stylesheet src="YinYong/kindeditor-4.1.10/themes/default/default-min.css"/>
 		<asset:javascript src="YinYong/kindeditor-4.1.10/kindeditor-min.js"/>
 		<asset:javascript src="YinYong/kindeditor-4.1.10/lang/zh_CN.js"/>
 	</head>
