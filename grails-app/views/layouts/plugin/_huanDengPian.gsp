@@ -8,7 +8,7 @@
        <div id="slider" class="cycleslider" style="position:relative; width:${width}; height:${ height };margin:0 auto;">
 	       	 <g:each in="${instanceList}" status="i" var="instance">
 				  <div class="cycle-slider">
-	             	<a href="${ instance.href }">
+	             	<a href="${ instance.href }" target="_blank">
 	   					<img src="${ instance.url }" width="${width}" height="${ height }" alt="">
 	             	</a>
 	              </div>
