@@ -199,7 +199,6 @@ img {
 fieldset,
 .property-list {
 	margin: 0.6em 1.25em 0 1.25em;
-	padding: 0.3em 1.8em 1.25em;
 	position: relative;
 	zoom: 1;
 	border: none;
@@ -209,6 +208,7 @@ fieldset,
 	list-style: none;
 	overflow: hidden;
 	zoom: 1;
+	position:relative;
 }
 
 .fieldcontain {
