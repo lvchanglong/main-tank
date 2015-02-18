@@ -7,7 +7,7 @@
 		<title>主坦克-建议反馈</title>
 	</head>
 	<body>
-		<div id="jianYiFanKui" class="borderBox clearfix defaultPage">
+		<div id="jianYiFanKui" class="borderBox clearfix defaultPage page">
 			
 			<h1>建议反馈</h1>
 			

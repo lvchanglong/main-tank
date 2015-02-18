@@ -1,3 +1,7 @@
+.color {
+	color:darkcyan;
+}
+
 .hello-world {
 	font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	background: url("WangLuo/QiTa/header-bg-nav.png") 0px -38px repeat-x;

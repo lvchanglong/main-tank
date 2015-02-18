@@ -16,7 +16,7 @@
 				<g:render template="/layouts/transition/shengXiao" />
 			</section>
 			
-			<section class="decorationWidthPadding">
+			<section class="decorationWidthPadding end">
 				<h2>图片压缩</h2>
 				<g:render template="/layouts/plugin/tuPianYaSuo" />
 			</section>

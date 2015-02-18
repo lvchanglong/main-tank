@@ -7,7 +7,7 @@
 		<title>主坦克-网站相关</title>
 	</head>
 	<body>
-		<div id="wangZhanXiangGuan" class="borderBox clearfix defaultPage">
+		<div id="wangZhanXiangGuan" class="borderBox clearfix defaultPage page">
 		
 			<h1>网站相关</h1>
 			
@@ -50,7 +50,7 @@
 					</li>
 					<li class="renWu">
 						
-						<asset:image src="WangLuo/SuCai/背影1.png"/>
+						<asset:image src="WangLuo/SuCai/背影.png" alt="背影"/>
 						
 					</li>
 				</ul>

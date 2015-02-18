@@ -23,7 +23,7 @@
 				<div class="touXiangQv borderBox">
 					<g:link uri="/kongjian/${ yongHuInstance.zhangHao }" class="aMain">
 						
-						<asset:image src="${ yongHuInstance.touXiang }" class="touXiang"/>
+						<asset:image src="${ yongHuInstance.touXiang }" class="touXiang" alt="头像"/>
 
 					</g:link>
 					<div class="youJianTou">

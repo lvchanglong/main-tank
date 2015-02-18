@@ -4,7 +4,7 @@
 	</div>
 	<g:formRemote name="shengXiaoChaXun" url="[controller:'x520', action:'shengXiaoChaXun']" onSuccess="shengXiaoChaXunSuccess(data,textStatus,'#shengXiao-wrapper')" onFailure="shengXiaoChaXunFailure(XMLHttpRequest,textStatus,errorThrown,'#shengXiao-wrapper')">
 		<g:textField name="nian" placeholder="年份"/>
-		<g:actionSubmit value="提交" />
+		<g:actionSubmit value="提交" style="padding:4px 8px;"/>
 	</g:formRemote>
 	
 	<script type="text/javascript">

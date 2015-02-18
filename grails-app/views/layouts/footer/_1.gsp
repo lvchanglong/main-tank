@@ -40,7 +40,7 @@
 		</ul>
 	</nav>
 	<%--
-	<asset:image src="WangLuo/3D/左手.png" class="leftHand"/>
-	<asset:image src="WangLuo/3D/右手.png" class="rightHand"/>
+	<asset:image src="WangLuo/3D/左手.png" class="leftHand" alt="左手"/>
+	<asset:image src="WangLuo/3D/右手.png" class="rightHand" alt="右手"/>
 	--%>
 </div>

@@ -1,6 +1,6 @@
 <%@ page import="main.tank.YongHu" %>
 
-<div id="yonghu-wenzhang-0" class="borderBox">
+<div id="yonghu-wenzhang-0" class="borderBox page">
 	<h1>个人文章</h1>
 
 	<div class="wrapper borderBox">

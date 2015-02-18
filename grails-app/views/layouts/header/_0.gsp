@@ -46,7 +46,7 @@
 							
 							<div class="touXiangKongJian">
 								<div id="touXiangWrapper">
-									<asset:image src="${ dangQianYongHu.touXiang }" width="256px;" height="256px"/>
+									<asset:image src="${ dangQianYongHu.touXiang }" width="256px;" height="256px" alt="头像"/>
 								</div>
 								<g:uploadForm controller="x520" action="touXiangShangChuan" onsubmit="touXiangShangChuan(jQuery(this).find([type=file])[0].files, '${ createLink(controller:"x520", action:"touXiangShangChuan") }', '${ dangQianYongHu.id }', '#kaiShiShangChuan');return false">									
 									<input type="file" name="file" onchange="touXiangChaKan(this.files, '#touXiangWrapper', '#tuPianXuanZe', '#kaiShiShangChuan');" multiple="false" class="borderBox"/>

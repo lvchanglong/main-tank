@@ -7,7 +7,7 @@
 		<title>主坦克-联系方式</title>
 	</head>
 	<body>
-		<div id="lianXiFangShi" class="borderBox clearfix defaultPage">
+		<div id="lianXiFangShi" class="borderBox clearfix defaultPage page">
 		
 			<h1>联系方式</h1>
 			
@@ -18,7 +18,7 @@
 				<li><span class="leibie">手机：</span>${ ChangLiang.SHOU_JI }</li>
 				<li><span class="leibie">信仰：</span>${ ChangLiang.WANG_ZHAN_KOU_HAO }</li>
 				<li class="zhuangTai"><span class="leibie">状态：</span><span class="xianZai">已</span></li>
-				<li class="touXiang"><asset:image src="WangLuo/TouXiang/ChengYuan/吕常龙.png" style="width:135px;"/></li>
+				<li class="touXiang"><asset:image src="WangLuo/TouXiang/ChengYuan/吕常龙.png" style="width:135px;" alt="吕常龙"/></li>
 				<li class="separator-image"></li>
 			</ul>
 			

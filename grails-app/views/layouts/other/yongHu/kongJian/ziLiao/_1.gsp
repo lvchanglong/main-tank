@@ -4,7 +4,7 @@
 	<div class="wrapper borderBox">
 		<div style="position:relative;">
 		
-			<asset:image src="WangLuo/SuCai/${ yongHuInstance.xingBie }.png"/>
+			<asset:image src="WangLuo/SuCai/${ yongHuInstance.xingBie }.png" alt="性别"/>
 		
 			<div class="shuoMing">
 				<div class="xingMing">

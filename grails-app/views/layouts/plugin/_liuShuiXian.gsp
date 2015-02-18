@@ -6,7 +6,7 @@
 		<g:each in="${instanceList}" status="i" var="instance">
 			<div class="imageWrapper borderBox">
 				<a href="${ instance.url }">
-					<asset:image src="SanFang/LiuShuiXian/images/${ instance.fileName }" alt="" width="100%" height="100%"/>
+					<asset:image src="SanFang/LiuShuiXian/images/${ instance.fileName }" alt="" width="100%" height="100%" alt="流水线"/>
 				</a>
 			</div>
 		</g:each>

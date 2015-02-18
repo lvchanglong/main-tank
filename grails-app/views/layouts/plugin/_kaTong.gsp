@@ -4,10 +4,10 @@
 				不支持 Canvas
 		</canvas>
 		
-		<asset:image src="WangLuo/SuCai/白云.png" class="zhuangShi"/>
+		<asset:image src="WangLuo/SuCai/白云.png" class="zhuangShi" alt="白云"/>
 
 		<div id="kaTong-dialog" class="dialog">
-			<asset:image src="WangLuo/SuCai/小卡通对话框.png"/>
+			<asset:image src="WangLuo/SuCai/小卡通对话框.png" alt="对话框"/>
 			<span id="kaTong-hanHua" class="hanHua">
 				
 			</span>

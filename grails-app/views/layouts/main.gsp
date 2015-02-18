@@ -69,7 +69,7 @@
 
 		<%--等待--%>
 		<div id="spinner" style="display:none;">
-			<asset:image src="WangLuo/SuCai/奔跑.png" style="width:180px;height:180px;"/>
+			<asset:image src="WangLuo/SuCai/奔跑.png" style="width:180px;height:180px;" alt="处理中"/>
 			<div class="tiShi">处理中...</div>
 		</div>
 		

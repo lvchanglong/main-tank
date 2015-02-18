@@ -7,7 +7,7 @@
 		<title>主坦克-用前必读</title>
 	</head>
 	<body>
-		<div id="yongQianBiDu" class="borderBox clearfix defaultPage">
+		<div id="yongQianBiDu" class="borderBox clearfix defaultPage page">
 		
 			<h1>用前必读</h1>
 			<h3>使用协议</h3>
