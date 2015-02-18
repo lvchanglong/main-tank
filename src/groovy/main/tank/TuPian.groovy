@@ -21,6 +21,11 @@ class TuPian {
 	String url = ""
 	
 	/**
+	 * 图片说明
+	 */
+	String alt = ""
+	
+	/**
 	 * 超链接
 	 */
 	String href = "javascript:void(0);"
@@ -29,8 +34,14 @@ class TuPian {
 		this.url = url
 	}
 	
-	TuPian(String url, String href) {
+	TuPian(String url, String alt) {
 		this.url = url
+		this.alt = alt
+	}
+	
+	TuPian(String url, String alt, String href) {
+		this.url = url
+		this.alt = alt
 		this.href = href
 	}
 	

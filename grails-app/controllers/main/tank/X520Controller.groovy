@@ -23,14 +23,14 @@ class X520Controller {
 	 * @return
 	 */
 	def index() {
-		ArrayList slideList = [//dan the man stage
-			new TuPian("http://ww4.sinaimg.cn/mw690/b21a3a8dtw1epcob17ygwj206b03tq2v.jpg", "http://v.youku.com/v_show/id_XNjAyMTcyMjcy.html"), 
-			new TuPian("http://ww4.sinaimg.cn/mw690/b21a3a8dtw1epcob1p4awj206b03tjrd.jpg", "http://v.youku.com/v_show/id_XNjAyMTcwMTU2.html"), 
-			new TuPian("http://ww2.sinaimg.cn/mw690/b21a3a8dtw1epcob27hetj206b03tq2y.jpg", "http://v.youku.com/v_show/id_XNTc1MDI3NDU2.html"), 
-			new TuPian("http://ww1.sinaimg.cn/mw690/b21a3a8dtw1epcob2px67j206b03taa1.jpg", "http://v.youku.com/v_show/id_XNTc0NzAwNTg4.html"),
-			new TuPian("http://ww1.sinaimg.cn/mw690/b21a3a8dtw1epcob3d2y5j206b03tjre.jpg", "http://v.youku.com/v_show/id_XNTc0NTU1MTY4.html"),
-			new TuPian("http://ww1.sinaimg.cn/mw690/b21a3a8dtw1epcob3u76lj206b03tq2x.jpg", "http://v.youku.com/v_show/id_XNTc0NTUwNTQ4.html"),
-			new TuPian("http://ww4.sinaimg.cn/mw690/b21a3a8dtw1epcob4n6phj206b03t0so.jpg", "http://v.youku.com/v_show/id_XNjAyMTcxMjU2.html")
+		ArrayList slideList = [
+			new TuPian("http://ww4.sinaimg.cn/mw690/b21a3a8dtw1epcob17ygwj206b03tq2v.jpg", "Dan The Man Stage 1", "http://v.youku.com/v_show/id_XNjAyMTcyMjcy.html"), 
+			new TuPian("http://ww4.sinaimg.cn/mw690/b21a3a8dtw1epcob1p4awj206b03tjrd.jpg", "Dan The Man Stage 2",  "http://v.youku.com/v_show/id_XNjAyMTcwMTU2.html"), 
+			new TuPian("http://ww2.sinaimg.cn/mw690/b21a3a8dtw1epcob27hetj206b03tq2y.jpg", "Dan The Man Stage 3",  "http://v.youku.com/v_show/id_XNTc1MDI3NDU2.html"), 
+			new TuPian("http://ww1.sinaimg.cn/mw690/b21a3a8dtw1epcob2px67j206b03taa1.jpg", "Dan The Man Stage 4",  "http://v.youku.com/v_show/id_XNTc0NzAwNTg4.html"),
+			new TuPian("http://ww1.sinaimg.cn/mw690/b21a3a8dtw1epcob3d2y5j206b03tjre.jpg", "Dan The Man Stage 5",  "http://v.youku.com/v_show/id_XNTc0NTU1MTY4.html"),
+			new TuPian("http://ww1.sinaimg.cn/mw690/b21a3a8dtw1epcob3u76lj206b03tq2x.jpg", "Dan The Man Stage 6",  "http://v.youku.com/v_show/id_XNTc0NTUwNTQ4.html"),
+			new TuPian("http://ww4.sinaimg.cn/mw690/b21a3a8dtw1epcob4n6phj206b03t0so.jpg", "Dan The Man Stage 7",  "http://v.youku.com/v_show/id_XNjAyMTcxMjU2.html")
 		]
 		
 		[slideList:slideList]

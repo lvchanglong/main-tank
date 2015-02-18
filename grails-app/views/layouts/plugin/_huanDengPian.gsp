@@ -9,7 +9,7 @@
 	       	 <g:each in="${instanceList}" status="i" var="instance">
 				  <div class="cycle-slider">
 	             	<a href="${ instance.href }" target="_blank">
-	   					<img src="${ instance.url }" width="${width}" height="${ height }" alt="">
+	   					<img src="${ instance.url }" width="${width}" height="${ height }" alt="${ instance.alt }" title="${ instance.alt }">
 	             	</a>
 	              </div>
 			 </g:each>

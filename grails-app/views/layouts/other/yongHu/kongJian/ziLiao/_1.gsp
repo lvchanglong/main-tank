@@ -1,4 +1,4 @@
-<div id="yonghu-ziliao-1" class="borderBox">
+<div id="yonghu-ziliao-1" class="borderBox page">
 	<h1>个人资料</h1>
 	
 	<div class="wrapper borderBox">
