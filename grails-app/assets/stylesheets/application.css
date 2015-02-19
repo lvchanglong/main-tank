@@ -985,9 +985,6 @@ transition-shiZhong
 	width:100%;
 	margin-bottom:10px;
 }
-.page strong {
-	font-size:16px;
-}
 .page .separator, .page .shiJian {
 	font-size:12px;
 }
@@ -1010,7 +1007,10 @@ transition-shiZhong
 	text-align: left;
 	border: 3px ridge lightgray;
 }
-
+.page .neiRong, .page .biaoTi {
+	font-size: 20px;
+	font-weight:bold;
+}
 /*---------------------------------------------------------------------------------------------------------------------*/
 
 /*
@@ -1153,6 +1153,6 @@ page-jianYiFanKui
 	margin-top:30px;
 }
 #wenZhang-index li, #shuoShuo-index li {
-	margin-bottom:5px;
+	margin-bottom: 20px;
 	border-bottom: 1px dashed #dcdfe2;
 }
