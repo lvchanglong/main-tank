@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main">
-		<title>主坦克-文章查看</title>
+		<title>主坦克-文章编辑</title>
 		<asset:javascript src="YinYong/kindeditor-4.1.10/kindeditor-min.js"/>
 	</head>
 	<body>
@@ -38,12 +38,15 @@
 							<g:textField id="yonghu-wenzhang-edit-neiRong" name="neiRong" required="" value="${wenZhangInstance?.neiRong}" placeholder="内容" class="borderBox"/>
 							
 							<script type="text/javascript">
-								var keditorE = KindEditor.create("#yonghu-wenzhang-edit-neiRong", {
-									minHeight : "700",
-									width : "100%",
-									syncType : "form",
-									uploadJson : "${createLink(controller:'kindEditor', action:'uploadJson')}"
-								});
+								var keditorE;
+						        KindEditor.ready(function(K) {
+						        	keditorE = K.create("#yonghu-wenzhang-edit-neiRong", {
+										minHeight : "700",
+										width : "100%",
+										syncType : "form",
+										uploadJson : "${createLink(controller:'kindEditor', action:'uploadJson')}"
+									});
+						        });
 							</script>
 						</li>
 					</g:if>

@@ -90,7 +90,7 @@ class X520Controller {
 	 * @param yongHuInstance 被查看用户
 	 */
 	def geRenWenZhang(YongHu yongHuInstance) {
-		render(template:"/layouts/other/yongHu/kongJian/wenZhang/0", model:[yongHuInstance: yongHuInstance])
+		[yongHuInstance: yongHuInstance]
 	}
 	
 	/**

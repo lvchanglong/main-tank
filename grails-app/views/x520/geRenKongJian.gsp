@@ -5,7 +5,6 @@
 	<head>
 		<meta name="layout" content="main"/>
 		<title>主坦克-空间</title>
-		<asset:javascript src="YinYong/kindeditor-4.1.10/kindeditor-min.js"/>
 	</head>
 	<body>
 		<div id="kongjian" class="borderBox defaultPage">
@@ -28,9 +27,9 @@
 					</g:remoteLink>
 				</li>
 				<li class="main-li">
-					<g:remoteLink controller="x520" action="geRenWenZhang" update="kongjian-wrapper" id="${ yongHuInstance.id }" class="aList">
+					<g:link controller="x520" action="geRenWenZhang" id="${ yongHuInstance.id }" target="_blank" class="aList">
 						<asset:image src="WangLuo/SuCai/个人文章.png" alt="个人文章"/>
-					</g:remoteLink>
+					</g:link>
 				</li>
 				<li class="main-li">
 					<a href="javascript:void(0);" class="aList">
