@@ -14,24 +14,12 @@
 			<div class="wrapper borderBox">
 		
 				<g:if test="${ session.uid && session.uid == yongHuInstance.id }">
-					<g:formRemote name="wenzhang-save" url="[controller:'wenZhangRestful', action:'xsave']" before="keditor.sync();" onSuccess="wenZhangSaveSuccess(data,textStatus,'#geRenWenZhang-message')" onFailure="failure(XMLHttpRequest,textStatus,errorThrown,'#geRenWenZhang-message')" class="clearfix">
+					<g:formRemote name="wenzhang-save" url="[controller:'wenZhangRestful', action:'xsave']" before="keditorA.sync();" onSuccess="wenZhangSaveSuccess(data,textStatus,'#geRenWenZhang-message')" onFailure="failure(XMLHttpRequest,textStatus,errorThrown,'#geRenWenZhang-message')" class="clearfix">
 						
 						<g:textField name="biaoTi" value="" style="margin-bottom:15px;width:100%;" class="borderBox" placeholder="文章标题" id="geRenWenZhang-biaoTi"/>
 						
 						<g:textArea name="neiRong" placeholder="如果您想说点什么" class="borderBox" id="geRenWenZhang-neiRong" />
 		
-						<script type="text/javascript">
-							var keditor;
-					        KindEditor.ready(function(K) {
-					        	keditor = K.create("#geRenWenZhang-neiRong", {
-									minHeight : "700",
-									width : "100%",
-									syncType : "form",
-									uploadJson : "${createLink(controller:'kindEditor', action:'uploadJson')}"
-								});
-					        });
-						</script>
-						
 						<g:hiddenField name="yongHu.id" value="${ session.uid }"/>
 						<g:submitButton name="faBu" value="发布" style="margin-top: 10px;"/>
 						
@@ -48,7 +36,7 @@
 								
 								jQuery("#geRenWenZhang-biaoTi").val("");//清空文本
 								jQuery("#geRenWenZhang-neiRong").val("");
-								keditor.html('');
+								keditorA.html('');
 		
 								var $wrapper = jQuery("#geRenWenZhang-wrapper");//追加文本(复制、修改、追加)
 								var $ul =  $wrapper.find("ul:first");
@@ -69,5 +57,17 @@
 				</div>
 			</div>
 		</div>
+		
+		<script type="text/javascript">
+			var keditorA;
+	        KindEditor.ready(function(K) {
+	        	keditorA = K.create("#geRenWenZhang-neiRong", {
+					minHeight : "700",
+					width : "100%",
+					syncType : "form",
+					uploadJson : "${createLink(controller:'kindEditor', action:'uploadJson')}"
+				});
+	        });
+		</script>
 	</body>
 </html>

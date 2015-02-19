@@ -36,18 +36,6 @@
 					<g:if test="${wenZhangInstance?.neiRong}">
 						<li class="fieldcontain ${hasErrors(bean: wenZhangInstance, field: 'neiRong', 'error')} required">
 							<g:textField id="yonghu-wenzhang-edit-neiRong" name="neiRong" required="" value="${wenZhangInstance?.neiRong}" placeholder="内容" class="borderBox"/>
-							
-							<script type="text/javascript">
-								var keditorE;
-						        KindEditor.ready(function(K) {
-						        	keditorE = K.create("#yonghu-wenzhang-edit-neiRong", {
-										minHeight : "700",
-										width : "100%",
-										syncType : "form",
-										uploadJson : "${createLink(controller:'kindEditor', action:'uploadJson')}"
-									});
-						        });
-							</script>
 						</li>
 					</g:if>
 				
@@ -64,5 +52,17 @@
 			</g:if>
 			
 		</g:form>
+		
+		<script type="text/javascript">
+			var keditorE;
+	        KindEditor.ready(function(K) {
+	        	keditorE = K.create("#yonghu-wenzhang-edit-neiRong", {
+					minHeight : "700",
+					width : "100%",
+					syncType : "form",
+					uploadJson : "${createLink(controller:'kindEditor', action:'uploadJson')}"
+				});
+	        });
+		</script>
 	</body>
 </html>
