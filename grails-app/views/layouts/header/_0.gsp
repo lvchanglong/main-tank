@@ -204,7 +204,7 @@
 					console.log(reader.error);
 				} else {//成功
 					var xhr = new XMLHttpRequest();
-					xhr.open("POST", url + "?fileName=" + file.name + "&userID=" + userID);
+					xhr.open("POST", url + "?fileName=" + encodeURIComponent(file.name) + "&userID=" + userID);
 	          		xhr.overrideMimeType("application/octet-stream");
 					xhr.sendAsBinary(this.result);
 					

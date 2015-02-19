@@ -2,7 +2,7 @@
 	<h1>个人资料</h1>
 	
 	<div class="wrapper borderBox">
-		<div style="position:relative;">
+		<div style="position:relative;margin-top:70px;">
 		
 			<asset:image src="WangLuo/SuCai/${ yongHuInstance.xingBie }.png" alt="性别"/>
 		

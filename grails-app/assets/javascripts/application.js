@@ -105,7 +105,7 @@ function tuPianShangChuan(files, url, shangChuanSelector) {
 				$shangChuan.val("上传失败");
 			} else {//成功
 				var xhr = new XMLHttpRequest();
-				xhr.open("POST", url + "?fileName=" + file.name);
+				xhr.open("POST", url + "?fileName=" + encodeURIComponent(file.name));
           		xhr.overrideMimeType("application/octet-stream");
 				xhr.sendAsBinary(this.result);
 				
@@ -412,7 +412,7 @@ function wenJianShangChuan_backup(files, url, path) {
 				console.log(reader.error);
 			} else {//成功
 				var xhr = new XMLHttpRequest();
-				xhr.open("POST", url + "?fileName=" + file.name + "&path=" + path);
+				xhr.open("POST", url + "?fileName=" + encodeURIComponent(file.name) + "&path=" + path);
           		xhr.overrideMimeType("application/octet-stream");
 				xhr.sendAsBinary(this.result);
 				

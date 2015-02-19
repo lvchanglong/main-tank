@@ -79,7 +79,7 @@
 					$shangChuan.val("上传失败");
 				} else {//成功
 					var xhr = new XMLHttpRequest();
-					xhr.open("POST", url + "?fileName=" + file.name + "&" + params);
+					xhr.open("POST", url + "?fileName=" + encodeURIComponent(file.name) + "&" + params);
 	          		xhr.overrideMimeType("application/octet-stream");
 					xhr.sendAsBinary(this.result);
 					

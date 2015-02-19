@@ -45,7 +45,7 @@ class BangZhu {
 	}
 	
 	static main(args) {
-		println BangZhu.getFileType("fileName.txt")
+		//println BangZhu.getFileType("fileName.txt")
 	}
 
 }
