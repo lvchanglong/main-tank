@@ -634,6 +634,7 @@
 	position: absolute;
 	margin: 0;
 	padding: 0;
+	top: 0;
 }
 .ke-dialog .ke-header {
 	width: 100%;

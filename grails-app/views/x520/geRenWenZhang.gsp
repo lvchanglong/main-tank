@@ -18,7 +18,7 @@
 						
 						<g:textField name="biaoTi" value="" style="margin-bottom:15px;width:100%;" class="borderBox" placeholder="文章标题" id="geRenWenZhang-biaoTi"/>
 						
-						<g:textArea name="neiRong" placeholder="如果您想说点什么" class="borderBox" id="geRenWenZhang-neiRong" />
+						<g:textArea name="neiRong" placeholder="如果您想说点什么" class="borderBox" id="geRenWenZhang-neiRong" style="width:100%;height:700px;"/>
 		
 						<g:hiddenField name="yongHu.id" value="${ session.uid }"/>
 						<g:submitButton name="faBu" value="发布" style="margin-top: 10px;"/>
@@ -62,9 +62,6 @@
 			var keditorA;
 	        KindEditor.ready(function(K) {
 	        	keditorA = K.create("#geRenWenZhang-neiRong", {
-					minHeight : "700",
-					width : "100%",
-					syncType : "form",
 					uploadJson : "${createLink(controller:'kindEditor', action:'uploadJson')}"
 				});
 	        });
