@@ -15,6 +15,8 @@
 		<meta name="Author" Content="吕常龙">
 		
 		<meta name="baidu-site-verification" content="UsUpQQNOBg"/>
+		<meta name="baidu_union_verify" content="195dd308ea7db875bb960dfbbb44a29f">
+		
 		<script>
 			var _hmt = _hmt || [];
 			(function() {
