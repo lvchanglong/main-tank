@@ -16,7 +16,7 @@
 			</section>
 			
 			<section class="decorationWidthPadding">
-				<h2>解决方案</h2>
+				<h2>个人文章</h2>
 				<g:applyLayout controller="wenZhang" action="index" params="[offset:0, max:5]" />
 			</section>
 			
@@ -25,8 +25,12 @@
 			</section>
 			
 			<section class="decorationWidthPadding end">
-				<h2>说说信息</h2>
-				<g:applyLayout controller="shuoShuo" action="index" params="[offset:0, max:5]" />
+				<h2>
+					<g:link controller="x520" action="jianYiFanKui" target="_blank">
+						建议反馈
+					</g:link>
+				</h2>
+				<g:applyLayout controller="fanKui" action="index" params="[offset:0, max:5]" />
 			</section>
 			
 		</div>

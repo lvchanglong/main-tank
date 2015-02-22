@@ -105,6 +105,9 @@
 					<g:link controller="x520" action="yongHu">用户</g:link>
 				</li>
 				<li>
+					<g:link controller="x520" action="shuoShuo">说说</g:link>
+				</li>
+				<li>
 					<g:link controller="x520" action="fuWu">服务</g:link>
 				</li>
 				<li>

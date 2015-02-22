@@ -7,7 +7,7 @@ package main.tank
  */
 class YongHu {
 
-	static hasMany = [shuoShuos: ShuoShuo] //说说
+	static hasMany = [shuoShuos: ShuoShuo, wenZhangs: WenZhang, fanKuis: FanKui] //说说, 文章, 反馈
 	
 	String zhangHao //账号
 	String miMa //密码

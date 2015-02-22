@@ -19,6 +19,7 @@
 						</li>
 						<li>
 							<g:textArea  name="neiRong" id="fanKui-save-neiRong" class="textarea borderBox" />
+							<g:hiddenField name="yongHu.id" value="${ session.uid }"/>
 						</li>
 						<li>
 							<div id="fanKui-save-status" class="status borderBox">(￣_,￣ )：“我今天又没吃药，感觉自己萌萌哒...”</div>

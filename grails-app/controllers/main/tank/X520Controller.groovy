@@ -58,6 +58,13 @@ class X520Controller {
 	}
 	
 	/**
+	 * 说说
+	 */
+	def shuoShuo() {
+		
+	}
+	
+	/**
 	 * 个人空间
 	 */
 	def geRenKongJian(String zhangHao) {

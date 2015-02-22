@@ -9,6 +9,8 @@ import java.util.Date;
  */
 class FanKui {
 
+	static belongsTo = [yongHu: YongHu] //用户
+	
 	String neiRong //内容
 	
 	Date dateCreated //创建时间
@@ -16,6 +18,7 @@ class FanKui {
 	
 	static constraints = {
 		neiRong(nullable: false, blank: false)
+		yongHu(nullable: true, blank: true)
 	}
 	
 	static mapping = {
@@ -25,6 +28,7 @@ class FanKui {
 		version column:'BAN_BEN'
 		
 		neiRong column: 'NEI_RONG'
+		yongHu column: 'YONG_HU_ID'
 
 		dateCreated column: 'CHUANG_JIAN_SHI_JIAN'
 		lastUpdated column: 'GENG_XIN_SHI_JIAN'
@@ -34,5 +38,9 @@ class FanKui {
 	
 	String toString() {
 		return "${this.neiRong}"
+	}
+	
+	String getYongHuAsString() {
+		return this.yongHu?:"匿名"
 	}
 }
