@@ -34,7 +34,7 @@
 					</g:if>
 					
 					<li class="fieldcontain ${hasErrors(bean: wenZhangInstance, field: 'guanJianCi', 'error')}">
-						<g:textField name="guanJianCi" value="${wenZhangInstance?.getGuanJianCiAsString()}" placeholder="关键词" class="borderBox" style="width:100%;"/>
+						<g:textField name="guanJianCi" value="${wenZhangInstance?.guanJianCi}" placeholder="关键词" class="borderBox" style="width:100%;"/>
 					</li>
 					
 					<g:if test="${wenZhangInstance?.neiRong}">
