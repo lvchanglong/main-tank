@@ -1008,8 +1008,12 @@ transition-shiZhong
 	border: 3px ridge lightgray;
 }
 .page .neiRong, .page .biaoTi {
-	font-size: 20px;
+	font-size:18px;
 	font-weight:bold;
+}
+.guanJianCi {
+	font-weight:bold;
+	color:darkred;
 }
 /*---------------------------------------------------------------------------------------------------------------------*/
 

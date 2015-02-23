@@ -11,6 +11,14 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: wenZhangInstance, field: 'guanJianCi', 'error')}">
+	<label for="guanJianCi">
+		<g:message code="wenZhang.guanJianCi.label" default="Guan Jian Ci" />
+	</label>
+	<g:textField name="guanJianCi" value="${wenZhangInstance?.guanJianCi}"/>
+
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: wenZhangInstance, field: 'neiRong', 'error')} required">
 	<label for="neiRong">
 		<g:message code="wenZhang.neiRong.label" default="Nei Rong" />

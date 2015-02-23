@@ -7,6 +7,7 @@ class WenZhang {
 	static belongsTo = [yongHu: YongHu] //用户
 	
 	String biaoTi //标题
+	String guanJianCi//关键词
 	String neiRong //html内容
 	
 	Date dateCreated //创建时间
@@ -14,6 +15,7 @@ class WenZhang {
 	
 	static constraints = {
 		biaoTi(nullable: false, blank: false)
+		guanJianCi(nullable: true, blank: true)
 		neiRong(nullable: false, blank: false)
 	}
 	
@@ -24,6 +26,7 @@ class WenZhang {
 		version column:'BAN_BEN'
 		
 		biaoTi column: 'BIAO_TI'
+		guanJianCi column: 'GUAN_JIAN_CI'
 		neiRong column: 'NEI_RONG', sqlType:"text"
 		yongHu column: 'YONG_HU_ID'
 		
@@ -35,6 +38,10 @@ class WenZhang {
 	
 	String toString() {
 		return "${this.neiRong}"
+	}
+	
+	String getGuanJianCiAsString() {
+		return this.guanJianCi?:"暂无"
 	}
     
 }

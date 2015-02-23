@@ -8,6 +8,10 @@
 				<span class="shiJian">
 					yyyy-MM-dd HH:mm:ss
 				</span>
+				<span class="separator">/</span>
+				<span class="guanJianCi">
+					关键词
+				</span>
 				<p class="biaoTi">标题</p>
 			</li>
 		<g:each in="${wenZhangInstanceList}" status="i" var="wenZhangInstance">
@@ -18,6 +22,10 @@
 				<span class="separator">/</span>
 				<span class="shiJian">
 					<g:formatDate date="${wenZhangInstance.dateCreated}" format="yyyy-MM-dd HH:mm:ss" />
+				</span>
+				<span class="separator">/</span>
+				<span class="guanJianCi">
+					${wenZhangInstance.getGuanJianCiAsString()}
 				</span>
 				<p class="biaoTi">
 					<g:link controller="WenZhang" action="show" id="${ wenZhangInstance.id }" target="_blank">

@@ -23,10 +23,15 @@
 					</span>
 					<g:if test="${wenZhangInstance?.dateCreated}">
 						<span class="fuBiaoTi" style="min-width:230px;">
-							创建时间：<g:formatDate date="${wenZhangInstance?.dateCreated}" format="yyyy-MM-dd HH:mm"/>
+							创建：<g:formatDate date="${wenZhangInstance?.dateCreated}" format="yyyy-MM-dd HH:mm:ss"/>
 						</span>
-						<span class="fuBiaoTi" style="min-width:130px;">
-							更新时间：<g:formatDate date="${wenZhangInstance?.lastUpdated}" format="yyyy-MM-dd HH:mm"/>
+						<%--
+						<span class="fuBiaoTi" style="min-width:230px;">
+							更新：<g:formatDate date="${wenZhangInstance?.lastUpdated}" format="yyyy-MM-dd"/>
+						</span>
+						--%>
+						<span class="fuBiaoTi" style="min-width:230px;">
+							关键词：<span class="guanJianCi">${wenZhangInstance?.getGuanJianCiAsString()}</span>
 						</span>
 					</g:if>
 				</li>

@@ -29,6 +29,7 @@ class WenZhangRestfulController extends RestfulController {
 		def map = new HashMap([
 			"yongHu":wenZhangInstance.yongHu.xingMing,
 			"dateCreated":formatDate(date:wenZhangInstance.dateCreated,format:"yyyy-MM-dd HH:mm:ss"),
+			"guanJianCi":wenZhangInstance.getGuanJianCiAsString(),
 			"biaoTi":"<a href='${createLink(controller:'wenZhang', action:'show', id:wenZhangInstance.id)}' target='_blank'>${wenZhangInstance.biaoTi}</a>"
 		])
 		respond map, [status: CREATED]

@@ -18,6 +18,8 @@
 						
 						<g:textField name="biaoTi" value="" style="margin-bottom:15px;width:100%;" class="borderBox" placeholder="文章标题" id="geRenWenZhang-biaoTi"/>
 						
+						<g:textField name="guanJianCi" value="" style="margin-bottom:15px;width:100%;" class="borderBox" placeholder="关键词"/>
+						
 						<g:textArea name="neiRong" placeholder="如果您想说点什么" class="borderBox" id="geRenWenZhang-neiRong" style="width:100%;height:700px;"/>
 		
 						<g:hiddenField name="yongHu.id" value="${ session.uid }"/>
@@ -44,6 +46,7 @@
 		
 								$clone.find(".yongHu").html(data.yongHu);
 								$clone.find(".shiJian").html(data.dateCreated);
+								$clone.find(".guanJianCi").html(data.guanJianCi);
 								$clone.find(".biaoTi").html(data.biaoTi);
 		
 								$ul.prepend($clone.show());
