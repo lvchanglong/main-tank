@@ -991,7 +991,7 @@ transition-shiZhong
 .page p {
 	margin-top:10px;
 	padding-left:1px;
-	padding-bottom:10px;
+	padding-bottom:15px;
 }
 .page [type=submit] {
 	padding: 10px 61px;
@@ -1014,6 +1014,7 @@ transition-shiZhong
 .guanJianCi {
 	font-weight:bold;
 	color:darkred;
+	font-size: 18px;
 }
 /*---------------------------------------------------------------------------------------------------------------------*/
 
