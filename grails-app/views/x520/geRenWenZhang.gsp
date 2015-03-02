@@ -18,7 +18,7 @@
 						
 						<g:textField name="biaoTi" value="" style="margin-bottom:15px;width:100%;" class="borderBox" placeholder="文章标题" id="geRenWenZhang-biaoTi"/>
 						
-						<g:textField name="guanJianCi" value="" style="margin-bottom:15px;width:100%;" class="borderBox" placeholder="关键词"/>
+						<g:textField name="guanJianCi" value="" style="margin-bottom:15px;width:100%;" class="borderBox" placeholder="关键词" id="geRenWenZhang-guanJianCi"/>
 						
 						<g:textArea name="neiRong" placeholder="如果您想说点什么" class="borderBox" id="geRenWenZhang-neiRong" style="width:100%;height:700px;"/>
 		
@@ -37,6 +37,7 @@
 								jQuery(selector).html("操作成功");//更新状态
 								
 								jQuery("#geRenWenZhang-biaoTi").val("");//清空文本
+								jQuery("#geRenWenZhang-guanJianCi").val("");
 								jQuery("#geRenWenZhang-neiRong").val("");
 								keditorA.html('');
 		
