@@ -1,4 +1,4 @@
-<%@ page import="main.tank.ChangLiang" %>
+﻿<%@ page import="main.tank.ChangLiang" %>
 
 <!DOCTYPE html>
 <!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
@@ -14,7 +14,7 @@
 		<meta name="Description" content="我的经历,您可借鉴"/>
 		<meta name="Author" Content="吕常龙">
 		
-		<meta name="baidu-site-verification" content="UsUpQQNOBg"/>
+		<meta name="baidu-site-verification" content="MFYchAhfB6"/>
 		<meta name="baidu_union_verify" content="195dd308ea7db875bb960dfbbb44a29f">
 		
 		<script>
