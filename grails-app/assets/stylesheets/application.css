@@ -441,7 +441,7 @@ logo-2
 }
 #logo-2 h3 {
 	font-weight:normal;
-	font-size:13px;
+	font-size:12px;
 	line-height:24px;
 }
 
@@ -609,7 +609,7 @@ page-kongjian
 	padding-top:25px;
 }
 #kongjian .touXiangQv h3 {
-	font-size:27px;
+	font-size:26px;
 	font-weight:bold;
 	display:block;
 	margin-top:8px;
@@ -770,7 +770,7 @@ transition-IP
 	font-size:14px;
 }
 #transition-IP ul {
-	width:270px;
+	width:300px;
 	text-align:right;
 }
 #transition-IP li {
@@ -925,8 +925,6 @@ transition-shiZhong
 #show-wenZhang .neiRong {
 	line-height:24px;
 	margin:30px 0 80px 0;
-	padding:10px;
-	border:1px dotted lightgray;
 }
 #show-wenZhang .fuBiaoTi {
 	display:inline-block;
@@ -945,7 +943,7 @@ transition-shiZhong
 	float:right;
 	font-weight:bold;
 	text-align:right;
-	font-size:16px;
+	font-size:14px;
 	padding:7px;
 	border: 1px solid lightgray;
 	box-shadow: 1px 1px 3px #333 inset;
@@ -986,7 +984,7 @@ transition-shiZhong
 	margin-bottom:10px;
 }
 .page .separator, .page .shiJian {
-	font-size:12px;
+	font-size:14px;
 }
 .page p {
 	margin-top:10px;
@@ -1114,16 +1112,14 @@ page-jianYiFanKui
 	padding-bottom:90px;
 }
 #jianYiFanKui .xiangQing {
-	margin:0 0 71px 0;
 	position:relative;
+	margin-bottom:30px;
 }
 #jianYiFanKui ul {
-	margin:0 0 121px 0;
 	position:relative;
 }
 #jianYiFanKui li {
-	line-height:45px;
-	margin-bottom:30px;
+	line-height:25px;
 }
 #jianYiFanKui .textarea {
 	width:100%;

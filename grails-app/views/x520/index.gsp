@@ -15,22 +15,20 @@
 				<g:render template="/layouts/plugin/huanDengPian" model="[instanceList: slideList, width:'960px', height:'372px']"/>
 			</section>
 			
-			<section class="decorationWidthPadding">
-				<h2>个人文章</h2>
-				<g:applyLayout controller="wenZhang" action="index" params="[offset:0, max:5]" />
-			</section>
+			<g:if test="${ zuiXinWenZhang }">
+				<section class="decorationWidthPadding">
+				<h2>最新文章</h2>
+					${ zuiXinWenZhang.neiRong }
+				</section>
+			</g:if>
 			
 			<section class="decorationWidthPadding">
 				<g:render template="/layouts/transition/IP" />
 			</section>
 			
 			<section class="decorationWidthPadding end">
-				<h2>
-					<g:link controller="x520" action="jianYiFanKui" target="_blank">
-						建议反馈
-					</g:link>
-				</h2>
-				<g:applyLayout controller="fanKui" action="index" params="[offset:0, max:5]" />
+				<h2>个人文章</h2>
+				<g:applyLayout controller="wenZhang" action="index" params="[offset:0, max:5]" />
 			</section>
 			
 		</div>

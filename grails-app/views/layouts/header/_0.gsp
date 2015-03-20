@@ -114,6 +114,11 @@
 					<g:link controller="x520" action="liShi">历史</g:link>
 				</li>
 				<li>
+					<g:link controller="x520" action="jianYiFanKui">
+						反馈
+					</g:link>
+				</li>
+				<li>
 					<a href="javascript:void(0);" onclick="shouCang(window.location,document.title);">收藏</a>
 				</li>
 			</ol>

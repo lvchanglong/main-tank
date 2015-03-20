@@ -2,7 +2,7 @@
 body,
 input, select, textarea {
 	letter-spacing:1px;
-	font: 12px/1.5 "微软雅黑", "黑体", "宋体";
+	font: 12px/1.5 "黑体", "微软雅黑", "宋体";
 	color:#333;
 }
 
@@ -584,4 +584,9 @@ th:hover, tr:hover {
 a.skip {
 	position: absolute;
 	left: -9999px;
+}
+
+embed {
+	display:block;
+	margin:0 auto;
 }

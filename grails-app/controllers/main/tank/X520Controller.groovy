@@ -33,7 +33,7 @@ class X520Controller {
 			new TuPian("http://ww4.sinaimg.cn/mw690/b21a3a8dtw1epcob4n6phj206b03t0so.jpg", "Dan The Man Stage 7",  "http://v.youku.com/v_show/id_XNjAyMTcxMjU2.html")
 		]
 		
-		[slideList:slideList]
+		[slideList:slideList, zuiXinWenZhang: WenZhang.last()]
 	}
 	
 	/**

@@ -46,6 +46,8 @@
 				</script>
 			</div>
 			
+			<g:applyLayout controller="fanKui" action="index" params="[offset:0, max:5]" />
+			
 			<div class="tuZhang">您的建议与反馈，是我们最宝贵的财富</div>
 			
 		</div>
