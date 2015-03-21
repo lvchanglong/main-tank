@@ -1,6 +1,6 @@
-<asset:stylesheet src="SanFang/HuanDengPian/stylesheets/slider-min.css"/>
-<asset:javascript src="SanFang/HuanDengPian/javascripts/jquery.slider.pack-min.js"/>
-<asset:javascript src="SanFang/HuanDengPian/javascripts/jquery.easing-min.js"/>
+<asset:stylesheet src="YinYong/HuanDengPian/stylesheets/slider-min.css"/>
+<asset:javascript src="YinYong/HuanDengPian/javascripts/jquery.slider.pack-min.js"/>
+<asset:javascript src="YinYong/HuanDengPian/javascripts/jquery.easing-min.js"/>
 
 <div id="huanDengPian">
     <div class="cycleslider-wrap">

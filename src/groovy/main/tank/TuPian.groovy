@@ -15,7 +15,7 @@ class TuPian {
 
 	/**
 	 * 图片地址
-	 * ${assetPath(src: 'SanFang/HuanDengPian/images/yeshou.jpg')}
+	 * ${assetPath(src: 'YinYong/HuanDengPian/images/yeshou.jpg')}
 	 * http://ww1.sinaimg.cn/mw690/b21a3a8dtw1epbminr3cdj20nc0ac3zh.jpg
 	 */
 	String url = ""

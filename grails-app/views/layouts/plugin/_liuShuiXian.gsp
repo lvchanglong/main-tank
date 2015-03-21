@@ -1,12 +1,12 @@
-<asset:stylesheet src="SanFang/LiuShuiXian/stylesheets/carousel.css"/>
-<asset:javascript src="SanFang/LiuShuiXian/javascripts/jquery.carouFredSel-6.1.0-packed.js"/>
+<asset:stylesheet src="YinYong/LiuShuiXian/stylesheets/carousel.css"/>
+<asset:javascript src="YinYong/LiuShuiXian/javascripts/jquery.carouFredSel-6.1.0-packed.js"/>
 		
 <div id="liuShuiXian">
 	<div id="carousel">
 		<g:each in="${instanceList}" status="i" var="instance">
 			<div class="imageWrapper borderBox">
 				<a href="${ instance.url }">
-					<asset:image src="SanFang/LiuShuiXian/images/${ instance.fileName }" alt="" width="100%" height="100%" alt="流水线"/>
+					<asset:image src="YinYong/LiuShuiXian/images/${ instance.fileName }" alt="" width="100%" height="100%" alt="流水线"/>
 				</a>
 			</div>
 		</g:each>

@@ -5,7 +5,10 @@
 	<head>
 		<meta name="layout" content="main"/>
 		<title>主坦克-个人文章</title>
-		<asset:javascript src="YinYong/kindeditor-4.1.10/kindeditor-min.js"/>
+		<asset:stylesheet src="YinYong/umeditor1_2_2-utf8-jsp/themes/default/css/umeditor.min.css"/>
+		<asset:javascript src="YinYong/umeditor1_2_2-utf8-jsp/umeditor.config.js"/>
+		<asset:javascript src="YinYong/umeditor1_2_2-utf8-jsp/umeditor.min.js"/>
+		<asset:javascript src="YinYong/umeditor1_2_2-utf8-jsp/lang/zh-cn/zh-cn.js"/>
 	</head>
 	<body>
 		<div id="geRenWenZhang" class="borderBox defaultPage page">
@@ -14,14 +17,18 @@
 			<div class="wrapper borderBox">
 		
 				<g:if test="${ session.uid && session.uid == yongHuInstance.id }">
-					<g:formRemote name="wenzhang-save" url="[controller:'wenZhangRestful', action:'xsave']" before="keditorA.sync();" onSuccess="wenZhangSaveSuccess(data,textStatus,'#geRenWenZhang-message')" onFailure="failure(XMLHttpRequest,textStatus,errorThrown,'#geRenWenZhang-message')" class="clearfix">
+					<g:formRemote name="wenzhang-save" url="[controller:'wenZhangRestful', action:'xsave']" onSuccess="wenZhangSaveSuccess(data,textStatus,'#geRenWenZhang-message')" onFailure="failure(XMLHttpRequest,textStatus,errorThrown,'#geRenWenZhang-message')" class="clearfix">
 						
 						<g:textField name="biaoTi" value="" style="margin-bottom:15px;width:100%;" class="borderBox" placeholder="文章标题" id="geRenWenZhang-biaoTi"/>
 						
 						<g:textField name="guanJianCi" value="" style="margin-bottom:15px;width:100%;" class="borderBox" placeholder="关键词" id="geRenWenZhang-guanJianCi"/>
 						
+						<script type="text/plain" id="geRenWenZhang-neiRong" name="neiRong" class="borderBox" style="width:100%;height:500px;"></script>
+						
+						<%--
 						<g:textArea name="neiRong" placeholder="如果您想说点什么" class="borderBox" id="geRenWenZhang-neiRong" style="width:100%;height:700px;"/>
-		
+						--%>
+						
 						<g:hiddenField name="yongHu.id" value="${ session.uid }"/>
 						<g:submitButton name="faBu" value="发布" style="margin-top: 10px;"/>
 						
@@ -39,7 +46,7 @@
 								jQuery("#geRenWenZhang-biaoTi").val("");//清空文本
 								jQuery("#geRenWenZhang-guanJianCi").val("");
 								jQuery("#geRenWenZhang-neiRong").val("");
-								keditorA.html('');
+								um.setContent('');
 		
 								var $wrapper = jQuery("#geRenWenZhang-wrapper");//追加文本(复制、修改、追加)
 								var $ul =  $wrapper.find("ul:first");
@@ -63,12 +70,10 @@
 		</div>
 		
 		<script type="text/javascript">
-			var keditorA;
-	        KindEditor.ready(function(K) {
-	        	keditorA = K.create("#geRenWenZhang-neiRong", {
-					uploadJson : "${createLink(controller:'kindEditor', action:'uploadJson')}"
-				});
-	        });
+			var um = UM.getEditor('geRenWenZhang-neiRong', {
+				imageUrl: "${createLink(controller:'UEditor', action:'uploadImage')}",
+				imagePath:""
+		    });
 		</script>
 	</body>
 </html>

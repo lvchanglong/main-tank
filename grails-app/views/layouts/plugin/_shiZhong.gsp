@@ -1,5 +1,5 @@
-<asset:stylesheet src="SanFang/ShiZhong/stylesheets/style-min.css"/>
-<asset:javascript src="SanFang/ShiZhong/javascripts/moment.min.js"/>
+<asset:stylesheet src="YinYong/ShiZhong/stylesheets/style-min.css"/>
+<asset:javascript src="YinYong/ShiZhong/javascripts/moment.min.js"/>
 		
 <div id="shiZhong">
 	<div id="clock" class="light">

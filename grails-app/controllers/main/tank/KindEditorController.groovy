@@ -18,7 +18,7 @@ class KindEditorController {
 	 */
 	def uploadJson() {
 		//文件保存目录路径
-		String savePath = "grails-app/assets/images/kindeditor/attached/";
+		String savePath = "grails-app/assets/resources/kindeditor/attached/";
 		
 		//文件保存目录URL
 		String saveUrl  = assetPath(src: 'kindeditor/attached/');

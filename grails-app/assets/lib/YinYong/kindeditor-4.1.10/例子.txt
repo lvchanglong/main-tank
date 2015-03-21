@@ -1,0 +1,15 @@
+<asset:javascript src="YinYong/kindeditor-4.1.10/kindeditor-min.js"/>
+
+<g:textArea name="neiRong" placeholder="如果您想说点什么" class="borderBox" id="geRenWenZhang-neiRong" style="width:100%;height:700px;"/>
+
+before="keditorA.sync();" 
+onsubmit="keditorE.sync();"
+
+<script type="text/javascript">
+	var keditorA;
+    KindEditor.ready(function(K) {
+    	keditorA = K.create("#geRenWenZhang-neiRong", {
+			uploadJson : "${createLink(controller:'kindEditor', action:'uploadJson')}"
+		});
+    });
+</script>

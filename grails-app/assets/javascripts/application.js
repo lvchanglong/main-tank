@@ -179,6 +179,9 @@ function shiBaiChuLi(XMLHttpRequest,textStatus,errorThrown,key,selector) {
 		case "Conflict":
 			jQuery("#" + key).find(selector).html("已存在");
 			break;
+		case "Unauthorized":
+			jQuery("#" + key).find(selector).html("未授权");
+			break;
 	}
 }
 

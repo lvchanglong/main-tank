@@ -262,7 +262,7 @@ class X520Controller {
 			session.uid = yonghu.id
 			render status: ZhuangTai.ZHENG_CHANG
 		} else {
-			render status: ZhuangTai.WU_FA_FANG_WEN
+			render status: ZhuangTai.WEI_SHOU_QUAN
 		}
 	}
 	

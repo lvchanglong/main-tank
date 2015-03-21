@@ -4,10 +4,13 @@
 	<head>
 		<meta name="layout" content="main">
 		<title>主坦克-文章编辑</title>
-		<asset:javascript src="YinYong/kindeditor-4.1.10/kindeditor-min.js"/>
+		<asset:stylesheet src="YinYong/umeditor1_2_2-utf8-jsp/themes/default/css/umeditor.min.css"/>
+		<asset:javascript src="YinYong/umeditor1_2_2-utf8-jsp/umeditor.config.js"/>
+		<asset:javascript src="YinYong/umeditor1_2_2-utf8-jsp/umeditor.min.js"/>
+		<asset:javascript src="YinYong/umeditor1_2_2-utf8-jsp/lang/zh-cn/zh-cn.js"/>
 	</head>
 	<body>
-		<g:form url="[resource:wenZhangInstance, action:'update']" method="PUT" onsubmit="keditorE.sync();">
+		<g:form url="[resource:wenZhangInstance, action:'update']" method="PUT">
 		
 			<g:hiddenField name="version" value="${wenZhangInstance?.version}" />
 			
@@ -39,7 +42,10 @@
 					
 					<g:if test="${wenZhangInstance?.neiRong}">
 						<li class="fieldcontain ${hasErrors(bean: wenZhangInstance, field: 'neiRong', 'error')} required">
+							<%--
 							<g:textField id="yonghu-wenzhang-edit-neiRong" name="neiRong" required="" value="${wenZhangInstance?.neiRong}" placeholder="内容" class="borderBox" style="width:100%;height:700px;"/>
+							--%>
+							<script type="text/plain" id="yonghu-wenzhang-edit-neiRong" name="neiRong" class="borderBox" style="width:100%;height:500px;">${wenZhangInstance?.neiRong}</script>
 						</li>
 					</g:if>
 				
@@ -58,12 +64,10 @@
 		</g:form>
 		
 		<script type="text/javascript">
-			var keditorE;
-	        KindEditor.ready(function(K) {
-	        	keditorE = K.create("#yonghu-wenzhang-edit-neiRong", {
-					uploadJson : "${createLink(controller:'kindEditor', action:'uploadJson')}"
-				});
-	        });
+	        var um = UM.getEditor('yonghu-wenzhang-edit-neiRong', {
+				imageUrl: "${createLink(controller:'UEditor', action:'uploadImage')}",
+				imagePath:""
+		    });
 		</script>
 	</body>
 </html>
