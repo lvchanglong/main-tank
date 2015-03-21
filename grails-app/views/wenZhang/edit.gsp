@@ -66,7 +66,8 @@
 		<script type="text/javascript">
 	        var um = UM.getEditor('yonghu-wenzhang-edit-neiRong', {
 				imageUrl: "${createLink(controller:'UEditor', action:'uploadImage')}",
-				imagePath:""
+				imagePath:"",
+				zIndex:30
 		    });
 		</script>
 	</body>
