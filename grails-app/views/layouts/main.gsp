@@ -40,7 +40,7 @@
 		<section id="main" class="conWidth">
 			<%--页眉--%>
 			<header id="main-header">
-				<g:pageProperty name="page.ex-header" default="${ render(template:"/layouts/header/" + ChangLiang.HEADER_INDEX) }"/>
+				<g:pageProperty name="page.header" default="${ render(template:"/layouts/header/" + ChangLiang.HEADER_INDEX) }"/>
 			</header>
 			
 			<%--内容--%>
@@ -48,7 +48,7 @@
 			
 				<%--logo--%>
 				<div id="main-logo">
-					<g:pageProperty name="page.ex-logo" default="${ render(template:"/layouts/logo/" + ChangLiang.LOGO_INDEX) }"/>
+					<g:pageProperty name="page.logo" default="${ render(template:"/layouts/logo/" + ChangLiang.LOGO_INDEX) }"/>
 				</div>
 				
 				<%--wrapper--%>
@@ -60,12 +60,12 @@
 			
 			<%--页脚--%>
 			<footer id="main-footer">
-				<g:pageProperty name="page.ex-footer" default="${ render(template:"/layouts/footer/" + ChangLiang.FOOTER_INDEX) }"/>
+				<g:pageProperty name="page.footer" default="${ render(template:"/layouts/footer/" + ChangLiang.FOOTER_INDEX) }"/>
 			</footer>
 			
 			<%--助手--%>
 			<section id="main-helper">
-				<g:pageProperty name="page.ex-helper" default="${ render(template:"/layouts/helper/" + ChangLiang.HELPER_INDEX) }"/>
+				<g:pageProperty name="page.helper" default="${ render(template:"/layouts/helper/" + ChangLiang.HELPER_INDEX) }"/>
 			</section>
 		</section>
 

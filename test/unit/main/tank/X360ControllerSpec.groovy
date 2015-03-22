@@ -6,8 +6,8 @@ import spock.lang.Specification
 /**
  * See the API for {@link grails.test.mixin.web.ControllerUnitTestMixin} for usage instructions
  */
-@TestFor(X520Controller)
-class A520ControllerSpec extends Specification {
+@TestFor(X360Controller)
+class X360ControllerSpec extends Specification {
 
     def setup() {
     }

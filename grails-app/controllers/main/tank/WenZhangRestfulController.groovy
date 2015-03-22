@@ -24,7 +24,7 @@ class WenZhangRestfulController extends RestfulController {
 			return
 		}
 		
-		wenZhangInstance.save flush:true
+		wenZhangInstance.save flush: true
 		
 		def map = new HashMap([
 			"yongHu":wenZhangInstance.yongHu.xingMing,

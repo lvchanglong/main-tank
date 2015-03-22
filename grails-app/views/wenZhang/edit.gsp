@@ -45,7 +45,7 @@
 							<%--
 							<g:textField id="yonghu-wenzhang-edit-neiRong" name="neiRong" required="" value="${wenZhangInstance?.neiRong}" placeholder="内容" class="borderBox" style="width:100%;height:700px;"/>
 							--%>
-							<script type="text/plain" id="yonghu-wenzhang-edit-neiRong" name="neiRong" class="borderBox" style="width:100%;height:500px;">${wenZhangInstance?.neiRong}</script>
+							<script type="text/plain" id="yonghu-wenzhang-edit-neiRong" name="neiRong">${wenZhangInstance?.neiRong}</script>
 						</li>
 					</g:if>
 				
@@ -66,8 +66,7 @@
 		<script type="text/javascript">
 	        var um = UM.getEditor('yonghu-wenzhang-edit-neiRong', {
 				imageUrl: "${createLink(controller:'UEditor', action:'uploadImage')}",
-				imagePath:"",
-				zIndex:30
+				imagePath:""
 		    });
 		</script>
 	</body>

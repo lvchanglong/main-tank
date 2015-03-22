@@ -4,30 +4,30 @@
 <div id="footer-1" class="borderBox">
 	<nav>
 		<ul class="clearfix">
-			<li style="width:100%;text-align:center;">©&nbsp;${ new RiQi().getNian() }&nbsp;&nbsp;&nbsp;<g:link controller="x520" action="yongQianBiDu">${ ChangLiang.WANG_ZHAN_ZUO_ZHE }</g:link>&nbsp;&nbsp;&nbsp;版权所有</li>
+			<li style="width:100%;text-align:center;">©&nbsp;${ new RiQi().getNian() }&nbsp;&nbsp;&nbsp;<g:link controller="x360" action="yongQianBiDu">${ ChangLiang.WANG_ZHAN_ZUO_ZHE }</g:link>&nbsp;&nbsp;&nbsp;版权所有</li>
 			
 			<li class="clearBoth"></li>
 			
 			<li>
-				<g:link controller="x520" action="yongQianBiDu">
+				<g:link controller="x360" action="yongQianBiDu">
 					用前必读
 				</g:link>
 			</li>
 			<li><span class="separator">/</span></li>
 			<li>
-				<g:link controller="x520" action="wangZhanXiangGuan">
+				<g:link controller="x360" action="wangZhanXiangGuan">
 					网站相关
 				</g:link>
 			</li>
 			<li><span class="separator">/</span></li>
 			<li>
-				<g:link controller="x520" action="lianXiFangShi">
+				<g:link controller="x360" action="lianXiFangShi">
 					联系方式
 				</g:link>
 			</li>
 			<li><span class="separator">/</span></li>
 			<li>
-				<g:link controller="x520" action="jianYiFanKui">
+				<g:link controller="x360" action="jianYiFanKui">
 					建议反馈
 				</g:link>
 			</li>

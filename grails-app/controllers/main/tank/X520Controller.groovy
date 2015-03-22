@@ -2,109 +2,128 @@ package main.tank
 
 import grails.converters.JSON
 import grails.transaction.Transactional;
-
 import java.nio.CharBuffer
 import java.text.DateFormat
-
 import javax.servlet.http.HttpSession;
+import static org.springframework.http.HttpStatus.*
 
 /**
- * 系统前台
+ * 系统后台（爱你，在心中）
  * @author lvchanglong
  *
  */
 class X520Controller {
-
-	static defaultAction = "index" //默认方法
 	
 	/**
-	 * 网站首页
-	 * @param max
-	 * @return
+	 * 用户登录
+	 * @param zhangHao 账号
+	 * @param miMa 密码
 	 */
-	def index() {
-		ArrayList slideList = [
-			new TuPian("http://ww4.sinaimg.cn/mw690/b21a3a8dtw1epcob17ygwj206b03tq2v.jpg", "Dan The Man Stage 1", "http://v.youku.com/v_show/id_XNjAyMTcyMjcy.html"), 
-			new TuPian("http://ww4.sinaimg.cn/mw690/b21a3a8dtw1epcob1p4awj206b03tjrd.jpg", "Dan The Man Stage 2",  "http://v.youku.com/v_show/id_XNjAyMTcwMTU2.html"), 
-			new TuPian("http://ww2.sinaimg.cn/mw690/b21a3a8dtw1epcob27hetj206b03tq2y.jpg", "Dan The Man Stage 3",  "http://v.youku.com/v_show/id_XNTc1MDI3NDU2.html"), 
-			new TuPian("http://ww1.sinaimg.cn/mw690/b21a3a8dtw1epcob2px67j206b03taa1.jpg", "Dan The Man Stage 4",  "http://v.youku.com/v_show/id_XNTc0NzAwNTg4.html"),
-			new TuPian("http://ww1.sinaimg.cn/mw690/b21a3a8dtw1epcob3d2y5j206b03tjre.jpg", "Dan The Man Stage 5",  "http://v.youku.com/v_show/id_XNTc0NTU1MTY4.html"),
-			new TuPian("http://ww1.sinaimg.cn/mw690/b21a3a8dtw1epcob3u76lj206b03tq2x.jpg", "Dan The Man Stage 6",  "http://v.youku.com/v_show/id_XNTc0NTUwNTQ4.html"),
-			new TuPian("http://ww4.sinaimg.cn/mw690/b21a3a8dtw1epcob4n6phj206b03t0so.jpg", "Dan The Man Stage 7",  "http://v.youku.com/v_show/id_XNjAyMTcxMjU2.html")
-		]
-		
-		[slideList:slideList, zuiXinWenZhang: WenZhang.last()]
+	def yongHuDengLu(String zhangHao, String miMa) {
+		if (zhangHao) {
+			def yonghu = YongHu.findByZhangHaoAndMiMa(zhangHao, miMa.encodeAsMD5())
+			if (yonghu) {
+				session.uid = yonghu.id
+				render status: OK
+				return
+			} else {
+				render status: UNAUTHORIZED
+				return
+			}
+		}
+		render status: BAD_REQUEST
 	}
 	
 	/**
-	 * 用户
+	 * 用户注销
 	 */
-	def yongHu() {
-		
+	def yongHuZhuXiao() {
+		session.invalidate()
+		render status: OK
 	}
 	
 	/**
-	 * 服务
+	 * 用户注册
 	 */
-	def fuWu() {
-		
-	}
-	
-	/**
-	 * 历史
-	 */
-	def liShi() {
-		
-	}
-	
-	/**
-	 * 说说
-	 */
-	def shuoShuo() {
-		
-	}
-	
-	/**
-	 * 个人空间
-	 */
-	def geRenKongJian(String zhangHao) {
-		def yongHuInstance = YongHu.findByZhangHao(zhangHao)
-		if (!yongHuInstance) {
-			render status: ZhuangTai.WEI_ZHAO_DAO
+	@Transactional
+	def yongHuZhuCe(String zhangHao, String miMa, String queRenMiMa) {
+		if (zhangHao) {
+			if (miMa == queRenMiMa) {//确认密码一致性
+				def yongHuInstance = YongHu.findByZhangHao(zhangHao)
+				if (yongHuInstance) {//账号冲突
+					render status: CONFLICT
+					return
+				}
+				def yonghu = new YongHu([zhangHao: zhangHao, miMa: miMa])//注册用户
+				if (!yonghu.hasErrors()) {
+					yonghu.save flush: true
+					render status: OK
+					return
+				}
+			}
+			render status: NOT_ACCEPTABLE
 			return
 		}
-		[yongHuInstance: yongHuInstance]
+		render status: BAD_REQUEST
 	}
 	
 	/**
-	 * 个人空间-个人资料
-	 * @param yongHuInstance 被查看用户
+	 * 修改密码
 	 */
-	def geRenZiLiao(YongHu yongHuInstance) {
-		render(template:"/layouts/other/yongHu/kongJian/ziLiao/1", model:[yongHuInstance: yongHuInstance])
+	@Transactional
+	def miMaXiuGai(YongHu yongHuInstance, String yuanMiMa, String xinMiMa, String queRenMiMa) {
+		if (yongHuInstance && yuanMiMa && xinMiMa && queRenMiMa) {
+			if (xinMiMa == queRenMiMa) {//确认密码一致性
+				if (yongHuInstance) {
+					if (yongHuInstance.miMa == yuanMiMa.encodeAsMD5()) {//原始密码验证
+						yongHuInstance.miMa = xinMiMa.encodeAsMD5() //更新密码
+						yongHuInstance.save(flush: true)
+						render status: OK
+						return
+					}
+					render status: UNAUTHORIZED
+					return
+				}
+			}
+			render status: NOT_ACCEPTABLE
+			return
+		}
+		render status: BAD_REQUEST
 	}
 	
 	/**
-	 * 个人空间-个人说说
-	 * @param yongHuInstance 被查看用户
+	 * 头像上传
+	 * grails-app/assets/resources/KongJian/${yongHuInstance.zhangHao}/TuPian/${fileName}
 	 */
-	def geRenShuoShuo(YongHu yongHuInstance) {
-		render(template:"/layouts/other/yongHu/kongJian/shuoShuo/0", model:[yongHuInstance: yongHuInstance])
-	}
-	
-	/**
-	 * 个人空间-个人文章
-	 * @param yongHuInstance 被查看用户
-	 */
-	def geRenWenZhang(YongHu yongHuInstance) {
-		[yongHuInstance: yongHuInstance]
-	}
-	
-	/**
-	 * 测试
-	 */
-	def test() {
-		
+	@Transactional
+	def touXiangShangChuan(String fileName, String userID) {
+		def yongHuInstance = YongHu.get(userID)
+		if (yongHuInstance) {
+			def xiangDuiLuJing = "KongJian/${yongHuInstance.zhangHao}/TuPian/${fileName}"//相对路径
+			BufferedInputStream fileIn = new BufferedInputStream(request.getInputStream())
+			byte[] buf = new byte[1024]
+			File file = ZiYuanGuanLi.getFile("grails-app/assets/resources/${xiangDuiLuJing}")
+			BufferedOutputStream fileOut = new BufferedOutputStream(new FileOutputStream(file))
+			while (true) {
+			   int bytesIn = fileIn.read(buf, 0, 1024)
+			   if (bytesIn == -1) {
+				  break
+			   } else {
+				  fileOut.write(buf, 0, bytesIn)
+			   }
+			}
+			fileOut.flush()
+			fileOut.close()
+			
+			yongHuInstance.touXiang = xiangDuiLuJing
+			yongHuInstance.save(flush: true)//更新路径
+			
+			TuPian.yaSuo(file, 180, 180)//图片压缩处理
+			
+			render xiangDuiLuJing
+		} else {
+			render status: NOT_FOUND
+		}
 	}
 	
 	/**
@@ -145,6 +164,32 @@ class X520Controller {
 	}
 	
 	/**
+	 * 生肖查询
+	 * @param nian 年份
+	 */
+	def shengXiaoChaXun(Integer nian) {
+		if (nian && nian >= 0) {
+			render BangZhu.getShengXiao(nian) as JSON
+			return
+		}
+		render status: NOT_ACCEPTABLE
+	}
+	
+	/**
+	 * ip详情
+	 * @param ip地址
+	 */
+	def ipXiangQing(String ip) {
+		try {
+			def url = new URL("http://wap.ip138.com/ip138.asp?ip=" + ip)
+			def text = url.getText()
+			render text.find(/(?<=<b>).*?(?=<\/b>)/)
+		} catch(Exception e) {
+			
+		}
+	}
+	
+	/**
 	 * 下载
 	 * @param filePath 文件路径
 	 */
@@ -158,159 +203,6 @@ class X520Controller {
 		out << file.getBytes()
 		out.flush()
 		out.close()
-	}
-	
-	/**
-	 * 生肖查询
-	 * @param nian 年份
-	 */
-	def shengXiaoChaXun(Integer nian) {
-		if (nian && nian >= 0) {
-			render BangZhu.getShengXiao(nian) as JSON
-			return
-		}
-		render status: ZhuangTai.WU_FA_FANG_WEN
-	}
-	
-	/**
-	 * 用户注册
-	 */
-	@Transactional
-	def yongHuZhuCe(String zhangHao, String miMa, String queRenMiMa) {
-		if (zhangHao) {
-			if (miMa == queRenMiMa) {//确认密码一致性
-				def yongHuInstance = YongHu.findByZhangHao(zhangHao)
-				if (yongHuInstance) {//账号冲突
-					render status: ZhuangTai.CHONG_TU
-					return
-				}
-	
-				def yonghu = new YongHu([zhangHao: zhangHao, miMa: miMa])//注册用户
-				if (!yonghu.hasErrors()) {
-					yonghu.save flush:true
-					render status: ZhuangTai.ZHENG_CHANG
-					return
-				}
-			}
-		}
-		render status: ZhuangTai.WU_FA_FANG_WEN
-	}
-	
-	/**
-	 * 头像上传
-	 * grails-app/assets/resources/KongJian/${yongHuInstance.zhangHao}/TuPian/${fileName}
-	 */
-	@Transactional
-	def touXiangShangChuan(String fileName, String userID) {
-		def yongHuInstance = YongHu.get(userID)
-		if (yongHuInstance) {
-			def xiangDuiLuJing = "KongJian/${yongHuInstance.zhangHao}/TuPian/${fileName}"//相对路径
-			BufferedInputStream fileIn = new BufferedInputStream(request.getInputStream())
-			byte[] buf = new byte[1024]
-			File file = ZiYuanGuanLi.getFile("grails-app/assets/resources/${xiangDuiLuJing}")
-			BufferedOutputStream fileOut = new BufferedOutputStream(new FileOutputStream(file))
-			while (true) {
-			   int bytesIn = fileIn.read(buf, 0, 1024)
-			   //System.out.println(bytesIn)
-			   if (bytesIn == -1) {
-				  break
-			   } else {
-				  fileOut.write(buf, 0, bytesIn)
-			   }
-			}
-			fileOut.flush()
-			fileOut.close()
-			
-			yongHuInstance.touXiang = xiangDuiLuJing
-			yongHuInstance.save(flush: true)//更新路径
-			
-			TuPian.yaSuo(file, 180, 180)//图片压缩处理
-			
-			render xiangDuiLuJing
-		} else {
-			render status: ZhuangTai.WU_FA_FANG_WEN
-		}
-	}
-	
-	/**
-	 * 修改密码
-	 */
-	@Transactional
-	def miMaXiuGai(YongHu yongHuInstance, String yuanMiMa, String xinMiMa, String queRenMiMa) {
-		if (xinMiMa == queRenMiMa) {//确认密码一致性
-			if (yongHuInstance) {
-				if (yongHuInstance.miMa == yuanMiMa.encodeAsMD5()) {//原始密码验证
-					yongHuInstance.miMa = xinMiMa.encodeAsMD5() //更新密码
-					yongHuInstance.save(flush: true)
-					//println yongHuInstance.errors
-					render status: ZhuangTai.ZHENG_CHANG
-					return
-				}
-			}
-		}
-		render status: ZhuangTai.WU_FA_FANG_WEN
-	}
-	
-	/**
-	 * 用户登录
-	 * @param zhangHao 账号
-	 * @param miMa 密码
-	 */
-	def yongHuDengLu(String zhangHao, String miMa) {
-		def yonghu = YongHu.findByZhangHaoAndMiMa(zhangHao, miMa.encodeAsMD5())
-		if (yonghu) {
-			session.uid = yonghu.id
-			render status: ZhuangTai.ZHENG_CHANG
-		} else {
-			render status: ZhuangTai.WEI_SHOU_QUAN
-		}
-	}
-	
-	/**
-	 * 用户注销
-	 */
-	def yongHuZhuXiao() {
-		session.invalidate()
-		render status: ZhuangTai.ZHENG_CHANG
-	}
-	
-	/**
-	 * ip详情
-	 * @param ip地址
-	 */
-	def ipXiangQing(String ip) {
-		def url = new URL("http://wap.ip138.com/ip138.asp?ip=" + ip)
-		def text = url.getText()
-		//println text
-		render text.find(/(?<=<b>).*?(?=<\/b>)/)
-	}
-	
-	/**
-	 * 用前必读
-	 */
-	def yongQianBiDu() {
-		
-	}
-	
-	/**
-	 * 联系方式
-	 */
-	def lianXiFangShi() {
-		
-	}
-	
-	/**
-	 * 网站相关
-	 */
-	def wangZhanXiangGuan() {
-		
-	}
-	
-	/**
-	 * 建议反馈
-	 */
-	def jianYiFanKui() {
-		
 	}
 	
 }

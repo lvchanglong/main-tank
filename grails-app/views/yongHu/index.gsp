@@ -3,8 +3,11 @@
 		<g:each in="${yongHuInstanceList}" status="i" var="yongHuInstance">
 			<li>
 				<div class="content borderBox">
-					<h3><g:link uri="/kongjian/${ yongHuInstance.zhangHao }">${ yongHuInstance.zhangHao }</g:link><span class="separator">/</span><span class="fuBiaoTi">${ yongHuInstance.xingMing }</span></h3>
-					
+					<h3>
+						<g:link controller="x360" action="geRenGuanLi" id="${ yongHuInstance.id }">${ yongHuInstance.zhangHao }</g:link>
+						<span class="separator">/</span><span class="fuBiaoTi">${ yongHuInstance.xingMing }</span>
+					</h3>
+	
 					<p>
 						${fieldValue(bean: yongHuInstance, field: "shengRi")}
 						<span class="separator">/</span>
@@ -21,11 +24,8 @@
 				</div>
 				
 				<div class="touXiangQv borderBox">
-					<g:link uri="/kongjian/${ yongHuInstance.zhangHao }" class="aMain">
-						
-						<asset:image src="${ yongHuInstance.touXiang }" class="touXiang" alt="头像"/>
+					<asset:image src="${ yongHuInstance.touXiang }" class="touXiang" alt="头像"/>
 
-					</g:link>
 					<div class="youJianTou">
 						>
 					</div>

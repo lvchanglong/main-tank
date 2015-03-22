@@ -7,6 +7,125 @@ package main.tank
  */
 class ZhuangTai {
 
+//	INTERNAL_SERVER_ERROR;内部服务器错误500
+//	UNAUTHORIZED;未授权
+//	NOT_FOUND;未找到
+//	BAD_REQUEST;参数有误
+//	NOT_ACCEPTABLE;验证未通过
+//	UNPROCESSABLE_ENTITY;请求未接受
+//	CONFLICT;冲突
+//	OK;正常200
+//	CREATED;已创建
+//	NO_CONTENT;无内容
+	
+//	ACCEPTED;接受
+//	NON_AUTHORITATIVE_INFORMATION;非官方信息
+//	CONTINUE;继续
+//	
+//	SWITCHING_PROTOCOLS;转换协议
+//	
+//	PROCESSING;
+//
+//	CHECKPOINT;
+//	
+//	RESET_CONTENT;重置内容
+//	
+//	PARTIAL_CONTENT;局部内容
+//	
+//	MULTI_STATUS;
+//	
+//	ALREADY_REPORTED;
+//	
+//	IM_USED;
+//	
+//	MULTIPLE_CHOICES;多重选择
+//	
+//	MOVED_PERMANENTLY;
+//
+//	FOUND;找到
+//	
+//	MOVED_TEMPORARILY;
+//	
+//	SEE_OTHER;参见其他信息
+//
+//	NOT_MODIFIED;未修正
+//	
+//	USE_PROXY;使用代理
+//	
+//	TEMPORARY_REDIRECT;临时重定向
+//	
+//	RESUME_INCOMPLETE;
+//	
+//	PAYMENT_REQUIRED;
+//	
+//	FORBIDDEN;禁止
+//
+//	METHOD_NOT_ALLOWED;方法未允许
+//	
+//	PROXY_AUTHENTICATION_REQUIRED;代理服务器认证要求
+//	
+//	REQUEST_TIMEOUT;请求超时
+//	
+//	GONE;已经不存在
+//
+//	LENGTH_REQUIRED;需要数据长度
+//	
+//	PRECONDITION_FAILED;先决条件错误
+//
+//	REQUEST_ENTITY_TOO_LARGE;请求实体过大
+//	
+//	REQUEST_URI_TOO_LONG;请求URI过长
+//
+//	UNSUPPORTED_MEDIA_TYPE;不支持的媒体格式
+//	
+//	REQUESTED_RANGE_NOT_SATISFIABLE;请求范围无法满足
+//
+//	EXPECTATION_FAILED;期望失败
+//	
+//	I_AM_A_TEAPOT;
+//	
+//	INSUFFICIENT_SPACE_ON_RESOURCE;
+//	
+//	METHOD_FAILURE;
+//	
+//	DESTINATION_LOCKED;
+//	
+//	UNPROCESSABLE_ENTITY;
+//	
+//	LOCKED;
+//	
+//	FAILED_DEPENDENCY;
+//	
+//	UPGRADE_REQUIRED;
+//	
+//	PRECONDITION_REQUIRED;
+//	
+//	TOO_MANY_REQUESTS;
+//	
+//	REQUEST_HEADER_FIELDS_TOO_LARGE;
+//	
+//	NOT_IMPLEMENTED;未实现
+//	
+//	BAD_GATEWAY;未实现
+//	
+//	SERVICE_UNAVAILABLE;服务无法获得
+//	
+//	GATEWAY_TIMEOUT;网关超时
+//	
+//	HTTP_VERSION_NOT_SUPPORTED;不支持的 HTTP 版本
+//	
+//	VARIANT_ALSO_NEGOTIATES;
+//	
+//	INSUFFICIENT_STORAGE;
+//	
+//	LOOP_DETECTED;
+//	
+//	BANDWIDTH_LIMIT_EXCEEDED;
+//	
+//	NOT_EXTENDED;
+//	
+//	NETWORK_AUTHENTICATION_REQUIRED;
+	
 	/**
 	 * 正常->修改成功
 	 */

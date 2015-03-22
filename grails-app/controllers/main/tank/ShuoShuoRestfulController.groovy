@@ -24,7 +24,7 @@ class ShuoShuoRestfulController extends RestfulController {
 			return
 		}
 		
-		shuoShuoInstance.save flush:true
+		shuoShuoInstance.save flush: true
 		
 		def map = new HashMap([
 			"yongHu":shuoShuoInstance.yongHu.xingMing,

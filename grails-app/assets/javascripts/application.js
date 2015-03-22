@@ -20,6 +20,102 @@ if (typeof jQuery !== 'undefined') {
 }
 
 /**
+ * 成功处理
+ * @param data
+ * @param textStatus
+ * @param key 上层唯一id，用于解决重复问题
+ * @param selector 用于更新成功信息
+ */
+function chengGongChuLi(data,textStatus,key,selector) {
+	switch(textStatus) {
+		case "nocontent":
+			jQuery("#" + key).find(selector).html("删除成功");
+			break;
+		case "success":
+			jQuery("#" + key).find(selector).html("操作成功");
+			break;
+	}
+}
+
+/**
+ * 失败处理
+ * @param XMLHttpRequest
+ * @param textStatus
+ * @param errorThrown
+ * @param key 上层唯一id，用于解决重复问题
+ * @param selector 用于更新失败信息
+ */
+function shiBaiChuLi(XMLHttpRequest,textStatus,errorThrown,key,selector) {
+	switch(errorThrown) {
+		case "Not Found":
+			jQuery("#" + key).find(selector).html("资源未找到");
+			break;
+		case "Not Acceptable":
+			jQuery("#" + key).find(selector).html("验证未通过");
+			break;
+		case "Conflict":
+			jQuery("#" + key).find(selector).html("已存在");
+			break;
+		case "Unauthorized":
+			jQuery("#" + key).find(selector).html("未授权");
+			break;
+		case "Bad Request":
+			jQuery("#" + key).find(selector).html("请求不合法");
+			break;
+		case "Unprocessable Entity":
+			jQuery("#" + key).find(selector).html("请求未接受");
+			break;
+	}
+}
+
+/**
+ * 简单成功处理
+ * @param data
+ * @param textStatus
+ * @param selector 用于更新成功信息
+ */
+function success(data,textStatus, selector) {
+	switch(textStatus) {
+		case "nocontent":
+			jQuery(selector).html("删除成功");
+			break;
+		case "success":
+			jQuery(selector).html("操作成功");
+			break;
+	}
+}
+
+/**
+ * 简单失败处理
+ * @param XMLHttpRequest
+ * @param textStatus
+ * @param errorThrown
+ * @param selector 用于更新失败信息
+ */
+function failure(XMLHttpRequest,textStatus,errorThrown,selector) {
+	switch(errorThrown) {
+		case "Not Found":
+			jQuery(selector).html("资源未找到");
+			break;
+		case "Not Acceptable":
+			jQuery(selector).html("验证未通过");
+			break;
+		case "Conflict":
+			jQuery(selector).html("已存在");
+			break;
+		case "Unauthorized":
+			jQuery(selector).html("未授权");
+			break;
+		case "Bad Request":
+			jQuery(selector).html("请求不合法");
+			break;
+		case "Unprocessable Entity":
+			jQuery(selector).html("请求未接受");
+			break;
+	}
+}
+
+/**
  * 头像预览
  * wrapperSelector:用于更新头像
  * tuPianXuanZe:用于更新选择(按钮)状态
@@ -140,84 +236,6 @@ function responseToHover(wrapper, target) {
 			jQuery(this).find(target).hide();
 		}
 	);
-}
-
-/**
- * 成功处理
- * @param data
- * @param textStatus
- * @param key 上层唯一id，用于解决重复问题
- * @param selector 用于更新成功信息
- */
-function chengGongChuLi(data,textStatus,key,selector) {
-	switch(textStatus) {
-		case "nocontent":
-			jQuery("#" + key).find(selector).html("删除成功");
-			break;
-		case "success":
-			jQuery("#" + key).find(selector).html("操作成功");
-			break;
-	}
-}
-
-/**
- * 失败处理
- * @param XMLHttpRequest
- * @param textStatus
- * @param errorThrown
- * @param key 上层唯一id，用于解决重复问题
- * @param selector 用于更新失败信息
- */
-function shiBaiChuLi(XMLHttpRequest,textStatus,errorThrown,key,selector) {
-	switch(errorThrown) {
-		case "Not Found":
-			jQuery("#" + key).find(selector).html("资源未找到");
-			break;
-		case "Not Acceptable":
-			jQuery("#" + key).find(selector).html("请求未接受");
-			break;
-		case "Conflict":
-			jQuery("#" + key).find(selector).html("已存在");
-			break;
-		case "Unauthorized":
-			jQuery("#" + key).find(selector).html("未授权");
-			break;
-	}
-}
-
-/**
- * 简单成功处理
- * @param data
- * @param textStatus
- * @param selector 用于更新成功信息
- */
-function success(data,textStatus, selector) {
-	switch(textStatus) {
-		case "nocontent":
-			jQuery(selector).html("删除成功");
-			break;
-		case "success":
-			jQuery(selector).html("操作成功");
-			break;
-	}
-}
-
-/**
- * 简单失败处理
- * @param XMLHttpRequest
- * @param textStatus
- * @param errorThrown
- * @param selector 用于更新失败信息
- */
-function failure(XMLHttpRequest,textStatus,errorThrown,selector) {
-	switch(errorThrown) {
-		case "Not Found":
-			jQuery(selector).html("资源未找到");
-			break;
-		case "Not Acceptable":
-			jQuery(selector).html("请求未接受");
-			break;
-	}
 }
 
 /**

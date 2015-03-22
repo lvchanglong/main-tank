@@ -92,30 +92,30 @@ class YongHu {
 		
 		def yonghu = YongHu.findWhere([zhangHao: "lvchanglong"])
 		
-		if (!yonghu) {
-			Map map = [
-				zhangHao: "lvchanglong",
-				miMa: "123456",
-				xingMing: "吕常龙",
-				xingBie: "男",
-				suoZai: "沈阳",
-				quanXian: "管理员",
-				touXiang: "WangLuo/TouXiang/警察.png",
-				shengRi: "19880305",
-				youXiang: "417891235@qq.com",
-				shouJi: "13478275273",
-				jianJie: "用实践更新认识、用认识指导实践"
-			]
-			yonghu = new YongHu(map)
-			if (yonghu.hasErrors()) {
-				return ZhuangTai.CUO_WU
-			} else {
-				yonghu.save flush:true
-				return ZhuangTai.ZHENG_CHANG
-			}
+		if (yonghu) {
+			return 200
 		}
 		
-		return ZhuangTai.JIN_ZHI
+		Map map = [
+			zhangHao: "lvchanglong",
+			miMa: "123456",
+			xingMing: "吕常龙",
+			xingBie: "男",
+			suoZai: "沈阳",
+			quanXian: "管理员",
+			touXiang: "WangLuo/TouXiang/警察.png",
+			shengRi: "19880305",
+			youXiang: "417891235@qq.com",
+			shouJi: "13478275273",
+			jianJie: "用实践更新认识、用认识指导实践"
+		]
+		yonghu = new YongHu(map)
+		if (yonghu.hasErrors()) {
+			return 500
+		} else {
+			yonghu.save flush:true
+			return 200
+		}
 		
 	}
 	
@@ -126,22 +126,26 @@ class YongHu {
 		
 		def yonghu = YongHu.findWhere([zhangHao: "test"])
 		
-		if (!yonghu) {
-			Map map = [
-				zhangHao: "test",
-				miMa: "123456"
-			]
-			yonghu = new YongHu(map)
-			if (yonghu.hasErrors()) {
-				return ZhuangTai.CUO_WU
-			} else {
-				yonghu.save flush:true
-				return ZhuangTai.ZHENG_CHANG
-			}
+		if (yonghu) {
+			return 200
 		}
 		
-		return ZhuangTai.JIN_ZHI
+		Map map = [
+			zhangHao: "test",
+			miMa: "123456"
+		]
+		yonghu = new YongHu(map)
+		if (yonghu.hasErrors()) {
+			return 500
+		} else {
+			yonghu.save flush:true
+			return 200
+		}
 		
+	}
+	
+	def getPrivateKey() {
+		return this.zhangHao.encodeAsMD5()
 	}
 	
 }

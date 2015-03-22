@@ -7,11 +7,10 @@ class UrlMappings {
             }
         }
 
-		"/"(controller:"x520", action:"index") // 首页
+		"/kongjian/$publicKey"(controller:"x360", action:"kongJian")//关键词忽略大小写
 		
-		"/kongjian/$zhangHao"(controller:"x520", action:"geRenKongJian") //kongjian：个人空间
-		
-		"/admin"(view:'/index')//管理界面
+		"/"(controller:"x360", action:"index")
+		"/admin"(view:'/index')
 		
         "500"(view:'/error')
 	}

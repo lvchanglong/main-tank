@@ -59,7 +59,10 @@
 						</div>
 					</li>
 					<li>
-						<g:link uri="/kongjian/${ dangQianYongHu.zhangHao }">空间</g:link>
+						<g:link controller="x360" action="kongJian" params="[publicKey:dangQianYongHu.getPrivateKey()]">自由空间</g:link>
+					</li>
+					<li>
+						<g:link controller="x360" action="geRenGuanLi" id="${ dangQianYongHu.id }">特殊管理</g:link>
 					</li>
 					<li>
 						<g:remoteLink controller="x520" action="yongHuZhuXiao" onSuccess="window.location.reload()">注销</g:remoteLink>
@@ -102,21 +105,16 @@
 					<g:link uri="/">主页</g:link>
 				</li>
 				<li>
-					<g:link controller="x520" action="yongHu">用户</g:link>
+					<g:link controller="x360" action="yongHu">用户</g:link>
 				</li>
 				<li>
-					<g:link controller="x520" action="shuoShuo">说说</g:link>
+					<g:link controller="x360" action="shuoShuo">说说</g:link>
 				</li>
 				<li>
-					<g:link controller="x520" action="fuWu">服务</g:link>
+					<g:link controller="x360" action="fuWu">服务</g:link>
 				</li>
 				<li>
-					<g:link controller="x520" action="liShi">历史</g:link>
-				</li>
-				<li>
-					<g:link controller="x520" action="jianYiFanKui">
-						反馈
-					</g:link>
+					<g:link controller="x360" action="liShi">历史</g:link>
 				</li>
 				<li>
 					<a href="javascript:void(0);" onclick="shouCang(window.location,document.title);">收藏</a>
@@ -231,7 +229,6 @@
 			}
 			reader.readAsBinaryString(file);
 	    }
-		//console.log(files);
-		
+	    
 	}
 </script>

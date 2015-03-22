@@ -1,6 +1,7 @@
 package main.tank
 
 import java.text.SimpleDateFormat
+import static org.springframework.http.HttpStatus.*
 
 class UEditorController {
 
@@ -11,13 +12,13 @@ class UEditorController {
 	
 		def file = request.getFile('upfile')
 		if ( file.isEmpty() ){
-			render status: ZhuangTai.WEI_ZHAO_DAO
+			render status: NOT_FOUND
 			return
 		}
 		
 		def originalName = file.getOriginalFilename() //得到原始文件名
 		if (!this.checkFileType(originalName)) {//检查文件名后缀合法性
-			render status: ZhuangTai.WU_FA_FANG_WEN
+			render status: NOT_ACCEPTABLE
 			return
 		}
 		
@@ -32,7 +33,7 @@ class UEditorController {
 			try {
 				dir.mkdirs();
 			} catch (Exception e) {
-				render status: ZhuangTai.CUO_WU
+				render status: INTERNAL_SERVER_ERROR
 				return
 			}
 		}

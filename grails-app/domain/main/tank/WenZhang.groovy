@@ -36,6 +36,14 @@ class WenZhang {
 		sort dateCreated: "desc"
 	}
 	
+	def beforeInsert() {
+		println "Insert:" + new Date()
+	}
+	
+	def beforeUpdate() {
+		println "Update:" + new Date()
+	}
+	
 	String toString() {
 		return "${this.neiRong}"
 	}
