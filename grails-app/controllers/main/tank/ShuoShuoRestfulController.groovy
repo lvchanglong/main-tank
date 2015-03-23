@@ -14,13 +14,13 @@ class ShuoShuoRestfulController extends RestfulController {
 	@Transactional
 	def xsave(ShuoShuo shuoShuoInstance) {
 		if (shuoShuoInstance == null) {
-			render status: NOT_FOUND
+			render status: NOT_FOUND, text:"无法创建实例"
 			return
 		}
 
 		shuoShuoInstance.validate()
 		if (shuoShuoInstance.hasErrors()) {
-			render status: NOT_ACCEPTABLE
+			render status: NOT_ACCEPTABLE, text:"未通过验证"
 			return
 		}
 		

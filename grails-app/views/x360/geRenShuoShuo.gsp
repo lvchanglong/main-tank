@@ -18,7 +18,7 @@
 						<g:hiddenField name="yongHu.id" value="${ session.uid }"/>
 						<g:submitButton name="faBu" value="发布"/>
 						
-						<div id="yonghu-shuoshuo-0-message" class="tiShi">(￣_,￣ )：“我今天又没吃药，感觉自己萌萌哒...”</div>
+						<div id="yonghu-shuoshuo-0-message" class="tiShi">(^_,^ )：“我今天又没吃药，感觉自己萌萌哒...”</div>
 					</g:formRemote>
 				</g:if>
 				

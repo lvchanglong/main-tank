@@ -1,4 +1,6 @@
 <%@ page import="main.tank.YongHu" %>
+<%@ page import="main.tank.RiQi" %>
+<%@ page import="main.tank.ChangLiang" %>
 
 <!DOCTYPE html>
 <html>
@@ -29,7 +31,7 @@
 				<g:hiddenField name="yongHu.id" value="${ session.uid }"/>
 				<g:submitButton name="faBu" value="发布" style="margin-top: 10px;"/>
 				
-				<div id="kongJian-message" class="tiShi" style="margin-top: 10px;">(￣_,￣ )：“我今天又没吃药，感觉自己萌萌哒...”</div>
+				<div id="kongJian-message" class="tiShi" style="margin-top: 10px;">(^_,^ )：“我今天又没吃药，感觉自己萌萌哒...”</div>
 			</g:formRemote>
 			
 			<script type="text/javascript">
@@ -55,39 +57,16 @@
 		</div>
 		
 		<content tag="header">
-			<div class="borderBox" style="height:70px;line-height:70px;border-bottom:1px dotted lightgray;">
-				<div class="floatLeft">
-					<g:link uri="/">
-						<asset:image src="WangLuo/Logo/小图标.png" style="height:70px;" alt="主坦克"/>
-					</g:link>
-				</div>
-				<div class="floatRight">
-					<g:if test="${ yongHuInstance }">
-						${ yongHuInstance.xingMing }（${ yongHuInstance.zhangHao }）
-						<g:remoteLink controller="x520" action="yongHuZhuXiao" onSuccess="window.location.reload()">注销</g:remoteLink>
-					</g:if>
-					<g:else>
-						<g:formRemote name="yongHuDengLu" url="[controller:'x520', action:'yongHuDengLu']" onSuccess="window.location.reload();" onFailure="failure(XMLHttpRequest,textStatus,errorThrown,'.message-content')">
-							<div class="xmessage borderBox" style="float:left;padding-right:15px;min-width:210px;">
-								(￣﹃￣ )<span class="separator">/</span><span class="message-content">账号、密码</span>
-							</div>
-							<g:textField name="zhangHao" value="" placeholder="账号"/>
-							<g:passwordField name="miMa" value="" placeholder="密码"/>
-							<g:submitButton name="dengLu" value="登录"/>
-						</g:formRemote>
-					</g:else>
-				</div>
-			</div>
 		</content>
 		
 		<content tag="logo">
 		</content>
 		
-		<content tag="footer">
+		<content tag="xfooter">
 		</content>
 		
-		<content tag="helper">
+		<content tag="xhelper">
 		</content>
-		
+	 	
 	</body>
 </html>

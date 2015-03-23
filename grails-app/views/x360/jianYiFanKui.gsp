@@ -22,7 +22,7 @@
 							<g:hiddenField name="yongHu.id" value="${ session.uid }"/>
 						</li>
 						<li>
-							<div id="fanKui-save-status" class="status borderBox">(￣_,￣ )：“我今天又没吃药，感觉自己萌萌哒...”</div>
+							<div id="fanKui-save-status" class="status borderBox">(^_,^ )：“我今天又没吃药，感觉自己萌萌哒...”</div>
 							<g:submitButton name="tiJiao" value="提交" class="submit"/>
 						</li>
 					</ul>
@@ -31,18 +31,18 @@
 				<script type="text/javascript">
 					function fanKuiSaveSuccess(data,textStatus) {
 						jQuery("#fanKui-save-neiRong").val("");
-						jQuery("#fanKui-save-status").html("(￣_,￣ )：“反馈已经收到，我们的未来可能因你而变...”");
+						jQuery("#fanKui-save-status").html("(^_,^ )：“反馈已经收到，我们的未来可能因你而变...”");
 					}
 					function fanKuiSaveFailure(XMLHttpRequest,textStatus,errorThrown) {
 						switch(errorThrown) {
 							case "Not Found":
-								jQuery("#fanKui-save-status").html("(￣_,￣ )：“操作失败，你去怪站长吧...”");
+								jQuery("#fanKui-save-status").html("(^_,^ )：“操作失败，你去怪站长吧...”");
 								break;
 							case "Not Acceptable":
-								jQuery("#fanKui-save-status").html("(￣_,￣ )：“验证未通过，请再确认一下吧...”");
+								jQuery("#fanKui-save-status").html("(^_,^ )：“验证未通过，请再确认一下吧...”");
 								break;
 							case "Unprocessable Entity":
-								jQuery("#fanKui-save-status").html("(￣_,￣ )：“请求未通过，请再确认一下吧...”");
+								jQuery("#fanKui-save-status").html("(^_,^ )：“请求未通过，请再确认一下吧...”");
 								break;
 						};
 					}

@@ -948,11 +948,11 @@ transition-shiZhong
 	padding:7px;
 	border: 1px solid lightgray;
 	box-shadow: 1px 1px 3px #333 inset;
-	-webkit-transform: rotate(-30deg); 
-	-moz-transform: rotate(-30deg);	
-	-o-transform: rotate(-30deg);
-	-ms-transform: rotate(-30deg);
-	transform: rotate(-30deg);
+	-webkit-transform: rotate(-15deg); 
+	-moz-transform: rotate(-15deg);	
+	-o-transform: rotate(-15deg);
+	-ms-transform: rotate(-15deg);
+	transform: rotate(-15deg);
 	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
 	color:chocolate;
 }

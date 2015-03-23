@@ -12,9 +12,9 @@
 					<li class="wrapperBox">
 						<span class="link">${ dangQianYongHu.zhangHao }</span>
 						<div class="hiddenBox normalBox borderBox" style="display:none;">
-							<g:formRemote name="miMaXiuGai" url="[controller:'x520', action:'miMaXiuGai', id:dangQianYongHu.id]" onSuccess="chengGongChuLi(data,textStatus,'miMaXiuGai','.message-content')" onFailure="shiBaiChuLi(XMLHttpRequest,textStatus,errorThrown,'miMaXiuGai','.message-content')">
+							<g:formRemote name="miMaXiuGai" url="[controller:'x520', action:'miMaXiuGai', id:dangQianYongHu.id]" update="[success:'miMaXiuGaiTiShi', failure:'miMaXiuGaiTiShi']">
 								<div class="xmessage borderBox">
-									(￣﹃￣ )<span class="separator">/</span><span class="message-content">修改密码</span>
+									(￣﹃￣ )<span class="separator">/</span><span id="miMaXiuGaiTiShi" class="message-content">修改密码</span>
 								</div>
 								<g:passwordField name="yuanMiMa" value="" placeholder="原始密码"/>
 								<g:passwordField name="xinMiMa" value="" placeholder="新的密码"/>
@@ -26,9 +26,9 @@
 					<li class="wrapperBox">
 						<span class="link">${ dangQianYongHu.xingMing }</span>
 						<div class="hiddenBox customBox borderBox" style="display:none;">
-							<g:formRemote name="xinXiXiuGai" url="[controller:'yongHuRestful', action:'update', id:dangQianYongHu.id]" onSuccess="chengGongChuLi(data,textStatus,'xinXiXiuGai','.message-content')" onFailure="shiBaiChuLi(XMLHttpRequest,textStatus,errorThrown,'xinXiXiuGai','.message-content')" >
+							<g:formRemote name="xinXiXiuGai" url="[controller:'yongHuRestful', action:'update', id:dangQianYongHu.id]" onSuccess="success(data,textStatus,'#yongHuXiuGaiTiShi')" onFailure="failure(XMLHttpRequest,textStatus,errorThrown,'#yongHuXiuGaiTiShi')" >
 								<div class="xmessage borderBox">
-									(￣﹃￣ )<span class="separator">/</span><span class="message-content">修改信息</span>
+									(￣﹃￣ )<span class="separator">/</span><span id="yongHuXiuGaiTiShi" class="message-content">修改信息</span>
 								</div>
 								
 								<g:hiddenField name="_method" value="PUT"/>
@@ -59,7 +59,7 @@
 						</div>
 					</li>
 					<li>
-						<g:link controller="x360" action="kongJian" params="[publicKey:dangQianYongHu.getPrivateKey()]">自由空间</g:link>
+						<g:link controller="x360" action="kongJian" params="[publicKey:dangQianYongHu.getPrivateKey()]" target="_blank">自由空间</g:link>
 					</li>
 					<li>
 						<g:link controller="x360" action="geRenGuanLi" id="${ dangQianYongHu.id }">特殊管理</g:link>
@@ -72,9 +72,9 @@
 					<li class="wrapperBox">
 						<span class="link">登录</span>
 						<div class="hiddenBox normalBox borderBox" style="display:none;">
-							<g:formRemote name="yongHuDengLu" url="[controller:'x520', action:'yongHuDengLu']" onSuccess="chengGongDengLu(data,textStatus,'yongHuDengLu','.message-content')" onFailure="shiBaiChuLi(XMLHttpRequest,textStatus,errorThrown,'yongHuDengLu','.message-content')">
+							<g:formRemote name="yongHuDengLu" url="[controller:'x520', action:'yongHuDengLu']" update="[success:'dengLuTiShi', failure:'dengLuTiShi']" onSuccess="window.location.reload();">
 								<div class="xmessage borderBox">
-									(￣﹃￣ )<span class="separator">/</span><span class="message-content">账号、密码</span>
+									(￣﹃￣ )<span class="separator">/</span><span id="dengLuTiShi" class="message-content">账号、密码</span>
 								</div>
 								<g:textField name="zhangHao" value="" placeholder="账号"/>
 								<g:passwordField name="miMa" value="" placeholder="密码"/>
@@ -85,9 +85,9 @@
 					<li class="wrapperBox">
 						<span class="link">注册</span>
 						<div class="hiddenBox normalBox borderBox" style="display:none;">
-							<g:formRemote name="yongHuZhuCe" url="[controller:'x520', action:'yongHuZhuCe']" onSuccess="chengGongChuLi(data,textStatus,'yongHuZhuCe','.message-content')" onFailure="shiBaiChuLi(XMLHttpRequest,textStatus,errorThrown,'yongHuZhuCe','.message-content')">
+							<g:formRemote name="yongHuZhuCe" url="[controller:'x520', action:'yongHuZhuCe']"  update="[success:'zhuCeTiShi', failure:'zhuCeTiShi']">
 								<div class="xmessage borderBox">
-									(￣﹃￣ )<span class="separator">/</span><span class="message-content">账号、密码、确认</span>
+									(￣﹃￣ )<span class="separator">/</span><span id="zhuCeTiShi" class="message-content">账号、密码、确认</span>
 								</div>
 								<g:textField name="zhangHao" value="" placeholder="账号"/>
 								<g:passwordField name="miMa" value="" placeholder="密码"/>
@@ -126,16 +126,6 @@
 
 <script type="text/javascript">
 	responseToHover(".wrapperBox", ".hiddenBox");//浮动响应
-
-	//登录成功
-	function chengGongDengLu(data,textStatus,key,selector) {
-		switch(textStatus) {
-			case "success":
-				jQuery("#" + key).find(selector).html("操作成功，初始化...");
-				window.location.reload();
-				break;
-		}
-	}
 
 	//头像预览
 	function touXiangChaKan(files, wrapperSelector, xuanZeSelector, shangChuanSelector) {

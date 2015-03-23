@@ -32,7 +32,7 @@
 						<g:hiddenField name="yongHu.id" value="${ session.uid }"/>
 						<g:submitButton name="faBu" value="发布" style="margin-top: 10px;"/>
 						
-						<div id="geRenWenZhang-message" class="tiShi" style="margin-top: 10px;">(￣_,￣ )：“我今天又没吃药，感觉自己萌萌哒...”</div>
+						<div id="geRenWenZhang-message" class="tiShi" style="margin-top: 10px;">(^_,^ )：“我今天又没吃药，感觉自己萌萌哒...”</div>
 					</g:formRemote>
 				</g:if>
 						

@@ -14,13 +14,13 @@ class WenZhangRestfulController extends RestfulController {
 	@Transactional
 	def xsave(WenZhang wenZhangInstance) {
 		if (wenZhangInstance == null) {
-			render status: NOT_FOUND
+			render status: NOT_FOUND, text:"无法创建实例"
 			return
 		}
 
 		wenZhangInstance.validate()
 		if (wenZhangInstance.hasErrors()) {
-			render status: NOT_ACCEPTABLE
+			render status: NOT_ACCEPTABLE, text:"未通过验证"
 			return
 		}
 		

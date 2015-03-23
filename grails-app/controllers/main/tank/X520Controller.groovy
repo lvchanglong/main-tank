@@ -24,14 +24,14 @@ class X520Controller {
 			def yonghu = YongHu.findByZhangHaoAndMiMa(zhangHao, miMa.encodeAsMD5())
 			if (yonghu) {
 				session.uid = yonghu.id
-				render status: OK
+				render status: OK, text: '操作成功，初始化...'
 				return
 			} else {
-				render status: UNAUTHORIZED
+				render status: UNAUTHORIZED, text: '认证失败'
 				return
 			}
 		}
-		render status: BAD_REQUEST
+		render status: BAD_REQUEST, text: '请输入账号'
 	}
 	
 	/**
@@ -51,20 +51,20 @@ class X520Controller {
 			if (miMa == queRenMiMa) {//确认密码一致性
 				def yongHuInstance = YongHu.findByZhangHao(zhangHao)
 				if (yongHuInstance) {//账号冲突
-					render status: CONFLICT
+					render status: CONFLICT, text: '账号已存在'
 					return
 				}
 				def yonghu = new YongHu([zhangHao: zhangHao, miMa: miMa])//注册用户
 				if (!yonghu.hasErrors()) {
 					yonghu.save flush: true
-					render status: OK
+					render status: OK, text: '注册成功'
 					return
 				}
 			}
-			render status: NOT_ACCEPTABLE
+			render status: NOT_ACCEPTABLE, text: '密码不一致'
 			return
 		}
-		render status: BAD_REQUEST
+		render status: BAD_REQUEST, text: '请输入账号'
 	}
 	
 	/**
@@ -74,21 +74,19 @@ class X520Controller {
 	def miMaXiuGai(YongHu yongHuInstance, String yuanMiMa, String xinMiMa, String queRenMiMa) {
 		if (yongHuInstance && yuanMiMa && xinMiMa && queRenMiMa) {
 			if (xinMiMa == queRenMiMa) {//确认密码一致性
-				if (yongHuInstance) {
-					if (yongHuInstance.miMa == yuanMiMa.encodeAsMD5()) {//原始密码验证
-						yongHuInstance.miMa = xinMiMa.encodeAsMD5() //更新密码
-						yongHuInstance.save(flush: true)
-						render status: OK
-						return
-					}
-					render status: UNAUTHORIZED
+				if (yongHuInstance.miMa == yuanMiMa.encodeAsMD5()) {//原始密码验证
+					yongHuInstance.miMa = xinMiMa.encodeAsMD5() //更新密码
+					yongHuInstance.save(flush: true)
+					render status: OK, text: "修改成功"
 					return
 				}
+				render status: UNAUTHORIZED, text: "原密码有误"
+				return
 			}
-			render status: NOT_ACCEPTABLE
+			render status: NOT_ACCEPTABLE, text: "新密码不一致"
 			return
 		}
-		render status: BAD_REQUEST
+		render status: BAD_REQUEST, text: "请求不合法 "
 	}
 	
 	/**
