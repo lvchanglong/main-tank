@@ -141,7 +141,7 @@ class X360Controller {
 	 * 测试
 	 */
 	def test() {
-		render "Hello World"
+		
 	}
 	
 }

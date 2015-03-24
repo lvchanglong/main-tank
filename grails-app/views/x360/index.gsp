@@ -17,7 +17,7 @@
 			
 			<g:if test="${ zuiXinWenZhang }">
 				<section class="decorationWidthPadding">
-					<h2>${ zuiXinWenZhang.biaoTi }/<span style="font-size:14px;">${ zuiXinWenZhang.yongHu }</span></h2>
+					<h2>${ zuiXinWenZhang.biaoTi }/<span>${ zuiXinWenZhang.yongHu }</span></h2>
 					${ zuiXinWenZhang.neiRong }
 				</section>
 			</g:if>

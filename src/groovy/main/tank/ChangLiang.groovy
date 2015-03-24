@@ -38,16 +38,6 @@ class ChangLiang {
 	static String WANG_ZHAN_MING_CHENG = "主坦克"
 	
 	/**
-	 * 网站口号
-	 */
-	static String WANG_ZHAN_KOU_HAO = "我的经历，您可借鉴"
-	
-	/**
-	 * 网站关键词
-	 */
-	static String WANG_ZHAN_GUAN_JIAN_CI = "亲身经历，解决方案，贵在真实"
-	
-	/**
 	 * 网站目标
 	 */
 	static String WANG_ZHAN_MU_BIAO = "我们的征途是星辰大海！"
@@ -75,12 +65,12 @@ class ChangLiang {
 	/**
 	 * 页脚
 	 */
-	static String FOOTER_INDEX = "1"
+	static String FOOTER_INDEX = "0"
 	
 	/**
 	 * LOGO
 	 */
-	static String LOGO_INDEX = "2"
+	static String LOGO_INDEX = "0"
 	
 	/**
 	 * 助手

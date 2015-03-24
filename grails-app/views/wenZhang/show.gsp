@@ -16,32 +16,32 @@
 				</li>
 				</g:if>
 				
-				<g:if test="${wenZhangInstance?.yongHu}">
-				<li class="fieldcontain">
-					<span class="fuBiaoTi" style="min-width:130px;">
-						作者：${wenZhangInstance?.yongHu?.encodeAsHTML()}
-					</span>
-					<g:if test="${wenZhangInstance?.dateCreated}">
-						<span class="fuBiaoTi" style="min-width:230px;">
-							创建：<g:formatDate date="${wenZhangInstance?.dateCreated}" format="yyyy-MM-dd HH:mm:ss"/>
-						</span>
-						<%--
-						<span class="fuBiaoTi" style="min-width:230px;">
-							更新：<g:formatDate date="${wenZhangInstance?.lastUpdated}" format="yyyy-MM-dd"/>
-						</span>
-						--%>
-						<span class="fuBiaoTi" style="min-width:230px;">
-							关键词：<span class="guanJianCi">${wenZhangInstance?.getGuanJianCiAsString()}</span>
-						</span>
-					</g:if>
-				</li>
-				</g:if>
-				
 				<g:if test="${wenZhangInstance?.neiRong}">
 				<li class="fieldcontain neiRong">
 					<div style="overflow:auto;">
 						${wenZhangInstance.neiRong}
 					</div>
+				</li>
+				</g:if>
+				
+				<g:if test="${wenZhangInstance?.yongHu}">
+				<li class="fieldcontain" style="position:absolute;right:0;bottom:-60px;">
+					<span class="fuBiaoTi">
+						${wenZhangInstance?.yongHu}
+					</span>
+					<g:if test="${wenZhangInstance?.dateCreated}">
+						<span class="fuBiaoTi">
+							&nbsp;/&nbsp;<g:formatDate date="${wenZhangInstance?.dateCreated}" format="yyyy-MM-dd HH:mm:ss"/>
+						</span>
+						<%--
+						<span class="fuBiaoTi">
+							更新：<g:formatDate date="${wenZhangInstance?.lastUpdated}" format="yyyy-MM-dd"/>
+						</span>
+						--%>
+						<span class="fuBiaoTi">
+							&nbsp;/&nbsp;<span class="guanJianCi">${wenZhangInstance?.getGuanJianCiAsString()}</span>
+						</span>
+					</g:if>
 				</li>
 				</g:if>
 				

@@ -2,7 +2,7 @@
 
 <g:set var="dangQianYongHu" value="${ YongHu.get(session.uid) }" />
 
-<div id="header-0">
+<header id="main-header">
 	<nav>
 		<div class="conWidth h_100p">
 			
@@ -122,103 +122,104 @@
 			</ol>
 		</div>
 	</nav>
-</div>
-
-<script type="text/javascript">
-	responseToHover(".wrapperBox", ".hiddenBox");//浮动响应
-
-	//头像预览
-	function touXiangChaKan(files, wrapperSelector, xuanZeSelector, shangChuanSelector) {
-
-		$xuanZe = jQuery(xuanZeSelector);//上传按钮
-		
-		if (files.length < 1) {
-			$xuanZe.html("选择图片");
-			return false;
-		}
-		
-		for(var i = 0; i < files.length; i++) {
-	         var tuPian = files[i];//图片
-	         var reader = new FileReader();
-	         reader.readAsDataURL(tuPian);
-	         reader.onload=function(e){
-	             //console.log(e.target.result);
-	             jQuery(wrapperSelector).html("<img src='"+e.target.result+"' width='100%' height='100%' alt=''/>");
-	             $xuanZe.html("已选择");
-	             jQuery(shangChuanSelector).val("开始上传");
-	         };
-	    }
-	    
-	    //console.log(files);
-	}
 	
-	//头像上传
-	function touXiangShangChuan(files, url, userID, shangChuanSelector) {
-
-		$shangChuan = jQuery(shangChuanSelector);//上传按钮
-
-		if (files.length < 1) {
-			$shangChuan.val("( ↑ _ ↑ )");
-			return false;
+	<script type="text/javascript">
+		responseToHover(".wrapperBox", ".hiddenBox");//浮动响应
+	
+		//头像预览
+		function touXiangChaKan(files, wrapperSelector, xuanZeSelector, shangChuanSelector) {
+	
+			$xuanZe = jQuery(xuanZeSelector);//上传按钮
+			
+			if (files.length < 1) {
+				$xuanZe.html("选择图片");
+				return false;
+			}
+			
+			for(var i = 0; i < files.length; i++) {
+		         var tuPian = files[i];//图片
+		         var reader = new FileReader();
+		         reader.readAsDataURL(tuPian);
+		         reader.onload=function(e){
+		             //console.log(e.target.result);
+		             jQuery(wrapperSelector).html("<img src='"+e.target.result+"' width='100%' height='100%' alt=''/>");
+		             $xuanZe.html("已选择");
+		             jQuery(shangChuanSelector).val("开始上传");
+		         };
+		    }
+		    
+		    //console.log(files);
 		}
 		
-		try {//修复谷歌浏览器sendAsBinary()异常
-		  if (typeof XMLHttpRequest.prototype.sendAsBinary == 'undefined') {
-		    XMLHttpRequest.prototype.sendAsBinary = function(text){
-		      var data = new ArrayBuffer(text.length);
-		      var ui8a = new Uint8Array(data, 0);
-		      for (var i = 0; i < text.length; i++) ui8a[i] = (text.charCodeAt(i) & 0xff);
-		      this.send(ui8a);
-		    }
-		  }
-		} catch (e) {}
-		
-		for(var i = 0; i < files.length; i++) {
-	        var file = files[i];//当前文件
-	        var reader = new FileReader();
-
-	        reader.onloadstart = function() {
-				console.log("读取开始");
-				$shangChuan.val("读取开始");
+		//头像上传
+		function touXiangShangChuan(files, url, userID, shangChuanSelector) {
+	
+			$shangChuan = jQuery(shangChuanSelector);//上传按钮
+	
+			if (files.length < 1) {
+				$shangChuan.val("( ↑ _ ↑ )");
+				return false;
 			}
 			
-			reader.onprogress = function(p) {
-				var loaded = p.loaded;
-				var total = p.total;
-				var baiFenBi = loaded / total * 100;
-				console.log("读取进行中:" + baiFenBi + "%");
-				$shangChuan.val("读取进行中:" + baiFenBi + "%");
-			}
+			try {//修复谷歌浏览器sendAsBinary()异常
+			  if (typeof XMLHttpRequest.prototype.sendAsBinary == 'undefined') {
+			    XMLHttpRequest.prototype.sendAsBinary = function(text){
+			      var data = new ArrayBuffer(text.length);
+			      var ui8a = new Uint8Array(data, 0);
+			      for (var i = 0; i < text.length; i++) ui8a[i] = (text.charCodeAt(i) & 0xff);
+			      this.send(ui8a);
+			    }
+			  }
+			} catch (e) {}
 			
-			reader.onload = function() {
-				console.log("读取完成"); 
-				$shangChuan.val("读取完成");
-			}
-			
-			reader.onloadend = function() {
-				if (reader.error) {//失败
-					console.log(reader.error);
-				} else {//成功
-					var xhr = new XMLHttpRequest();
-					xhr.open("POST", url + "?fileName=" + encodeURIComponent(file.name) + "&userID=" + userID);
-	          		xhr.overrideMimeType("application/octet-stream");
-					xhr.sendAsBinary(this.result);
-					
-					xhr.onreadystatechange = function() {
-						if (xhr.readyState == 4) {
-							if (xhr.status == 200) {
-								console.log("上传成功");
-								//console.log("response: " + xhr.responseText);
-								$shangChuan.val("上传成功");
-
-								$shangChuan.css("background-color", "lightslategray");
+			for(var i = 0; i < files.length; i++) {
+		        var file = files[i];//当前文件
+		        var reader = new FileReader();
+	
+		        reader.onloadstart = function() {
+					console.log("读取开始");
+					$shangChuan.val("读取开始");
+				}
+				
+				reader.onprogress = function(p) {
+					var loaded = p.loaded;
+					var total = p.total;
+					var baiFenBi = loaded / total * 100;
+					console.log("读取进行中:" + baiFenBi + "%");
+					$shangChuan.val("读取进行中:" + baiFenBi + "%");
+				}
+				
+				reader.onload = function() {
+					console.log("读取完成"); 
+					$shangChuan.val("读取完成");
+				}
+				
+				reader.onloadend = function() {
+					if (reader.error) {//失败
+						console.log(reader.error);
+					} else {//成功
+						var xhr = new XMLHttpRequest();
+						xhr.open("POST", url + "?fileName=" + encodeURIComponent(file.name) + "&userID=" + userID);
+		          		xhr.overrideMimeType("application/octet-stream");
+						xhr.sendAsBinary(this.result);
+						
+						xhr.onreadystatechange = function() {
+							if (xhr.readyState == 4) {
+								if (xhr.status == 200) {
+									console.log("上传成功");
+									//console.log("response: " + xhr.responseText);
+									$shangChuan.val("上传成功");
+	
+									$shangChuan.css("background-color", "lightslategray");
+								}
 							}
 						}
 					}
 				}
-			}
-			reader.readAsBinaryString(file);
-	    }
-	    
-	}
-</script>
+				reader.readAsBinaryString(file);
+		    }
+		    
+		}
+	</script>
+</header>
+

@@ -34,47 +34,38 @@
 		<link rel="apple-touch-icon" sizes="114x114" href="${assetPath(src: 'apple-touch-icon-retina.png')}">
   		<asset:stylesheet src="application.css"/>
 		<asset:javascript src="application.js"/>
+		
+		<asset:stylesheet src="YinYong/nprogress-master/nprogress.css"/>
+		<asset:javascript src="YinYong/nprogress-master/nprogress.js"/>
 		<g:layoutHead/>
 	</head>
 	<body>
 		<section id="main" class="conWidth">
-			<%--页眉--%>
-			<header id="main-header">
-				<g:pageProperty name="page.header" default="${ render(template:"/layouts/header/" + ChangLiang.HEADER_INDEX) }"/>
-			</header>
+			<g:pageProperty name="page.header" default="${ render(template:"/layouts/header/" + ChangLiang.HEADER_INDEX) }"/>
+			<g:pageProperty name="page.logo" default="${ render(template:"/layouts/logo/" + ChangLiang.LOGO_INDEX) }"/>
 			
-			<%--内容--%>
-			<section id="main-section">
+			<div id="main-wrapper">
+				<g:layoutBody/>
+			</div>
 			
-				<%--logo--%>
-				<div id="main-logo">
-					<g:pageProperty name="page.logo" default="${ render(template:"/layouts/logo/" + ChangLiang.LOGO_INDEX) }"/>
-				</div>
-				
-				<%--wrapper--%>
-				<div id="main-wrapper">
-					<g:layoutBody/>
-				</div>
-				
-			</section>
-			
-			<%--页脚--%>
-			<footer id="main-footer">
-				<g:pageProperty name="page.footer" default="${ render(template:"/layouts/footer/" + ChangLiang.FOOTER_INDEX) }"/>
-			</footer>
-			
-			<%--助手--%>
-			<section id="main-helper">
-				<g:pageProperty name="page.helper" default="${ render(template:"/layouts/helper/" + ChangLiang.HELPER_INDEX) }"/>
-			</section>
+			<g:pageProperty name="page.footer" default="${ render(template:"/layouts/footer/" + ChangLiang.FOOTER_INDEX) }"/>
+			<g:pageProperty name="page.helper" default="${ render(template:"/layouts/helper/" + ChangLiang.HELPER_INDEX) }"/>
 		</section>
 
-		<%--等待--%>
 		<div id="spinner" style="display:none;">
 			<asset:image src="WangLuo/SuCai/奔跑.png" style="width:180px;height:180px;" alt="处理中"/>
 			<div class="tiShi">处理中...</div>
 		</div>
 		
 		<noscript>不支持 JavaScript</noscript>
+		
+		<script type="text/javascript">
+			jQuery(document).ready(function(){
+				NProgress.start();
+			});
+			jQuery(window).load(function(){
+				NProgress.done();
+			});
+		</script>
 	</body>
 </html>
