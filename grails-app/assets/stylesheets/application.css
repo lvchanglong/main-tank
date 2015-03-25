@@ -417,14 +417,14 @@ main-logo
 */
 #main-logo {
 	position:relative;
-	height:120px;
+	height:150px;
 	margin:10px 0 15px 0;
 }
 #main-logo .tank {
 	position:absolute;
 	left:0;
 	top:0;
-	height:120px;
+	height:150px;
 	width:auto;
 }
 #main-logo ul {
@@ -441,7 +441,7 @@ main-logo
 #main-logo h1 {
 	font-weight: 900;
 	letter-spacing: 10px;
-	margin-top: 16px;
+	margin-top: 30px;
 	margin-bottom: 4px;
 	font-size:60px;
 }
@@ -875,6 +875,7 @@ transition-shiZhong
 	text-align: center;
 	font-weight: bold;
 	display:block;
+	font-size:24px;
 }
 #show-wenZhang .neiRong {
 	line-height:24px;

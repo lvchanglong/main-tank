@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main"/>
-		<title>主坦克-个人说说</title>
+		<title>个人说说</title>
 	</head>
 	<body>
 		<div id="yonghu-shuoshuo-0" class="borderBox defaultPage page">

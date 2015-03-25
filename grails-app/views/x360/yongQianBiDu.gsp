@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main"/>
-		<title>主坦克-用前必读</title>
+		<title>用前必读</title>
 	</head>
 	<body>
 		<div id="yongQianBiDu" class="borderBox clearfix defaultPage page">

@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main">
-		<title>主坦克-文章查看</title>
+		<title>${wenZhangInstance?.biaoTi}</title>
 	</head>
 	<body>
 		<div id="show-wenZhang" class="borderBox defaultPage">
@@ -26,7 +26,7 @@
 				
 				<g:if test="${wenZhangInstance?.yongHu}">
 				<li class="fieldcontain" style="position:absolute;right:0;bottom:-60px;">
-					<span class="fuBiaoTi">
+					<span class="fuBiaoTi small">
 						${wenZhangInstance?.yongHu}
 					</span>
 					<g:if test="${wenZhangInstance?.dateCreated}">

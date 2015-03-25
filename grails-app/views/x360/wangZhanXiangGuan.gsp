@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main"/>
-		<title>主坦克-网站相关</title>
+		<title>网站相关</title>
 	</head>
 	<body>
 		<div id="wangZhanXiangGuan" class="borderBox clearfix defaultPage page">

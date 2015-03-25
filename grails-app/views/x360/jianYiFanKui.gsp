@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main"/>
-		<title>主坦克-建议反馈</title>
+		<title>建议反馈</title>
 	</head>
 	<body>
 		<div id="jianYiFanKui" class="borderBox clearfix defaultPage page">

@@ -2,7 +2,7 @@
 
 <div id="main-logo">
 	
-	<g:link uri="/"><asset:image src="WangLuo/Logo/小图标.png" class="tank" alt="主坦克"/></g:link>
+	<g:link uri="/"><asset:image src="WangLuo/Logo/主坦克.png" class="tank" alt="主坦克"/></g:link>
 	
 	<ul class="borderBox">
 		<li>

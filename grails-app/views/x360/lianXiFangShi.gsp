@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main"/>
-		<title>主坦克-联系方式</title>
+		<title>联系方式</title>
 	</head>
 	<body>
 		<div id="lianXiFangShi" class="borderBox clearfix defaultPage page">

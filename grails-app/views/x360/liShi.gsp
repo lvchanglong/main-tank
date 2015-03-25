@@ -5,7 +5,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main"/>
-		<title>主坦克-历史</title>
+		<title>历史</title>
 	</head>
 	<body>
 

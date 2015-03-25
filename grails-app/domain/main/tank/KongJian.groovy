@@ -13,7 +13,7 @@ class KongJian {
 	Date lastUpdated //更新时间
 	
 	static constraints = {
-		kouLing(nullable: false, blank: false)
+		kouLing(nullable: false, blank: false) 
 		neiRong(nullable: false, blank: false)
 		yongHu(nullable: true, blank: true)
 	}

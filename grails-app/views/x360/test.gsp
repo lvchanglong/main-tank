@@ -5,7 +5,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main"/>
-		<title>主坦克-测试</title>
+		<title>测试页面</title>
 	</head>
 	<body>
 		<h1>H1</h1>

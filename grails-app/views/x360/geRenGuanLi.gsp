@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main"/>
-		<title>主坦克-个人管理</title>
+		<title>个人管理</title>
 	</head>
 	<body>
 		<div id="kongjian" class="borderBox defaultPage">

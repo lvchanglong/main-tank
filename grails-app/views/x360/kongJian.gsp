@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main"/>
-		<title>主坦克-自由空间</title>
+		<title>自由空间</title>
 		<asset:stylesheet src="YinYong/umeditor1_2_2-utf8-jsp/themes/default/css/umeditor.min.css"/>
 		<asset:javascript src="YinYong/umeditor1_2_2-utf8-jsp/umeditor.config.js"/>
 		<asset:javascript src="YinYong/umeditor1_2_2-utf8-jsp/umeditor.min.js"/>
@@ -17,9 +17,7 @@
 		<g:each in="${kongJianInstanceList}" status="i" var="kongJianInstance">
 			<div class="kongJianWrapper">
 				${kongJianInstance.neiRong}
-				<g:if test="${ publicKey == privateKey }">
-					<g:remoteLink controller="kongJianRestful" action="delete" id="${ kongJianInstance.id }" method="DELETE" onSuccess="window.location.reload();" style="position:absolute;right:-30px;bottom:0;font-weight:bold;">删除</g:remoteLink>
-				</g:if>	
+				<g:remoteLink controller="kongJianRestful" action="delete" id="${ kongJianInstance.id }" method="DELETE" onSuccess="window.location.reload();" style="position:absolute;right:-30px;bottom:0;font-weight:bold;">删除</g:remoteLink>
 			</div>
 		</g:each>
 		
