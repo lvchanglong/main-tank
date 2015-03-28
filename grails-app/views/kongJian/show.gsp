@@ -23,20 +23,20 @@
 			</g:if>
 			<ol class="property-list kongJian">
 			
-				<g:if test="${kongJianInstance?.kouLing}">
-				<li class="fieldcontain">
-					<span id="kouLing-label" class="property-label"><g:message code="kongJian.kouLing.label" default="Kou Ling" /></span>
-					
-						<span class="property-value" aria-labelledby="kouLing-label"><g:fieldValue bean="${kongJianInstance}" field="kouLing"/></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${kongJianInstance?.neiRong}">
 				<li class="fieldcontain">
 					<span id="neiRong-label" class="property-label"><g:message code="kongJian.neiRong.label" default="Nei Rong" /></span>
 					
 						<span class="property-value" aria-labelledby="neiRong-label"><g:fieldValue bean="${kongJianInstance}" field="neiRong"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${kongJianInstance?.shiJie}">
+				<li class="fieldcontain">
+					<span id="shiJie-label" class="property-label"><g:message code="kongJian.shiJie.label" default="Shi Jie" /></span>
+					
+						<span class="property-value" aria-labelledby="shiJie-label"><g:link controller="shiJie" action="show" id="${kongJianInstance?.shiJie?.id}">${kongJianInstance?.shiJie?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

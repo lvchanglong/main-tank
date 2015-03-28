@@ -12,7 +12,7 @@
 					<li class="wrapperBox">
 						<span class="link">${ dangQianYongHu.zhangHao }</span>
 						<div class="hiddenBox normalBox borderBox" style="display:none;">
-							<g:formRemote name="miMaXiuGai" url="[controller:'x520', action:'miMaXiuGai', id:dangQianYongHu.id]" update="[success:'miMaXiuGaiTiShi', failure:'miMaXiuGaiTiShi']">
+							<g:formRemote name="miMaXiuGai" url="[controller:'x520', action:'miMaXiuGai', id:session.uid]" update="[success:'miMaXiuGaiTiShi', failure:'miMaXiuGaiTiShi']">
 								<div class="xmessage borderBox">
 									(^﹃^ )<span class="separator">/</span><span id="miMaXiuGaiTiShi" class="message-content">修改密码</span>
 								</div>
@@ -26,7 +26,7 @@
 					<li class="wrapperBox">
 						<span class="link">${ dangQianYongHu.xingMing }</span>
 						<div class="hiddenBox customBox borderBox" style="display:none;">
-							<g:formRemote name="xinXiXiuGai" url="[controller:'yongHuRestful', action:'update', id:dangQianYongHu.id]" onSuccess="success(data,textStatus,'#yongHuXiuGaiTiShi')" onFailure="failure(XMLHttpRequest,textStatus,errorThrown,'#yongHuXiuGaiTiShi')" >
+							<g:formRemote name="xinXiXiuGai" url="[controller:'yongHuRestful', action:'update', id:session.uid]" onSuccess="success(data,textStatus,'#yongHuXiuGaiTiShi')" onFailure="failure(XMLHttpRequest,textStatus,errorThrown,'#yongHuXiuGaiTiShi')" >
 								<div class="xmessage borderBox">
 									(^﹃^ )<span class="separator">/</span><span id="yongHuXiuGaiTiShi" class="message-content">修改信息</span>
 								</div>
@@ -48,7 +48,7 @@
 								<div id="touXiangWrapper">
 									<asset:image src="${ dangQianYongHu.touXiang }" width="256px;" height="256px" alt="头像"/>
 								</div>
-								<g:uploadForm controller="x520" action="touXiangShangChuan" onsubmit="touXiangShangChuan(jQuery(this).find([type=file])[0].files, '${ createLink(controller:"x520", action:"touXiangShangChuan") }', '${ dangQianYongHu.id }', '#kaiShiShangChuan');return false">									
+								<g:uploadForm controller="x520" action="touXiangShangChuan" onsubmit="touXiangShangChuan(jQuery(this).find([type=file])[0].files, '${ createLink(controller:"x520", action:"touXiangShangChuan") }', '${ session.uid }', '#kaiShiShangChuan');return false">									
 									<input type="file" name="file" onchange="touXiangChaKan(this.files, '#touXiangWrapper', '#tuPianXuanZe', '#kaiShiShangChuan');" multiple="false" class="borderBox"/>
 									<div id="tuPianXuanZe"class="preview borderBox">
 										选择图片
@@ -58,25 +58,8 @@
 							</div>
 						</div>
 					</li>
-					<li class="wrapperBox">
-						<span class="link">世界申请</span>
-						<div class="hiddenBox normalBox borderBox" style="display:none;">
-							<g:formRemote name="shiJieShenQing" url="[controller:'x520', action:'shiJieShenQing', id:dangQianYongHu.id]" update="[success:'shiJieShenQingTiShi', failure:'shiJieShenQingTiShi']">
-								<div class="xmessage borderBox">
-									(^﹃^ )<span class="separator">/</span><span id="shiJieShenQingTiShi" class="message-content">修改密码</span>
-								</div>
-								<g:textField name="biaoTi" value="" placeholder="标题"/>
-								<g:submitButton name="tiJiao" value="提交"/>
-							</g:formRemote>
-						</div>
-					</li>
-					<%--
 					<li>
-						开放空间
-					</li>
-					--%>
-					<li>
-						<g:link controller="x360" action="geRenGuanLi" id="${ dangQianYongHu.id }">特殊管理</g:link>
+						<g:link controller="x360" action="woDeShiJie" id="${ session.uid }">我的世界</g:link>
 					</li>
 					<li>
 						<g:remoteLink controller="x520" action="yongHuZhuXiao" onSuccess="window.location.reload()">注销</g:remoteLink>
@@ -116,9 +99,7 @@
 			
 			<ol>
 				<li>
-					<%--
-					<g:link controller="x360" action="fuWuLieBiao">服务列表</g:link>
-					--%>
+					<g:link controller="x360" action="geRenGuanLi" id="${ session.uid }">特殊管理</g:link>		
 				</li>
 			</ol>
 		</div>

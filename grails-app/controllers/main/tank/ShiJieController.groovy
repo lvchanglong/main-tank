@@ -15,7 +15,7 @@ class ShiJieController {
 
 	/**
 	 * 我的世界
-	 * @param yongHuInstance 被查看人(id:YongHu)
+	 * @param yongHuInstance 被处理用户(id:YongHu)
 	 */
 	def index(YongHu yongHuInstance, Integer max) {
 		params.max = Math.min(max ?: 10, 100)

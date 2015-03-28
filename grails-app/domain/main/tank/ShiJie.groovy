@@ -6,6 +6,8 @@ class ShiJie {
 
     static belongsTo = [yongHu: YongHu] //主宰
 	
+	SortedSet kongJians
+	
 	static hasMany = [kongJians: KongJian]//空间
 	
 	String biaoTi //标题

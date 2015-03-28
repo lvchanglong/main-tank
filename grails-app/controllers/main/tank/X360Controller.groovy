@@ -13,23 +13,6 @@ class X360Controller {
 	static defaultAction = "index" //默认方法
 	
 	/**
-	 * 开放空间
-	 */
-	def kongJian(String publicKey) {
-		if (publicKey) {
-			def yongHuInstance = null
-			def privateKey = null
-			if (session.uid) {
-				yongHuInstance = YongHu.get(session.uid)
-				privateKey = yongHuInstance.getPrivateKey()
-			}
-			def kongJianInstanceList = KongJian.findAllByKouLing(publicKey)
-			return [publicKey:publicKey, privateKey:privateKey, yongHuInstance:yongHuInstance, kongJianInstanceList:kongJianInstanceList]
-		}
-		render status: BAD_REQUEST
-	}
-	
-	/**
 	 * 网站首页
 	 */
 	def index() {
@@ -47,7 +30,37 @@ class X360Controller {
 	}
 	
 	/**
+	 * 我的世界
+	 * @param yongHuInstance 被处理用户(id:YongHu)
+	 */
+	def woDeShiJie(YongHu yongHuInstance) {
+		[yongHuInstance: yongHuInstance]
+	}
+	
+	/**
+	 * 开放空间
+	 * @param id 世界口令(ShiJie.kouLing)
+	 */
+	def kaiFangKongJian(String id) {
+		if (id) {
+			def shiJieInstance = ShiJie.findByKouLing(id)
+			if (shiJieInstance) {
+				def kongJianInstanceList = shiJieInstance.kongJians
+				def dangQianYongHu = null
+				if(session.uid) {
+					dangQianYongHu = YongHu.get(session.uid)
+				}
+				return [shiJieInstance:shiJieInstance, kongJianInstanceList:kongJianInstanceList, dangQianYongHu:dangQianYongHu]
+			}
+			render status: NOT_FOUND, text:"未开通"
+			return
+		}
+		render status: BAD_REQUEST, text:"请求不合法"
+	}
+	
+	/**
 	 * 个人管理
+	 * @param yongHuInstance 被处理用户(id:YongHu)
 	 */
 	def geRenGuanLi(YongHu yongHuInstance) {
 		if (!yongHuInstance) {
@@ -58,15 +71,8 @@ class X360Controller {
 	}
 	
 	/**
-	 * 个人管理-我的世界
-	 */
-	def woDeShiJie(YongHu yongHuInstance) {
-		[yongHuInstance: yongHuInstance]
-	}
-	
-	/**
 	 * 个人空间-个人资料
-	 * @param yongHuInstance 被查看用户
+	 * @param yongHuInstance 被处理用户(id:YongHu)
 	 */
 	def geRenZiLiao(YongHu yongHuInstance) {
 		[yongHuInstance: yongHuInstance]
@@ -74,7 +80,7 @@ class X360Controller {
 	
 	/**
 	 * 个人空间-个人说说
-	 * @param yongHuInstance 被查看用户
+	 * @param yongHuInstance 被处理用户(id:YongHu)
 	 */
 	def geRenShuoShuo(YongHu yongHuInstance) {
 		[yongHuInstance: yongHuInstance]
@@ -82,7 +88,7 @@ class X360Controller {
 	
 	/**
 	 * 个人空间-个人文章
-	 * @param yongHuInstance 被查看用户
+	 * @param yongHuInstance 被处理用户(id:YongHu)
 	 */
 	def geRenWenZhang(YongHu yongHuInstance) {
 		[yongHuInstance: yongHuInstance]
@@ -141,6 +147,13 @@ class X360Controller {
 	 * 说说列表
 	 */
 	def shuoShuoLieBiao() {
+		
+	}
+	
+	/**
+	 * 测试
+	 */
+	def test() {
 		
 	}
 	

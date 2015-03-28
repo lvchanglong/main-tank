@@ -27,7 +27,9 @@
 				<span class="biaoTi">
 					${fieldValue(bean: shiJieInstance, field: "biaoTi")}
 				</span>
-				<p class="kouLing">${fieldValue(bean: shiJieInstance, field: "kouLing")}</p>
+				<p class="kouLing">
+					<g:link controller="x360" action="kaiFangKongJian" id="${ shiJieInstance.kouLing }" target="_blank">${fieldValue(bean: shiJieInstance, field: "kouLing")}</g:link>
+				</p>
 			</li>
 		</g:each>
 	</ul>

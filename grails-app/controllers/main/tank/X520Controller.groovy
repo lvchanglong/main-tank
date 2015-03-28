@@ -69,6 +69,7 @@ class X520Controller {
 	
 	/**
 	 * 修改密码
+	 * @param yongHuInstance 被处理用户(id:YongHu)
 	 */
 	@Transactional
 	def miMaXiuGai(YongHu yongHuInstance, String yuanMiMa, String xinMiMa, String queRenMiMa) {
@@ -91,16 +92,17 @@ class X520Controller {
 	
 	/**
 	 * 头像上传
+	 * @param userID 被处理用户
 	 * grails-app/assets/resources/KongJian/${yongHuInstance.zhangHao}/TuPian/${fileName}
 	 */
 	@Transactional
 	def touXiangShangChuan(String fileName, String userID) {
 		def yongHuInstance = YongHu.get(userID)
 		if (yongHuInstance) {
-			def xiangDuiLuJing = "KongJian/${yongHuInstance.zhangHao}/TuPian/${fileName}"//相对路径
+			def assetPath = "KongJian/${yongHuInstance.zhangHao}/TuPian/${fileName}"
 			BufferedInputStream fileIn = new BufferedInputStream(request.getInputStream())
 			byte[] buf = new byte[1024]
-			File file = ZiYuanGuanLi.getFile("grails-app/assets/resources/${xiangDuiLuJing}")
+			File file = ZiYuanGuanLi.getFile("grails-app/assets/resources/${assetPath}")
 			BufferedOutputStream fileOut = new BufferedOutputStream(new FileOutputStream(file))
 			while (true) {
 			   int bytesIn = fileIn.read(buf, 0, 1024)
@@ -113,12 +115,12 @@ class X520Controller {
 			fileOut.flush()
 			fileOut.close()
 			
-			yongHuInstance.touXiang = xiangDuiLuJing
+			yongHuInstance.touXiang = assetPath
 			yongHuInstance.save(flush: true)//更新路径
 			
 			TuPian.yaSuo(file, 180, 180)//图片压缩处理
 			
-			render xiangDuiLuJing
+			render assetPath
 		} else {
 			render status: NOT_FOUND
 		}
@@ -140,10 +142,12 @@ class X520Controller {
 			width = 0
 		}
 		
-		def xiangDuiLuJing = "resources/LinShi/${fileName}"//相对路径
+		def assetPath = "LinShi/${fileName}"
+		def filePath = "grails-app/assets/resources/${assetPath}"
+		
 		BufferedInputStream fileIn = new BufferedInputStream(request.getInputStream())
 		byte[] buf = new byte[1024]
-		File file = ZiYuanGuanLi.getFile("grails-app/assets/${xiangDuiLuJing}")
+		File file = ZiYuanGuanLi.getFile(filePath)
 		BufferedOutputStream fileOut = new BufferedOutputStream(new FileOutputStream(file))
 		while (true) {
 			int bytesIn = fileIn.read(buf, 0, 1024)
@@ -158,7 +162,7 @@ class X520Controller {
 		
 		TuPian.yaSuo(file, width, height)//图片压缩处理
 		
-		render createLink(controller:"x520", action:"xiaZai", params:["filePath":xiangDuiLuJing])
+		render createLink(controller:"x520", action:"xiaZai", params:["filePath":filePath])
 	}
 	
 	/**
@@ -189,10 +193,10 @@ class X520Controller {
 	
 	/**
 	 * 下载
-	 * @param filePath 文件路径
+	 * @param filePath 文件路径  grails-app/assets/resources/LinShi/${fileName}
 	 */
 	def xiaZai(String filePath) {
-		File file = new File("grails-app/assets/${filePath}")
+		File file = new File(filePath)
 		def fileName = file.getName()
 		def fileType = BangZhu.getFileType(fileName)
 		response.contentType = grailsApplication.config.grails.mime.types[fileType]

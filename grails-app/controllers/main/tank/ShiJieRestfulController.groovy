@@ -16,7 +16,7 @@ class ShiJieRestfulController extends RestfulController {
 	
 	@Transactional
 	def xsave(ShiJie shiJieInstance, String biaoTi) {
-		if (shiJieInstance == null || biaoTi == null) {
+		if (shiJieInstance == null || !biaoTi) {
 			render status: BAD_REQUEST, text:"参数不合法"
 			return
 		}
@@ -41,7 +41,8 @@ class ShiJieRestfulController extends RestfulController {
 		def map = new HashMap([
 			"yongHu":shiJieInstance.yongHu.xingMing,
 			"dateCreated":formatDate(date:shiJieInstance.dateCreated,format:"yyyy-MM-dd HH:mm:ss"),
-			"neiRong":shiJieInstance.neiRong
+			"biaoTi":shiJieInstance.biaoTi,
+			"kouLing":"<a href='${createLink(controller:'x360', action:'kaiFangKongJian', id:shiJieInstance.kouLing)}' target='_blank'>${shiJieInstance.kouLing}</a>"
 		])
 		respond map, [status: CREATED]
 	}

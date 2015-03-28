@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main"/>
-		<title>开放空间</title>
+		<title>${shiJieInstance.biaoTi}</title>
 		<asset:stylesheet src="YinYong/umeditor1_2_2-utf8-jsp/themes/default/css/umeditor.min.css"/>
 		<asset:javascript src="YinYong/umeditor1_2_2-utf8-jsp/umeditor.config.js"/>
 		<asset:javascript src="YinYong/umeditor1_2_2-utf8-jsp/umeditor.min.js"/>
@@ -17,16 +17,22 @@
 		<g:each in="${kongJianInstanceList}" status="i" var="kongJianInstance">
 			<div class="kongJianWrapper">
 				${kongJianInstance.neiRong}
-				<g:remoteLink controller="kongJianRestful" action="delete" id="${ kongJianInstance.id }" method="DELETE" onSuccess="window.location.reload();" style="position:absolute;right:-30px;bottom:0;font-weight:bold;">删除</g:remoteLink>
+				<%--删除规则：管理员、空间拥有者、原作者本身--%>
+				<g:if test="${ dangQianYongHu?.shiFouGuanLiYuan() || shiJieInstance.yongHu == dangQianYongHu || kongJianInstance.yongHu == dangQianYongHu }">
+					<g:remoteLink controller="kongJianRestful" action="delete" id="${ kongJianInstance.id }" method="DELETE" onSuccess="window.location.reload();" style="position:absolute;left:-35px;bottom:0;color:lightgray;">
+						删除
+					</g:remoteLink>
+				</g:if>
 			</div>
 		</g:each>
 		
-		<div class="page" style="padding-top:15px;">
+		<div class="page" style="padding-top:30px;">
 			<g:formRemote name="kongJian-save" url="[controller:'kongJianRestful', action:'save']" onSuccess="kongJianSuccess(data,textStatus,'#kongJian-message')" onFailure="failure(XMLHttpRequest,textStatus,errorThrown,'#kongJian-message')" class="clearfix">
 				<script type="text/plain" id="kongJian-neiRong" name="neiRong" ></script>
 	
-				<g:hiddenField name="kouLing" value="${ publicKey }"/>
 				<g:hiddenField name="yongHu.id" value="${ session.uid }"/>
+				<g:hiddenField name="shiJie.id" value="${ shiJieInstance.id }"/>
+				
 				<g:submitButton name="faBu" value="发布" style="margin-top: 10px;"/>
 				
 				<div id="kongJian-message" class="tiShi" style="margin-top: 10px;">(^_,^ )：“我今天又没吃药，感觉自己萌萌哒...”</div>
@@ -63,7 +69,7 @@
 		<content tag="xfooter">
 		</content>
 		
-		<content tag="xhelper">
+		<content tag="helper">
 		</content>
 	 	
 	</body>

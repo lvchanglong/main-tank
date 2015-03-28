@@ -2,7 +2,7 @@ package main.tank
 
 import java.util.Date;
 
-class KongJian {
+class KongJian implements Comparable {
 	
 	static belongsTo = [shiJie: ShiJie, yongHu: YongHu] //世界，用户 
 
@@ -31,6 +31,10 @@ class KongJian {
 		lastUpdated column: 'GENG_XIN_SHI_JIAN'
 	}
 	
+	int compareTo(obj) {
+		id.compareTo(obj.id)
+	}
+
 	String toString() {
 		return "${this.neiRong}"
 	}

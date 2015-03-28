@@ -24,9 +24,9 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="kouLing" title="${message(code: 'kongJian.kouLing.label', default: 'Kou Ling')}" />
-					
 						<g:sortableColumn property="neiRong" title="${message(code: 'kongJian.neiRong.label', default: 'Nei Rong')}" />
+					
+						<th><g:message code="kongJian.shiJie.label" default="Shi Jie" /></th>
 					
 						<th><g:message code="kongJian.yongHu.label" default="Yong Hu" /></th>
 					
@@ -40,9 +40,9 @@
 				<g:each in="${kongJianInstanceList}" status="i" var="kongJianInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${kongJianInstance.id}">${fieldValue(bean: kongJianInstance, field: "kouLing")}</g:link></td>
+						<td><g:link action="show" id="${kongJianInstance.id}">${fieldValue(bean: kongJianInstance, field: "neiRong")}</g:link></td>
 					
-						<td>${fieldValue(bean: kongJianInstance, field: "neiRong")}</td>
+						<td>${fieldValue(bean: kongJianInstance, field: "shiJie")}</td>
 					
 						<td>${fieldValue(bean: kongJianInstance, field: "yongHu")}</td>
 					
