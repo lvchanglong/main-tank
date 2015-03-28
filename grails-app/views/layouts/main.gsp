@@ -10,12 +10,9 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		
-		<meta name="Keywords" content="亲身经历,解决方案,贵在真实"/>
-		<meta name="Description" content="我的经历,您可借鉴"/>
-		<meta name="Author" Content="吕常龙">
-		
-		<meta name="baidu-site-verification" content="MFYchAhfB6"/>
-		<meta name="baidu_union_verify" content="195dd308ea7db875bb960dfbbb44a29f">
+		<meta name="Keywords" content="主坦克,吕常龙,个人网站,开放空间,快速建站,我的世界,亲身经历,解决方案,贵在真实"/>
+		<meta name="Description" content="主坦克,吕常龙,个人网站,开放空间,快速建站,我的世界,亲身经历,解决方案,贵在真实"/>
+		<meta name="Author" content="吕常龙">
 		
 		<script>
 			var _hmt = _hmt || [];
@@ -34,9 +31,6 @@
 		<link rel="apple-touch-icon" sizes="114x114" href="${assetPath(src: 'apple-touch-icon-retina.png')}">
   		<asset:stylesheet src="application.css"/>
 		<asset:javascript src="application.js"/>
-		
-		<asset:stylesheet src="YinYong/nprogress-master/nprogress.css"/>
-		<asset:javascript src="YinYong/nprogress-master/nprogress.js"/>
 		<g:layoutHead/>
 	</head>
 	<body>
@@ -51,21 +45,10 @@
 			<g:pageProperty name="page.footer" default="${ render(template:"/layouts/footer/" + ChangLiang.FOOTER_INDEX) }"/>
 			<g:pageProperty name="page.helper" default="${ render(template:"/layouts/helper/" + ChangLiang.HELPER_INDEX) }"/>
 		</section>
-
-		<div id="spinner" style="display:none;">
-			<asset:image src="WangLuo/SuCai/奔跑.png" style="width:180px;height:180px;" alt="处理中"/>
+		
+		<div id="spinner">
+			<asset:image src="WangLuo/SuCai/奔跑.png" alt="处理中"/>
 			<div class="tiShi">处理中...</div>
 		</div>
-		
-		<noscript>不支持 JavaScript</noscript>
-		
-		<script type="text/javascript">
-			jQuery(document).ready(function(){
-				NProgress.start();
-			});
-			jQuery(window).load(function(){
-				NProgress.done();
-			});
-		</script>
 	</body>
 </html>

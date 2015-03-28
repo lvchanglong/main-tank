@@ -10,7 +10,7 @@
 		<div id="kongjian" class="borderBox defaultPage">
 			<ul class="main-ul borderBox clearfix">
 				<li class="touXiangQv borderBox">
-					<g:link controller="x360" action="kongJian" params="[publicKey:yongHuInstance.getPrivateKey()]" target="_blank" class="aMain">
+					<g:link controller="x360" action="woDeShiJie" id="${ yongHuInstance.id }" target="_blank" class="aMain">
 						<asset:image src="${ yongHuInstance.touXiang }" class="touXiang" alt="头像"/>
 						<h3>${ yongHuInstance.xingMing }</h3>
 						<h4>${ yongHuInstance.zhangHao }</h4>

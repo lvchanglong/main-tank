@@ -5,14 +5,14 @@
 <html>
 	<head>
 		<meta name="layout" content="main"/>
-		<title>说说</title>
+		<title>说说列表</title>
 	</head>
 	<body>
 
 		<div id="shuoShuo" class="page borderBox">
 		
 			<section class="decorationWidthPadding end">
-				<h2>说说信息</h2>
+				<h2>说说列表</h2>
 				<g:applyLayout controller="shuoShuo" action="index" params="[offset:0, max:5]" />
 			</section>
 			

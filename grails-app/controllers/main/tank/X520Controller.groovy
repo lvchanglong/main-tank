@@ -15,7 +15,7 @@ import static org.springframework.http.HttpStatus.*
 class X520Controller {
 	
 	/**
-	 * 用户登录
+	 * 用户登录(私有)
 	 * @param zhangHao 账号
 	 * @param miMa 密码
 	 */
@@ -35,7 +35,7 @@ class X520Controller {
 	}
 	
 	/**
-	 * 用户注销
+	 * 用户注销(私有)
 	 */
 	def yongHuZhuXiao() {
 		session.invalidate()

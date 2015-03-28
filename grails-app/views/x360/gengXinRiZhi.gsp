@@ -5,7 +5,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main"/>
-		<title>历史</title>
+		<title>更新日志</title>
 	</head>
 	<body>
 

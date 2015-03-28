@@ -5,7 +5,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main"/>
-		<title>服务</title>
+		<title>服务列表</title>
 	</head>
 	<body>
 

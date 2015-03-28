@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main"/>
-		<title>自由空间</title>
+		<title>开放空间</title>
 		<asset:stylesheet src="YinYong/umeditor1_2_2-utf8-jsp/themes/default/css/umeditor.min.css"/>
 		<asset:javascript src="YinYong/umeditor1_2_2-utf8-jsp/umeditor.config.js"/>
 		<asset:javascript src="YinYong/umeditor1_2_2-utf8-jsp/umeditor.min.js"/>

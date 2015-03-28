@@ -13,7 +13,7 @@ class X360Controller {
 	static defaultAction = "index" //默认方法
 	
 	/**
-	 * 自由空间
+	 * 开放空间
 	 */
 	def kongJian(String publicKey) {
 		if (publicKey) {
@@ -54,6 +54,13 @@ class X360Controller {
 			render status: NOT_FOUND
 			return
 		}
+		[yongHuInstance: yongHuInstance]
+	}
+	
+	/**
+	 * 个人管理-我的世界
+	 */
+	def woDeShiJie(YongHu yongHuInstance) {
 		[yongHuInstance: yongHuInstance]
 	}
 	
@@ -110,37 +117,30 @@ class X360Controller {
 	}
 	
 	/**
-	 * 用户
+	 * 更新日志
 	 */
-	def yongHu() {
+	def gengXinRiZhi() {
 		
 	}
 	
 	/**
-	 * 服务
+	 * 用户列表
 	 */
-	def fuWu() {
+	def yongHuLieBiao() {
 		
 	}
 	
 	/**
-	 * 历史
+	 * 服务列表
 	 */
-	def liShi() {
+	def fuWuLieBiao() {
 		
 	}
 	
 	/**
-	 * 说说
+	 * 说说列表
 	 */
-	def shuoShuo() {
-		
-	}
-	
-	/**
-	 * 测试
-	 */
-	def test() {
+	def shuoShuoLieBiao() {
 		
 	}
 	

@@ -2,29 +2,33 @@ package main.tank
 
 import java.util.Date;
 
-class KongJian {
-	
-	static belongsTo = [shiJie: ShiJie, yongHu: YongHu] //世界，用户 
+class ShiJie {
 
-	String neiRong //内容
+    static belongsTo = [yongHu: YongHu] //主宰
+	
+	static hasMany = [kongJians: KongJian]//空间
+	
+	String biaoTi //标题
+	String kouLing//口令
 	
 	Date dateCreated //创建时间
 	Date lastUpdated //更新时间
 	
 	static constraints = {
-		neiRong(nullable: false, blank: false)
-		shiJie(nullable: false, blank: false)
+		biaoTi(nullable: false, blank: false, unique: true)
+		kouLing(nullable: false, blank: false, unique: true)
 		yongHu(nullable: true, blank: true)
 	}
 	
 	static mapping = {
-		table 'KONG_JIAN'
+		table 'SHI_JIE'
 		
 		id column:'ID'
 		version column:'BAN_BEN'
 		
-		neiRong column: 'NEI_RONG', sqlType:"text"
-		shiJie column: 'SHI_JIE_ID'
+		biaoTi column: 'BIAO_TI'
+		kouLing column: 'KOU_LING'
+		
 		yongHu column: 'YONG_HU_ID'
 
 		dateCreated column: 'CHUANG_JIAN_SHI_JIAN'
@@ -32,7 +36,7 @@ class KongJian {
 	}
 	
 	String toString() {
-		return "${this.neiRong}"
+		return "${this.biaoTi}"
 	}
 	
 	String getYongHuAsString() {

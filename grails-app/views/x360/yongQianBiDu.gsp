@@ -38,7 +38,7 @@
 				</li>
 			</ol>
 		
-			<h3 class="biaoTi">站长声明</h3>
+			<h3>站长声明</h3>
 			<ol>
 				<li>
 					当您在使用或者间接使用本站时，就代表您已接受本站的使用协议。如果事实并非如此，请您安静的离开。
@@ -48,7 +48,7 @@
 				</li>
 			</ol>
 			
-			<h3 class="biaoTi">联系站长</h3>
+			<h3>联系站长</h3>
 			<ul class="lianXiFangShi">
 				<li><strong>姓名</strong>：<span class="key">${ ChangLiang.XING_MING }</span><span class="separator">/</span>我是一个卑微的站长，上帝不高兴，就是我最大的不幸</li>
 				<li><strong>邮箱</strong>：<span class="key">${ ChangLiang.YOU_XIANG }</span><span class="separator lightgray">/</span><strong>QQ</strong>，你懂的</li>

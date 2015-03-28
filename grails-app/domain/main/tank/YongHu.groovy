@@ -7,7 +7,7 @@ package main.tank
  */
 class YongHu {
 
-	static hasMany = [shuoShuos: ShuoShuo, wenZhangs: WenZhang, fanKuis: FanKui] //说说, 文章, 反馈
+	static hasMany = [shuoShuos: ShuoShuo, wenZhangs: WenZhang, fanKuis: FanKui, shiJies: ShiJie] //说说, 文章, 反馈, 世界
 	
 	String zhangHao //账号
 	String miMa //密码
@@ -16,7 +16,7 @@ class YongHu {
 	String xingBie = "未知" //性别
 	String suoZai = "中国" //所在
 	String quanXian = "普通用户" //权限
-	String touXiang = "WangLuo/TouXiang/侦探.png" //头像
+	String touXiang = "WangLuo/TouXiang/警察.png" //头像
 	String shengRi = "19491001" //生日
 	String youXiang = "xxxxxxxxx@xx.com" //邮箱
 	String shouJi = "xxxxxxxxxxx" //手机
@@ -71,10 +71,11 @@ class YongHu {
 	
 	def beforeInsert() {
 		this.miMa = this.miMa.encodeAsMD5()
+		println "Insert"
 	}
 	
 	def beforeUpdate() {
-		
+		println "Updates"
 	}
 	
 	/**

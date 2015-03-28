@@ -33,14 +33,34 @@
 			</li>
 			<li><span class="separator">/</span></li>
 			<li>
+				<g:link controller="x360" action="gengXinRiZhi">
+					更新日志
+				</g:link>
+			</li>
+			<li><span class="separator">/</span></li>
+			<li>
+				<g:link controller="x360" action="yongHuLieBiao">
+					用户列表
+				</g:link>
+			</li>
+			<li><span class="separator">/</span></li>
+			<li>
+				<g:link controller="x360" action="shuoShuoLieBiao">
+					说说列表
+				</g:link>
+			</li>
+			<li><span class="separator">/</span></li>
+			<li>
+				<g:link controller="x360" action="fuWuLieBiao">
+					服务列表
+				</g:link>
+			</li>
+			<li><span class="separator">/</span></li>
+			<li>
 				<a href="http://www.miitbeian.gov.cn" target="_blank" rel="nofollow">
 					${ ChangLiang.BEI_AN }
 				</a>
 			</li>
 		</ul>
 	</nav>
-	<%--
-	<asset:image src="WangLuo/3D/左手.png" class="leftHand" alt="左手"/>
-	<asset:image src="WangLuo/3D/右手.png" class="rightHand" alt="右手"/>
-	--%>
 </footer>

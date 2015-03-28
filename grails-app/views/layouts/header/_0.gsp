@@ -58,9 +58,23 @@
 							</div>
 						</div>
 					</li>
-					<li>
-						<g:link controller="x360" action="kongJian" params="[publicKey:dangQianYongHu.getPrivateKey()]" target="_blank">自由空间</g:link>
+					<li class="wrapperBox">
+						<span class="link">世界申请</span>
+						<div class="hiddenBox normalBox borderBox" style="display:none;">
+							<g:formRemote name="shiJieShenQing" url="[controller:'x520', action:'shiJieShenQing', id:dangQianYongHu.id]" update="[success:'shiJieShenQingTiShi', failure:'shiJieShenQingTiShi']">
+								<div class="xmessage borderBox">
+									(^﹃^ )<span class="separator">/</span><span id="shiJieShenQingTiShi" class="message-content">修改密码</span>
+								</div>
+								<g:textField name="biaoTi" value="" placeholder="标题"/>
+								<g:submitButton name="tiJiao" value="提交"/>
+							</g:formRemote>
+						</div>
 					</li>
+					<%--
+					<li>
+						开放空间
+					</li>
+					--%>
 					<li>
 						<g:link controller="x360" action="geRenGuanLi" id="${ dangQianYongHu.id }">特殊管理</g:link>
 					</li>
@@ -102,22 +116,9 @@
 			
 			<ol>
 				<li>
-					<g:link uri="/">主页</g:link>
-				</li>
-				<li>
-					<g:link controller="x360" action="yongHu">用户</g:link>
-				</li>
-				<li>
-					<g:link controller="x360" action="shuoShuo">说说</g:link>
-				</li>
-				<li>
-					<g:link controller="x360" action="fuWu">服务</g:link>
-				</li>
-				<li>
-					<g:link controller="x360" action="liShi">历史</g:link>
-				</li>
-				<li>
-					<a href="javascript:void(0);" onclick="shouCang(window.location,document.title);">收藏</a>
+					<%--
+					<g:link controller="x360" action="fuWuLieBiao">服务列表</g:link>
+					--%>
 				</li>
 			</ol>
 		</div>
