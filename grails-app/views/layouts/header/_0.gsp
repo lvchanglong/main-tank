@@ -99,7 +99,9 @@
 			
 			<ol>
 				<li>
-					<g:link controller="x360" action="geRenGuanLi" id="${ session.uid }">特殊管理</g:link>		
+					<g:if test="${ session.uid }">
+						<g:link controller="x360" action="geRenGuanLi" id="${ session.uid }">个人管理</g:link>
+					</g:if>		
 				</li>
 			</ol>
 		</div>
