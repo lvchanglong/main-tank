@@ -23,6 +23,11 @@
 			</g:if>
 			
 			<section class="decorationWidthPadding">
+				<h2>我的世界</h2>
+				<g:applyLayout controller="shiJie" action="index" params="[offset:0, max:5]" />
+			</section>
+			
+			<section class="decorationWidthPadding">
 				<g:render template="/layouts/plugin/IP" />
 			</section>
 			

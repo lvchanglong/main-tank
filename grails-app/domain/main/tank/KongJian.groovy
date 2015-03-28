@@ -2,6 +2,11 @@ package main.tank
 
 import java.util.Date;
 
+/**
+ * 开放空间
+ * @author lvchanglong
+ *
+ */
 class KongJian implements Comparable {
 	
 	static belongsTo = [shiJie: ShiJie, yongHu: YongHu] //世界，用户 

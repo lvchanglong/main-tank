@@ -2,6 +2,11 @@ package main.tank
 
 import java.util.Date;
 
+/**
+ * 文章
+ * @author lvchanglong
+ *
+ */
 class WenZhang {
 
 	static belongsTo = [yongHu: YongHu] //用户
