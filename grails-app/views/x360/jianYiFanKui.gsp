@@ -18,7 +18,7 @@
 							<p>您能够访问这个网站，我们万分感谢；您能够来到这个页面，我们无限感激。也许您还没有察觉，您的到来，已是我们几世修来的福气。也许您在这里留下的，不经意的一句话，甚至一个字，却能够让我们的未来，产生巨大改变。</p>
 						</li>
 						<li>
-							<g:textArea  name="neiRong" id="fanKui-save-neiRong" class="textarea borderBox" />
+							<g:textArea  name="neiRong" required="" id="fanKui-save-neiRong" class="textarea borderBox" />
 							<g:hiddenField name="yongHu.id" value="${ session.uid }"/>
 						</li>
 						<li>

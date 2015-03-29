@@ -19,9 +19,9 @@
 				<g:if test="${ session.uid && session.uid == yongHuInstance.id }">
 					<g:formRemote name="wenzhang-save" url="[controller:'wenZhangRestful', action:'xsave']" onSuccess="wenZhangSaveSuccess(data,textStatus,'#geRenWenZhang-message')" onFailure="failure(XMLHttpRequest,textStatus,errorThrown,'#geRenWenZhang-message')" class="clearfix">
 						
-						<g:textField name="biaoTi" value="" style="margin-bottom:15px;width:100%;" class="borderBox" placeholder="文章标题" id="geRenWenZhang-biaoTi"/>
+						<g:textField name="biaoTi" required="" value="" style="margin-bottom:15px;width:100%;" class="borderBox" placeholder="文章标题" id="geRenWenZhang-biaoTi"/>
 						
-						<g:textField name="guanJianCi" value="" style="margin-bottom:15px;width:100%;" class="borderBox" placeholder="关键词" id="geRenWenZhang-guanJianCi"/>
+						<g:textField name="guanJianCi" required="" value="" style="margin-bottom:15px;width:100%;" class="borderBox" placeholder="关键词" id="geRenWenZhang-guanJianCi"/>
 						
 						<script type="text/plain" id="geRenWenZhang-neiRong" name="neiRong" ></script>
 						

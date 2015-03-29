@@ -45,7 +45,6 @@
 			<g:pageProperty name="page.footer" default="${ render(template:"/layouts/footer/" + ChangLiang.FOOTER_INDEX) }"/>
 			<g:pageProperty name="page.helper" default="${ render(template:"/layouts/helper/" + ChangLiang.HELPER_INDEX) }"/>
 		</section>
-		
 		<div id="spinner">
 			<asset:image src="WangLuo/SuCai/奔跑.png" alt="处理中"/>
 			<div class="tiShi">处理中...</div>

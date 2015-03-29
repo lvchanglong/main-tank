@@ -23,8 +23,8 @@
 			</g:if>
 			
 			<section class="decorationWidthPadding">
-				<h2>我的世界</h2>
-				<g:applyLayout controller="shiJie" action="index" params="[offset:0, max:10]" />
+				<h2>个人文章</h2>
+				<g:applyLayout controller="wenZhang" action="index" params="[offset:0, max:10]" />
 			</section>
 			
 			<section class="decorationWidthPadding">
@@ -32,8 +32,8 @@
 			</section>
 			
 			<section class="decorationWidthPadding end">
-				<h2>个人文章</h2>
-				<g:applyLayout controller="wenZhang" action="index" params="[offset:0, max:10]" />
+				<h2>我的世界</h2>
+				<g:applyLayout controller="shiJie" action="index" params="[offset:0, max:10]" />
 			</section>
 			
 		</div>

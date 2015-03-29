@@ -14,7 +14,7 @@
 		
 				<g:if test="${ session.uid && session.uid == yongHuInstance.id }">
 					<g:formRemote name="shuoshuo-save" url="[controller:'shuoShuoRestful', action:'xsave']" onSuccess="shuoShuoSaveSuccess(data,textStatus,'#yonghu-shuoshuo-0-message')" onFailure="failure(XMLHttpRequest,textStatus,errorThrown,'#yonghu-shuoshuo-0-message')" class="clearfix">
-						<g:textArea name="neiRong" placeholder="如果您想说点什么" class="borderBox" id="yonghu-shuoshuo-0-neiRong" />
+						<g:textArea name="neiRong" required="" placeholder="如果您想说点什么" class="borderBox" id="yonghu-shuoshuo-0-neiRong" />
 						<g:hiddenField name="yongHu.id" value="${ session.uid }"/>
 						<g:submitButton name="faBu" value="发布"/>
 						

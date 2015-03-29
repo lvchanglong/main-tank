@@ -19,7 +19,7 @@ class WenZhangController {
 		def wenZhangInstanceList
 		def wenZhangInstanceCount
 		if (yongHuInstance) {//过滤
-			def criteria = WenZhang.where {
+			def criteria = WenZhang.where {//where语句无法使用默认排序
 				yongHu {
 					id == yongHuInstance.id
 				}

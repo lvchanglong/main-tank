@@ -16,9 +16,9 @@
 								<div class="xmessage borderBox">
 									(^﹃^ )<span class="separator">/</span><span id="miMaXiuGaiTiShi" class="message-content">修改密码</span>
 								</div>
-								<g:passwordField name="yuanMiMa" value="" placeholder="原始密码"/>
-								<g:passwordField name="xinMiMa" value="" placeholder="新的密码"/>
-								<g:passwordField name="queRenMiMa" value="" placeholder="确认密码"/>
+								<g:passwordField name="yuanMiMa" required="" value="" placeholder="原始密码"/>
+								<g:passwordField name="xinMiMa" required="" value="" placeholder="新的密码"/>
+								<g:passwordField name="queRenMiMa" required="" value="" placeholder="确认密码"/>
 								<g:submitButton name="xiuGai" value="修改"/>
 							</g:formRemote>
 						</div>
@@ -73,8 +73,8 @@
 								<div class="xmessage borderBox">
 									(^﹃^ )<span class="separator">/</span><span id="dengLuTiShi" class="message-content">账号、密码</span>
 								</div>
-								<g:textField name="zhangHao" value="" placeholder="账号"/>
-								<g:passwordField name="miMa" value="" placeholder="密码"/>
+								<g:textField name="zhangHao" required="" value="" placeholder="账号"/>
+								<g:passwordField name="miMa" required="" value="" placeholder="密码"/>
 								<g:submitButton name="dengLu" value="登录"/>
 							</g:formRemote>
 						</div>
@@ -86,9 +86,9 @@
 								<div class="xmessage borderBox">
 									(^﹃^ )<span class="separator">/</span><span id="zhuCeTiShi" class="message-content">账号、密码、确认</span>
 								</div>
-								<g:textField name="zhangHao" value="" placeholder="账号"/>
-								<g:passwordField name="miMa" value="" placeholder="密码"/>
-								<g:passwordField name="queRenMiMa" value="" placeholder="确认"/>
+								<g:textField name="zhangHao" required="" value="" placeholder="账号"/>
+								<g:passwordField name="miMa" required="" value="" placeholder="密码"/>
+								<g:passwordField name="queRenMiMa" required="" value="" placeholder="确认"/>
 								<g:submitButton name="zhuCe" value="注册"/>
 							</g:formRemote>
 						</div>

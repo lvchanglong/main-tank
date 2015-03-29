@@ -96,8 +96,6 @@ grails.hibernate.osiv.readonly = false
 
 grails.app.context  = "/"
 
-//grails.assets.bundle=true
-
 environments {
     development {
         grails.logging.jul.usebridge = true

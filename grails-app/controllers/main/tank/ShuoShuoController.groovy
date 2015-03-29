@@ -19,7 +19,7 @@ class ShuoShuoController {
 		def shuoShuoInstanceList
 		def shuoShuoInstanceCount
 		if (yongHuInstance) {//过滤
-			def criteria = ShuoShuo.where {
+			def criteria = ShuoShuo.where {//where语句无法使用默认排序
 				yongHu {
 					id == yongHuInstance.id
 				}

@@ -23,7 +23,7 @@ class ShiJieController {
 		def shiJieInstanceList
 		def shiJieInstanceCount
 		if (yongHuInstance) {//过滤
-			def criteria = ShiJie.where {
+			def criteria = ShiJie.where {//where语句无法使用默认排序
 				yongHu {
 					id == yongHuInstance.id
 				}

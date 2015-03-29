@@ -7,7 +7,7 @@ import java.util.Date;
  * @author lvchanglong
  *
  */
-class KongJian implements Comparable {
+class KongJian {
 	
 	static belongsTo = [shiJie: ShiJie, yongHu: YongHu] //世界，用户 
 
@@ -36,10 +36,6 @@ class KongJian implements Comparable {
 		lastUpdated column: 'GENG_XIN_SHI_JIAN'
 	}
 	
-	int compareTo(obj) {
-		id.compareTo(obj.id)
-	}
-
 	String toString() {
 		return "${this.neiRong}"
 	}

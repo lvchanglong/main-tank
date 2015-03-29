@@ -14,7 +14,7 @@
 		
 				<g:if test="${ session.uid && session.uid == yongHuInstance.id }">
 					<g:formRemote name="shijie-save" url="[controller:'shiJieRestful', action:'xsave']" onSuccess="shiJieSaveSuccess(data,textStatus,'#yonghu-shijie-0-message')" onFailure="failure(XMLHttpRequest,textStatus,errorThrown,'#yonghu-shijie-0-message')" class="clearfix">
-						<g:textArea name="biaoTi" placeholder="为“新世界”起个名字吧" class="borderBox" id="yonghu-shijie-0-biaoTi" />
+						<g:textArea name="biaoTi" required="" placeholder="为“新世界”起个名字吧" class="borderBox" id="yonghu-shijie-0-biaoTi" />
 						<g:hiddenField name="yongHu.id" value="${ session.uid }"/>
 						<g:submitButton name="chuangZao" value="创造"/>
 						

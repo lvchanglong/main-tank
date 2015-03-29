@@ -63,6 +63,11 @@ class YongHu {
 
 		dateCreated column: 'CHUANG_JIAN_SHI_JIAN'
 		lastUpdated column: 'GENG_XIN_SHI_JIAN'
+		
+		shuoShuos sort: "dateCreated", order: "desc"
+		wenZhangs sort: "dateCreated", order: "desc"
+		fanKuis sort: "dateCreated", order: "desc"
+		shiJies sort: "dateCreated", order: "desc"
 	}
 	
 	String toString() {
@@ -71,11 +76,10 @@ class YongHu {
 	
 	def beforeInsert() {
 		this.miMa = this.miMa.encodeAsMD5()
-		println "Insert"
 	}
 	
 	def beforeUpdate() {
-		println "Updates"
+		
 	}
 	
 	/**

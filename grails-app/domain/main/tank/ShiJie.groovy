@@ -11,8 +11,6 @@ class ShiJie {
 
     static belongsTo = [yongHu: YongHu] //主宰
 	
-	SortedSet kongJians
-	
 	static hasMany = [kongJians: KongJian]//空间
 	
 	String biaoTi //标题
@@ -40,6 +38,10 @@ class ShiJie {
 
 		dateCreated column: 'CHUANG_JIAN_SHI_JIAN'
 		lastUpdated column: 'GENG_XIN_SHI_JIAN'
+		
+		sort dateCreated: "desc"
+		
+		kongJians sort: "dateCreated", order: "asc"
 	}
 	
 	String toString() {
