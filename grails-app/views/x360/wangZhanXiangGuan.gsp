@@ -33,6 +33,15 @@
 							<li>
 								变<span class="separator lightgray">/</span>拥抱变化，自我更新
 							</li>
+							<li>
+								情<span class="separator lightgray">/</span>以情动人，引起共鸣
+							</li>
+							<li>
+								懒<span class="separator lightgray">/</span>拼尽全力，助你偷懒
+							</li>
+							<li>
+								智<span class="separator lightgray">/</span>不是很笨，有小聪明
+							</li>
 						</ol>
 						
 					</li>

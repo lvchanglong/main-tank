@@ -2,17 +2,13 @@
 
 <div id="main-logo">
 	
-	<g:link uri="/"><asset:image src="WangLuo/Logo/主坦克.png" class="tank" alt="主坦克"/></g:link>
+	<g:link uri="/"><asset:image src="WangLuo/Logo/12175.png" class="tank" alt="主坦克"/></g:link>
 	
 	<ul class="borderBox">
 		<li>
-			<div style="position:relative;">
-				<h1>
-					<g:link uri="/">
-						${ ChangLiang.WANG_ZHAN_MING_CHENG }
-					</g:link>
-				</h1>
-			</div>
+			<g:link uri="/">
+				<asset:image src="WangLuo/Logo/小字.png" alt="主坦克"/>
+			</g:link>
 		</li>
 	</ul>
 	

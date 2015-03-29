@@ -50,7 +50,7 @@
 			
 			<h3>联系站长</h3>
 			<ul class="lianXiFangShi">
-				<li><strong>姓名</strong>：<span class="key">${ ChangLiang.XING_MING }</span><span class="separator">/</span>我是一个卑微的站长，上帝不高兴，就是我最大的不幸</li>
+				<li><strong>姓名</strong>：<span class="key">${ ChangLiang.XING_MING }</span><span class="separator">/</span>这是一个赔钱的网站，我是一个倒霉的站长</li>
 				<li><strong>邮箱</strong>：<span class="key">${ ChangLiang.YOU_XIANG }</span><span class="separator lightgray">/</span><strong>QQ</strong>，你懂的</li>
 				<li><strong>手机</strong>：<span class="key">${ ChangLiang.SHOU_JI }</span></li>
 			</ul>

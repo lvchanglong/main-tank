@@ -1,3 +1,10 @@
+.bacground {
+	background-color:#435766;	
+}
+
+.color {
+	color:chocolate;
+}
 .spinner {
 	background: url(../images/spinner.gif) 50% 50% no-repeat transparent;
 	height: 16px;

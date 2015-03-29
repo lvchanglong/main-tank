@@ -31,9 +31,13 @@
 				<g:render template="/layouts/plugin/IP" />
 			</section>
 			
-			<section class="decorationWidthPadding end">
+			<section class="decorationWidthPadding">
 				<h2>我的世界</h2>
 				<g:applyLayout controller="shiJie" action="index" params="[offset:0, max:10]" />
+			</section>
+			
+			<section class="decorationWidthPadding end">
+				<script type="text/javascript">document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E%3Cscript charset="utf-8" src="http://znsv.baidu.com/customer_search/api/js?sid=18053579584178193383') + '&plate_url=' + (encodeURIComponent(window.location.href)) + '&t=' + (Math.ceil(new Date()/3600000)) + unescape('"%3E%3C/script%3E'));</script>
 			</section>
 			
 		</div>

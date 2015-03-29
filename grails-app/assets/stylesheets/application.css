@@ -81,7 +81,7 @@ globle
 .defaultPage {
 	position:relative;
 	padding:30px;
-	box-shadow: 0 0 21px #333;
+	box-shadow: 0 0 11px #333;
 }
 .conWidth {
 	position:relative;
@@ -204,7 +204,7 @@ header
 	height: 40px;
 	line-height:40px;
 	color:#fff;
-	background-color:#435766;
+	background-color:black;
 	box-shadow: 0 0 23px #333;
 	text-align: center;
 	z-index:999;
@@ -241,17 +241,17 @@ header
 }
 #main-header .wrapperBox .link {
 	display:block;
-	border-left:1px solid #435766;
-	border-right:1px solid #435766;
+	border-left:1px solid black;
+	border-right:1px solid black;
 	text-align: center;
 	font-weight:bold;
 	font-size:16px;
 }
 #main-header .hiddenBox {
 	position:absolute;
-	border-bottom:1px solid #435766;
-	border-left:1px solid #435766;
-	border-right:1px solid #435766;
+	border-bottom:1px solid black;
+	border-left:1px solid black;
+	border-right:1px solid black;
 	z-index:999;
 	text-align:left;
 	background-color:white;
@@ -411,33 +411,25 @@ main-logo
 */
 #main-logo {
 	position:relative;
-	height:150px;
+	height:75px;
 	margin:10px 0 15px 0;
 }
 #main-logo .tank {
 	position:absolute;
 	left:0;
 	top:0;
-	height:150px;
+	height:75px;
 	width:auto;
 }
 #main-logo ul {
 	position:relative;
 	width:50%;
 	height:100%;
-	padding:1px 0 0 0;
 	margin-left:auto;
 	text-align:right;
 }
-#main-logo li {
-	position:relative;
-}
-#main-logo h1 {
-	font-weight: 900;
-	letter-spacing: 10px;
-	margin-top: 30px;
-	margin-bottom: 4px;
-	font-size:60px;
+#main-logo ul img {
+	margin-top:10px;
 }
 
 /*
@@ -899,7 +891,8 @@ transition-shiZhong
 	-ms-transform: rotate(-15deg);
 	transform: rotate(-15deg);
 	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
-	color:chocolate;
+	color: black;
+	font-weight:bold;
 }
 .page h2 {
 	margin-bottom:35px;
@@ -918,11 +911,11 @@ transition-shiZhong
 	margin-bottom:0;
 }
 .page .decoration {
-	box-shadow: 0 0 23px #333;
+	box-shadow: 0 0 11px #333;
 }
 .page .decorationWidthPadding {
 	padding:30px;
-	box-shadow: 0 0 23px #333;
+	box-shadow: 0 0 11px #333;
 }
 .page textarea {
 	width:100%;

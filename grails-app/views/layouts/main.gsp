@@ -14,6 +14,8 @@
 		<meta name="Description" content="主坦克,吕常龙,个人网站,开放空间,快速建站,我的世界,亲身经历,解决方案,贵在真实"/>
 		<meta name="Author" content="吕常龙">
 		
+		<meta name="baidu-tc-verification" content="66ad01f0020303b0fa06d197cdecd434" />
+		
 		<script>
 			var _hmt = _hmt || [];
 			(function() {
