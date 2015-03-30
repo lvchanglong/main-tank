@@ -10,11 +10,11 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		
-		<meta name="Keywords" content="主坦克,吕常龙,个人网站,开放空间,快速建站,我的世界,亲身经历,解决方案,贵在真实"/>
-		<meta name="Description" content="主坦克,吕常龙,个人网站,开放空间,快速建站,我的世界,亲身经历,解决方案,贵在真实"/>
+		<meta name="Keywords" content="主坦克,MT,吕常龙,个人网站,开放空间,快速建站,我的世界,亲身经历,解决方案,贵在真实"/>
+		<meta name="Description" content="这是一个赔钱的网站，我是一个倒霉的站长"/>
 		<meta name="Author" content="吕常龙">
 		
-		<meta name="baidu-tc-verification" content="66ad01f0020303b0fa06d197cdecd434" />
+		<meta name="baidu-tc-verification" content="c9927280767c671848f1ca16d4077ed5" />
 		
 		<script>
 			var _hmt = _hmt || [];

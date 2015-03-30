@@ -12,6 +12,10 @@
 		<div id="fuWu" class="page borderBox">
 		
 			<section class="decorationWidthPadding">
+				<g:render template="/layouts/plugin/IP" />
+			</section>
+			
+			<section class="decorationWidthPadding">
 				<h2>生肖查询</h2>
 				<div id="transition-shengXiao">
 					<div class="wrapper">
