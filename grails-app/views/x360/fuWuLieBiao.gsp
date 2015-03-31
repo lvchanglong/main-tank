@@ -6,6 +6,7 @@
 	<head>
 		<meta name="layout" content="main"/>
 		<title>服务列表</title>
+		<asset:stylesheet src="keyFrames.css"/>
 	</head>
 	<body>
 

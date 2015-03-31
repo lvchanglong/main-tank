@@ -2,110 +2,108 @@
 
 <g:set var="dangQianYongHu" value="${ YongHu.get(session.uid) }" />
 
-<header id="main-header">
-	<nav>
-		<div class="conWidth h_100p">
+<header id="main-header" class="minWidth">
+	<ul class="borderBox clearfix">
+		<li>
+			<g:link uri="/"><i class="fa fa-home"></i>主坦克</g:link>
+		</li>
 			
-			<ul class="borderBox clearfix">
-				
-				<g:if test="${ dangQianYongHu }">
-					<li class="wrapperBox">
-						<span class="link">${ dangQianYongHu.zhangHao }</span>
-						<div class="hiddenBox normalBox borderBox" style="display:none;">
-							<g:formRemote name="miMaXiuGai" url="[controller:'x520', action:'miMaXiuGai', id:session.uid]" update="[success:'miMaXiuGaiTiShi', failure:'miMaXiuGaiTiShi']">
-								<div class="xmessage borderBox">
-									(^﹃^ )<span class="separator">/</span><span id="miMaXiuGaiTiShi" class="message-content">修改密码</span>
-								</div>
-								<g:passwordField name="yuanMiMa" required="" value="" placeholder="原始密码"/>
-								<g:passwordField name="xinMiMa" required="" value="" placeholder="新的密码"/>
-								<g:passwordField name="queRenMiMa" required="" value="" placeholder="确认密码"/>
-								<g:submitButton name="xiuGai" value="修改"/>
-							</g:formRemote>
+		<g:if test="${ dangQianYongHu }">
+			<li class="wrapperBox">
+				<span class="link">${ dangQianYongHu.zhangHao }</span>
+				<div class="hiddenBox normalBox borderBox" style="display:none;">
+					<g:formRemote name="miMaXiuGai" url="[controller:'x520', action:'miMaXiuGai', id:session.uid]" update="[success:'miMaXiuGaiTiShi', failure:'miMaXiuGaiTiShi']">
+						<div class="xmessage borderBox">
+							(^﹃^ )<span class="separator">/</span><span id="miMaXiuGaiTiShi" class="message-content">修改密码</span>
 						</div>
-					</li>
-					<li class="wrapperBox">
-						<span class="link">${ dangQianYongHu.xingMing }</span>
-						<div class="hiddenBox customBox borderBox" style="display:none;">
-							<g:formRemote name="xinXiXiuGai" url="[controller:'yongHuRestful', action:'update', id:session.uid]" onSuccess="success(data,textStatus,'#yongHuXiuGaiTiShi')" onFailure="failure(XMLHttpRequest,textStatus,errorThrown,'#yongHuXiuGaiTiShi')" >
-								<div class="xmessage borderBox">
-									(^﹃^ )<span class="separator">/</span><span id="yongHuXiuGaiTiShi" class="message-content">修改信息</span>
-								</div>
-								
-								<g:hiddenField name="_method" value="PUT"/>
-								<g:hiddenField name="version" value="${gengXinInstance?.version}" />
-								<g:textField name="xingMing" value="${dangQianYongHu?.xingMing}" placeholder="姓名"/>
-								<g:select name="xingBie" from="${dangQianYongHu.constraints.xingBie.inList}" value="${dangQianYongHu?.xingBie}" valueMessagePrefix="yongHu.xingBie" noSelection="['': '']" placeholder="性别"/>
-								<g:textField name="suoZai" value="${dangQianYongHu?.suoZai}" placeholder="所在"/>
-								<g:textField name="shengRi" value="${dangQianYongHu?.shengRi}" placeholder="生日"/>
-								<g:field type="email" name="youXiang" value="${dangQianYongHu?.youXiang}" placeholder="邮箱"/>
-								<g:textField name="shouJi" value="${dangQianYongHu?.shouJi}" placeholder="手机"/>	
-								<g:textField name="jianJie" value="${dangQianYongHu?.jianJie}" placeholder="简介"/>
+						<g:passwordField name="yuanMiMa" required="" value="" placeholder="原始密码"/>
+						<g:passwordField name="xinMiMa" required="" value="" placeholder="新的密码"/>
+						<g:passwordField name="queRenMiMa" required="" value="" placeholder="确认密码"/>
+						<g:submitButton name="xiuGai" value="修改"/>
+					</g:formRemote>
+				</div>
+			</li>
+			<li class="wrapperBox">
+				<span class="link">${ dangQianYongHu.xingMing }</span>
+				<div class="hiddenBox customBox borderBox" style="display:none;">
+					<g:formRemote name="xinXiXiuGai" url="[controller:'yongHuRestful', action:'update', id:session.uid]" onSuccess="success(data,textStatus,'#yongHuXiuGaiTiShi')" onFailure="failure(XMLHttpRequest,textStatus,errorThrown,'#yongHuXiuGaiTiShi')" >
+						<div class="xmessage borderBox">
+							(^﹃^ )<span class="separator">/</span><span id="yongHuXiuGaiTiShi" class="message-content">修改信息</span>
+						</div>
+						
+						<g:hiddenField name="_method" value="PUT"/>
+						<g:hiddenField name="version" value="${gengXinInstance?.version}" />
+						<g:textField name="xingMing" value="${dangQianYongHu?.xingMing}" placeholder="姓名"/>
+						<g:select name="xingBie" from="${dangQianYongHu.constraints.xingBie.inList}" value="${dangQianYongHu?.xingBie}" valueMessagePrefix="yongHu.xingBie" noSelection="['': '']" placeholder="性别"/>
+						<g:textField name="suoZai" value="${dangQianYongHu?.suoZai}" placeholder="所在"/>
+						<g:textField name="shengRi" value="${dangQianYongHu?.shengRi}" placeholder="生日"/>
+						<g:field type="email" name="youXiang" value="${dangQianYongHu?.youXiang}" placeholder="邮箱"/>
+						<g:textField name="shouJi" value="${dangQianYongHu?.shouJi}" placeholder="手机"/>	
+						<g:textField name="jianJie" value="${dangQianYongHu?.jianJie}" placeholder="简介"/>
 
-								<g:submitButton name="xiuGai" value="修改"/>
-							</g:formRemote>
-							
-							<div class="touXiangKongJian">
-								<div id="touXiangWrapper">
-									<asset:image src="${ dangQianYongHu.touXiang }" width="256px;" height="256px" alt="头像"/>
-								</div>
-								<g:uploadForm controller="x520" action="touXiangShangChuan" onsubmit="touXiangShangChuan(jQuery(this).find([type=file])[0].files, '${ createLink(controller:"x520", action:"touXiangShangChuan") }', '${ session.uid }', '#kaiShiShangChuan');return false">									
-									<input type="file" name="file" onchange="touXiangChaKan(this.files, '#touXiangWrapper', '#tuPianXuanZe', '#kaiShiShangChuan');" multiple="false" class="borderBox"/>
-									<div id="tuPianXuanZe"class="preview borderBox">
-										选择图片
-									</div>
-									<g:submitButton id="kaiShiShangChuan" name="shangChuan" value="开始上传" class="shangChuan"/>
-								</g:uploadForm>
+						<g:submitButton name="xiuGai" value="修改"/>
+					</g:formRemote>
+					
+					<div class="touXiangKongJian">
+						<div id="touXiangWrapper">
+							<asset:image src="${ dangQianYongHu.touXiang }" width="180px;" height="180px" alt="头像"/>
+						</div>
+						<g:uploadForm controller="x520" action="touXiangShangChuan" onsubmit="touXiangShangChuan(jQuery(this).find([type=file])[0].files, '${ createLink(controller:"x520", action:"touXiangShangChuan") }', '${ session.uid }', '#kaiShiShangChuan');return false">									
+							<input type="file" name="file" onchange="touXiangChaKan(this.files, '#touXiangWrapper', '#tuPianXuanZe', '#kaiShiShangChuan');" multiple="false" class="borderBox"/>
+							<div id="tuPianXuanZe"class="preview borderBox">
+								选择图片
 							</div>
+							<g:submitButton id="kaiShiShangChuan" name="shangChuan" value="开始上传" class="shangChuan"/>
+						</g:uploadForm>
+					</div>
+				</div>
+			</li>
+			<li>
+				<g:link controller="x360" action="woDeShiJie" id="${ session.uid }">我的世界</g:link>
+			</li>
+			<li>
+				<g:remoteLink controller="x520" action="yongHuZhuXiao" onSuccess="window.location.reload()">注销</g:remoteLink>
+			</li>
+		</g:if>
+		<g:else>
+			<li class="wrapperBox">
+				<span class="link">登录</span>
+				<div class="hiddenBox normalBox borderBox" style="display:none;">
+					<g:formRemote name="yongHuDengLu" url="[controller:'x520', action:'yongHuDengLu']" update="[success:'dengLuTiShi', failure:'dengLuTiShi']" onSuccess="window.location.reload();">
+						<div class="xmessage borderBox">
+							(^﹃^ )<span class="separator">/</span><span id="dengLuTiShi" class="message-content">账号、密码</span>
 						</div>
-					</li>
-					<li>
-						<g:link controller="x360" action="woDeShiJie" id="${ session.uid }">我的世界</g:link>
-					</li>
-					<li>
-						<g:remoteLink controller="x520" action="yongHuZhuXiao" onSuccess="window.location.reload()">注销</g:remoteLink>
-					</li>
-				</g:if>
-				<g:else>
-					<li class="wrapperBox">
-						<span class="link">登录</span>
-						<div class="hiddenBox normalBox borderBox" style="display:none;">
-							<g:formRemote name="yongHuDengLu" url="[controller:'x520', action:'yongHuDengLu']" update="[success:'dengLuTiShi', failure:'dengLuTiShi']" onSuccess="window.location.reload();">
-								<div class="xmessage borderBox">
-									(^﹃^ )<span class="separator">/</span><span id="dengLuTiShi" class="message-content">账号、密码</span>
-								</div>
-								<g:textField name="zhangHao" required="" value="" placeholder="账号"/>
-								<g:passwordField name="miMa" required="" value="" placeholder="密码"/>
-								<g:submitButton name="dengLu" value="登录"/>
-							</g:formRemote>
+						<g:textField name="zhangHao" required="" value="" placeholder="账号"/>
+						<g:passwordField name="miMa" required="" value="" placeholder="密码"/>
+						<g:submitButton name="dengLu" value="登录"/>
+					</g:formRemote>
+				</div>
+			</li>
+			<li class="wrapperBox">
+				<span class="link">注册</span>
+				<div class="hiddenBox normalBox borderBox" style="display:none;">
+					<g:formRemote name="yongHuZhuCe" url="[controller:'x520', action:'yongHuZhuCe']"  update="[success:'zhuCeTiShi', failure:'zhuCeTiShi']">
+						<div class="xmessage borderBox">
+							(^﹃^ )<span class="separator">/</span><span id="zhuCeTiShi" class="message-content">账号、密码、确认</span>
 						</div>
-					</li>
-					<li class="wrapperBox">
-						<span class="link">注册</span>
-						<div class="hiddenBox normalBox borderBox" style="display:none;">
-							<g:formRemote name="yongHuZhuCe" url="[controller:'x520', action:'yongHuZhuCe']"  update="[success:'zhuCeTiShi', failure:'zhuCeTiShi']">
-								<div class="xmessage borderBox">
-									(^﹃^ )<span class="separator">/</span><span id="zhuCeTiShi" class="message-content">账号、密码、确认</span>
-								</div>
-								<g:textField name="zhangHao" required="" value="" placeholder="账号"/>
-								<g:passwordField name="miMa" required="" value="" placeholder="密码"/>
-								<g:passwordField name="queRenMiMa" required="" value="" placeholder="确认"/>
-								<g:submitButton name="zhuCe" value="注册"/>
-							</g:formRemote>
-						</div>
-					</li>
-				</g:else>
-				
-			</ul>
-			
-			<ol>
-				<li>
-					<g:if test="${ session.uid }">
-						<g:link controller="x360" action="geRenGuanLi" id="${ session.uid }">个人管理</g:link>
-					</g:if>		
-				</li>
-			</ol>
-		</div>
-	</nav>
+						<g:textField name="zhangHao" required="" value="" placeholder="账号"/>
+						<g:passwordField name="miMa" required="" value="" placeholder="密码"/>
+						<g:passwordField name="queRenMiMa" required="" value="" placeholder="确认"/>
+						<g:submitButton name="zhuCe" value="注册"/>
+					</g:formRemote>
+				</div>
+			</li>
+		</g:else>
+		
+	</ul>
+	
+	<ol>
+		<li>
+			<g:if test="${ session.uid }">
+				<g:link controller="x360" action="geRenGuanLi" id="${ session.uid }">个人管理</g:link>
+			</g:if>		
+		</li>
+	</ol>
 	
 	<script type="text/javascript">
 		responseToHover(".wrapperBox", ".hiddenBox");//浮动响应
@@ -132,7 +130,6 @@
 		         };
 		    }
 		    
-		    //console.log(files);
 		}
 		
 		//头像上传

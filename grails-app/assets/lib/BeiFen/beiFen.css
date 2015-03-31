@@ -1,9 +1,12 @@
 .bacground {
-	background-color:#435766;	
+	background-color:#435766;
+	box-shadow: 0 0 11px #333;	
+	border-bottom: 1px dashed #dcdfe2;
+	border-bottom: 3px ridge lightgray;
 }
-
 .color {
 	color:chocolate;
+	color:darkcyan;
 }
 .spinner {
 	background: url(../images/spinner.gif) 50% 50% no-repeat transparent;
@@ -15,11 +18,6 @@
 	top: 0;
 	text-indent: -9999px;
 }
-
-.color {
-	color:darkcyan;
-}
-
 .hello-world {
 	font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	background: url("WangLuo/QiTa/header-bg-nav.png") 0px -38px repeat-x;

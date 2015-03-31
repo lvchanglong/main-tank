@@ -7,7 +7,7 @@
 		<title>用前必读</title>
 	</head>
 	<body>
-		<div id="yongQianBiDu" class="borderBox clearfix defaultPage page">
+		<div id="yongQianBiDu" class="borderBox clearfix defaultPage page pb90">
 		
 			<h1>用前必读</h1>
 			<h3>使用协议</h3>
@@ -38,23 +38,18 @@
 				</li>
 			</ol>
 		
+			<br/>
+			
 			<h3>站长声明</h3>
 			<ol>
 				<li>
 					当您在使用或者间接使用本站时，就代表您已接受本站的使用协议。如果事实并非如此，请您安静的离开。
 				</li>
 				<li>
-					假若本站在无意中侵犯了您的知识产权，请及时与我取得联系。我会在第一时间对其进行删除处理。如果您需要，我也会在网站中最醒目的位置对您发表为期三天的道歉声明，以此来表达我的歉意。
+					假若本站在无意中侵犯了您的知识产权，请及时与我取得联系。我会在第一时间对其进行删除处理。
 				</li>
 			</ol>
-			
-			<h3>联系站长</h3>
-			<ul class="lianXiFangShi">
-				<li><strong>姓名</strong>：<span class="key">${ ChangLiang.XING_MING }</span><span class="separator">/</span>这是一个赔钱的网站，我是一个倒霉的站长</li>
-				<li><strong>邮箱</strong>：<span class="key">${ ChangLiang.YOU_XIANG }</span><span class="separator lightgray">/</span><strong>QQ</strong>，你懂的</li>
-				<li><strong>手机</strong>：<span class="key">${ ChangLiang.SHOU_JI }</span></li>
-			</ul>
-			
+	
 			<div class="tuZhang">在同一片天空，追逐各自的梦</div>
 			
 		</div>

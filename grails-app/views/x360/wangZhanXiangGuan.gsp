@@ -7,7 +7,7 @@
 		<title>网站相关</title>
 	</head>
 	<body>
-		<div id="wangZhanXiangGuan" class="borderBox clearfix defaultPage page">
+		<div id="wangZhanXiangGuan" class="borderBox clearfix defaultPage page pb90">
 		
 			<h1>网站相关</h1>
 			

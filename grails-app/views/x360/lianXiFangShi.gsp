@@ -7,7 +7,7 @@
 		<title>联系方式</title>
 	</head>
 	<body>
-		<div id="lianXiFangShi" class="borderBox clearfix defaultPage page">
+		<div id="lianXiFangShi" class="borderBox clearfix defaultPage page pb90">
 		
 			<h1>联系方式</h1>
 			

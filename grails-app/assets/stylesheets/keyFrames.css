@@ -1,41 +1,18 @@
-/* 
-logoZaiXingDong
-*/
-@keyframes logoZaiXingDong
-{
-	0%  {
-		left:0px;
-	}
-	100% {
-		left:100%;
-	}
+.leftToRight, .rightToLeft {
+	display:block;
+	position:absolute;
 }
-@-moz-keyframes logoZaiXingDong /* Firefox */
-{
-	0%  {
-		left:0px;
-	}
-	100% {
-		left:100%;
-	}
+.leftToRight:hover {
+	animation:leftToRight 7s ease;
+	-moz-animation:leftToRight 7s ease; /* Firefox */
+	-webkit-animation:leftToRight 7s ease; /* Safari and Chrome */
+	-o-animation:leftToRight 7s ease; /* Opera */
 }
-@-webkit-keyframes logoZaiXingDong /* Safari 和 Chrome */
-{
-	0%  {
-		left:0px;
-	}
-	100% {
-		left:100%;
-	}
-}
-@-o-keyframes logoZaiXingDong /* Opera */
-{
-	0%  {
-		left:0px;
-	}
-	100% {
-		left:100%;
-	}
+.rightToLeft:hover {
+	animation:rightToLeft 7s ease;
+	-moz-animation:rightToLeft 7s ease; /* Firefox */
+	-webkit-animation:rightToLeft 7s ease; /* Safari and Chrome */
+	-o-animation:rightToLeft 7s ease; /* Opera */
 }
 
 /* 

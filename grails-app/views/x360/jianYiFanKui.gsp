@@ -7,7 +7,7 @@
 		<title>建议反馈</title>
 	</head>
 	<body>
-		<div id="jianYiFanKui" class="borderBox clearfix defaultPage page">
+		<div id="jianYiFanKui" class="borderBox clearfix defaultPage page pb90">
 			
 			<h1>建议反馈</h1>
 			

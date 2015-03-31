@@ -66,16 +66,13 @@
 			</div>
 		</div>
 		
-		<content tag="header">
+		<content tag="xheader">
 		</content>
 		
 		<content tag="logo">
 		</content>
 		
 		<content tag="xfooter">
-		</content>
-		
-		<content tag="helper">
 		</content>
 	 	
 	</body>

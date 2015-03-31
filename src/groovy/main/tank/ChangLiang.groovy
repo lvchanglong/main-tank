@@ -72,13 +72,6 @@ class ChangLiang {
 	 */
 	static String LOGO_INDEX = "0"
 	
-	/**
-	 * 助手
-	 */
-	static String HELPER_INDEX = "0"
-
-	
-	
 	static main(args) {
 		println ChangLiang.XING_MING
 	}

@@ -53,10 +53,6 @@
 		<content tag="footerX">
 			New Footer
 		</content>
-		
-		<content tag="helperX">
-			New Helper
-		</content>
-		
+
 	</body>
 </html>

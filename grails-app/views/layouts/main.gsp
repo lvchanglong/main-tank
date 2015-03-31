@@ -34,16 +34,15 @@
 		<g:layoutHead/>
 	</head>
 	<body>
-		<section id="main" class="conWidth">
+		<section id="main" class="minWidth">
 			<g:pageProperty name="page.header" default="${ render(template:"/layouts/header/" + ChangLiang.HEADER_INDEX) }"/>
-			<g:pageProperty name="page.logo" default="${ render(template:"/layouts/logo/" + ChangLiang.LOGO_INDEX) }"/>
 			
 			<div id="main-wrapper">
+				<g:pageProperty name="page.logo" default="${ render(template:"/layouts/logo/" + ChangLiang.LOGO_INDEX) }"/>
 				<g:layoutBody/>
 			</div>
 			
 			<g:pageProperty name="page.footer" default="${ render(template:"/layouts/footer/" + ChangLiang.FOOTER_INDEX) }"/>
-			<g:pageProperty name="page.helper" default="${ render(template:"/layouts/helper/" + ChangLiang.HELPER_INDEX) }"/>
 		</section>
 		<div id="spinner">
 			<asset:image src="WangLuo/SuCai/奔跑.png" alt="处理中"/>

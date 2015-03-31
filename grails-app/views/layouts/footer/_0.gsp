@@ -2,65 +2,92 @@
 <%@ page import="main.tank.ChangLiang" %>
 
 <footer id="main-footer" class="borderBox">
-	<nav>
-		<ul class="clearfix">
-			<li style="width:100%;text-align:center;">©&nbsp;${ new RiQi().getNian() }&nbsp;&nbsp;&nbsp;<g:link controller="x360" action="yongQianBiDu">${ ChangLiang.WANG_ZHAN_ZUO_ZHE }</g:link>&nbsp;&nbsp;&nbsp;版权所有</li>
-			
-			<li class="clearBoth"></li>
-			
-			<li>
-				<g:link controller="x360" action="yongQianBiDu">
-					用前必读
-				</g:link>
-			</li>
-			<li><span class="separator">/</span></li>
-			<li>
-				<g:link controller="x360" action="wangZhanXiangGuan">
-					网站相关
-				</g:link>
-			</li>
-			<li><span class="separator">/</span></li>
-			<li>
-				<g:link controller="x360" action="lianXiFangShi">
-					联系方式
-				</g:link>
-			</li>
-			<li><span class="separator">/</span></li>
-			<li>
-				<g:link controller="x360" action="jianYiFanKui">
-					建议反馈
-				</g:link>
-			</li>
-			<li><span class="separator">/</span></li>
-			<li>
-				<g:link controller="x360" action="gengXinRiZhi">
-					更新日志
-				</g:link>
-			</li>
-			<li><span class="separator">/</span></li>
-			<li>
-				<g:link controller="x360" action="yongHuLieBiao">
-					用户列表
-				</g:link>
-			</li>
-			<li><span class="separator">/</span></li>
-			<li>
-				<g:link controller="x360" action="shuoShuoLieBiao">
-					说说列表
-				</g:link>
-			</li>
-			<li><span class="separator">/</span></li>
-			<li>
-				<g:link controller="x360" action="fuWuLieBiao">
-					服务列表
-				</g:link>
-			</li>
-			<li><span class="separator">/</span></li>
-			<li>
-				<a href="http://www.miitbeian.gov.cn" target="_blank" rel="nofollow">
-					${ ChangLiang.BEI_AN }
-				</a>
-			</li>
-		</ul>
-	</nav>
+	
+	<div style="padding-top:15px;">
+        <a class="defaultButton" href="http://www.main-tank.com">
+        	<i class="fa fa-desktop"></i>电脑版
+		</a>
+		<a class="defaultButton" href="http://wap.main.tank.com">
+			<i class="fa fa-mobile-phone"></i>手机版
+		</a>
+        <a class="defaultButton" href="#main">
+            <i class="fa fa-chevron-up"></i>回顶部
+        </a>
+    </div>
+    
+	<ul class="clearfix">
+		<li>
+			<i class="fa fa-copyright"></i>${ new RiQi().getNian() }&nbsp;${ ChangLiang.WANG_ZHAN_ZUO_ZHE }&nbsp;版权所有
+		</li>
+		<li><span class="separator">/</span></li>
+		<li>
+			<i class="fa fa-qq"></i>417891235
+		</li>
+		<li><span class="separator">/</span></li>
+		<li>
+			<i class="fa fa-envelope-o"></i><a href="mailto:417891235@qq.com">417891235@qq.com</a>
+		</li>
+		<li><span class="separator">/</span></li>
+		<li>
+			<i class="fa fa-phone"></i>13478275273
+		</li>
+		<li><span class="separator">/</span></li>
+		<li>
+			<a href="http://www.miitbeian.gov.cn" target="_blank" rel="nofollow">
+				${ ChangLiang.BEI_AN }
+			</a>
+		</li>
+	</ul>
+	
+	<ol class="clearfix">	
+		<li>
+			<g:link controller="x360" action="yongQianBiDu">
+				用前必读
+			</g:link>
+		</li>
+		<li><span class="separator">/</span></li>
+		<li>
+			<g:link controller="x360" action="wangZhanXiangGuan">
+				网站相关
+			</g:link>
+		</li>
+		<li><span class="separator">/</span></li>
+		<li>
+			<g:link controller="x360" action="lianXiFangShi">
+				联系方式
+			</g:link>
+		</li>
+		<li><span class="separator">/</span></li>
+		<li>
+			<g:link controller="x360" action="jianYiFanKui">
+				建议反馈
+			</g:link>
+		</li>
+		<li><span class="separator">/</span></li>
+		<li>
+			<g:link controller="x360" action="gengXinRiZhi">
+				更新日志
+			</g:link>
+		</li>
+		<li><span class="separator">/</span></li>
+		<li>
+			<g:link controller="x360" action="yongHuLieBiao">
+				用户列表
+			</g:link>
+		</li>
+		<li><span class="separator">/</span></li>
+		<li>
+			<g:link controller="x360" action="shuoShuoLieBiao">
+				说说列表
+			</g:link>
+		</li>
+		<li><span class="separator">/</span></li>
+		<li>
+			<g:link controller="x360" action="fuWuLieBiao">
+				服务列表
+			</g:link>
+		</li>
+	</ol>
+	
+	<asset:image src="WangLuo/SuCai/站长微信.png" alt="吕常龙"/>
 </footer>
