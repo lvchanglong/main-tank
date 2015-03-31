@@ -189,7 +189,8 @@ main
 #main-wrapper {
 	padding:70px 6px 150px 6px;
 	position: relative;
-	width: 100%;
+	width: 80%;
+	margin:0 auto;
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
@@ -382,7 +383,12 @@ header
 	height:180sp;
 	margin-bottom:10px;
 }
-
+#main-header .logo {
+	height:32px;
+	width:32px;
+	vertical-align:middle;
+	padding-right:10px;
+}
 /*
 main-footer
 */
@@ -435,32 +441,6 @@ main-footer
 	width:110px;
 	margin:10px 15px;
 	
-}
-
-/*
-main-logo
-*/
-#main-logo {
-	position:relative;
-	height:75px;
-	margin:0 0 15px 0;
-}
-#main-logo .tank {
-	position:absolute;
-	left:0;
-	top:0;
-	height:75px;
-	width:auto;
-}
-#main-logo ul {
-	position:relative;
-	width:50%;
-	height:100%;
-	margin-left:auto;
-	text-align:right;
-}
-#main-logo ul img {
-	margin-top:10px;
 }
 
 /*

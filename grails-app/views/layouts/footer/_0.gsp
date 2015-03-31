@@ -7,7 +7,7 @@
         <a class="defaultButton" href="http://www.main-tank.com">
         	<i class="fa fa-desktop"></i>电脑版
 		</a>
-		<a class="defaultButton" href="http://wap.main.tank.com">
+		<a class="defaultButton" href="http://wap.main-tank.com">
 			<i class="fa fa-mobile-phone"></i>手机版
 		</a>
         <a class="defaultButton" href="#main">

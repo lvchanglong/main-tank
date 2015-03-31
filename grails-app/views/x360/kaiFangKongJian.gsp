@@ -69,9 +69,6 @@
 		<content tag="xheader">
 		</content>
 		
-		<content tag="logo">
-		</content>
-		
 		<content tag="xfooter">
 		</content>
 	 	

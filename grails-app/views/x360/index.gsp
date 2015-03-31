@@ -46,10 +46,6 @@
 			New Header
 		</content>
 		
-		<content tag="logoX">
-			New Logo
-		</content>
-		
 		<content tag="footerX">
 			New Footer
 		</content>

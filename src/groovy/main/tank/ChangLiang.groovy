@@ -67,11 +67,6 @@ class ChangLiang {
 	 */
 	static String FOOTER_INDEX = "0"
 	
-	/**
-	 * LOGO
-	 */
-	static String LOGO_INDEX = "0"
-	
 	static main(args) {
 		println ChangLiang.XING_MING
 	}

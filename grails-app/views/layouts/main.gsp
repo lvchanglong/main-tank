@@ -38,7 +38,6 @@
 			<g:pageProperty name="page.header" default="${ render(template:"/layouts/header/" + ChangLiang.HEADER_INDEX) }"/>
 			
 			<div id="main-wrapper">
-				<g:pageProperty name="page.logo" default="${ render(template:"/layouts/logo/" + ChangLiang.LOGO_INDEX) }"/>
 				<g:layoutBody/>
 			</div>
 			

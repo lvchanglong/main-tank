@@ -5,7 +5,7 @@
 <header id="main-header" class="minWidth">
 	<ul class="borderBox clearfix">
 		<li>
-			<g:link uri="/"><i class="fa fa-home"></i>主坦克</g:link>
+			<g:link uri="/"><asset:image src="WangLuo/Logo/3232.png" alt="主坦克" class="logo"/>主坦克</g:link>
 		</li>
 			
 		<g:if test="${ dangQianYongHu }">
@@ -59,15 +59,15 @@
 				</div>
 			</li>
 			<li>
-				<g:link controller="x360" action="woDeShiJie" id="${ session.uid }">我的世界</g:link>
+				<g:link controller="x360" action="woDeShiJie" id="${ session.uid }"><i class="fa fa-globe"></i>我的世界</g:link>
 			</li>
 			<li>
-				<g:remoteLink controller="x520" action="yongHuZhuXiao" onSuccess="window.location.reload()">注销</g:remoteLink>
+				<g:remoteLink controller="x520" action="yongHuZhuXiao" onSuccess="window.location.reload()"><i class="fa fa-sign-out"></i>注销</g:remoteLink>
 			</li>
 		</g:if>
 		<g:else>
 			<li class="wrapperBox">
-				<span class="link">登录</span>
+				<span class="link"><i class="fa fa-sign-in"></i>登录</span>
 				<div class="hiddenBox normalBox borderBox" style="display:none;">
 					<g:formRemote name="yongHuDengLu" url="[controller:'x520', action:'yongHuDengLu']" update="[success:'dengLuTiShi', failure:'dengLuTiShi']" onSuccess="window.location.reload();">
 						<div class="xmessage borderBox">
@@ -80,7 +80,7 @@
 				</div>
 			</li>
 			<li class="wrapperBox">
-				<span class="link">注册</span>
+				<span class="link"><i class="fa fa-user-plus"></i>注册</span>
 				<div class="hiddenBox normalBox borderBox" style="display:none;">
 					<g:formRemote name="yongHuZhuCe" url="[controller:'x520', action:'yongHuZhuCe']"  update="[success:'zhuCeTiShi', failure:'zhuCeTiShi']">
 						<div class="xmessage borderBox">
