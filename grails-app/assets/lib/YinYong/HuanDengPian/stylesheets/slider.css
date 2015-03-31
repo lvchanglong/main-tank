@@ -1,4 +1,12 @@
-.cycle-slider{width:100% !important;}
+.cycleslider {
+	position:relative;
+}
+.cycle-slider{
+	position:absolute;
+	left:0;
+	top:0;
+	width:100% !important;
+}
 .cycleslider-wrap{
 	box-shadow: 0 1px 5px rgba(0, 0, 0, .25); 
 	-moz-box-shadow: 0 1px 5px rgba(0, 0, 0, .25);  

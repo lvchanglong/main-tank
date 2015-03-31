@@ -491,6 +491,7 @@ plugin-shengXiao
 }
 #shengXiao .wenHao {
 	font-weight:700;
+	font-size:70px;
 }
 #shengXiao .shengXiao {
 	background-image: url("WangLuo/SuCai/十二生肖.png");
@@ -922,9 +923,6 @@ transition-shiZhong
 	margin-bottom:10px;
 }
 .page p {
-	margin-top:10px;
-	padding-left:1px;
-	padding-bottom:15px;
 	font-size:16px;
 }
 .page [type=submit] {
@@ -1089,9 +1087,8 @@ page-jianYiFanKui
 #geRenWenZhang, #yonghu-shuoshuo-0 {
 	margin-top:30px;
 }
-#wenZhang-index li, #shuoShuo-index li {
+#wenZhang-index li, #shuoShuo-index li, #shiJie-index li {
 	margin-bottom: 20px;
-	border-bottom: 1px dashed #dcdfe2;
 }
 #shiJie-index .biaoTi {
 	color:darkred;
@@ -1099,5 +1096,4 @@ page-jianYiFanKui
 .kongJianWrapper {
 	position:relative;
 	margin:15px 0 30px 0;
-	box-shadow: 0 0 7px #333;
 }

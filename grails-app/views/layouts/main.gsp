@@ -14,8 +14,6 @@
 		<meta name="Description" content="这是一个赔钱的网站，我是一个倒霉的站长"/>
 		<meta name="Author" content="吕常龙">
 		
-		<meta name="baidu-tc-verification" content="c9927280767c671848f1ca16d4077ed5" />
-		
 		<script>
 			var _hmt = _hmt || [];
 			(function() {
