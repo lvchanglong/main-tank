@@ -207,7 +207,7 @@ header
 	height:44px;
 	line-height:44px;
 	color:#fff;
-	background-color:#04080b;
+	background-color: #232323;
 	box-shadow: 0 0 23px #333;
 	text-align: center;
 	z-index:999;
@@ -228,16 +228,9 @@ header
 	height:100%;
 	float:left;
 }
-#main-header ul li {
+#main-header li {
 	float:left;
-	min-width: 130px;
-	text-align:center;
-	position:relative;
-	height:100%;
-}
-#main-header ol li {
-	float:left;
-	width:120px;
+	padding:0 20px;
 	text-align:center;
 	position:relative;
 	height:100%;
@@ -255,17 +248,12 @@ header
 }
 #main-header .wrapperBox .link {
 	display:block;
-	border-left:1px solid black;
-	border-right:1px solid black;
 	text-align: center;
 	font-weight:bold;
 	font-size:18px;
 }
 #main-header .hiddenBox {
 	position:absolute;
-	border-bottom:1px solid black;
-	border-left:1px solid black;
-	border-right:1px solid black;
 	z-index:999;
 	text-align:left;
 	background-color:white;
@@ -400,9 +388,9 @@ main-footer
 	height:130px;
 	box-shadow: 0 0 11px #333;
 	text-align:center;
-	background-color: #576069;
+	background-color: #232323;
 	overflow: hidden;
-	color: white;
+	color: #ccc;
 }
 #main-footer ul {
 	margin:0 auto;
@@ -422,6 +410,9 @@ main-footer
 	line-height:25px;
 }
 #main-footer a {
+	color:#ccc;
+}
+#main-footer a:hover {
 	color:white;
 }
 #main-footer .fa {
@@ -432,6 +423,11 @@ main-footer
 }
 #main-footer .defaultButton {
 	margin:2px 3px;
+	background-color:white;
+	color:#666666;
+}
+#main-footer .defaultButton:hover {
+	color:black;
 }
 #main-footer img {
 	position:absolute;
@@ -440,7 +436,6 @@ main-footer
 	height:110px;
 	width:110px;
 	margin:10px 15px;
-	
 }
 
 /*

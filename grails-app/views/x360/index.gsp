@@ -12,7 +12,7 @@
 		<div id="zhuYe" class="page borderBox">
 			
 			<section class="decoration">
-				<g:render template="/layouts/plugin/huanDengPian" model="[instanceList: slideList, width:'100%', height:'372px']"/>
+				<g:render template="/layouts/plugin/sliderEvolution" model="[instanceList: slideList, width:'100%', height:'372px']"/>
 			</section>
 			
 			<g:if test="${ zuiXinWenZhang }">

@@ -10,7 +10,7 @@
 			
 		<g:if test="${ dangQianYongHu }">
 			<li class="wrapperBox">
-				<span class="link">${ dangQianYongHu.zhangHao }</span>
+				<span class="link"><i class="fa fa-key"></i>${ dangQianYongHu.zhangHao }</span>
 				<div class="hiddenBox normalBox borderBox" style="display:none;">
 					<g:formRemote name="miMaXiuGai" url="[controller:'x520', action:'miMaXiuGai', id:session.uid]" update="[success:'miMaXiuGaiTiShi', failure:'miMaXiuGaiTiShi']">
 						<div class="xmessage borderBox">
@@ -24,7 +24,7 @@
 				</div>
 			</li>
 			<li class="wrapperBox">
-				<span class="link">${ dangQianYongHu.xingMing }</span>
+				<span class="link"><i class="fa fa-user"></i>${ dangQianYongHu.xingMing }</span>
 				<div class="hiddenBox customBox borderBox" style="display:none;">
 					<g:formRemote name="xinXiXiuGai" url="[controller:'yongHuRestful', action:'update', id:session.uid]" onSuccess="success(data,textStatus,'#yongHuXiuGaiTiShi')" onFailure="failure(XMLHttpRequest,textStatus,errorThrown,'#yongHuXiuGaiTiShi')" >
 						<div class="xmessage borderBox">
@@ -100,7 +100,7 @@
 	<ol>
 		<li>
 			<g:if test="${ session.uid }">
-				<g:link controller="x360" action="geRenGuanLi" id="${ session.uid }">个人管理</g:link>
+				<g:link controller="x360" action="geRenGuanLi" id="${ session.uid }"><i class="fa fa-cog"></i>个人管理</g:link>
 			</g:if>		
 		</li>
 	</ol>

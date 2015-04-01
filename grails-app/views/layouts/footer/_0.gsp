@@ -39,6 +39,8 @@
 		</li>
 	</ul>
 	
+	<br/>
+	
 	<ol class="clearfix">	
 		<li>
 			<g:link controller="x360" action="yongQianBiDu">
@@ -89,5 +91,7 @@
 		</li>
 	</ol>
 	
+	<%--
 	<asset:image src="WangLuo/SuCai/站长微信.png" alt="吕常龙"/>
+	--%>
 </footer>
