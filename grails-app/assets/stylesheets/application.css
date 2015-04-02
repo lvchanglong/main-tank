@@ -13,40 +13,12 @@
 *= require_self
 */
 
-/*
-globle
-*/
+/*globle*/
 [type=submit]:hover {
 	cursor:pointer;
 	   -moz-box-shadow: 0 0 1em #b2d1ff;
 	-webkit-box-shadow: 0 0 1em #b2d1ff;
 	        box-shadow: 0 0 1em #b2d1ff;
-}
-#spinner {
-	background-color:white;
-	border:7px solid black;
-    position: fixed;
-	top: 0;
-	left:0;
-	bottom:0;
-	right: 0;
-	width:360px;
-	height:180px;
-	margin:auto;
-	z-index:1000;
-	display:none;
-}
-#spinner .tiShi{
-	position:absolute;
-	right:0;
-	top:0;
-	width:180px;
-	height:180px;
-	line-height:180px;
-}
-#spinner img {
-	width:180px;
-	height:180px;
 }
 .borderBox {
 	-webkit-box-sizing: border-box;
@@ -80,12 +52,6 @@ globle
 }
 .separator {
 	padding:0 11px;
-}
-.lightgray {
-	color:lightgray;
-}
-.gray {
-	color:gray;
 }
 .wrapper {
 	position:relative;
@@ -130,27 +96,8 @@ globle
 	color: #fff;
 	text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1),0 1px 3px rgba(0,0,0,0.3),0 3px 5px rgba(0,0,0,0.2),0 5px 10px rgba(0,0,0,0.25);
 }
-.larger, .large, .medium, .small, .smaller {
-	font-weight:bold;
-}
-.larger {
-	font-size: 24px;
-}
-.large {
-	font-size: 20px;
-}
-.medium {
-	font-size: 18px;	
-}
-.small {
-	font-size: 16px;
-}
-.smaller {
-	font-size: 14px;
-}
-
 .minWidth {
-	min-width:960px;
+	min-width:1024px;
 }
 .defaultButton {
 	font-weight: 700;
@@ -171,15 +118,12 @@ globle
 	user-select: none;
 	position: relative;
 	display: inline-block;
-	
 	margin: 2px 0;
 	background-color: #3A434D;
 	color: #ddd;
 }
 
-/*
-main
-*/
+/*main*/
 #main {
 	position:relative;
 	min-height:100%;
@@ -196,9 +140,92 @@ main
 	        box-sizing: border-box;
 }
 
-/*
-header
-*/
+/*spinner*/
+#spinner {
+	background-color:white;
+	border:7px solid black;
+    position: fixed;
+	top: 0;
+	left:0;
+	bottom:0;
+	right: 0;
+	width:360px;
+	height:180px;
+	margin:auto;
+	z-index:1000;
+	display:none;
+}
+#spinner .tiShi{
+	position:absolute;
+	right:0;
+	top:0;
+	width:180px;
+	height:180px;
+	line-height:180px;
+}
+#spinner img {
+	width:180px;
+	height:180px;
+}
+
+/*main-footer*/
+#main-footer {
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:100%;
+	height:130px;
+	text-align:center;
+	background-color: #232323;
+	box-shadow: 0 0 11px #333;
+	color: #ccc;
+	overflow: hidden;
+}
+#main-footer ul {
+	display:inline-block;
+	margin:10px auto 0 auto;
+}
+#main-footer ol {
+	display:inline-block;
+	margin:0 auto;
+}
+#main-footer li {
+	float:left;
+	height:25px;
+	line-height:25px;
+}
+#main-footer a {
+	color:#ccc;
+}
+#main-footer a:hover {
+	color:white;
+}
+#main-footer .fa {
+	padding-right:3px;
+}
+#main-footer .defaultButton {
+	margin:2px 3px;
+	background-color:white;
+	color:#666666;
+}
+#main-footer .defaultButton:hover {
+	color:black;
+}
+#main-footer img {
+	position:absolute;
+	top:0;
+	height:90px;
+	width:90px;
+	margin:20px 30px 0 30px;
+}
+#main-footer img.geRen {
+	right:0;
+}
+#main-footer img.gongZhong {
+	left:0;
+}
+
+/*header*/
 #main-header {
 	position: fixed;
 	top: 0;
@@ -376,66 +403,6 @@ header
 	width:32px;
 	vertical-align:middle;
 	padding-right:10px;
-}
-/*
-main-footer
-*/
-#main-footer {
-	position:absolute;
-	left:0;
-	bottom:0;
-	width:100%;
-	height:130px;
-	box-shadow: 0 0 11px #333;
-	text-align:center;
-	background-color: #232323;
-	overflow: hidden;
-	color: #ccc;
-}
-#main-footer ul {
-	margin:0 auto;
-	text-align:center;
-	display:inline-block;
-	padding-top:10px;
-}
-#main-footer ol {
-	margin:0 auto;
-	text-align:center;
-	display:inline-block;
-}
-#main-footer ul li, #main-footer ol li {
-	float:left;
-	text-align:right;
-	height:25px;
-	line-height:25px;
-}
-#main-footer a {
-	color:#ccc;
-}
-#main-footer a:hover {
-	color:white;
-}
-#main-footer .fa {
-	font-size:14px;
-}
-#main-footer i {
-	padding-right:3px;
-}
-#main-footer .defaultButton {
-	margin:2px 3px;
-	background-color:white;
-	color:#666666;
-}
-#main-footer .defaultButton:hover {
-	color:black;
-}
-#main-footer img {
-	position:absolute;
-	left:0;
-	top:0;
-	height:110px;
-	width:110px;
-	margin:10px 15px;
 }
 
 /*
@@ -686,51 +653,6 @@ section-yongHu-index
 	padding:0;
 	line-height:24px;
 }
-
-/*
-transition-liangMei
-*/
-#transition-liangMei {
-	height:90px;
-	border-bottom:3px ridge lightgray;
-	margin-bottom:15px;
-}
-#transition-liangMei .meinv {
-	position:absolute;
-	left:257px;
-	top:-183px;
-}
-
-/*
-transition-IP
-*/
-#transition-IP {
-	position:relative;
-}
-#transition-IP ul {
-	width:300px;
-	text-align:right;
-}
-#transition-IP li {
-	display:inline-block;
-	margin-top:5px;
-}
-#transition-IP ul h3 {
-	margin-bottom:11px;
-}
-/*
-transition-shiZhong
-*/
-#transition-shiZhong {
-	position:relative;
-}
-#transition-shiZhong .xiongYing {
-	position:absolute;
-	left:30px;
-	bottom:0;4
-	width:250px;
-	height:180px;
-}
 /*yonghu-ziliao-1*/
 #yonghu-ziliao-1 {
 	position:relative;
@@ -860,12 +782,7 @@ transition-shiZhong
 }
 
 /*整合*/
-.page h1 {
-	margin-bottom: 30px;
-	text-align: center;
-	font-size:40px;
-}
-.page .tuZhang {
+.defaultPage .tuZhang {
 	float:right;
 	text-align:right;
 	padding:7px;
@@ -880,43 +797,31 @@ transition-shiZhong
 	color: black;
 	font-weight:bold;
 }
-.page h2 {
-	margin-bottom:35px;
-	font-size:24px;
-}
-.page h3 {
+.defaultPage h3 {
 	margin-bottom:25px;
 	font-size:20px;
 }
-.page > section.end {
+.defaultPage > section.end {
 	position:relative;
 	margin-bottom:0;
 }
-.page .decorationWidthPadding {
+.defaultPage .decorationWidthPadding {
 	padding:30px;
 }
-.page textarea {
-	width:100%;
-	margin-bottom:10px;
-}
-.page p {
-	font-size:16px;
-}
-.page [type=submit] {
+.defaultPage [type=submit] {
 	padding: 10px 61px;
 	background-color: black;
 	color: lavender;
+	margin:10px 0 0 0;
 	float:right;
 }
-.page .tiShi {
-	line-height: 34px;
-	height: 34px;
+.defaultPage .tiShi {
+	line-height: 60px;
+	height: 50px;
 	width: 77%;
-	padding-left: 10px;
-	text-align: left;
-	border: 3px ridge lightgray;
+	float:left;
 }
-.page .neiRong, .page .biaoTi {
+.defaultPage .neiRong, .defaultPage .biaoTi {
 	font-weight:bold;
 	font-size:16px;
 }
@@ -930,116 +835,6 @@ transition-shiZhong
 	font-weight:bold;
 }
 /*---------------------------------------------------------------------------------------------------------------------*/
-
-/*
-page-yongQianBiDu
-*/
-.pb90 {
-	padding-bottom:90px;
-}
-#yongQianBiDu li {
-	line-height:2;
-	margin-bottom:15px;
-}
-#yongQianBiDu .biaoTi {
-	margin:47px 0 25px 0;
-}
-/*
-page-lianXiFangShi
-*/
-#lianXiFangShi li {
-	line-height:23px;
-	margin-bottom:10px;
-}
-#lianXiFangShi .leibie {
-	padding-right:7px;
-}
-#lianXiFangShi .xiangQing {
-	margin:0 0 30px 0;
-	position:relative;
-	border-bottom: 1px dashed #dcdfe2;
-	min-height:180px;
-	padding:15px;
-	letter-spacing: 2px;
-}
-#lianXiFangShi .zhuangTai {
-	margin-bottom:0;
-}
-#lianXiFangShi .touXiang {
-	position:absolute;
-	right:15px;
-	top:15px;
-	margin:0;
-}
-
-/*
-page-wangZhanXiangGuan
-*/
-#wangZhanXiangGuan .xiangQing {
-	margin:0 0 71px 0;
-	position:relative;
-}
-#wangZhanXiangGuan ul {
-	margin:0 0 71px 0;
-	position:relative;
-}
-#wangZhanXiangGuan li {
-	margin-bottom:50px;
-}
-#wangZhanXiangGuan ol li {
-	line-height:44px;
-	margin-bottom:0;
-}
-#wangZhanXiangGuan .renWu {
-	position:absolute;
-	right:129px;
-	top:171px;
-	margin-top:90px;
-}
-
-/*
-page-jianYiFanKui
-*/
-#jianYiFanKui strong {
-	font-size:18px;
-}
-#jianYiFanKui .xiangQing {
-	position:relative;
-	margin-bottom:30px;
-}
-#jianYiFanKui ul {
-	position:relative;
-}
-#jianYiFanKui li {
-	line-height:25px;
-	margin-bottom:15px;
-}
-#jianYiFanKui .textarea {
-	width:100%;
-	min-height:370px;
-	line-height:30px;
-	color:darkred;
-}
-#jianYiFanKui .submit {
-	padding:10px 61px;
-	position:absolute;
-	right:0;
-	bottom:0;
-	background-color:black;
-	color:lavender;
-}
-#jianYiFanKui .submit:hover {
-	cursor:pointer;
-	color:white;
-}
-#jianYiFanKui .status {
-	line-height:34px;
-	height:40px;
-	width:77%;
-	padding-left:10px;
-	text-align:left;
-	border:3px ridge lightgray;
-}
 
 /*geRenWenZhang/shuoshuo-0*/
 #geRenWenZhang, #yonghu-shuoshuo-0 {
@@ -1056,7 +851,7 @@ page-jianYiFanKui
 	margin:15px 0 30px 0;
 }
 
-.page > section {
+.defaultPage > section {
 	position:relative;
 	border-bottom: 1px dashed #dcdfe2;
 }

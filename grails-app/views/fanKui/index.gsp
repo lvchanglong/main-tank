@@ -8,7 +8,7 @@
 				<span class="shiJian">
 					yyyy-MM-dd HH:mm:ss
 				</span>
-				<p class="neiRong">内容</p>
+				<div class="neiRong">内容</div>
 			</li>
 		<g:each in="${fanKuiInstanceList}" status="i" var="fanKuiInstance">
 			<li>
@@ -19,7 +19,7 @@
 				<span class="shiJian">
 					<g:formatDate date="${fanKuiInstance.dateCreated}" format="yyyy-MM-dd HH:mm:ss" />
 				</span>
-				<p class="neiRong">${fieldValue(bean: fanKuiInstance, field: "neiRong")}</p>
+				<div class="neiRong">${fieldValue(bean: fanKuiInstance, field: "neiRong")}</div>
 			</li>
 		</g:each>
 	</ul>

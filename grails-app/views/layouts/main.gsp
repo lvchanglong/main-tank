@@ -10,7 +10,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		
-		<meta name="Keywords" content="主坦克,MT,吕常龙,个人网站,开放空间,快速建站,我的世界,亲身经历,解决方案,贵在真实"/>
+		<meta name="Keywords" content="主坦克,MT,吕常龙,个人网站,开放空间,我的世界,亲身经历,解决方案"/>
 		<meta name="Description" content="这是一个赔钱的网站，我是一个倒霉的站长"/>
 		<meta name="Author" content="吕常龙">
 		

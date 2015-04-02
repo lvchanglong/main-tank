@@ -12,7 +12,7 @@
 				<span class="guanJianCi">
 					关键词
 				</span>
-				<p class="biaoTi">标题</p>
+				<div class="biaoTi">标题</div>
 			</li>
 		<g:each in="${wenZhangInstanceList}" status="i" var="wenZhangInstance">
 			<li>
@@ -27,11 +27,11 @@
 				<span class="guanJianCi">
 					${wenZhangInstance.getGuanJianCiAsString()}
 				</span>
-				<p class="biaoTi">
+				<div class="biaoTi">
 					<g:link controller="WenZhang" action="show" id="${ wenZhangInstance.id }" target="_blank">
 						${fieldValue(bean: wenZhangInstance, field: "biaoTi")}
 					</g:link>
-				</p>
+				</div>
 			</li>
 		</g:each>
 	</ul>

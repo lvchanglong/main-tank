@@ -112,16 +112,9 @@ class X360Controller {
 	}
 	
 	/**
-	 * 联系方式
+	 * 网站运营
 	 */
-	def lianXiFangShi() {
-		
-	}
-	
-	/**
-	 * 网站相关
-	 */
-	def wangZhanXiangGuan() {
+	def wangZhanYunYing() {
 		
 	}
 	

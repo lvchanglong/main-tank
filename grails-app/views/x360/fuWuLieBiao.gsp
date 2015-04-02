@@ -11,23 +11,19 @@
 	<body>
 
 		<div id="fuWu" class="page borderBox">
-		
-			<section class="decorationWidthPadding">
-				<g:render template="/layouts/plugin/IP" />
-			</section>
 			
 			<section class="decorationWidthPadding">
-				<h2>生肖查询</h2>
-				<div id="transition-shengXiao">
-					<div class="wrapper">
-						<div style="position:absolute;left:0;top:0;width:450px;">
-							<asset:image src="WangLuo/SuCai/腾云驾雾.png" class="leftToRight" width="239px" height="180px" alt="腾云驾雾"/>
-						</div>
-						<div style="width:210px;margin-left:auto;">
-							<g:render template="/layouts/plugin/shengXiao"/>
-						</div>
-					</div>
-				</div>
+				<ul>
+					<li style="width:100%;height:200px;">
+						<asset:image src="WangLuo/SuCai/腾云驾雾.png" class="leftToRight" width="239px" height="180px" alt="腾云驾雾"/>
+					</li>
+					<li>
+						<g:render template="/layouts/plugin/yongHuIP" />
+					</li>
+					<li>
+						<g:render template="/layouts/plugin/shengXiao"/>
+					</li>
+				</ul>
 			</section>
 			
 			<section class="decorationWidthPadding end">

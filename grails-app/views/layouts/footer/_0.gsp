@@ -17,19 +17,19 @@
     
 	<ul class="clearfix">
 		<li>
-			<i class="fa fa-copyright"></i>${ new RiQi().getNian() }&nbsp;${ ChangLiang.WANG_ZHAN_ZUO_ZHE }&nbsp;版权所有
+			<i class="fa fa-copyright"></i>${ new RiQi().getNian() }&nbsp;${ ChangLiang.XING_MING }&nbsp;版权所有
 		</li>
 		<li><span class="separator">/</span></li>
 		<li>
-			<i class="fa fa-qq"></i>417891235
+			<i class="fa fa-qq"></i>${ ChangLiang.QQ }
 		</li>
 		<li><span class="separator">/</span></li>
 		<li>
-			<i class="fa fa-envelope-o"></i><a href="mailto:417891235@qq.com">417891235@qq.com</a>
+			<i class="fa fa-envelope-o"></i><a href="mailto:${ ChangLiang.YOU_XIANG }">${ ChangLiang.YOU_XIANG }</a>
 		</li>
 		<li><span class="separator">/</span></li>
 		<li>
-			<i class="fa fa-phone"></i>13478275273
+			<i class="fa fa-phone"></i>${ ChangLiang.SHOU_JI }
 		</li>
 		<li><span class="separator">/</span></li>
 		<li>
@@ -39,8 +39,6 @@
 		</li>
 	</ul>
 	
-	<br/>
-	
 	<ol class="clearfix">	
 		<li>
 			<g:link controller="x360" action="yongQianBiDu">
@@ -49,14 +47,8 @@
 		</li>
 		<li><span class="separator">/</span></li>
 		<li>
-			<g:link controller="x360" action="wangZhanXiangGuan">
-				网站相关
-			</g:link>
-		</li>
-		<li><span class="separator">/</span></li>
-		<li>
-			<g:link controller="x360" action="lianXiFangShi">
-				联系方式
+			<g:link controller="x360" action="wangZhanYunYing">
+				网站运营
 			</g:link>
 		</li>
 		<li><span class="separator">/</span></li>
@@ -91,7 +83,8 @@
 		</li>
 	</ol>
 	
-	<%--
-	<asset:image src="WangLuo/SuCai/站长微信.png" alt="吕常龙"/>
-	--%>
+	<asset:image src="WangLuo/SuCai/个人定制.png" alt="微信个人号" title="个人号" class="geRen"/>
+	
+	<asset:image src="WangLuo/SuCai/公众定制.jpg" alt="微信公众号" title="公众号" class="gongZhong"/>
+	
 </footer>

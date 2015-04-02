@@ -12,7 +12,7 @@
 				<span class="biaoTi">
 					标题
 				</span>
-				<p class="kouLing">口令</p>
+				<div class="kouLing">口令</div>
 			</li>
 		<g:each in="${shiJieInstanceList}" status="i" var="shiJieInstance">
 			<li>
@@ -27,9 +27,9 @@
 				<span class="biaoTi">
 					${fieldValue(bean: shiJieInstance, field: "biaoTi")}
 				</span>
-				<p class="kouLing">
+				<div class="kouLing">
 					<g:link controller="x360" action="kaiFangKongJian" id="${ shiJieInstance.kouLing }" target="_blank">${fieldValue(bean: shiJieInstance, field: "kouLing")}</g:link>
-				</p>
+				</div>
 			</li>
 		</g:each>
 	</ul>

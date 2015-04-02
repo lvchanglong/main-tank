@@ -148,8 +148,6 @@
   display:block;
 }
 
-
-
 .jquery-slider-wrapper .caption
 {
   padding:6px 10px;
@@ -159,6 +157,10 @@
   bottom:10px;
   left:10px;
   color:#FFFFFF;
+  filter:alpha(opacity=80);  
+  -moz-opacity:0.8;  
+  -khtml-opacity: 0.8;  
+  opacity: 0.8;  
 }
 
 .jquery-slider-timer
