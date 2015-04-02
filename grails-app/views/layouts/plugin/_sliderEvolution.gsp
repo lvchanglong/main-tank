@@ -22,7 +22,7 @@
 </div>
 
 <script type="text/javascript">
-	jQuery("#sliderEvolution").slideshow({
+	jQuery171("#sliderEvolution").slideshow({
 	    width      : 900,
 	  	height     : 325,
 	  	transition : 'bar'

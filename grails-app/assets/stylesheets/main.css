@@ -1,7 +1,7 @@
 /* FONT STACK */
 body, input, select, textarea {
 	letter-spacing:1px;
-	font: 12px/1.5 "黑体", "宋体";
+	font: 12px/1.5 Georgia, "黑体", serif, "宋体";
 }
 
 h1, h2, h3, h4, h5, h6 {
