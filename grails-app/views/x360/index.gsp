@@ -9,7 +9,7 @@
 	</head>
 	<body>
 
-		<div id="zhuYe" class="page borderBox">
+		<div id="zhuYe" class="borderBox clearfix defaultPage">
 			
 			<g:render template="/layouts/plugin/sliderEvolution" model="[instanceList: slideList, width:'100%', height:'372px']"/>
 			

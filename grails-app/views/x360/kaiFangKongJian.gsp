@@ -18,8 +18,8 @@
 			<div class="relative">
 				${kongJianInstance.neiRong}
 				<g:if test="${ dangQianYongHu?.shiFouGuanLiYuan() || shiJieInstance.yongHu == dangQianYongHu || kongJianInstance.yongHu == dangQianYongHu }">
-					<g:remoteLink controller="kongJianRestful" action="delete" id="${ kongJianInstance.id }" method="DELETE" onSuccess="window.location.reload();" style="position:absolute;left:-35px;bottom:0;color:lightgray;">
-						删除
+					<g:remoteLink controller="kongJianRestful" action="delete" id="${ kongJianInstance.id }" method="DELETE" onSuccess="window.location.reload();" style="position:absolute;left:-35px;bottom:0;color:gray;font-size:20px;">
+						<i class="fa fa-trash" title="删除"></i>
 					</g:remoteLink>
 				</g:if>
 			</div>

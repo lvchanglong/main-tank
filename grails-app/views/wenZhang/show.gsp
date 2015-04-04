@@ -7,50 +7,40 @@
 		<title>${wenZhangInstance?.biaoTi}</title>
 	</head>
 	<body>
-		<div id="show-wenZhang" class="borderBox defaultPage">
-			<ol class="property-list wenZhang">
-				
-				<g:if test="${wenZhangInstance?.biaoTi}">
-				<li class="fieldcontain">
-					<span class="biaoTi"><g:fieldValue bean="${wenZhangInstance}" field="biaoTi"/></span>
-				</li>
-				</g:if>
-				
-				<g:if test="${wenZhangInstance?.neiRong}">
-				<li class="fieldcontain neiRong">
-					<div style="overflow:auto;">
-						${wenZhangInstance.neiRong}
-					</div>
-				</li>
-				</g:if>
-				
-				<g:if test="${wenZhangInstance?.yongHu}">
-				<li class="fieldcontain" style="position:absolute;right:0;bottom:-60px;">
-					<span class="fuBiaoTi small">
+		<div id="show-wenZhang" class="borderBox clearfix defaultPage">
+
+			<h2><g:fieldValue bean="${wenZhangInstance}" field="biaoTi"/></h2>
+			
+			<g:if test="${wenZhangInstance?.yongHu}">
+				<div style="float:right;">
+					<span class="yongHu">
 						${wenZhangInstance?.yongHu}
 					</span>
 					<g:if test="${wenZhangInstance?.dateCreated}">
-						<span class="fuBiaoTi">
+						<span class="shiJian">
 							&nbsp;/&nbsp;<g:formatDate date="${wenZhangInstance?.dateCreated}" format="yyyy-MM-dd HH:mm:ss"/>
 						</span>
 						<%--
-						<span class="fuBiaoTi">
+						<span class="shiJian">
 							更新：<g:formatDate date="${wenZhangInstance?.lastUpdated}" format="yyyy-MM-dd"/>
 						</span>
 						--%>
-						<span class="fuBiaoTi">
+						<span class="guanJianCi">
 							&nbsp;/&nbsp;<span class="guanJianCi">${wenZhangInstance?.getGuanJianCiAsString()}</span>
 						</span>
 					</g:if>
-				</li>
-				</g:if>
-				
-				<li style="position:absolute;left:0;bottom:-60px;">
-					<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a><a href="#" class="bds_ty" data-cmd="ty" title="分享到天涯社区"></a></div>
-				</li>
+				</div>
+				<div style="clear:both;"></div>
+			</g:if>
 			
-			</ol>
+			<g:if test="${wenZhangInstance?.neiRong}">
+				<div class="relative" style="overflow:auto;">
+					${wenZhangInstance.neiRong}
+				</div>
+			</g:if>
 			
+			<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a><a href="#" class="bds_ty" data-cmd="ty" title="分享到天涯社区"></a></div>
+
 		</div>
 		
 		<g:if test="${ session.uid && session.uid == wenZhangInstance.yongHu.id }">

@@ -14,7 +14,7 @@
 
 			<h1>服务列表</h1>
 
-			<h2>ｉｐ查询</h2>
+			<h2>ＩＰ查询</h2>
 			<g:render template="/layouts/plugin/yongHuIP" />
 			
 			<hr/>

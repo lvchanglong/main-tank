@@ -81,14 +81,6 @@ class X360Controller {
 	}
 	
 	/**
-	 * 个人空间-个人资料
-	 * @param yongHuInstance 被处理用户(id:YongHu)
-	 */
-	def geRenZiLiao(YongHu yongHuInstance) {
-		[yongHuInstance: yongHuInstance]
-	}
-	
-	/**
 	 * 个人空间-个人说说
 	 * @param yongHuInstance 被处理用户(id:YongHu)
 	 */

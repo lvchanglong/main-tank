@@ -14,7 +14,7 @@
 		
 			<g:hiddenField name="version" value="${wenZhangInstance?.version}" />
 			
-			<div id="edit-wenZhang" class="borderBox defaultPage">
+			<div id="edit-wenZhang" class="borderBox clearfix defaultPage">
 		
 				<g:if test="${flash.message}">
 					<div class="message" role="status">${flash.message}</div>

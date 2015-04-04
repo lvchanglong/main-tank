@@ -1,9 +1,9 @@
 <div id="shengXiao">
-	<div id="shengXiao-wrapper">
-		<span class="wenHao">!</span>
+	<div id="shengXiao-wrapper" style="position:relative;width:150px;height:150px;line-height:150px;text-align:center;">
+		<span style="font-weight:700;font-size:70px;">!</span>
 	</div>
 	<g:formRemote name="shengXiaoChaXun" url="[controller:'x520', action:'shengXiaoChaXun']" onSuccess="shengXiaoChaXunSuccess(data,textStatus,'#shengXiao-wrapper')" onFailure="shengXiaoChaXunFailure(XMLHttpRequest,textStatus,errorThrown,'#shengXiao-wrapper')">
-		<g:textField name="nian" required="" placeholder="年份"/>
+		<g:field type="number" name="nian" required="" placeholder="年份"/>
 		<g:actionSubmit value="提交" style="padding:4px 8px;"/>
 	</g:formRemote>
 	
@@ -12,7 +12,7 @@
 			switch(textStatus) {
 				case "success":
 					jQuery(selector).removeClass();
-					jQuery(selector).html("<div class='zhongWen'>" + data.zhongWen + "</div>");
+					jQuery(selector).html("<div style='position:absolute;right:-40px;top:0;font-weight:bold;display:block;'>" + data.zhongWen + "</div>");
 					jQuery(selector).addClass("shengXiao " + data.pinYin);
 					break;
 			}

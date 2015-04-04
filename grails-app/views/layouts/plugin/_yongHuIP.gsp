@@ -1,5 +1,5 @@
 <div id="yongHuIP">
-	<ul class="borderBox textAlignLeft">
+	<ul class="borderBox">
 		<li>
 			您的ＩＰ：${ request.getRemoteAddr() }
 		</li>

@@ -72,6 +72,10 @@ hr {
 	border:1px dashed #DCDCDC;
 }
 
+form {
+	position:relative;
+}
+
 a, [type=submit] {
 	cursor:pointer;
 }

@@ -26,7 +26,7 @@ class TuiSongController {
 	 * 近期公告
 	 */
 	def jinQiGongGao() {
-		def array = ["I want to play a game with you", "强者不需要等待机遇", "以心神洞察万物", "用实践更新认识，用认识指导实践", "能否想到是一种能力，能否做到是另一种能力", "只因没把自己逼到那种地步，所以如今才是如今这种程度", "一切都是资源，一切都有用处"]
+		def array = ["I want to play a game with you", "我就是吕常龙", "我是这的站长", "我要不断的成长", "这是赔钱的网站，但我似乎并不在意"]
 		
 		Integer i = Math.floor(Math.random() * array.size())
 		

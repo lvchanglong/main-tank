@@ -128,6 +128,72 @@
 .separator {
 	padding:0 11px;
 }
+.shengXiao {
+	background-image: url("WangLuo/SuCai/十二生肖.png");
+	width:150px;
+	height:150px;
+}
+.shengXiao.shu {
+	background-position:0 0;
+}
+.shengXiao.niu {
+	background-position:-150px 0;
+}
+.shengXiao.hu {
+	background-position:-300px 0;
+}
+.shengXiao.tu {
+	background-position:-450px 0;
+}
+.shengXiao.long {
+	background-position:0 -150px;
+}
+.shengXiao.she {
+	background-position:-150px -150px;
+}
+.shengXiao.ma {
+	background-position:-300px -150px;
+}
+.shengXiao.yang {
+	background-position:-450px -150px;
+}
+.shengXiao.hou {
+	background-position:0 -300px;
+}
+.shengXiao.ji {
+	background-position:-150px -300px;
+}
+.shengXiao.gou {
+	background-position:-300px -300px;
+}
+.shengXiao.zhu {
+	background-position:-450px -300px;
+}
+
+[type=file] {
+	position:absolute;
+	left:0;
+	top:0;
+	width:157px;
+	height:30px;
+	padding:0;
+	margin:0;
+	opacity:0.0;
+	filter:Alpha(opacity=0);
+	cursor:pointer;
+}
+.tuPianXuanZe, .tuPianShangChuan, .tuPianXiaZai {
+	display: inline-block;
+	width:157px;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	padding:0;
+	margin-bottom:11px;
+	border: 1px solid #cccccc;
+	background-color: ghostwhite;
+	color:black;
+}
 
 /*-----------------------------------------------------------------------------------------------*/
 
@@ -205,7 +271,8 @@
 	color:white;
 }
 
-/*header*/
+/*------------------------------------------------------------------------------------------*/
+
 #main-header {
 	position: fixed;
 	top: 0;
@@ -381,305 +448,5 @@
 	padding-right:10px;
 }
 
-/*-----------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
 
-/*
-plugin-yongHuIP
-*/
-#yongHuIP ul {
-	text-align:left;
-}
-#yongHuIP ul li {
-	height:25px;
-}
-#yongHuIP ul li:first-child {
-	margin-bottom:5px;
-}
-
-/*
-plugin-kaTong
-*/
-#kaTong {
-	width:200px;
-	height:125px;
-	margin:0 auto;
-}
-#kaTong .zhuangShi {
-	position:absolute;
-	left:109px;
-	top:0;
-	height:100px;
-	width:auto;
-}
-#kaTong .dialog {
-	position:absolute;left:61px;top:3px;display:none;
-}
-#kaTong .hanHua {
-	position:absolute;left:21px;top:10px;font-weight:bold;
-}
-
-/*
-plugin-shengXiao
-*/
-#shengXiao {
-	position:relative;
-	width:210px;
-	height:180px;
-}
-#shengXiao-wrapper {
-	position:relative;
-	width:150px;
-	height:150px;
-	line-height:150px;
-	text-align:center;
-}
-#shengXiao .wenHao {
-	font-weight:700;
-	font-size:70px;
-}
-#shengXiao .shengXiao {
-	background-image: url("WangLuo/SuCai/十二生肖.png");
-	width:150px;
-	height:150px;
-}
-#shengXiao .zhongWen {
-	position:absolute;
-	right:-40px;
-	top:0;
-	font-weight:bold;
-	display:block;
-}
-#shengXiao .shengXiao.shu {
-	background-position:0 0;
-}
-#shengXiao .shengXiao.niu {
-	background-position:-150px 0;
-}
-#shengXiao .shengXiao.hu {
-	background-position:-300px 0;
-}
-#shengXiao .shengXiao.tu {
-	background-position:-450px 0;
-}
-#shengXiao .shengXiao.long {
-	background-position:0 -150px;
-}
-#shengXiao .shengXiao.she {
-	background-position:-150px -150px;
-}
-#shengXiao .shengXiao.ma {
-	background-position:-300px -150px;
-}
-#shengXiao .shengXiao.yang {
-	background-position:-450px -150px;
-}
-#shengXiao .shengXiao.hou {
-	background-position:0 -300px;
-}
-#shengXiao .shengXiao.ji {
-	background-position:-150px -300px;
-}
-#shengXiao .shengXiao.gou {
-	background-position:-300px -300px;
-}
-#shengXiao .shengXiao.zhu {
-	background-position:-450px -300px;
-}
-
-/*
-page-kongjian
-*/
-#kongjian .touXiangQv {
-	position:absolute;
-	left:0px;
-	top:0px;
-	min-width:250px;
-	height:100%;
-	margin:0;
-	text-align:left;
-}
-#kongjian .touXiang {
-	width:180px;
-	height:180px;
-	margin:0 auto;
-	display:block;
-	padding-top:25px;
-}
-#kongjian .touXiangQv h3 {
-	font-weight:bold;
-	display:block;
-	margin-top:8px;
-	padding:0 15px;
-}
-#kongjian .touXiangQv h4 {
-	display:block;
-	padding:0 15px 0 18px;
-	margin-top:5px;
-	font-weight:normal;
-}
-#kongjian .main-ul {
-	position:relative;
-	padding-left:250px;
-	width:100%;
-	min-height:290px;
-}
-#kongjian .main-li {
-	float:left;
-	width:100px;
-	height:100px;
-	margin:15px;
-}
-#kongjian .main-li .aList {
-	width:100px;
-	height:100px;
-	display:block;
-}
-#kongjian .aMain {
-	display:block;
-	text-decoration: none;
-	height:100%;
-}
-#kongjian .main-li:hover, #kongjian .touXiangQv:hover {
-	cursor:pointer;
-	box-shadow: 3px 3px 7px #888888;
-}
-#kongjian-wrapper {
-	padding:30px 30px 170px 30px;
-	min-height:300px;
-}
-#kongjian-wrapper-h1 {
-	font-weight:normal;
-	text-align:center;
-	margin-top:161px;
-	margin-bottom:30px;
-	font-weight:700;
-}
-/*yonghu-ziliao-1*/
-#yonghu-ziliao-1 {
-	position:relative;
-	width:100%;
-	margin-top:30px;
-}
-#yonghu-ziliao-1 .wrapper {
-	padding:0;
-}
-#yonghu-ziliao-1 .shuoMing {
-	position:absolute;
-	left:0;
-	top:0;
-}
-#yonghu-ziliao-1 .xingMing {
-	color:black;
-	letter-spacing: 3px;
-	text-align:center;
-}
-#yonghu-ziliao-1 .strong {
-	margin-bottom: 15px;
-}
-#yonghu-ziliao-1 img {
-	display:block;
-	padding-left:150px;
-}
-#yonghu-ziliao-1 ul {
-	position: absolute;
-	right: 0;
-	top: 0;
-	width: 300px;
-	min-height: 256px;
-	padding: 0 0 0 50px;
-}
-#yonghu-ziliao-1 li {
-	line-height:45px;
-}
-#yonghu-ziliao-1 li .ignore {
-	line-height:30px;
-}
-
-/*plugin-tuPianYaSuo*/
-#tuPianYaSuo form {
-	position:relative;
-	min-height:256px;
-	width:256px;
-	margin-left:auto;
-}
-#tuPianYaSuo [type=file] {
-	position:absolute;
-	left:0;
-	top:0;
-	width:255px;
-	height:30px;
-	padding:0;
-	margin:0;
-	opacity:0.0;
-	filter:Alpha(opacity=0);
-	cursor:pointer;
-}
-#tuPianYaSuo .tuPianXuanZe, #tuPianYaSuo .tuPianShangChuan, #tuPianYaSuo .tuPianXiaZai {
-	display: inline-block;
-	width:255px;
-	height:30px;
-	line-height:30px;
-	text-align:center;
-	padding:0;
-	margin:0 0 11px 0;
-	border: 1px solid #cccccc;
-	background-color: ghostwhite;
-	color:black;
-}
-#tuPianYaSuo .tuPianWrapper {
-	position:absolute;
-	left:0;
-	top:0;
-	width:625px;
-	height: 100%;
-	line-height:303px;
-	text-align:center;
-	border: 1px solid #cccccc;
-}
-#tuPianYaSuo .tuPianWrapper img {
-	width:256px;
-	height:256px;
-	display:block;
-	margin:22px auto 0 auto;
-}
-#tuPianYaSuo [type=text] {
-	width:116px;
-	margin-bottom:10px;
-}
-#tuPianYaSuo ul {
-	width:100%;
-	margin-left:auto;
-	border: 1px solid #cccccc;
-	padding:25px 0 15px 0;
-}
-#tuPianYaSuo li span {
-	display:inline-block;
-	width:62px;
-	margin-bottom:10px;
-	text-align:center;
-}
-#tuPianYaSuo li span.long {
-	width:105px;
-}
-#tuPianYaSuo .tuPianXiaZai {
-	background-color:cadetblue;
-	text-decoration:none;
-}
-/*page-showWenZhang*/
-#show-wenZhang .biaoTi {
-	text-align: center;
-	font-weight: bold;
-	display:block;
-	font-size:24px;
-}
-#show-wenZhang .neiRong {
-	line-height:24px;
-	margin:30px 0 80px 0;
-}
-#show-wenZhang .fuBiaoTi {
-	display:inline-block;
-	color:darkblue;
-	font-weight:bold;
-}
-
-/*---------------------------------------------------------------------------------------------------------------------*/

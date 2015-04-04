@@ -7,7 +7,13 @@
 		<li>
 			<g:link uri="/"><asset:image src="WangLuo/Logo/3232.png" alt="主坦克" class="logo"/>主坦克</g:link>
 		</li>
-			
+		<li class="wrapperBox">
+			<span class="link"><i class="fa fa-camera"></i>联系站长</span>
+			<div class="hiddenBox normalBox borderBox" style="display:none;">
+				<asset:image src="WangLuo/SuCai/个人原版.png" alt="微信号" title="微信号" style="height:210px;width:210px;margin:0 auto;display:block;"/>
+			</div>
+		</li>
+		
 		<g:if test="${ dangQianYongHu }">
 			<li class="wrapperBox">
 				<span class="link"><i class="fa fa-key"></i>${ dangQianYongHu.zhangHao }</span>

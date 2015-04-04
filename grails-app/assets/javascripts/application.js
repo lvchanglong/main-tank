@@ -319,12 +319,10 @@ function Motion(id, imageSrc, w, h, maxColumn, fromRow, toRow, ms, callFun, call
 /**
  * 说点什么
  * dialogID:话框
- * sayID:用于更新话内容
  * array:话列表
  */
-function Talk(dialogID, sayID, array) {
+function Talk(dialogID, array) {
 	this.dialogID = dialogID;
-	this.sayID = sayID;
 	this.array = array;
 	this.arrayLength = this.array.length;
 	
@@ -332,10 +330,7 @@ function Talk(dialogID, sayID, array) {
 		var wt = this.array[Math.floor(Math.random() * this.arrayLength)];
 		$dialog = jQuery("#" + this.dialogID);
 		if ($dialog.is(":hidden")) {
-			//console.log(wt + "---" + this.sayID);
-			
-			jQuery("#" + this.sayID).html(wt);
-			$dialog.show();
+			$dialog.html(wt).show();
 		} else {
 			$dialog.hide();
 		}
