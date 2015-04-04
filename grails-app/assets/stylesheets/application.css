@@ -12,51 +12,79 @@
 *= require font-awesome-4.3.0/css/font-awesome.min
 *= require_self
 */
-
-/*globle*/
-[type=submit]:hover {
-	cursor:pointer;
-	   -moz-box-shadow: 0 0 1em #b2d1ff;
-	-webkit-box-shadow: 0 0 1em #b2d1ff;
-	        box-shadow: 0 0 1em #b2d1ff;
-}
 .borderBox {
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
 }
-.textAlignLeft {
-	text-align:left !important;
+.borderRadius {
+	border-radius:5px;
+	-moz-border-radius:5px; /* 老的 Firefox */
 }
-.textAlignRight {
-	text-align:right !important;
+.verticalAlignBottom {
+	vertical-align:bottom;
+}
+.smallTextArea {
+	padding:10px 15px;
+	height:150px;
+}
+.messageBox {
+	float:left;
+	margin: 5px 0;
+	line-height: 34px;
+	height: 34px;
+	font-weight:700;
+	font-size:16px;
+}
+.submitBtn {
+	float:right;
+	width:130px;
+	font-weight: 700;
+	line-height: 34px;
+	height: 34px;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	border: 1px solid rgba(0,0,0,.05);
+	text-decoration: none;
+	padding: 0 10px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	position: relative;
+	display: inline-block;
+	margin: 5px 0;
+	background-color:#232323;
+	color: #ccc;
+	font-size:16px;
+}
+.submitBtn:hover {
+	color:white;
+}
+.relative {
+	position:relative;
+}
+.neiRong, .biaoTi, .guanJianCi {
+	font-weight:bold;
+	font-size:16px;
+}
+.yongHu {
+	font-size:20px;
+	font-weight:bold;
 }
 .defaultPage {
 	position:relative;
-	padding:30px;
+	padding-bottom:25px;
 }
-.defaultBoxShadow {
-	box-shadow: 3px 3px 7px #888888;
-}
-.h_100p {
-	height:100%;
-}
-.floatLeft {
-	float:left;
-}
-.floatRight {
-	float:right;
-}
-.clearBoth {
-	clear:both;
-}
-.separator {
-	padding:0 11px;
-}
-.wrapper {
-	position:relative;
-	width:100%;
-	height:100%;
+.rightTopHeight100 {
+	position: absolute;
+	right:0;
+	top:0;
+	height: 100%;
 }
 .clearfix:after {
 	content:"";
@@ -64,40 +92,6 @@
 	height:0; 
 	visibility:hidden; 
 	clear:both;
-}
-.moHu {
-	color: transparent;
-	text-shadow: 0 0 4px #f36;
-}
-.rotate {
-	-webkit-transform: rotate(-90deg); 
-	-moz-transform: rotate(-90deg);	
-	-o-transform: rotate(-90deg);
-	-ms-transform: rotate(-90deg);
-	transform: rotate(-90deg);
-	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-}
-.miaoBian {
-	color: #c00; 
-}
-.fuDiaoA {
-	color: #FFFFFF;
-	text-shadow: 0 -1px 0 #374683;
-}
-.fuDiaoB {
-	color: #737373;
-	text-shadow: 0px 1px 0px #e5e5ee;
-}
-.tuBan {
-	color: #222;
-	text-shadow: 0px 2px 3px #555;
-}
-.liTi {
-	color: #fff;
-	text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1),0 1px 3px rgba(0,0,0,0.3),0 3px 5px rgba(0,0,0,0.2),0 5px 10px rgba(0,0,0,0.25);
-}
-.minWidth {
-	min-width:1024px;
 }
 .defaultButton {
 	font-weight: 700;
@@ -118,12 +112,25 @@
 	user-select: none;
 	position: relative;
 	display: inline-block;
-	margin: 2px 0;
-	background-color: #3A434D;
-	color: #ddd;
+	margin:0 3px;
+	background-color:white;
+	color:#666666 !important;
+}
+.defaultButton:hover {
+	color:black !important;
+}
+.minWidth {
+	min-width:1024px;
+}
+.fa {
+	padding-right:3px;
+}
+.separator {
+	padding:0 11px;
 }
 
-/*main*/
+/*-----------------------------------------------------------------------------------------------*/
+
 #main {
 	position:relative;
 	min-height:100%;
@@ -131,7 +138,7 @@
 	margin:0 auto;
 }
 #main-wrapper {
-	padding:70px 6px 150px 6px;
+	padding:70px 6px 170px 6px;
 	position: relative;
 	width: 80%;
 	margin:0 auto;
@@ -139,8 +146,6 @@
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
 }
-
-/*spinner*/
 #spinner {
 	background-color:white;
 	border:7px solid black;
@@ -167,8 +172,6 @@
 	width:180px;
 	height:180px;
 }
-
-/*main-footer*/
 #main-footer {
 	position:absolute;
 	left:0;
@@ -201,30 +204,6 @@
 #main-footer a:hover {
 	color:white;
 }
-#main-footer .fa {
-	padding-right:3px;
-}
-#main-footer .defaultButton {
-	margin:2px 3px;
-	background-color:white;
-	color:#666666;
-}
-#main-footer .defaultButton:hover {
-	color:black;
-}
-#main-footer img {
-	position:absolute;
-	top:0;
-	height:90px;
-	width:90px;
-	margin:30px 30px 0 30px;
-}
-#main-footer img.geRen {
-	right:0;
-}
-#main-footer img.gongZhong {
-	left:0;
-}
 
 /*header*/
 #main-header {
@@ -239,8 +218,6 @@
 	box-shadow: 0 0 23px #333;
 	text-align: center;
 	z-index:999;
-	font-size: 20px;
-	font-family: "微软雅黑", "宋体";
 }
 #main-header .fa {
 	width:32px;
@@ -262,6 +239,7 @@
 	text-align:center;
 	position:relative;
 	height:100%;
+	margin:0;
 }
 #main-header a {
 	color:white;
@@ -359,9 +337,6 @@
 }
 #main-header .hiddenBox [type=submit]:hover{
 	color: black;
-	   -moz-box-shadow: 0 0 1em #b2d1ff;
-	-webkit-box-shadow: 0 0 1em #b2d1ff;
-	        box-shadow: 0 0 1em #b2d1ff;
 }
 #main-header .hiddenBox .touXiangKongJian form {
 	position:relative;
@@ -370,7 +345,7 @@
 	position:absolute;
 	left:0;
 	top:0;
-	width:256px;
+	width: 100%;
 	height:30px;
 	padding:0;
 	margin:0;
@@ -405,6 +380,8 @@
 	vertical-align:middle;
 	padding-right:10px;
 }
+
+/*-----------------------------------------------------------------------------------------------*/
 
 /*
 plugin-yongHuIP
@@ -577,83 +554,6 @@ page-kongjian
 	margin-bottom:30px;
 	font-weight:700;
 }
-
-/*
-section-gengXin-index
-*/
-#gengXin-index ul li {
-	padding:12px 0;
-}
-
-/*
-section-yongHu-index
-*/
-#yongHu-index {
-	position:relative;
-}
-#yongHu-index .aMain {
-	display: block;
-	text-decoration: none;
-	color: black;
-	height: 100%;
-}
-#yongHu-index .touXiang {
-	width: 150px;
-	height: 150px;
-	display: block;
-	padding: 10px;
-}
-#yongHu-index .touXiangQv {
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	width: 210px;
-	height: 100%;
-	margin: 0;
-	text-align: left;
-}
-#yongHu-index h3 {
-	display: block;
-	margin-bottom: 12px;
-}
-#yongHu-index h3 a:hover {
-	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
-}
-#yongHu-index h1 .separator {
-	color:lightgray;
-	text-decoration: none;
-}
-#yongHu-index p .separator {
-	color:lightgray;
-	text-decoration: none;
-	padding: 0 7px;
-}
-#yongHu-index .youJianTou {
-	position:absolute;
-	right:-14px;
-	top:0;
-	height:200px;
-	line-height:200px;
-	font-weight:bold;
-}
-#yongHu-index ul li {
-	position: relative;
-	border-bottom: 1px dashed #dcdfe2;
-	margin-bottom:15px;
-}
-#yongHu-index .content {
-	position: relative;
-	width: 100%;
-	height: 170px;
-	padding: 45px 30px 0 255px;
-	font-weight: 500;
-}
-#yongHu-index .content p {
-	position: relative;
-	margin:0;
-	padding:0;
-	line-height:24px;
-}
 /*yonghu-ziliao-1*/
 #yonghu-ziliao-1 {
 	position:relative;
@@ -782,77 +682,4 @@ section-yongHu-index
 	font-weight:bold;
 }
 
-/*整合*/
-.defaultPage .tuZhang {
-	float:right;
-	text-align:right;
-	padding:7px;
-	border: 1px solid lightgray;
-	box-shadow: 1px 1px 3px #333 inset;
-	-webkit-transform: rotate(-15deg); 
-	-moz-transform: rotate(-15deg);	
-	-o-transform: rotate(-15deg);
-	-ms-transform: rotate(-15deg);
-	transform: rotate(-15deg);
-	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
-	color: black;
-	font-weight:bold;
-}
-.defaultPage h3 {
-	margin-bottom:25px;
-	font-size:20px;
-}
-.defaultPage > section.end {
-	position:relative;
-	margin-bottom:0;
-}
-.defaultPage .decorationWidthPadding {
-	padding:30px;
-}
-.defaultPage [type=submit] {
-	padding: 10px 61px;
-	background-color: black;
-	color: lavender;
-	margin:10px 0 0 0;
-	float:right;
-}
-.defaultPage .tiShi {
-	line-height: 60px;
-	height: 50px;
-	width: 77%;
-	float:left;
-}
-.defaultPage .neiRong, .defaultPage .biaoTi {
-	font-weight:bold;
-	font-size:16px;
-}
-.guanJianCi {
-	font-weight:bold;
-	color:darkred;
-	font-size:16px;
-}
-.yongHu {
-	font-size:20px;
-	font-weight:bold;
-}
 /*---------------------------------------------------------------------------------------------------------------------*/
-
-/*geRenWenZhang/shuoshuo-0*/
-#geRenWenZhang, #yonghu-shuoshuo-0 {
-	margin-top:30px;
-}
-#wenZhang-index li, #shuoShuo-index li, #shiJie-index li {
-	margin-bottom: 20px;
-}
-#shiJie-index .biaoTi {
-	color:darkred;
-}
-.kongJianWrapper {
-	position:relative;
-	margin:15px 0 30px 0;
-}
-
-.defaultPage > section {
-	position:relative;
-	border-bottom: 1px dashed #dcdfe2;
-}

@@ -11,26 +11,26 @@
 
 		<div id="zhuYe" class="page borderBox">
 			
-			<section class="decoration">
-				<g:render template="/layouts/plugin/sliderEvolution" model="[instanceList: slideList, width:'100%', height:'372px']"/>
-			</section>
+			<g:render template="/layouts/plugin/sliderEvolution" model="[instanceList: slideList, width:'100%', height:'372px']"/>
+			
+			<g:render template="/layouts/plugin/faBuFanKui" />
+			
+			<hr />
 			
 			<g:if test="${ zuiXinWenZhang }">
-				<section class="decorationWidthPadding">
-					<h2>${ zuiXinWenZhang.biaoTi }/<span class="small">${ zuiXinWenZhang.yongHu }</span></h2>
-					${ zuiXinWenZhang.neiRong }
-				</section>
+				<h1>最新文章</h1>
+				<h2>${ zuiXinWenZhang.biaoTi }/${ zuiXinWenZhang.yongHu }</h2>
+				${ zuiXinWenZhang.neiRong }
+				<hr/>
 			</g:if>
 			
-			<section class="decorationWidthPadding">
-				<h2>个人文章</h2>
-				<g:applyLayout controller="wenZhang" action="index" params="[offset:0, max:10]" />
-			</section>
-		
-			<section class="decorationWidthPadding end">
-				<h2>我的世界</h2>
-				<g:applyLayout controller="shiJie" action="index" params="[offset:0, max:10]" />
-			</section>
+			<h1>个人文章</h1>
+			<g:applyLayout controller="wenZhang" action="index" params="[offset:0, max:10]" />		
+			
+			<hr/>
+			
+			<h1>我的世界</h1>
+			<g:applyLayout controller="shiJie" action="index" params="[offset:0, max:10]" />
 			
 		</div>
 		

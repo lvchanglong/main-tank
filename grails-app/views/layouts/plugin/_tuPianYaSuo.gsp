@@ -1,4 +1,4 @@
-<div id="tuPianYaSuo" class="clearfix wrapper">
+<div id="tuPianYaSuo" class="clearfix relative">
 	<div class="tuPianWrapper">
 		图片预览
 	</div>

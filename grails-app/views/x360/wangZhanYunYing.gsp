@@ -8,7 +8,6 @@
 	</head>
 	<body>
 		<div id="wangZhanXiangGuan" class="borderBox clearfix defaultPage">
-		
 			<h1>网站运营</h1>
 			<p>什么东西有用，我们就提供什么。没用时就扔掉。倘若后来看看还有用，就再捡回来。我们不一定要做到最好，但一定要做到最有用。我们的目标，就是星辰大海！</p>
 			
@@ -27,6 +26,8 @@
 				懒&nbsp;/&nbsp;拼尽全力，助你偷懒
 				<br />
 				智&nbsp;/&nbsp;不是很笨，有小聪明
+				<br />
+				快&nbsp;/&nbsp;天下武功，唯快不破
 			</p>
 		
 			<h2>网站维持：</h2>
@@ -36,10 +37,7 @@
 				网站域名&nbsp;/&nbsp;55元/年
 			</p>
 			
-			<asset:image src="WangLuo/SuCai/背影.png" alt="背影" style="position:absolute;right:129px;top:330px;"/>
-			
-			<div class="tuZhang">集彼之长，补己之短</div>
-			
+			<asset:image src="WangLuo/SuCai/背影.png" alt="背影" style="position:absolute;right:129px;top:250px;"/>	
 		</div>
 	</body>
 </html>

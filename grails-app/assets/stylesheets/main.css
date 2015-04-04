@@ -20,33 +20,40 @@ body {
 }
 
 body, input, select, textarea {
-	letter-spacing:1px;
-	font: 12px/1.5 Georgia, "黑体", serif, "宋体";
+	letter-spacing:1.5px;
+	font: 12px/1.5 Georgia, "微软雅黑", serif, "宋体";
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight:bold;
+	margin: 37px 0 0 0;
+	text-align: justify;
 }
 
 h1 {
 	font-size: 96px;
 	letter-spacing: -1.5px;
 	text-align: center;
-	margin: 62px 0 0 0;
+	margin: 17px 0 0 0;
 	line-height: 102px;
 }
 
 h2 {
+	font-size: 26px;
+}
+
+h3 {
 	font-size: 24px;
-	line-height: 30px;
-	margin: 37px 0 0 0;
-	text-align: justify;
+}
+
+h4 {
+	font-size: 22px;
 }
 
 p {
 	position:relative;
 	line-height: 24px;
-	margin-top: 48px;
+	margin-top: 25px;
 	font-size: 14px;
 }
 
@@ -56,15 +63,21 @@ ul, ol {
 }
 
 li {
-	margin-bottom:10px;	
+	position:relative;
+	margin-top:15px;	
 }
 
 hr {
-	margin:10px auto;
+	margin:30px auto;
+	border:1px dashed #DCDCDC;
+}
+
+a, [type=submit] {
+	cursor:pointer;
 }
 
 a:link, a:visited, a:hover {
-	color: darkblue;
+	color: black;
 }
 
 a:hover, a:active {
@@ -208,6 +221,7 @@ input, select, textarea {
 	background-color: #fcfcfc;
 	border: 1px solid #cccccc;
 	padding: 3px;
+	margin-top: 5px;
 }
 
 select {
@@ -220,7 +234,6 @@ select[multiple] {
 
 textarea {
 	width:100%;
-	min-height:300px;
 	overflow: auto; /* IE always renders vertical scrollbar without this */
 	vertical-align: top;
 }
@@ -232,8 +245,6 @@ input[type=checkbox], input[type=radio] {
 }
 
 input:focus, select:focus, textarea:focus {
-	background-color: #ffffff;
-	border: 1px solid #eeeeee;
 	outline: 0;
 	   -moz-box-shadow: 0 0 0.5em #ffffff;
 	-webkit-box-shadow: 0 0 0.5em #ffffff;
@@ -342,15 +353,13 @@ fieldset.embedded legend {
 /* same effects for browsers that support HTML5 client-side validation (these have to be specified separately or IE will ignore the entire rule) */
 
 input:invalid, select:invalid, textarea:invalid {
-	background: #fff3f3;
-	border-color: #ffaaaa;
-	color: #cc0000;
+	border-color: lightgray;
 }
 
 input:invalid:focus, select:invalid:focus, textarea:invalid:focus {
-	   -moz-box-shadow: 0 0 0.5em #ffaaaa;
-	-webkit-box-shadow: 0 0 0.5em #ffaaaa;
-	        box-shadow: 0 0 0.5em #ffaaaa;
+	   -moz-box-shadow: 0 0 0.5em #ccc;
+	-webkit-box-shadow: 0 0 0.5em #ccc;
+	        box-shadow: 0 0 0.5em #ccc;
 }
 
 /* PAGINATION */

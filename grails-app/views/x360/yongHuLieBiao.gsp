@@ -9,13 +9,10 @@
 	</head>
 	<body>
 
-		<div id="yongHu" class="page borderBox">
-		
-			<section class="decorationWidthPadding end">
-				<h2>用户列表</h2>
-				<g:applyLayout controller="yongHu" action="index" params="[offset:0, max:5]" />
-			</section>
-			
+		<div id="yongHu" class="borderBox clearfix defaultPage">
+			<h1>用户列表</h1>
+			<br/><br/>
+			<g:applyLayout controller="yongHu" action="index" params="[offset:0, max:5]" />
 		</div>
 		
 	</body>

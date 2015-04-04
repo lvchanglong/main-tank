@@ -10,26 +10,34 @@
 	</head>
 	<body>
 
-		<div id="fuWu" class="page borderBox">
+		<div id="fuWu" class="borderBox clearfix defaultPage">
+
+			<h1>服务列表</h1>
+
+			<h2>ｉｐ查询</h2>
+			<g:render template="/layouts/plugin/yongHuIP" />
 			
-			<section class="decorationWidthPadding">
-				<ul>
-					<li style="width:100%;height:200px;">
-						<asset:image src="WangLuo/SuCai/腾云驾雾.png" class="leftToRight" width="239px" height="180px" alt="腾云驾雾"/>
-					</li>
-					<li>
-						<g:render template="/layouts/plugin/yongHuIP" />
-					</li>
-					<li>
-						<g:render template="/layouts/plugin/shengXiao"/>
-					</li>
-				</ul>
-			</section>
+			<hr/>
 			
-			<section class="decorationWidthPadding end">
-				<h2>图片压缩</h2>
-				<g:render template="/layouts/plugin/tuPianYaSuo" />
-			</section>
+			<h2>生肖查询</h2>
+			<g:render template="/layouts/plugin/shengXiao"/>
+			
+			<hr/>
+			
+			<h2>当前时间</h2>
+			<g:render template="/layouts/plugin/shiZhong"/>
+			
+			<hr/>
+			
+			<h2>腾云驾雾</h2>
+			<div style="position:relative;width:100%;height:200px;">
+				<asset:image src="WangLuo/SuCai/腾云驾雾.png" class="leftToRight" width="239px" height="180px" alt="腾云驾雾"/>
+			</div>
+			
+			<hr/>
+			
+			<h2>图片压缩</h2>
+			<g:render template="/layouts/plugin/tuPianYaSuo" />
 			
 		</div>
 		

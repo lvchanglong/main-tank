@@ -1,35 +1,27 @@
-<div id="yongHu-index" class="index">
+<div id="yongHu-index" class="index relative;">
 	<ul>
 		<g:each in="${yongHuInstanceList}" status="i" var="yongHuInstance">
 			<li>
-				<div class="content borderBox">
-					<h3>
-						<g:link controller="x360" action="geRenGuanLi" id="${ yongHuInstance.id }">${ yongHuInstance.zhangHao }</g:link>
-						<span class="separator">/</span><span class="fuBiaoTi">${ yongHuInstance.xingMing }</span>
-					</h3>
-	
-					<p>
-						${fieldValue(bean: yongHuInstance, field: "shengRi")}
-						<span class="separator">/</span>
-						${fieldValue(bean: yongHuInstance, field: "xingBie")}
-						<span class="separator">/</span>
-						${fieldValue(bean: yongHuInstance, field: "suoZai")}
-						<span class="separator">/</span>
-						${fieldValue(bean: yongHuInstance, field: "youXiang")}
-						<span class="separator">/</span>
-						${fieldValue(bean: yongHuInstance, field: "shouJi")}
-						<br />
-						${fieldValue(bean: yongHuInstance, field: "jianJie")}
-					</p>
-				</div>
-				
-				<div class="touXiangQv borderBox">
-					<asset:image src="${ yongHuInstance.touXiang }" class="touXiang" alt="头像"/>
+				<h3>
+					<g:link controller="x360" action="geRenGuanLi" id="${ yongHuInstance.id }">${ yongHuInstance.zhangHao }</g:link>
+					<span class="separator">/</span>${ yongHuInstance.xingMing }
+				</h3>
 
-					<div class="youJianTou">
-						>
-					</div>
-				</div>
+				<p>
+					${fieldValue(bean: yongHuInstance, field: "shengRi")}
+					<span class="separator">/</span>
+					${fieldValue(bean: yongHuInstance, field: "xingBie")}
+					<span class="separator">/</span>
+					${fieldValue(bean: yongHuInstance, field: "suoZai")}
+					<span class="separator">/</span>
+					${fieldValue(bean: yongHuInstance, field: "youXiang")}
+					<span class="separator">/</span>
+					${fieldValue(bean: yongHuInstance, field: "shouJi")}
+					<br />
+					${fieldValue(bean: yongHuInstance, field: "jianJie")}
+				</p>
+				
+				<asset:image src="${ yongHuInstance.touXiang }" class="rightTopHeight100" alt="头像"/>
 			</li>
 		</g:each>
 	</ul>

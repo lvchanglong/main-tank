@@ -55,8 +55,8 @@
 		</li>
 		<li><span class="separator">/</span></li>
 		<li>
-			<g:link controller="x360" action="jianYiFanKui">
-				建议反馈
+			<g:link controller="x360" action="fanKuiLieBiao">
+				反馈列表
 			</g:link>
 		</li>
 		<li><span class="separator">/</span></li>
@@ -85,8 +85,9 @@
 		</li>
 	</ol>
 	
-	<asset:image src="WangLuo/SuCai/个人定制.png" alt="微信个人号" title="个人号" class="geRen"/>
-	
-	<asset:image src="WangLuo/SuCai/公众定制.jpg" alt="微信公众号" title="公众号" class="gongZhong"/>
+	<%--
+	<asset:image src="WangLuo/SuCai/个人定制.png" alt="微信号" title="微信号" style="position:fixed;bottom:180px;;right:30px;height:90px;width:90px;"/>
+	<asset:image src="WangLuo/SuCai/公众定制.jpg" alt="微信公众号" title="公众号"/>
+	--%>
 	
 </footer>

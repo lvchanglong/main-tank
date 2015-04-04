@@ -119,9 +119,9 @@ class X360Controller {
 	}
 	
 	/**
-	 * 建议反馈
+	 * 反馈列表
 	 */
-	def jianYiFanKui() {
+	def fanKuiLieBiao() {
 		
 	}
 	
@@ -129,7 +129,11 @@ class X360Controller {
 	 * 更新日志
 	 */
 	def gengXinRiZhi() {
-		
+		def dangQianYongHu = null
+		if(session.uid) {
+			dangQianYongHu = YongHu.get(session.uid)
+		}
+		[dangQianYongHu:dangQianYongHu]
 	}
 	
 	/**

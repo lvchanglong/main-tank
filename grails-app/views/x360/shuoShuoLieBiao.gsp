@@ -9,13 +9,10 @@
 	</head>
 	<body>
 
-		<div id="shuoShuo" class="page borderBox">
-		
-			<section class="decorationWidthPadding end">
-				<h2>说说列表</h2>
-				<g:applyLayout controller="shuoShuo" action="index" params="[offset:0, max:5]" />
-			</section>
-			
+		<div id="shuoShuo" class="borderBox clearfix defaultPage">
+			<h1>说说列表</h1>
+			<br/><br/>
+			<g:applyLayout controller="shuoShuo" action="index" params="[offset:0, max:10]" />
 		</div>
 		
 	</body>

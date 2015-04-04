@@ -37,7 +37,7 @@
 		<section id="main" class="minWidth">
 			<g:pageProperty name="page.header" default="${ render(template:"/layouts/header/" + ChangLiang.HEADER_INDEX) }"/>
 			
-			<div id="main-wrapper">
+			<div id="main-wrapper" class="clearfix">
 				<g:layoutBody/>
 			</div>
 			
