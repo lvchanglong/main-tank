@@ -37,6 +37,10 @@
 				<hr/>
 			</g:if>
 			
+			<g:render template="/layouts/plugin/baiDuZhanNei"/>
+			
+			<hr/>
+			
 			<h1>个人文章</h1>
 			<g:applyLayout controller="wenZhang" action="index" params="[offset:0, max:10]" />		
 			
@@ -45,11 +49,6 @@
 			<h1>我的世界</h1>
 			<g:applyLayout controller="shiJie" action="index" params="[offset:0, max:10]" />
 			
-			<hr/>
-			
-			<div style="display:inline-block;margin:0 auto;" class="clearfix">
-				<g:render template="/layouts/plugin/baiDuZhanNei"/>
-			</div>
 		</div>
 		
 		<content tag="headerX">
