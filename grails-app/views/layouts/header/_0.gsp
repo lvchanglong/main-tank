@@ -5,35 +5,42 @@
 <header id="main-header" class="minWidth">
 	<ul class="borderBox clearfix">
 		<li>
-			<g:link uri="/"><asset:image src="WangLuo/Logo/3232.png" alt="主坦克" class="logo"/>主坦克</g:link>
+			<g:link uri="/" ><asset:image src="WangLuo/Logo/logo.png" alt="主坦克" style="height:56px;"/></g:link>
 		</li>
+		
 		<li class="wrapperBox">
-			<span class="link"><i class="fa fa-camera"></i>联系站长</span>
+			<i class="fa fa-camera"></i>微信
 			<div class="hiddenBox normalBox borderBox" style="display:none;">
 				<asset:image src="WangLuo/SuCai/个人原版.png" alt="微信号" title="微信号" style="height:210px;width:210px;margin:0 auto;display:block;"/>
+			</div>
+		</li>
+		<li class="wrapperBox">
+			<i class="fa fa-search"></i>站内
+			<div class="hiddenBox normalBox borderBox" style="display:none;">
+				<g:render template="/layouts/plugin/baiDuZhanNei"/>
 			</div>
 		</li>
 		
 		<g:if test="${ dangQianYongHu }">
 			<li class="wrapperBox">
-				<span class="link"><i class="fa fa-key"></i>${ dangQianYongHu.zhangHao }</span>
+				<i class="fa fa-key"></i>${ dangQianYongHu.zhangHao }
 				<div class="hiddenBox normalBox borderBox" style="display:none;">
 					<g:formRemote name="miMaXiuGai" url="[controller:'x520', action:'miMaXiuGai', id:session.uid]" update="[success:'miMaXiuGaiTiShi', failure:'miMaXiuGaiTiShi']">
-						<div class="xmessage borderBox">
+						<div class="borderBox">
 							(^﹃^ )<span class="separator">/</span><span id="miMaXiuGaiTiShi" class="message-content">修改密码</span>
 						</div>
 						<g:passwordField name="yuanMiMa" required="" value="" placeholder="原始密码"/>
 						<g:passwordField name="xinMiMa" required="" value="" placeholder="新的密码"/>
 						<g:passwordField name="queRenMiMa" required="" value="" placeholder="确认密码"/>
-						<g:submitButton name="xiuGai" value="修改"/>
+						<g:submitButton name="xiuGai" value="修改" class="submitBtn"/>
 					</g:formRemote>
 				</div>
 			</li>
 			<li class="wrapperBox">
-				<span class="link"><i class="fa fa-user"></i>${ dangQianYongHu.xingMing }</span>
-				<div class="hiddenBox customBox borderBox" style="display:none;">
+				<i class="fa fa-user"></i>${ dangQianYongHu.xingMing }
+				<div class="hiddenBox largeBox borderBox" style="display:none;">
 					<g:formRemote name="xinXiXiuGai" url="[controller:'yongHuRestful', action:'update', id:session.uid]" onSuccess="success(data,textStatus,'#yongHuXiuGaiTiShi')" onFailure="failure(XMLHttpRequest,textStatus,errorThrown,'#yongHuXiuGaiTiShi')" >
-						<div class="xmessage borderBox">
+						<div class="borderBox">
 							(^﹃^ )<span class="separator">/</span><span id="yongHuXiuGaiTiShi" class="message-content">修改信息</span>
 						</div>
 						
@@ -47,64 +54,63 @@
 						<g:textField name="shouJi" value="${dangQianYongHu?.shouJi}" placeholder="手机"/>	
 						<g:textField name="jianJie" value="${dangQianYongHu?.jianJie}" placeholder="简介"/>
 
-						<g:submitButton name="xiuGai" value="修改"/>
+						<g:submitButton name="xiuGai" value="修改" class="submitBtn"/>
 					</g:formRemote>
 					
-					<div class="touXiangKongJian">
+					<div class="touXiangKongJian" style="position:absolute;top:0;right:0;padding:30px;">
 						<div id="touXiangWrapper">
 							<asset:image src="${ dangQianYongHu.touXiang }" width="180px;" height="180px" alt="头像"/>
 						</div>
 						<g:uploadForm controller="x520" action="touXiangShangChuan" onsubmit="touXiangShangChuan(jQuery(this).find([type=file])[0].files, '${ createLink(controller:"x520", action:"touXiangShangChuan") }', '${ session.uid }', '#kaiShiShangChuan');return false">									
 							<input type="file" name="file" onchange="touXiangChaKan(this.files, '#touXiangWrapper', '#tuPianXuanZe', '#kaiShiShangChuan');" multiple="false" class="borderBox"/>
-							<div id="tuPianXuanZe"class="preview borderBox">
+							<div id="tuPianXuanZe"class="borderBox tuPianXuanZe">
 								选择图片
 							</div>
-							<g:submitButton id="kaiShiShangChuan" name="shangChuan" value="开始上传" class="shangChuan"/>
+							<g:submitButton id="kaiShiShangChuan" name="shangChuan" value="开始上传" class="tuPianShangChuan"/>
 						</g:uploadForm>
 					</div>
 				</div>
 			</li>
-			<li>
+			<li class="wrapperBox">
 				<g:link controller="x360" action="woDeShiJie" id="${ session.uid }"><i class="fa fa-globe"></i>我的世界</g:link>
 			</li>
-			<li>
+			<li class="wrapperBox">
 				<g:remoteLink controller="x520" action="yongHuZhuXiao" onSuccess="window.location.reload()"><i class="fa fa-sign-out"></i>注销</g:remoteLink>
 			</li>
 		</g:if>
 		<g:else>
 			<li class="wrapperBox">
-				<span class="link"><i class="fa fa-sign-in"></i>登录</span>
+				<i class="fa fa-sign-in"></i>登录
 				<div class="hiddenBox normalBox borderBox" style="display:none;">
 					<g:formRemote name="yongHuDengLu" url="[controller:'x520', action:'yongHuDengLu']" update="[success:'dengLuTiShi', failure:'dengLuTiShi']" onSuccess="window.location.reload();">
-						<div class="xmessage borderBox">
+						<div class="borderBox">
 							(^﹃^ )<span class="separator">/</span><span id="dengLuTiShi" class="message-content">账号、密码</span>
 						</div>
 						<g:textField name="zhangHao" required="" value="" placeholder="账号"/>
 						<g:passwordField name="miMa" required="" value="" placeholder="密码"/>
-						<g:submitButton name="dengLu" value="登录"/>
+						<g:submitButton name="dengLu" value="登录" class="submitBtn"/>
 					</g:formRemote>
 				</div>
 			</li>
 			<li class="wrapperBox">
-				<span class="link"><i class="fa fa-user-plus"></i>注册</span>
+				<i class="fa fa-user-plus"></i>注册
 				<div class="hiddenBox normalBox borderBox" style="display:none;">
 					<g:formRemote name="yongHuZhuCe" url="[controller:'x520', action:'yongHuZhuCe']"  update="[success:'zhuCeTiShi', failure:'zhuCeTiShi']">
-						<div class="xmessage borderBox">
+						<div class="borderBox">
 							(^﹃^ )<span class="separator">/</span><span id="zhuCeTiShi" class="message-content">账号、密码、确认</span>
 						</div>
 						<g:textField name="zhangHao" required="" value="" placeholder="账号"/>
 						<g:passwordField name="miMa" required="" value="" placeholder="密码"/>
 						<g:passwordField name="queRenMiMa" required="" value="" placeholder="确认"/>
-						<g:submitButton name="zhuCe" value="注册"/>
+						<g:submitButton name="zhuCe" value="注册" class="submitBtn"/>
 					</g:formRemote>
 				</div>
 			</li>
 		</g:else>
-		
 	</ul>
 	
 	<ol>
-		<li>
+		<li class="wrapperBox">
 			<g:if test="${ session.uid }">
 				<g:link controller="x360" action="geRenGuanLi" id="${ session.uid }"><i class="fa fa-cog"></i>个人管理</g:link>
 			</g:if>		

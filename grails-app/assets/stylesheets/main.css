@@ -37,17 +37,20 @@ h1 {
 	margin: 17px 0 0 0;
 	line-height: 102px;
 }
-
 h2 {
 	font-size: 26px;
 }
-
 h3 {
 	font-size: 24px;
 }
-
 h4 {
 	font-size: 22px;
+}
+h5 {
+	font-size: 20px;
+}
+h6 {
+	font-size: 18px;
 }
 
 p {
@@ -80,12 +83,12 @@ a, [type=submit] {
 	cursor:pointer;
 }
 
-a:link, a:visited, a:hover {
-	color: black;
-}
-
 a:hover, a:active {
 	outline: none; /* prevents outline in webkit on active links but retains it for tab focus */
+}
+
+a {
+	color:inherit;
 }
 
 img {
@@ -246,6 +249,14 @@ input[type=checkbox], input[type=radio] {
 	background-color: transparent;
 	border: 0;
 	padding: 0;
+}
+input[type=text], input[type=password], input[type=email]{
+	width:100%;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	border:1px solid lightgray;
+	text-align:left;
 }
 
 input:focus, select:focus, textarea:focus {

@@ -4,7 +4,7 @@
 		
 		<input type="file" name="file" onchange="touXiangChaKan(this.files, '#tuPianYaSuo .tuPianWrapper', '#tuPianYaSuo .tuPianXuanZe', '#tuPianYaSuo .tuPianShangChuan');" multiple="false" class="borderBox"/>
 		
-		<div class="preview borderBox tuPianXuanZe">
+		<div class="borderBox tuPianXuanZe">
 			选择图片
 		</div>
 		
@@ -12,19 +12,19 @@
 		
 		<a href="javascript:void(0);" class="tuPianXiaZai" style="display:none;">点此下载</a>
 		
-		<g:field type="number" name="width" placeholder="限定宽度(px)"/>
-		<g:field type="number" name="height" placeholder="限定高度(px)"/>
+		<g:field type="number" name="width" placeholder="限定宽度(px)" class="borderBox" style="width:180px;"/>
+		<g:field type="number" name="height" placeholder="限定高度(px)" class="borderBox" style="width:180px;"/>
 		
 		<ul class="borderBox">
-			<li style="color:darkred;"><span>宽度</span>+<span>高度</span>=<span class="long">(宽度, 高度)</span></li>
-			<li><span>空值</span>+<span>空值</span>=<span class="long">(180, 180)</span></li>
-			<li><span>空值</span>+<span>300</span>=<span class="long">(自适, 300)</span></li>
-			<li><span>300</span>+<span>空值</span>=<span class="long">(300, 自适)</span></li>
-			<li><span>300</span>+<span>300</span>=<span class="long">(300, 300)</span></li>
+			<li>宽度&nbsp;+&nbsp;高度&nbsp;=&nbsp;&nbsp;(宽度, 高度)</li>
+			<li>空值&nbsp;+&nbsp;空值&nbsp;=&nbsp;&nbsp;(180, 180)</li>
+			<li>空值&nbsp;+&nbsp;300&nbsp;=&nbsp;&nbsp;(自适, 300)</li>
+			<li>300&nbsp;+&nbsp;空值&nbsp;=&nbsp;&nbsp;(300, 自适)</li>
+			<li>300&nbsp;+&nbsp;300&nbsp;=&nbsp;&nbsp;(300, 300)</li>
 		</ul>
 	</g:uploadForm>
 	
-	<div class="tuPianWrapper" style="position:absolute;right:0;top:0;width:70%;">
+	<div class="tuPianWrapper" style="position:absolute;right:0;top:0;width:70%;height:100%;">
 		
 	</div>
 	
