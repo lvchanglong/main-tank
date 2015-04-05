@@ -19,7 +19,20 @@
 			
 			<g:if test="${ zuiXinWenZhang }">
 				<h1>最新文章</h1>
-				<h2>${ zuiXinWenZhang.biaoTi }/${ zuiXinWenZhang.yongHu }</h2>
+				<h2>${ zuiXinWenZhang.biaoTi }</h2>
+				<div style="float:right;">
+					<span class="yongHu">
+						${zuiXinWenZhang?.yongHu}
+					</span>
+					<span class="shiJian">
+						&nbsp;/&nbsp;<g:formatDate date="${zuiXinWenZhang?.dateCreated}" format="yyyy-MM-dd HH:mm:ss"/>
+					</span>
+					<span class="guanJianCi">
+						&nbsp;/&nbsp;<span class="guanJianCi">${zuiXinWenZhang?.getGuanJianCiAsString()}</span>
+					</span>
+				</div>
+				<div style="clear:both;"></div>
+				
 				${ zuiXinWenZhang.neiRong }
 				<hr/>
 			</g:if>

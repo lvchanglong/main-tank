@@ -24,6 +24,12 @@
 			})();
 		</script>
 		
+		<script type="text/javascript">
+		    if (top.location !== self.location) {
+			    top.location = self.location;
+			}
+		</script>
+
 		<title><g:layoutTitle default="主坦克"/></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="${assetPath(src: 'favicon.ico')}" type="image/x-icon">

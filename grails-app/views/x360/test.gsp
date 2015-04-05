@@ -10,38 +10,11 @@
 	</head>
 	<body>
 		
-		<h1>1</h1><h1>1</h1><h1>1</h1><h1>1</h1>
-		<h1>1</h1>
-		<h1>1</h1>
-		<h1>1</h1><h1>1</h1><h1>1</h1><h1>1</h1><h1>1</h1>
-		<h1>1</h1>
-		<h1>1</h1>
-		<h1>1</h1>
-		<h1>1</h1><h1>1</h1><h1>1</h1><h1>1</h1><h1>1</h1>
-		<h1>1</h1>
-		<h1>1</h1>
-		<h1>1</h1>
-		<h1>1</h1>
-		<h1>1</h1>
-		<h1>1</h1>
-		<h1>1</h1>
-		<h1>1</h1>
-		<h1>1</h1>
-		<h1>1</h1>
-		<h1>1</h1>
-		<h1>1</h1>
-		
-		<content tag="xheader">
+		<content tag="header">
 		</content>
 		
-		<content tag="logo">
+		<content tag="footer">
 		</content>
 		
-		<content tag="xfooter">
-		</content>
-		
-		<content tag="helper">
-		</content>
-	 	
 	</body>
 </html>

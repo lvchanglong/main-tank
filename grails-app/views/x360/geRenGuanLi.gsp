@@ -33,18 +33,7 @@
 					<asset:image src="${ yongHuInstance.touXiang }" style="position:absolute;left:0;top:0;width:180px;height:180px;" alt="头像"/>
 				</g:link>
 				
-				<ul class="clearfix" style="position:absolute;right:0;top:0;">
-					<li style="float:left;margin:0 15px;">
-						<g:link controller="x360" action="geRenShuoShuo" id="${ yongHuInstance.id }" target="_blank" class="aList">
-							<asset:image src="WangLuo/SuCai/个人说说.png" alt="个人说说"/>
-						</g:link>
-					</li>
-					<li style="float:left;margin:0 30px;">
-						<g:link controller="x360" action="geRenWenZhang" id="${ yongHuInstance.id }" target="_blank" class="aList">
-							<asset:image src="WangLuo/SuCai/个人文章.png" alt="个人文章"/>
-						</g:link>
-					</li>
-				</ul>
+				<asset:image src="WangLuo/SuCai/${ yongHuInstance.xingBie }.png" alt="性别" title="${ yongHuInstance.xingBie }" style="position:absolute;right:0;top:0;height:250px;"/>
 			</div>
 			<div style="clear:both;"></div>
 			
@@ -54,11 +43,27 @@
 			<hr />
 			<br />
 			
-			<asset:image src="WangLuo/SuCai/${ yongHuInstance.xingBie }.png" alt="性别" title="${ yongHuInstance.xingBie }" style="float:right;height:250px;"/>
-						
-			<div id="kongjian-wrapper" class="relative">
-				<h2 id="kongjian-wrapper-h1">I want to play a game with you</h2>
-				<g:render template="/layouts/plugin/kaTong" />
+			<ul class="clearfix">
+				<li style="float:left;margin:0 15px;">
+					<g:link controller="x360" action="geRenShuoShuo" id="${ yongHuInstance.id }" target="_blank" class="aList">
+						<asset:image src="WangLuo/SuCai/个人说说.png" alt="个人说说"/>
+					</g:link>
+				</li>
+				<li style="float:left;margin:0 30px;">
+					<g:link controller="x360" action="geRenWenZhang" id="${ yongHuInstance.id }" target="_blank" class="aList">
+						<asset:image src="WangLuo/SuCai/个人文章.png" alt="个人文章"/>
+					</g:link>
+				</li>
+			</ul>
+			
+			<hr />
+			
+			<div id="kongjian-wrapper" class="relative clearfix">
+				<h2 id="kongjian-wrapper-h1" style="float:left;">网站公告</h2>
+				
+				<div style="float:right;">
+					<g:render template="/layouts/plugin/kaTong" />
+				</div>
 			</div>
 			
 		</div>
