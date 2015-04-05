@@ -9,15 +9,9 @@
 		</li>
 		
 		<li class="wrapperBox">
-			<i class="fa fa-camera"></i>微信
+			<i class="fa fa-camera"></i>联系站长
 			<div class="hiddenBox normalBox borderBox" style="display:none;">
 				<asset:image src="WangLuo/SuCai/个人原版.png" alt="微信号" title="微信号" style="height:210px;width:210px;margin:0 auto;display:block;"/>
-			</div>
-		</li>
-		<li class="wrapperBox">
-			<i class="fa fa-search"></i>站内
-			<div class="hiddenBox normalBox borderBox" style="display:none;">
-				<g:render template="/layouts/plugin/baiDuZhanNei"/>
 			</div>
 		</li>
 		
