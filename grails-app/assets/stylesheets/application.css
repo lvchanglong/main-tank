@@ -49,12 +49,6 @@
 	position:relative;
 	padding-bottom:25px;
 }
-.rightTopHeight100 {
-	position: absolute;
-	right:0;
-	top:0;
-	height: 100%;
-}
 .clearfix:after {
 	content:"";
 	display:block; 
@@ -276,6 +270,13 @@
 	position:absolute;
 	left:0;
 	top:auto;
+}
+
+#main-header .innerWrapper {
+	max-width:360px;
+	margin:0 auto;
+	width:100%;
+	padding:5px 5px 130px 5px;
 }
 
 /*------------------------------------------------------------------------------------------*/

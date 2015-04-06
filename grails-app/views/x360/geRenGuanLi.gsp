@@ -12,28 +12,28 @@
 			<br/>
 			
 			<div class="relative">
-				<div style="position:relative;padding-left:210px;">
+				<div style="position:relative;padding-left:210px;float:left;">
 					<h3>
 						${ yongHuInstance.xingMing }（${ yongHuInstance.zhangHao }）
 					</h3>
 					<p>
-						生日<span class="separator">/</span>${ yongHuInstance.shengRi }
+						生日<span class="separator"></span>${ yongHuInstance.shengRi }
 						<br/>
-						性别<span class="separator">/</span>${ yongHuInstance.xingBie }
+						性别<span class="separator"></span>${ yongHuInstance.xingBie }
 						<br/>
-						所在<span class="separator">/</span>${ yongHuInstance.suoZai }
+						所在<span class="separator"></span>${ yongHuInstance.suoZai }
 						<br/>
-						手机<span class="separator">/</span>${ yongHuInstance.shouJi }
+						手机<span class="separator"></span>${ yongHuInstance.shouJi }
 						<br/>
-						邮箱<span class="separator">/</span>${ yongHuInstance.youXiang }
+						邮箱<span class="separator"></span>${ yongHuInstance.youXiang }
 					</p>
 				</div>
 				
 				<g:link controller="x360" action="woDeShiJie" id="${ yongHuInstance.id }" target="_blank">
-					<asset:image src="${ yongHuInstance.touXiang }" style="position:absolute;left:0;top:0;width:180px;height:180px;" alt="头像"/>
+					<asset:image src="${ yongHuInstance.touXiang }" style="position:absolute;left:0;top:0;width:180px;height:180px;margin-top:35px;" alt="头像"/>
 				</g:link>
 				
-				<asset:image src="WangLuo/SuCai/${ yongHuInstance.xingBie }.png" alt="性别" title="${ yongHuInstance.xingBie }" style="position:absolute;right:0;top:0;height:250px;"/>
+				<asset:image src="WangLuo/SuCai/${ yongHuInstance.xingBie }.png" alt="性别" title="${ yongHuInstance.xingBie }" style="float:right;height:250px;"/>
 			</div>
 			<div style="clear:both;"></div>
 			
@@ -44,12 +44,12 @@
 			<br />
 			
 			<ul class="clearfix">
-				<li style="float:left;margin:0 15px;">
+				<li style="float:left;">
 					<g:link controller="x360" action="geRenShuoShuo" id="${ yongHuInstance.id }" target="_blank" class="aList">
 						<asset:image src="WangLuo/SuCai/个人说说.png" alt="个人说说"/>
 					</g:link>
 				</li>
-				<li style="float:left;margin:0 30px;">
+				<li style="float:left;">
 					<g:link controller="x360" action="geRenWenZhang" id="${ yongHuInstance.id }" target="_blank" class="aList">
 						<asset:image src="WangLuo/SuCai/个人文章.png" alt="个人文章"/>
 					</g:link>
@@ -59,11 +59,11 @@
 			<hr />
 			
 			<div id="kongjian-wrapper" class="relative clearfix">
-				<h2 id="kongjian-wrapper-h1" style="float:left;">网站公告</h2>
-				
-				<div style="float:right;">
+				<div style="float:left;">
 					<g:render template="/layouts/plugin/kaTong" />
 				</div>
+				
+				<h2 id="kongjian-wrapper-h1" style="float:right;">网站公告</h2>
 			</div>
 			
 		</div>

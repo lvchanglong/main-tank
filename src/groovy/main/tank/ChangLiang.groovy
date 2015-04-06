@@ -18,6 +18,11 @@ class ChangLiang {
 	static String QQ = "417891235"
 	
 	/**
+	 * 微信
+	 */
+	static String WX = "lv417891235"
+	
+	/**
 	 * YOU_XIANG
 	 */
 	static String YOU_XIANG = "417891235@qq.com"

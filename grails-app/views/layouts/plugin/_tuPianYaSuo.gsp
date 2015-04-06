@@ -9,9 +9,9 @@
 			<input type="file" name="file" onchange="tuPianChaKan(this.files, '#tuPianYaSuo .tuPianWrapper', '#tuPianYaSuo .tuPianXuanZe', '#tuPianYaSuo .tuPianShangChuan');" multiple="false" class="btn"/>
 		</div>
 		
-		<g:submitButton name="shangChuan" value="开始上传" class="tuPianShangChuan btn"/>
+		<g:submitButton name="shangChuan" value="开始上传" class="tuPianShangChuan btn btn-default" style="width:180px;"/>
 		
-		<a href="javascript:void(0);" class="tuPianXiaZai btn" style="display:none;">点此下载</a>
+		<a href="javascript:void(0);" class="tuPianXiaZai btn btn-default" style="display:none;">点此下载</a>
 		
 		<g:field type="number" name="width" placeholder="限定宽度(px)" style="width:180px;"/>
 		<g:field type="number" name="height" placeholder="限定高度(px)" style="width:180px;"/>
@@ -25,7 +25,7 @@
 		</ul>
 	</g:uploadForm>
 	
-	<div class="tuPianWrapper" style="position:absolute;right:0;top:0;width:70%;height:100%;">
+	<div class="tuPianWrapper" style="float:left;width:180px;height:180px;">
 		
 	</div>
 	
