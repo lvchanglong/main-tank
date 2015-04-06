@@ -171,22 +171,6 @@ function wenJianShangChuan(files, url, shangChuanSelector, params) {
 }
 
 /**
- * 浮动响应
- * wrapper:顶层
- * target:浮动框
- */
-function responseToHover(wrapper, target) {
-	jQuery(wrapper).hover(
-		function () {
-			jQuery(this).find(target).show();
-		},
-		function () {
-			jQuery(this).find(target).hide();
-		}
-	);
-}
-
-/**
  * 远程分页
  * wrapperClass:用于整体内容更新
  */
@@ -332,4 +316,24 @@ function Talk(dialogID, array) {
 			$dialog.hide();
 		}
 	}
+}
+
+/**
+ * 浮动响应
+ * wrapperClass:包装类（触发器）
+ * hideElement:需要隐藏的元素(处理元素)
+ */
+function responseToHover(wrapperClass, hideID) {
+	var timer = null;//延时器
+	jQuery(wrapperClass).hover(
+		function () {
+			jQuery(hideID).show();
+			clearTimeout(timer);
+		},
+		function () {
+			timer = setTimeout(function() {//延时执行
+				jQuery(hideID).hide();
+			}, 50);
+		}
+	);
 }

@@ -132,6 +132,21 @@
 .inlineBlock {
 	display:inline-block;
 }
+.minWidth {
+	min-width:360px;
+}
+.zIndexMax{
+	z-index:999;
+}
+.zIndex9{
+	z-index:900;
+}
+.zIndex8{
+	z-index:800;
+}
+.zIndex7{
+	z-index:700;
+}
 /*-----------------------------------------------------------------------------------------------*/
 
 #main {
@@ -191,82 +206,76 @@
 	height:25px;
 	line-height:25px;
 	margin:0;
-	padding:0 15px;
+	padding:0 10px;
 }
 #main-footer a:hover {
 	color:white;
-}
-.minWidth {
-	min-width:360px;
 }
 
 /*------------------------------------------------------------------------------------------*/
 
 #main-header {
+	position:relative;
+}
+#main-header .daoHang {
 	width:100%;
 	line-height:56px;
-	color:white;
 	background-color: #2C3E50;
+	color:#fff;
 	box-shadow: 0 0 17px #333;
+	position:relative;
 	z-index:999;
 }
-#main-header .logo {
-	float:left;
+
+#main-header-logo {
+	display:block;
 	width:260px;
 	height:56px;
+	float:left;
 }
-#main-header .logo img {
+#main-header-logo img {
 	height:100%;
 	width:100%;
 	vertical-align:top;
 }
-#main-header .menu{
-	float:right;
+
+#main-header-menu {
 	display:block;
 	width:100px;
 	height:56px;
-	text-decoration:none;
+	float:right;
+	text-align:center;
 	font-size:26px;
-	text-align:center;
-}
-#main-header ol{
-	float:left;
-	margin:0;
-}
-#main-header ol li {
-	float:left;
-	display:block;
-	width:120px;
-	padding:0 15px;
-	text-align:center;
-	position:relative;
-	margin:0;
-}
-#main-header .hiddenBox {
-	position:fixed;
-	left:0;
-	top:auto;
-	z-index:999;
-	text-align:left;
-	color:#333;
-	line-height:40px;
-	width:100%;
-	height:300px;
-	background-color: white;
-	border-bottom:7px solid #2C3E50;
+	color: #ccc;
 }
 
-#main-header .normalBox {
-	font-size:14px;
+#main-header-toggle {
+	float:left;
 }
-#main-header .largeBox {
-	left:0px;
-	bottom:-460px;
-	width:570px;
-	height:460px;
-	padding:30px 230px 40px 30px;
-	font-size:14px;
+#main-header-toggle li {
+	float:left;
+	width:120px;
+	text-align:center;
+	margin:0;
+	color: #ccc;
+}
+#main-header-toggle li:hover, #main-header-menu:hover {
+	color: #fff;
+}
+
+#main-header .hiddenBox {
+	display:none;
+	width:98%;
+	margin:0 1%;
+	min-height:400px;
+	z-index:900;
+	background-color: white;
+	border-width:0 7px 7px 7px;
+	border-style:solid;
+	border-color:#2C3E50;
+	position:absolute;
+	left:0;
+	top:auto;
 }
 
 /*------------------------------------------------------------------------------------------*/
-

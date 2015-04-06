@@ -3,7 +3,7 @@
 
 <footer id="main-footer">
 	
-	<div style="padding-top:10px;">
+	<div style="padding:5px 0 5px 0;">
         <a class="btn bold" href="http://www.main-tank.com">
         	<i class="fa fa-desktop"></i>电脑版</strong>
 		</a>
@@ -43,37 +43,31 @@
 				用前必读
 			</g:link>
 		</li>
-		<li><span class="separator">/</span></li>
 		<li>
 			<g:link controller="x360" action="wangZhanYunYing">
 				网站运营
 			</g:link>
 		</li>
-		<li><span class="separator">/</span></li>
 		<li>
 			<g:link controller="x360" action="fanKuiLieBiao">
 				反馈列表
 			</g:link>
 		</li>
-		<li><span class="separator">/</span></li>
 		<li>
 			<g:link controller="x360" action="gengXinRiZhi">
 				更新日志
 			</g:link>
 		</li>
-		<li><span class="separator">/</span></li>
 		<li>
 			<g:link controller="x360" action="yongHuLieBiao">
 				用户列表
 			</g:link>
 		</li>
-		<li><span class="separator">/</span></li>
 		<li>
 			<g:link controller="x360" action="shuoShuoLieBiao">
 				说说列表
 			</g:link>
 		</li>
-		<li><span class="separator">/</span></li>
 		<li>
 			<g:link controller="x360" action="fuWuLieBiao">
 				服务列表

@@ -242,7 +242,7 @@ button,input,select,textarea {
 	vertical-align: baseline;
 }
 
-button,input,textarea,.btn {
+button,input,textarea,select,.btn {
 	margin-top: 5px;
 	color: #141412;
 	border: 1px solid #dce4ec;
@@ -485,11 +485,17 @@ table {
 	width: 100%;
 }
 
+tr {
+	border: 0;
+}
+
 caption,
 th,
 td {
 	font-weight: normal;
 	text-align: left;
+	line-height: 1.5em;
+	vertical-align: top;
 }
 
 caption {
@@ -527,53 +533,6 @@ form {
 	position:relative;
 }
 
-/* 
- * Assistive text 
- * ----------------------------------------------------------------------------
- */
-.screen-reader-text {
-	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important;
-}
-
-.screen-reader-text:focus {
-	background-color: #f1f1f1;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	clip: auto !important;
-	color: #21759b;
-	display: block;
-	font-size: 14px;
-	font-weight: bold;
-	height: auto;
-	line-height: normal;
-	padding: 15px 23px 14px;
-	position: absolute;
-	left: 5px;
-	top: 5px;
-	text-decoration: none;
-	width: auto;
-	z-index: 100000; /* Above WP toolbar */
-}
-
-/* GENERAL */
-.content h1 {
-	border-bottom: 1px solid #CCCCCC;
-	margin: 0.8em 1em 0.3em;
-	padding: 0 0.25em;
-}
-
-.scaffold-list h1 {
-	border: none;
-}
-
-.footer {
-	background: #abbf78;
-	color: #000;
-	clear: both;
-	margin-top: 1.5em;
-	padding: 1em;
-	min-height: 1em;
-}
 /* NAVIGATION MENU */
 
 .nav {
@@ -906,32 +865,6 @@ embed {
 }
 
 /* TABLES */
-
-table {
-	border-collapse: collapse;
-	width: 100%;
-}
-
-tr {
-	border: 0;
-}
-
-td, th {
-	line-height: 1.5em;
-	text-align: left;
-	vertical-align: top;
-}
-
-th {
-	background-color: #efefef;
-	background-image: -moz-linear-gradient(top, #ffffff, #eaeaea);
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff), color-stop(1, #eaeaea));
-	    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = '#ffffff', EndColorStr = '#eaeaea');
-	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff', EndColorStr='#eaeaea')";
-	color: #666666;
-	font-weight: bold;
-}
-
 thead th {
 	white-space: nowrap;
 }
@@ -969,4 +902,10 @@ th.desc a {
 
 .even {
 	background: #ffffff;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 1000px white inset;
 }
