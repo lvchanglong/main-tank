@@ -11,20 +11,20 @@
 		<asset:javascript src="YinYong/umeditor1_2_2-utf8-jsp/lang/zh-cn/zh-cn.js"/>
 	</head>
 	<body>
-		<div id="geRenWenZhang" class="borderBox clearfix defaultPage">
+		<div id="geRenWenZhang" class="clearfix defaultPage">
 			<h1>个人文章</h1>
 			<br/><br/>
 			
 			<g:if test="${ session.uid && session.uid == yongHuInstance.id }">
 				<g:formRemote name="wenzhang-save" url="[controller:'wenZhangRestful', action:'xsave']" onSuccess="wenZhangSaveSuccess(data,textStatus,'#geRenWenZhang-message')" onFailure="failure(XMLHttpRequest,textStatus,errorThrown,'#geRenWenZhang-message')" class="clearfix">
-					<g:textField name="biaoTi" required="" value="" style="margin-bottom:15px;width:100%;" class="borderBox" placeholder="文章标题" id="geRenWenZhang-biaoTi"/>
+					<g:textField name="biaoTi" required="" value="" style="margin-bottom:15px;width:100%;" placeholder="文章标题" id="geRenWenZhang-biaoTi"/>
 					
-					<g:textField name="guanJianCi" required="" value="" style="margin-bottom:15px;width:100%;" class="borderBox" placeholder="关键词" id="geRenWenZhang-guanJianCi"/>
+					<g:textField name="guanJianCi" required="" value="" style="margin-bottom:15px;width:100%;" placeholder="关键词" id="geRenWenZhang-guanJianCi"/>
 					
 					<script type="text/plain" id="geRenWenZhang-neiRong" name="neiRong" ></script>
 					
 					<%--
-					<g:textArea name="neiRong" placeholder="如果您想说点什么" class="borderBox" id="geRenWenZhang-neiRong" style="width:100%;height:700px;"/>
+					<g:textArea name="neiRong" placeholder="如果您想说点什么" id="geRenWenZhang-neiRong" style="width:100%;height:700px;"/>
 					--%>
 					
 					<g:hiddenField name="yongHu.id" value="${ session.uid }"/>

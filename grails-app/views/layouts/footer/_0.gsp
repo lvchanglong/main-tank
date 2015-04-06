@@ -1,37 +1,33 @@
 <%@ page import="main.tank.RiQi" %>
 <%@ page import="main.tank.ChangLiang" %>
 
-<footer id="main-footer" class="borderBox">
+<footer id="main-footer">
 	
-	<div style="padding-top:15px;">
-        <a class="defaultButton" href="http://www.main-tank.com">
-        	<i class="fa fa-desktop"></i>电脑版
+	<div style="padding-top:10px;">
+        <a class="btn bold" href="http://www.main-tank.com">
+        	<i class="fa fa-desktop"></i>电脑版</strong>
 		</a>
-		<a class="defaultButton" href="http://wap.main-tank.com">
+		<a class="btn bold" href="http://wap.main-tank.com">
 			<i class="fa fa-mobile-phone"></i>手机版
 		</a>
-        <a class="defaultButton" href="#main">
+        <a class="btn bold" href="#main">
             <i class="fa fa-chevron-up"></i>回顶部
         </a>
     </div>
     
-	<ul class="clearfix">
+	<ul class="clearfix inlineBlock">
 		<li>
 			<i class="fa fa-copyright"></i>${ new RiQi().getNian() }&nbsp;${ ChangLiang.XING_MING }&nbsp;版权所有
 		</li>
-		<li><span class="separator">/</span></li>
 		<li>
 			<i class="fa fa-qq"></i>${ ChangLiang.QQ }
 		</li>
-		<li><span class="separator">/</span></li>
 		<li>
 			<i class="fa fa-envelope-o"></i><a href="mailto:${ ChangLiang.YOU_XIANG }">${ ChangLiang.YOU_XIANG }</a>
 		</li>
-		<li><span class="separator">/</span></li>
 		<li>
 			<i class="fa fa-phone"></i>${ ChangLiang.SHOU_JI }
 		</li>
-		<li><span class="separator">/</span></li>
 		<li>
 			<a href="http://www.miitbeian.gov.cn" target="_blank" rel="nofollow">
 				${ ChangLiang.BEI_AN }
@@ -41,7 +37,7 @@
 	
 	<br/>
 	
-	<ol class="clearfix">	
+	<ol class="clearfix inlineBlock">	
 		<li>
 			<g:link controller="x360" action="yongQianBiDu">
 				用前必读

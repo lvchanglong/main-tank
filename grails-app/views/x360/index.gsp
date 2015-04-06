@@ -9,12 +9,9 @@
 	</head>
 	<body>
 
-		<div id="zhuYe" class="borderBox clearfix defaultPage">
-			
-			<g:render template="/layouts/plugin/sliderEvolution" model="[instanceList: slideList, width:'100%', height:'372px']"/>
-			
+		<div id="zhuYe" class="clearfix defaultPage">
+
 			<g:render template="/layouts/plugin/faBuFanKui" />
-			
 			<hr />
 			
 			<g:if test="${ zuiXinWenZhang }">
@@ -37,13 +34,14 @@
 				<hr/>
 			</g:if>
 			
-			<g:render template="/layouts/plugin/baiDuZhanNei"/>
+			<g:render template="/layouts/plugin/sliderEvolution" model="[instanceList: slideList, width:'100%', height:'372px']"/>
+			<hr/>
 			
+			<g:render template="/layouts/plugin/baiDuZhanNei"/>
 			<hr/>
 			
 			<h1>个人文章</h1>
 			<g:applyLayout controller="wenZhang" action="index" params="[offset:0, max:10]" />		
-			
 			<hr/>
 			
 			<h1>我的世界</h1>

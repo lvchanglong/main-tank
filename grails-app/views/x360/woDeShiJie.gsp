@@ -7,13 +7,13 @@
 		<title>我的世界</title>
 	</head>
 	<body>
-		<div id="yonghu-shijie-0" class="borderBox clearfix defaultPage">
+		<div id="yonghu-shijie-0" class="clearfix defaultPage">
 			<h1>我的世界</h1>
 			<br/><br/>
 			
 			<g:if test="${ session.uid && session.uid == yongHuInstance.id }">
 				<g:formRemote name="shijie-save" url="[controller:'shiJieRestful', action:'xsave']" onSuccess="shiJieSaveSuccess(data,textStatus,'#yonghu-shijie-0-message')" onFailure="failure(XMLHttpRequest,textStatus,errorThrown,'#yonghu-shijie-0-message')" class="clearfix">
-					<g:textArea name="biaoTi" required="" placeholder="请为“新世界”命名" class="borderBox" id="yonghu-shijie-0-biaoTi" />
+					<g:textArea name="biaoTi" required="" placeholder="请为“新世界”命名" id="yonghu-shijie-0-biaoTi" />
 					<g:hiddenField name="yongHu.id" value="${ session.uid }"/>
 					<g:submitButton name="chuangZao" value="创造" class="submitBtn"/>
 					<div id="yonghu-shijie-0-message" class="messageBox">(^_,^ )：“我今天又没吃药，感觉自己萌萌哒...”</div>

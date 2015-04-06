@@ -7,7 +7,7 @@
 		<title>${wenZhangInstance?.biaoTi}</title>
 	</head>
 	<body>
-		<div id="show-wenZhang" class="borderBox clearfix defaultPage">
+		<div id="show-wenZhang" class="clearfix defaultPage">
 
 			<h2><g:fieldValue bean="${wenZhangInstance}" field="biaoTi"/></h2>
 			

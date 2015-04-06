@@ -67,7 +67,7 @@ function failure(XMLHttpRequest,textStatus,errorThrown,selector) {
 }
 
 /**
- * 头像预览
+ * 图片查看
  * wrapperSelector:用于更新头像
  * tuPianXuanZe:用于更新选择(按钮)状态
  * shangChuanSelector:用于更新上传(按钮)状态
@@ -93,18 +93,17 @@ function tuPianChaKan(files, wrapperSelector, xuanZeSelector, shangChuanSelector
              jQuery(shangChuanSelector).val("开始上传");
          };
     }
-    
-    //console.log(files);
+	
 }
 
 /**
- * 图片上传
+ * 文件上传
  * files:jQuery(this).find([type=file])[0].files
  * url:${ createLink(controller:"x520", action:"touXiangShangChuan") }
  * shangChuanSelector:上传按钮
- * <g:uploadForm controller="x520" action="touXiangShangChuan" onsubmit="touXiangShangChuan(jQuery(this).find([type=file])[0].files, '${ createLink(controller:"x520", action:"touXiangShangChuan") }', '${ dangQianYongHu.id }', '#kaiShiShangChuan');return false">
+ * <g:uploadForm useToken="true" controller="x520" action="touXiangShangChuan" onsubmit="touXiangShangChuan(jQuery(this).find([type=file])[0].files, '${ createLink(controller:"x520", action:"touXiangShangChuan") }', '#kaiShiShangChuan', jQuery(this).serialize());return false">
  */
-function tuPianShangChuan(files, url, shangChuanSelector) {
+function wenJianShangChuan(files, url, shangChuanSelector, params) {
 
 	$shangChuan = jQuery(shangChuanSelector);//上传按钮
 
@@ -152,7 +151,7 @@ function tuPianShangChuan(files, url, shangChuanSelector) {
 				$shangChuan.val("上传失败");
 			} else {//成功
 				var xhr = new XMLHttpRequest();
-				xhr.open("POST", url + "?fileName=" + encodeURIComponent(file.name));
+				xhr.open("POST", url + "?fileName=" + encodeURIComponent(file.name) + "&" + params);
           		xhr.overrideMimeType("application/octet-stream");
 				xhr.sendAsBinary(this.result);
 				
@@ -162,8 +161,6 @@ function tuPianShangChuan(files, url, shangChuanSelector) {
 							console.log("上传成功");
 							//console.log("response: " + xhr.responseText);
 							$shangChuan.val("上传成功");
-
-							$shangChuan.css("background-color", "lightslategray");
 						}
 					}
 				}

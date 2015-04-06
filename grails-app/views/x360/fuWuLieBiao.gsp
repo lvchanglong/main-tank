@@ -10,7 +10,7 @@
 	</head>
 	<body>
 
-		<div id="fuWu" class="borderBox clearfix defaultPage">
+		<div id="fuWu" class="clearfix defaultPage">
 
 			<h1>服务列表</h1>
 

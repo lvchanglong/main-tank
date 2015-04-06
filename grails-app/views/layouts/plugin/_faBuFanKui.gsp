@@ -6,10 +6,10 @@
 	<g:formRemote name="fanKui-save" url="[controller:'fanKuiRestful', action:'save']"  onSuccess="fanKuiSaveSuccess(data,textStatus)" onFailure="failure(XMLHttpRequest,textStatus,errorThrown,'#fanKui-save-status')" class="clearfix">
 		<g:hiddenField name="yongHu.id" value="${ session.uid }"/>
 		
-		<g:textArea name="neiRong" id="fanKui-save-neiRong" required="" class="borderBox borderRadius smallTextArea" placeholder="你想写多长写多长"/>
+		<g:textArea name="neiRong" id="fanKui-save-neiRong" required="" class="borderRadius smallTextArea" placeholder="你想写多长就写多长"/>
 
 		<div id="fanKui-save-status" class="messageBox">(^_,^ )：“我今天又没吃药，感觉自己萌萌哒...”</div>
-		<g:submitButton name="tiJiao" value="发布" class="submitBtn"/>
+		<g:submitButton name="tiJiao" value="发布" class="submitBtn btn-default"/>
 	</g:formRemote>
 				
 	<script type="text/javascript">

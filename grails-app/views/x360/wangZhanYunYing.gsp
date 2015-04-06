@@ -7,7 +7,7 @@
 		<title>网站运营</title>
 	</head>
 	<body>
-		<div id="wangZhanXiangGuan" class="borderBox clearfix defaultPage">
+		<div id="wangZhanXiangGuan" class="clearfix defaultPage">
 			<h1>网站运营</h1>
 			<p>什么东西有用，我们就提供什么。没用时就扔掉。倘若后来看看还有用，就再捡回来。我们不一定要做到最好，但一定要做到最有用。我们的目标，就是星辰大海！</p>
 			

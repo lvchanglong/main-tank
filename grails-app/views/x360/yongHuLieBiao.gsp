@@ -9,7 +9,7 @@
 	</head>
 	<body>
 
-		<div id="yongHu" class="borderBox clearfix defaultPage">
+		<div id="yongHu" class="clearfix defaultPage">
 			<h1>用户列表</h1>
 			<br/><br/>
 			<g:applyLayout controller="yongHu" action="index" params="[offset:0, max:5]" />

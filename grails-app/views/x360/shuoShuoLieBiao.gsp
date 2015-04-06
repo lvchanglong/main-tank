@@ -9,7 +9,7 @@
 	</head>
 	<body>
 
-		<div id="shuoShuo" class="borderBox clearfix defaultPage">
+		<div id="shuoShuo" class="clearfix defaultPage">
 			<h1>说说列表</h1>
 			<br/><br/>
 			<g:applyLayout controller="shuoShuo" action="index" params="[offset:0, max:10]" />

@@ -7,7 +7,7 @@
 		<title>个人管理</title>
 	</head>
 	<body>
-		<div id="kongjian" class="borderBox clearfix defaultPage">
+		<div id="kongjian" class="clearfix defaultPage">
 			<h1>个人管理</h1>
 			<br/>
 			

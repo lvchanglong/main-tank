@@ -7,7 +7,7 @@
 		<title>用前必读</title>
 	</head>
 	<body>
-		<div id="yongQianBiDu" class="borderBox clearfix defaultPage">
+		<div id="yongQianBiDu" class="clearfix defaultPage">
 			<h1>用前必读</h1>
 			<h2>站长声明</h2>
 			<p>

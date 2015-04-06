@@ -92,37 +92,41 @@ class X520Controller {
 	
 	/**
 	 * 头像上传
-	 * @param userID 被处理用户
+	 * @param uid 被处理用户
 	 * grails-app/assets/resources/KongJian/${yongHuInstance.zhangHao}/TuPian/${fileName}
 	 */
 	@Transactional
-	def touXiangShangChuan(String fileName, String userID) {
-		def yongHuInstance = YongHu.get(userID)
-		if (yongHuInstance) {
-			def assetPath = "KongJian/${yongHuInstance.zhangHao}/TuPian/${fileName}"
-			BufferedInputStream fileIn = new BufferedInputStream(request.getInputStream())
-			byte[] buf = new byte[1024]
-			File file = ZiYuanGuanLi.getFile("grails-app/assets/resources/${assetPath}")
-			BufferedOutputStream fileOut = new BufferedOutputStream(new FileOutputStream(file))
-			while (true) {
-			   int bytesIn = fileIn.read(buf, 0, 1024)
-			   if (bytesIn == -1) {
-				  break
-			   } else {
-				  fileOut.write(buf, 0, bytesIn)
-			   }
+	def touXiangShangChuan(String fileName, String uid) {
+		withForm {
+			def yongHuInstance = YongHu.get(uid)
+			if (yongHuInstance) {
+				def assetPath = "KongJian/${yongHuInstance.zhangHao}/TuPian/${fileName}"
+				BufferedInputStream fileIn = new BufferedInputStream(request.getInputStream())
+				byte[] buf = new byte[1024]
+				File file = ZiYuanGuanLi.getFile("grails-app/assets/resources/${assetPath}")
+				BufferedOutputStream fileOut = new BufferedOutputStream(new FileOutputStream(file))
+				while (true) {
+				   int bytesIn = fileIn.read(buf, 0, 1024)
+				   if (bytesIn == -1) {
+					  break
+				   } else {
+					  fileOut.write(buf, 0, bytesIn)
+				   }
+				}
+				fileOut.flush()
+				fileOut.close()
+				
+				yongHuInstance.touXiang = assetPath
+				yongHuInstance.save(flush: true)//更新路径
+				
+				TuPian.yaSuo(file, 180, 180)//图片压缩处理
+				
+				render assetPath
+			} else {
+				render status: NOT_FOUND
 			}
-			fileOut.flush()
-			fileOut.close()
-			
-			yongHuInstance.touXiang = assetPath
-			yongHuInstance.save(flush: true)//更新路径
-			
-			TuPian.yaSuo(file, 180, 180)//图片压缩处理
-			
-			render assetPath
-		} else {
-			render status: NOT_FOUND
+		}.invalidToken {
+			// bad request
 		}
 	}
 	
@@ -133,36 +137,44 @@ class X520Controller {
 	 * @param height 高度限定
 	 */
 	def tuPianYaSuo(String fileName, Integer width, Integer height) {
-		if ((width == null && height == null) || (width && width <= 0) || (height && height <= 0)) {//错误数据处理
-			width = 180
-			height = 180
-		} else if (width != null && height == null) {//宽度限定，高度自适
-			height = 0
-		} else if (width == null && height != null) {//高度限定，宽度自适
-			width = 0
-		}
-		
-		def assetPath = "LinShi/${fileName}"
-		def filePath = "grails-app/assets/resources/${assetPath}"
-		
-		BufferedInputStream fileIn = new BufferedInputStream(request.getInputStream())
-		byte[] buf = new byte[1024]
-		File file = ZiYuanGuanLi.getFile(filePath)
-		BufferedOutputStream fileOut = new BufferedOutputStream(new FileOutputStream(file))
-		while (true) {
-			int bytesIn = fileIn.read(buf, 0, 1024)
-			if (bytesIn == -1) {
-				  break
-			} else {
-				  fileOut.write(buf, 0, bytesIn)
+		withForm {
+			if(!fileName) {
+				render status: BAD_REQUEST, text: "请求不合法 "
+				return
 			}
+			if ((width == null && height == null) || (width && width <= 0) || (height && height <= 0)) {//错误数据处理
+				width = 180
+				height = 180
+			} else if (width != null && height == null) {//宽度限定，高度自适
+				height = 0
+			} else if (width == null && height != null) {//高度限定，宽度自适
+				width = 0
+			}
+			
+			def assetPath = "LinShi/${fileName}"
+			def filePath = "grails-app/assets/resources/${assetPath}"
+			
+			BufferedInputStream fileIn = new BufferedInputStream(request.getInputStream())
+			byte[] buf = new byte[1024]
+			File file = ZiYuanGuanLi.getFile(filePath)
+			BufferedOutputStream fileOut = new BufferedOutputStream(new FileOutputStream(file))
+			while (true) {
+				int bytesIn = fileIn.read(buf, 0, 1024)
+				if (bytesIn == -1) {
+					  break
+				} else {
+					  fileOut.write(buf, 0, bytesIn)
+				}
+			}
+			fileOut.flush()
+			fileOut.close()
+			
+			TuPian.yaSuo(file, width, height)//图片压缩处理
+			
+			render createLink(controller:"x520", action:"xiaZai", params:["filePath":filePath])
+		}.invalidToken {
+			// bad request
 		}
-		fileOut.flush()
-		fileOut.close()
-		
-		TuPian.yaSuo(file, width, height)//图片压缩处理
-		
-		render createLink(controller:"x520", action:"xiaZai", params:["filePath":filePath])
 	}
 	
 	/**

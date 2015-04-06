@@ -2,56 +2,18 @@
 
 <g:set var="dangQianYongHu" value="${ YongHu.get(session.uid) }" />
 
-<header id="main-header" class="clearfix minWidth">
-
-	<g:link uri="/" class="logo">
-		<asset:image src="WangLuo/Logo/logo.png" alt="主坦克"/>
-	</g:link>
-	
-	<a href="javascript:void(0);" class="menu">
-		<i class="fa fa-list"></i>
-		<script type="text/javascript">
-			jQuery("#main-header .menu").click(function() {
-				$("#header-toggle").toggle();
-			});
-		</script>
-	</a>
-
-	<ol id="header-toggle">
+<header id="main-header">
+	<ul class="clearfix">
+		<li>
+			<g:link uri="/" ><asset:image src="WangLuo/Logo/logo.png" alt="主坦克" style="height:56px;"/></g:link>
+		</li>
+		
 		<li class="wrapperBox">
 			<i class="fa fa-camera"></i>联系站长
 			<div class="hiddenBox normalBox" style="display:none;">
 				<asset:image src="WangLuo/SuCai/个人原版.png" alt="微信号" title="微信号" style="height:210px;width:210px;margin:0 auto;display:block;"/>
 			</div>
 		</li>
-		<li>
-			<g:link controller="x360" action="geRenGuanLi" id="${ session.uid }"><i class="fa fa-cog"></i>个人管理</g:link>
-
-		</li>
-		<li>
-			<g:link controller="x360" action="geRenGuanLi" id="${ session.uid }"><i class="fa fa-cog"></i>个人管理</g:link>	
-		</li>
-		<li>
-			<g:link controller="x360" action="geRenGuanLi" id="${ session.uid }"><i class="fa fa-cog"></i>个人管理</g:link>
-	
-		</li>
-		<li>
-				<g:link controller="x360" action="geRenGuanLi" id="${ session.uid }"><i class="fa fa-cog"></i>个人管理</g:link>
-
-		</li>
-		<li>
-			<g:link controller="x360" action="geRenGuanLi" id="${ session.uid }"><i class="fa fa-cog"></i>个人管理</g:link>
-		</li>
-	</ol>
-
-	<script type="text/javascript">
-		responseToHover(".wrapperBox", ".hiddenBox");//浮动响应
-	</script>
-</header>
-
-<%--<ul class="clearfix">
-		
-		
 		
 		<g:if test="${ dangQianYongHu }">
 			<li class="wrapperBox">
@@ -134,4 +96,29 @@
 				</div>
 			</li>
 		</g:else>
-	</ul>--%>
+	</ul>
+	
+	<a href="javascript:void(0);" id="headerMenu"><i class="fa fa-list"></i></a>
+			
+	<script type="text/javascript">
+		jQuery("#headerMenu").click(function() {
+			$("#toggle").toggle();
+		});
+	</script>
+			
+	<ol>
+		<li>
+			
+		</li>
+		<li class="wrapperBox">
+			<g:if test="${ session.uid }">
+				<g:link controller="x360" action="geRenGuanLi" id="${ session.uid }"><i class="fa fa-cog"></i>个人管理</g:link>
+			</g:if>		
+		</li>
+	</ol>
+	
+	<script type="text/javascript">
+		responseToHover(".wrapperBox", ".hiddenBox");//浮动响应
+	</script>
+</header>
+

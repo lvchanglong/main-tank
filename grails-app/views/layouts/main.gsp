@@ -39,8 +39,8 @@
 		<asset:javascript src="application.js"/>
 		<g:layoutHead/>
 	</head>
-	<body>
-		<section id="main" class="minWidth">
+	<body class="minWidth">
+		<section id="main">
 			<g:pageProperty name="page.header" default="${ render(template:"/layouts/header/" + ChangLiang.HEADER_INDEX) }"/>
 			
 			<div id="main-wrapper" class="clearfix">

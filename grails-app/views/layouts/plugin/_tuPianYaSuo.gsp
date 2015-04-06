@@ -1,21 +1,22 @@
 <div id="tuPianYaSuo" class="clearfix relative">
 	
-	<g:uploadForm controller="x520" action="tuPianYaSuo" onsubmit="tuPianYaSuo(jQuery(this).find([type=file])[0].files, '${ createLink(controller:"x520", action:"tuPianYaSuo") }', '#tuPianYaSuo .tuPianShangChuan', jQuery(this).serialize());return false" style="position: relative;min-height: 256px;min-width: 256px;width:30%;">									
+	<g:uploadForm controller="x520" useToken="true" action="tuPianYaSuo" onsubmit="tuPianYaSuo(jQuery(this).find([type=file])[0].files, '${ createLink(controller:"x520", action:"tuPianYaSuo") }', '#tuPianYaSuo .tuPianShangChuan', jQuery(this).serialize());return false" style="position: relative;min-height: 256px;min-width: 256px;width:30%;">									
 		
-		<input type="file" name="file" onchange="touXiangChaKan(this.files, '#tuPianYaSuo .tuPianWrapper', '#tuPianYaSuo .tuPianXuanZe', '#tuPianYaSuo .tuPianShangChuan');" multiple="false" class="borderBox"/>
-		
-		<div class="borderBox tuPianXuanZe">
-			选择图片
+		<div class="relative">
+			<div class="tuPianXuanZe btn btn-default">
+				选择图片		
+			</div>
+			<input type="file" name="file" onchange="tuPianChaKan(this.files, '#tuPianYaSuo .tuPianWrapper', '#tuPianYaSuo .tuPianXuanZe', '#tuPianYaSuo .tuPianShangChuan');" multiple="false" class="btn"/>
 		</div>
 		
-		<g:submitButton name="shangChuan" value="开始上传" class="tuPianShangChuan"/>
+		<g:submitButton name="shangChuan" value="开始上传" class="tuPianShangChuan btn"/>
 		
-		<a href="javascript:void(0);" class="tuPianXiaZai" style="display:none;">点此下载</a>
+		<a href="javascript:void(0);" class="tuPianXiaZai btn" style="display:none;">点此下载</a>
 		
-		<g:field type="number" name="width" placeholder="限定宽度(px)" class="borderBox" style="width:180px;"/>
-		<g:field type="number" name="height" placeholder="限定高度(px)" class="borderBox" style="width:180px;"/>
+		<g:field type="number" name="width" placeholder="限定宽度(px)" style="width:180px;"/>
+		<g:field type="number" name="height" placeholder="限定高度(px)" style="width:180px;"/>
 		
-		<ul class="borderBox">
+		<ul>
 			<li>宽度&nbsp;+&nbsp;高度&nbsp;=&nbsp;&nbsp;(宽度, 高度)</li>
 			<li>空值&nbsp;+&nbsp;空值&nbsp;=&nbsp;&nbsp;(180, 180)</li>
 			<li>空值&nbsp;+&nbsp;300&nbsp;=&nbsp;&nbsp;(自适, 300)</li>
@@ -29,14 +30,12 @@
 	</div>
 	
 	<script type="text/javascript">
-		//图片压缩
 		function tuPianYaSuo(files, url, shangChuanSelector, params) {
 		
 			$shangChuan = jQuery(shangChuanSelector);//上传按钮
 		
 			if (files.length < 1) {
 				$shangChuan.val("( ↑ _ ↑ )");
-				$shangChuan.css("background-color", "transparent");
 				return false;
 			}
 			
@@ -82,19 +81,12 @@
 						xhr.open("POST", url + "?fileName=" + encodeURIComponent(file.name) + "&" + params);
 		          		xhr.overrideMimeType("application/octet-stream");
 						xhr.sendAsBinary(this.result);
-						
 						xhr.onreadystatechange = function() {
 							if (xhr.readyState == 4) {
 								if (xhr.status == 200) {
-									//console.log("压缩成功");
-									//console.log("response: " + xhr.responseText);
-									
 									$shangChuan.val("压缩成功");
-									$shangChuan.css("background-color", "lightslategray");
-									
 									jQuery("#tuPianYaSuo .tuPianXiaZai").attr("href", xhr.responseText).show();
 									$shangChuan.val("( ↓ _ ↓ )");
-									$shangChuan.css("background-color", "transparent");
 								}
 							}
 						}
