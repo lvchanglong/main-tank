@@ -29,7 +29,7 @@
 					<g:link controller="x360" action="geRenGuanLi" id="${ session.uid }"><i class="fa fa-cog"></i>个人管理</g:link>
 				</li>
 				<li>
-					<g:remoteLink controller="x520" action="yongHuZhuXiao" onSuccess="window.location.reload()"><i class="fa fa-sign-out"></i>注销</g:remoteLink>
+					<g:remoteLink controller="x520" action="yongHuZhuXiao" onSuccess="window.location.reload()"><i class="fa fa-sign-out"></i>退出登录</g:remoteLink>
 				</li>
 				<li class="hoverGaiMiMa">
 					<i class="fa fa-key"></i>${ dangQianYongHu.zhangHao }
@@ -40,10 +40,10 @@
 			</g:if>
 			<g:else>
 				<li class="hoverDengLu">
-					<i class="fa fa-sign-in"></i>登录
+					<i class="fa fa-sign-in"></i>用户登录
 				</li>
 				<li class="hoverZhuCe">
-					<i class="fa fa-user-plus"></i>注册
+					<i class="fa fa-user-plus"></i>用户注册
 				</li>
 			</g:else>
 			

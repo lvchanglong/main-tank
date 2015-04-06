@@ -158,6 +158,9 @@
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
 }
+#main-wrapper a {
+	text-decoration:underline;
+}
 #spinner {
 	background-color:white;
 	border:7px solid black;
@@ -201,6 +204,9 @@
 	line-height:25px;
 	margin:0;
 	padding:0 10px;
+}
+#main-footer a {
+	text-decoration:underline;
 }
 #main-footer a:hover {
 	color:white;
