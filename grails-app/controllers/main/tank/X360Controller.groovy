@@ -104,9 +104,9 @@ class X360Controller {
 	}
 	
 	/**
-	 * 网站运营
+	 * 关于网站
 	 */
-	def wangZhanYunYing() {
+	def guanYuWangZhan() {
 		
 	}
 	

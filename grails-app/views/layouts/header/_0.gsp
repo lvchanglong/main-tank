@@ -1,4 +1,5 @@
 <%@ page import="main.tank.YongHu" %>
+<%@ page import="main.tank.ChangLiang" %>
 
 <g:set var="dangQianYongHu" value="${ YongHu.get(session.uid) }" />
 
@@ -9,17 +10,21 @@
 			<asset:image src="WangLuo/Logo/logo.png" alt="主坦克"/>
 		</g:link>
 		
-		<a href="javascript:void(0);" id="main-header-menu">
-			<i class="fa fa-list"></i>
-			<script type="text/javascript">
-				jQuery("#main-header-menu").click(function() {
-					jQuery("#main-header-toggle").toggle();
-				});
-			</script>
-		</a>
+		<div id="main-header-menu">
+			<a href="javascript:void(0);">
+				<i class="fa fa-chevron-up"></i>
+			</a>
+			<a href="javascript:void(0);" id="main-header-link">
+				<i class="fa fa-list"></i>
+				<script type="text/javascript">
+					jQuery("#main-header-link").click(function() {
+						jQuery("#main-header-toggle").toggle();
+					});
+				</script>
+			</a>
+		</div>
 		
 		<ol id="main-header-toggle">
-			
 			
 			<g:if test="${ dangQianYongHu }">
 				<li>
@@ -55,7 +60,35 @@
 	
 	<%-- 联系站长 --%>
 	<div class="hiddenBox hoverLianXiZhanZhang" id="hoverLianXiZhanZhang">
-		<asset:image src="WangLuo/SuCai/个人原版.png" alt="微信号" title="微信号" style="height:360px;width:360px;margin:0 auto;display:block;"/>
+		<div class="innerWrapper clearfix">
+			<h3>微信公众号</h3>
+			<asset:image src="WangLuo/SuCai/公众原版.jpg" alt="微信公众号" title="微信公众号" style="float:left;display:block;width:100%;"/>
+			<hr/>
+			
+			<h3>个人相关信息</h3>
+			<div class="clearfix">
+				<ul style="float:left;display:block;">
+					<li>
+						<i class="fa fa-smile-o"></i>${ ChangLiang.XING_MING }
+					</li>
+					<li>
+						<i class="fa fa-qq"></i>${ ChangLiang.QQ }
+					</li>
+					<li>
+						<i class="fa fa-phone"></i>${ ChangLiang.SHOU_JI }
+					</li>
+					<li>
+						<i class="fa fa-envelope-o"></i><a href="mailto:${ ChangLiang.YOU_XIANG }" style="text-decoration:underline;">${ ChangLiang.YOU_XIANG }</a>
+					</li>
+				</ul>
+				
+				<asset:image src="WangLuo/SuCai/个人原版.png" alt="微信个人号" title="微信个人号" style="float:right;display:block;width:170px;"/>	
+			</div>
+			<hr/>
+			
+			<h3>支付宝收款码</h3>
+			<asset:image src="ShouKuan/1212.png" alt="支付宝收款码" title="支付宝收款码" style="float:right;width:100%;display:block;"/>
+		</div>
 	</div>
 	<script type="text/javascript">
 		responseToHover(".hoverLianXiZhanZhang", "#hoverLianXiZhanZhang");
@@ -83,7 +116,6 @@
 		<%-- 修改信息 --%>
 		<div class="hiddenBox hoverGaiXinXi" id="hoverGaiXinXi">
 			<div class="innerWrapper clearfix">
-				
 				<g:formRemote name="xinXiXiuGai" url="[controller:'yongHuRestful', action:'update', id:session.uid]" onSuccess="success(data,textStatus,'#yongHuXiuGaiTiShi')" onFailure="failure(XMLHttpRequest,textStatus,errorThrown,'#yongHuXiuGaiTiShi')" class="clearfix">
 					<h3>
 						(^﹃^ )<span class="separator">/</span><span id="yongHuXiuGaiTiShi" class="message-content">修改信息</span>

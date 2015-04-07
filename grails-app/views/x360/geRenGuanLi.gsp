@@ -12,7 +12,11 @@
 			<br/>
 			
 			<div class="relative">
-				<div style="position:relative;padding-left:210px;float:left;">
+				<g:link controller="x360" action="woDeShiJie" id="${ yongHuInstance.id }" target="_blank">
+					<asset:image src="${ yongHuInstance.touXiang }" style="float:left;width:180px;height:180px;margin-top:35px;padding:0 10px;" alt="头像"/>
+				</g:link>
+				
+				<div style="position:relative;float:left;">
 					<h3>
 						${ yongHuInstance.xingMing }（${ yongHuInstance.zhangHao }）
 					</h3>
@@ -28,10 +32,6 @@
 						邮箱<span class="separator"></span>${ yongHuInstance.youXiang }
 					</p>
 				</div>
-				
-				<g:link controller="x360" action="woDeShiJie" id="${ yongHuInstance.id }" target="_blank">
-					<asset:image src="${ yongHuInstance.touXiang }" style="position:absolute;left:0;top:0;width:180px;height:180px;margin-top:35px;" alt="头像"/>
-				</g:link>
 				
 				<asset:image src="WangLuo/SuCai/${ yongHuInstance.xingBie }.png" alt="性别" title="${ yongHuInstance.xingBie }" style="float:right;height:250px;"/>
 			</div>
