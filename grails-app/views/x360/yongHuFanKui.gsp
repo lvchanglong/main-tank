@@ -2,11 +2,11 @@
 <html>
 	<head>
 		<meta name="layout" content="main"/>
-		<title>反馈列表</title>
+		<title>用户反馈</title>
 	</head>
 	<body>
 		<div id="fanKuiLieBiao" class="clearfix defaultPage">
-			<h1>反馈列表</h1>
+			<h1>用户反馈</h1>
 			<g:render template="/layouts/plugin/faBuFanKui" />
 			
 			<hr/>

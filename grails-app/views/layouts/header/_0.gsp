@@ -11,22 +11,26 @@
 		</g:link>
 		
 		<div id="main-header-menu">
-			<a href="javascript:void(0);">
+			<a href="javascript:void(0);" onclick="hideAll('.hiddenBox');">
 				<i class="fa fa-chevron-up"></i>
 			</a>
-			<a href="javascript:void(0);" id="main-header-link">
+			<a href="javascript:void(0);" onclick="jQuery('#main-header-toggle').toggle();">
 				<i class="fa fa-list"></i>
-				<script type="text/javascript">
-					jQuery("#main-header-link").click(function() {
-						jQuery("#main-header-toggle").toggle();
-					});
-				</script>
 			</a>
 		</div>
 		
 		<ol id="main-header-toggle">
+			<li>
+				<a href="javascript:void(0);" onclick="clickToHover('.hiddenBox', '#hoverLianXiZhanZhang')"><i class="fa fa-camera"></i>联系站长</a>
+			</li>
 			
 			<g:if test="${ dangQianYongHu }">
+				<li>
+					<a href="javascript:void(0);" onclick="clickToHover('.hiddenBox', '#hoverGaiMiMa')"><i class="fa fa-key"></i>${ dangQianYongHu.zhangHao }</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" onclick="clickToHover('.hiddenBox', '#hoverGaiXinXi')"><i class="fa fa-user"></i>${ dangQianYongHu.xingMing }</a>
+				</li>
 				<li>
 					<g:link controller="x360" action="woDeShiJie" id="${ session.uid }"><i class="fa fa-globe"></i>我的世界</g:link>
 				</li>
@@ -36,67 +40,38 @@
 				<li>
 					<g:remoteLink controller="x520" action="yongHuZhuXiao" onSuccess="window.location.reload()"><i class="fa fa-sign-out"></i>退出登录</g:remoteLink>
 				</li>
-				<li class="hoverGaiMiMa">
-					<i class="fa fa-key"></i>${ dangQianYongHu.zhangHao }
-				</li>
-				<li class="hoverGaiXinXi">
-					<i class="fa fa-user"></i>${ dangQianYongHu.xingMing }
-				</li>
 			</g:if>
 			<g:else>
-				<li class="hoverDengLu">
-					<i class="fa fa-sign-in"></i>用户登录
+				<li>
+					<a href="javascript:void(0);" onclick="clickToHover('.hiddenBox', '#hoverDengLu')"><i class="fa fa-sign-in"></i>用户登录</a>
 				</li>
-				<li class="hoverZhuCe">
-					<i class="fa fa-user-plus"></i>用户注册
+				<li>
+					<a href="javascript:void(0);" onclick="clickToHover('.hiddenBox', '#hoverZhuCe')"><i class="fa fa-user-plus"></i>用户注册</a>
 				</li>
 			</g:else>
-			
-			<li class="hoverLianXiZhanZhang">
-				<i class="fa fa-camera"></i>联系站长
-			</li>
 		</ol>
 	</div>
 	
 	<%-- 联系站长 --%>
-	<div class="hiddenBox hoverLianXiZhanZhang" id="hoverLianXiZhanZhang">
+	<div class="hiddenBox" id="hoverLianXiZhanZhang">
 		<div class="innerWrapper clearfix">
-			<h3>微信公众号</h3>
-			<asset:image src="WangLuo/SuCai/公众原版.jpg" alt="微信公众号" title="微信公众号" style="float:left;display:block;width:100%;"/>
-			<hr/>
+			<asset:image src="ZhanZhang/个人微信.png" alt="微信个人号" title="微信个人号" style="width:100%;"/>
 			
-			<h3>个人相关信息</h3>
-			<div class="clearfix">
-				<ul style="float:left;display:block;">
-					<li>
-						<i class="fa fa-smile-o"></i>${ ChangLiang.XING_MING }
-					</li>
-					<li>
-						<i class="fa fa-qq"></i>${ ChangLiang.QQ }
-					</li>
-					<li>
-						<i class="fa fa-phone"></i>${ ChangLiang.SHOU_JI }
-					</li>
-					<li>
-						<i class="fa fa-envelope-o"></i><a href="mailto:${ ChangLiang.YOU_XIANG }" style="text-decoration:underline;">${ ChangLiang.YOU_XIANG }</a>
-					</li>
-				</ul>
-				
-				<asset:image src="WangLuo/SuCai/个人原版.png" alt="微信个人号" title="微信个人号" style="float:right;display:block;width:170px;"/>	
+			<div style="float:left;width:47%;text-align:center;color:#2C3E50;">
+				<asset:image src="WangLuo/SuCai/公众原版.jpg" alt="微信公众号" title="微信公众号" style="width:100%;"/>
+				<h4>公众号</h4><span style="color:lightgray;">微信</span>
 			</div>
-			<hr/>
 			
-			<h3>支付宝收款码</h3>
-			<asset:image src="ShouKuan/1212.png" alt="支付宝收款码" title="支付宝收款码" style="float:right;width:100%;display:block;"/>
+			<div style="float:right;width:47%;text-align:center;color:#2C3E50;">
+				<asset:image src="ZhanZhang/88.png" alt="支付宝收款码" title="支付宝收款码" style="width:100%;"/>
+				<h4>(^﹃^ )</h4><span style="color:lightgray;">支付宝</span>
+			</div>
 		</div>
 	</div>
-	<script type="text/javascript">
-		responseToHover(".hoverLianXiZhanZhang", "#hoverLianXiZhanZhang");
-	</script>
 	
 	<g:if test="${ dangQianYongHu }">
 		<%-- 修改密码 --%>
-		<div class="hiddenBox hoverGaiMiMa" id="hoverGaiMiMa">
+		<div class="hiddenBox" id="hoverGaiMiMa">
 			<div class="innerWrapper">
 				<g:formRemote name="miMaXiuGai" url="[controller:'x520', action:'miMaXiuGai', id:session.uid]" update="[success:'miMaXiuGaiTiShi', failure:'miMaXiuGaiTiShi']">
 					<h3>
@@ -109,12 +84,9 @@
 				</g:formRemote>
 			</div>
 		</div>
-		<script type="text/javascript">
-			responseToHover(".hoverGaiMiMa", "#hoverGaiMiMa");
-		</script>
 		
 		<%-- 修改信息 --%>
-		<div class="hiddenBox hoverGaiXinXi" id="hoverGaiXinXi">
+		<div class="hiddenBox" id="hoverGaiXinXi">
 			<div class="innerWrapper clearfix">
 				<g:formRemote name="xinXiXiuGai" url="[controller:'yongHuRestful', action:'update', id:session.uid]" onSuccess="success(data,textStatus,'#yongHuXiuGaiTiShi')" onFailure="failure(XMLHttpRequest,textStatus,errorThrown,'#yongHuXiuGaiTiShi')" class="clearfix">
 					<h3>
@@ -150,13 +122,10 @@
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript">
-			responseToHover(".hoverGaiXinXi", "#hoverGaiXinXi");
-		</script>
 	</g:if>
 	<g:else>
 		<%-- 用户登录 --%>
-		<div class="hiddenBox hoverDengLu" id="hoverDengLu">
+		<div class="hiddenBox" id="hoverDengLu">
 			<div class="innerWrapper">
 				<g:formRemote name="yongHuDengLu" url="[controller:'x520', action:'yongHuDengLu']" update="[success:'dengLuTiShi', failure:'dengLuTiShi']" onSuccess="window.location.reload();">
 					<h3>
@@ -168,12 +137,9 @@
 				</g:formRemote>
 			</div>
 		</div>
-		<script type="text/javascript">
-			responseToHover(".hoverDengLu", "#hoverDengLu");
-		</script>
 		
 		<%-- 用户注册 --%>
-		<div class="hiddenBox hoverZhuCe" id="hoverZhuCe">
+		<div class="hiddenBox" id="hoverZhuCe">
 			<div class="innerWrapper">
 				<g:formRemote name="yongHuZhuCe" url="[controller:'x520', action:'yongHuZhuCe']"  update="[success:'zhuCeTiShi', failure:'zhuCeTiShi']">
 					<h3>
@@ -186,8 +152,5 @@
 				</g:formRemote>
 			</div>
 		</div>
-		<script type="text/javascript">
-			responseToHover(".hoverZhuCe", "#hoverZhuCe");
-		</script>
 	</g:else>
 </header>

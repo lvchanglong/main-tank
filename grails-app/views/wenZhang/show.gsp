@@ -50,8 +50,8 @@
 					</fieldset>
 				</g:formRemote>
 				
-				<div style="position:absolute;right:0;bottom:0;line-height:30px;padding:0 1em;">	
-					(￣﹃￣ )：<span id="yonghu-wenzhang-caozuo-message">操作状态</span>
+				<div style="position:absolute;right:0;bottom:0;line-height:44px;padding:0 1em;">	
+					<span id="yonghu-wenzhang-caozuo-message">操作状态</span>
 				</div>
 			</div>
 		</g:if>

@@ -25,8 +25,8 @@
 			</g:link>
 		</li>
 		<li>
-			<g:link controller="x360" action="fanKuiLieBiao">
-				反馈列表
+			<g:link controller="x360" action="yongHuFanKui">
+				用户反馈
 			</g:link>
 		</li>
 		<li>

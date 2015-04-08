@@ -110,10 +110,7 @@ class X360Controller {
 		
 	}
 	
-	/**
-	 * 反馈列表
-	 */
-	def fanKuiLieBiao() {
+	def yongHuFanKui() {
 		
 	}
 	

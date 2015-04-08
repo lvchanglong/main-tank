@@ -161,6 +161,9 @@
 #main-wrapper a {
 	text-decoration:underline;
 }
+#main-wrapper img {
+	max-width:100%;
+}
 #spinner {
 	background-color:white;
 	border:7px solid black;
@@ -269,11 +272,14 @@
 #main-header-toggle li:hover, #main-header-menu a:hover {
 	color: #fff;
 }
+#main-header-toggle a {
+	display:block;
+}
 
 #main-header .hiddenBox {
 	display:none;
-	width:98%;
-	margin:0 1%;
+	width:96%;
+	margin:0 2%;
 	min-height:400px;
 	z-index:900;
 	background-color: white;

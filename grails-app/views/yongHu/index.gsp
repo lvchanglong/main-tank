@@ -7,21 +7,30 @@
 					<span class="separator">/</span>${ yongHuInstance.xingMing }
 				</h3>
 
-				<p>
-					${fieldValue(bean: yongHuInstance, field: "shengRi")}
-					<span class="separator"></span>
-					${fieldValue(bean: yongHuInstance, field: "xingBie")}
-					<span class="separator"></span>
-					${fieldValue(bean: yongHuInstance, field: "suoZai")}
-					<span class="separator"></span>
-					${fieldValue(bean: yongHuInstance, field: "youXiang")}
-					<span class="separator"></span>
-					${fieldValue(bean: yongHuInstance, field: "shouJi")}
-					<br />
-					${fieldValue(bean: yongHuInstance, field: "jianJie")}
-				</p>
+				<ul style="float:left;display:block;">
+					<%--
+					<li>
+						${fieldValue(bean: yongHuInstance, field: "xingBie")}
+					</li>
+					--%>
+					<li>
+						<i class="fa fa-bed"></i>${fieldValue(bean: yongHuInstance, field: "suoZai")}
+					</li>
+					<li>
+						<i class="fa fa-birthday-cake"></i>${fieldValue(bean: yongHuInstance, field: "shengRi")}
+					</li>
+					<li>
+						<i class="fa fa-phone"></i>${fieldValue(bean: yongHuInstance, field: "shouJi")}
+					</li>
+					<li>
+						<i class="fa fa-envelope-o"></i><a href="mailto:${ yongHuInstance.youXiang }" style="text-decoration:underline;">${ yongHuInstance.youXiang }</a>
+					</li>
+					<li>
+						<i class="fa fa-book"></i>${fieldValue(bean: yongHuInstance, field: "jianJie")}
+					</li>
+				</ul>
 				
-				<asset:image src="${ yongHuInstance.touXiang }" style="float:left;height: 100%;padding-bottom:5px;" alt="头像"/>
+				<asset:image src="${ yongHuInstance.touXiang }" style="float:right;height: 100%;padding-bottom:5px;" alt="头像"/>
 				
 				<hr style="clear:both;"/>
 			</li>

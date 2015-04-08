@@ -332,8 +332,31 @@ function responseToHover(wrapperClass, hideID) {
 		},
 		function () {
 			timer = setTimeout(function() {//延时执行
-				jQuery(hideID).hide();
+				//jQuery(hideID).hide();
 			}, 50);
 		}
 	);
+}
+
+/**
+ * 隐藏所有
+ * @param wrapperClass
+ */
+function hideAll(wrapperClass) {
+	jQuery(wrapperClass).hide();
+}
+
+/**
+ * 点击显示
+ * @param wrapperClass
+ * @param showID
+ */
+function clickToHover(wrapperClass, showID) {
+	var $showElement = jQuery(showID);
+	if($showElement.is(":visible")) {//已显示
+		$showElement.hide();
+	} else {//已隐藏
+		jQuery(wrapperClass).hide();
+		$showElement.show();
+	}
 }
