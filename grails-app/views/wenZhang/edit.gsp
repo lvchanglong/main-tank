@@ -4,10 +4,8 @@
 	<head>
 		<meta name="layout" content="main">
 		<title>主坦克-文章编辑</title>
-		<asset:stylesheet src="YinYong/umeditor1_2_2-utf8-jsp/themes/default/css/umeditor.min.css"/>
-		<asset:javascript src="YinYong/umeditor1_2_2-utf8-jsp/umeditor.config.js"/>
-		<asset:javascript src="YinYong/umeditor1_2_2-utf8-jsp/umeditor.min.js"/>
-		<asset:javascript src="YinYong/umeditor1_2_2-utf8-jsp/lang/zh-cn/zh-cn.js"/>
+		<script src="${ resource(dir:"ueditor", file:"ueditor.config.js") }"></script>
+		<script src="${ resource(dir:"ueditor", file:"ueditor.all.min.js") }"></script>
 	</head>
 	<body>
 		<g:form url="[resource:wenZhangInstance, action:'update']" method="PUT">
@@ -64,10 +62,7 @@
 		</g:form>
 		
 		<script type="text/javascript">
-	        var um = UM.getEditor('yonghu-wenzhang-edit-neiRong', {
-				imageUrl: "${createLink(controller:'UEditor', action:'uploadImage')}",
-				imagePath:""
-		    });
+	        UE.getEditor('yonghu-wenzhang-edit-neiRong');
 		</script>
 	</body>
 </html>

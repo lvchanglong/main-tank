@@ -93,7 +93,6 @@ class X520Controller {
 	/**
 	 * 头像上传
 	 * @param uid 被处理用户
-	 * grails-app/assets/resources/KongJian/${yongHuInstance.zhangHao}/TuPian/${fileName}
 	 */
 	@Transactional
 	def touXiangShangChuan(String fileName, String uid) {
@@ -103,7 +102,7 @@ class X520Controller {
 				def assetPath = "KongJian/${yongHuInstance.zhangHao}/TuPian/${fileName}"
 				BufferedInputStream fileIn = new BufferedInputStream(request.getInputStream())
 				byte[] buf = new byte[1024]
-				File file = ZiYuanGuanLi.getFile("grails-app/assets/resources/${assetPath}")
+				File file = ZiYuanGuanLi.getFile("grails-app/assets/working/${assetPath}")
 				BufferedOutputStream fileOut = new BufferedOutputStream(new FileOutputStream(file))
 				while (true) {
 				   int bytesIn = fileIn.read(buf, 0, 1024)
@@ -152,7 +151,7 @@ class X520Controller {
 			}
 			
 			def assetPath = "LinShi/${fileName}"
-			def filePath = "grails-app/assets/resources/${assetPath}"
+			def filePath = "grails-app/assets/working/${assetPath}"
 			
 			BufferedInputStream fileIn = new BufferedInputStream(request.getInputStream())
 			byte[] buf = new byte[1024]
@@ -205,7 +204,7 @@ class X520Controller {
 	
 	/**
 	 * 下载
-	 * @param filePath 文件路径  grails-app/assets/resources/LinShi/${fileName}
+	 * @param filePath 文件路径  grails-app/assets/working/LinShi/${fileName}
 	 */
 	def xiaZai(String filePath) {
 		File file = new File(filePath)

@@ -1,0 +1,11 @@
+<asset:stylesheet src="YinYong/umeditor1_2_2-utf8-jsp/themes/default/css/umeditor.min.css"/>
+<asset:javascript src="YinYong/umeditor1_2_2-utf8-jsp/umeditor.config.js"/>
+<asset:javascript src="YinYong/umeditor1_2_2-utf8-jsp/umeditor.min.js"/>
+<asset:javascript src="YinYong/umeditor1_2_2-utf8-jsp/lang/zh-cn/zh-cn.js"/>
+
+<script type="text/plain" id="kongJian-neiRong" name="neiRong" ></script>
+
+var um = UM.getEditor('kongJian-neiRong', {
+	imageUrl: "${createLink(controller:'UEditor', action:'uploadImage')}",
+	imagePath:""
+});

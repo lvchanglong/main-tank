@@ -22,7 +22,7 @@ class UEditorController {
 			return
 		}
 		
-		def savePath = "grails-app/assets/resources/kindeditor/attached/image"
+		def savePath = "grails-app/assets/working/kindeditor/attached/image"
 		
 		SimpleDateFormat formater = new SimpleDateFormat("yyyyMMdd");
 		def dateFolder = formater.format(new Date());//生成子目录
