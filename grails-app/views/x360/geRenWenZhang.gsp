@@ -41,7 +41,7 @@
 							jQuery("#geRenWenZhang-biaoTi").val("");//清空文本
 							jQuery("#geRenWenZhang-guanJianCi").val("");
 							jQuery("#geRenWenZhang-neiRong").val("");
-							um.setContent('');
+							ue.setContent('');
 	
 							var $wrapper = jQuery("#geRenWenZhang-wrapper");//追加文本(复制、修改、追加)
 							var $ul =  $wrapper.find("ul:first");
@@ -64,7 +64,7 @@
 		</div>
 		
 		<script type="text/javascript">
-			UE.getEditor('geRenWenZhang-neiRong');
+			var ue = UE.getEditor('geRenWenZhang-neiRong');
 		</script>
 	</body>
 </html>
