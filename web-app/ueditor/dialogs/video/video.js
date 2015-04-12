@@ -729,8 +729,10 @@
             uploader.on('uploadSuccess', function (file, ret) {
                 var $file = $('#' + file.id);
                 try {
-                    var responseText = (ret._raw || ret),
-                        json = utils.str2json(responseText);
+                    var responseText = (ret._raw || ret);
+                    responseText = responseText.replace(/&quot;/g, "'");
+                    var json = eval('(' + responseText + ')');
+                    
                     if (json.state == 'SUCCESS') {
                         uploadVideoList.push({
                             'url': json.url,

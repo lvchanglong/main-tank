@@ -715,8 +715,9 @@
             uploader.on('uploadSuccess', function (file, ret) {
                 var $file = $('#' + file.id);
                 try {
-                    var responseText = (ret._raw || ret),
-                        json = utils.str2json(responseText);
+                    var responseText = (ret._raw || ret);
+                    responseText = responseText.replace(/&quot;/g, "'");
+                    var json = eval('(' + responseText + ')');
                     if (json.state == 'SUCCESS') {
                         _this.imageList.push(json);
                         $file.append('<span class="success"></span>');
@@ -867,7 +868,8 @@
                     'method': 'get',
                     'onsuccess': function (r) {
                         try {
-                            var json = isJsonp ? r:eval('(' + r.responseText + ')');
+                            var json = isJsonp ? r:eval('(' + r.responseText.replace(/&quot;/g, "'") + ')');
+                            console.dir(url);
                             if (json.state == 'SUCCESS') {
                                 _this.pushData(json.list);
                                 _this.listIndex = parseInt(json.start) + parseInt(json.list.length);

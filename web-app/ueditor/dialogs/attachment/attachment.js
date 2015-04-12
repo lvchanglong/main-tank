@@ -474,6 +474,7 @@
                         /* 添加额外的GET参数 */
                         var params = utils.serializeParam(editor.queryCommandValue('serverparam')) || '',
                             url = utils.formatUrl(actionUrl + (actionUrl.indexOf('?') == -1 ? '?':'&') + 'encode=utf-8&' + params);
+
                         uploader.option('server', url);
                         setState('uploading', files);
                         break;
@@ -500,8 +501,11 @@
             uploader.on('uploadSuccess', function (file, ret) {
                 var $file = $('#' + file.id);
                 try {
-                    var responseText = (ret._raw || ret),
-                        json = utils.str2json(responseText);
+                    var responseText = (ret._raw || ret);
+
+                    responseText = responseText.replace(/&quot;/g, "'");
+                    var json = eval('(' + responseText + ')');
+                    
                     if (json.state == 'SUCCESS') {
                         _this.fileList.push(json);
                         $file.append('<span class="success"></span>');
@@ -639,7 +643,7 @@
                     method: 'get',
                     onsuccess: function (r) {
                         try {
-                            var json = eval('(' + r.responseText + ')');
+                            var json = eval('(' + r.responseText.replace(/&quot;/g, "'") + ')');
                             if (json.state == 'SUCCESS') {
                                 _this.pushData(json.list);
                                 _this.listIndex = parseInt(json.start) + parseInt(json.list.length);

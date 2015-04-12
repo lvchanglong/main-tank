@@ -7,7 +7,7 @@
 		<meta name="layout" content="main"/>
 		<title>测试</title>
 		<script src="${ resource(dir:"ueditor", file:"ueditor.config.js") }"></script>
-		<script src="${ resource(dir:"ueditor", file:"ueditor.all.min.js") }"></script>
+		<script src="${ resource(dir:"ueditor", file:"ueditor.all.js") }"></script>
 	</head>
 	<body>
 		
@@ -16,6 +16,10 @@
 		<script type="text/javascript">
 				var ue = UE.getEditor('kongJian-neiRong');
 		</script>
+		
+		<hr/>
+		
+		${ application.getRealPath( "/" ) }
 		
 		<content tag="header">
 		</content>

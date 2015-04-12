@@ -8071,8 +8071,8 @@ UE.Editor.defaultOptions = function(editor){
                     'dataType': isJsonp ? 'jsonp':'',
                     'onsuccess':function(r){
                         try {
-                            //var config = isJsonp ? r:eval("("+r.responseText+")");
-                        	var configJson = '{"videoMaxSize":102400000,"videoActionName":"uploadvideo","fileActionName":"uploadfile","fileManagerListPath":"/ueditor/jsp/upload/file/","imageCompressBorder":1600,"imageManagerAllowFiles":[".png",".jpg",".jpeg",".gif",".bmp"],"imageManagerListPath":"/ueditor/jsp/upload/image/","fileMaxSize":51200000,"fileManagerAllowFiles":[".png",".jpg",".jpeg",".gif",".bmp",".flv",".swf",".mkv",".avi",".rm",".rmvb",".mpeg",".mpg",".ogg",".ogv",".mov",".wmv",".mp4",".webm",".mp3",".wav",".mid",".rar",".zip",".tar",".gz",".7z",".bz2",".cab",".iso",".doc",".docx",".xls",".xlsx",".ppt",".pptx",".pdf",".txt",".md",".xml"],"fileManagerActionName":"listfile","snapscreenInsertAlign":"none","scrawlActionName":"uploadscrawl","videoFieldName":"upfile","imageCompressEnable":true,"videoUrlPrefix":"","fileManagerUrlPrefix":"","catcherAllowFiles":[".png",".jpg",".jpeg",".gif",".bmp"],"imageManagerActionName":"listimage","snapscreenPathFormat":"/ueditor/jsp/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}","scrawlPathFormat":"/ueditor/jsp/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}","scrawlMaxSize":2048000,"imageInsertAlign":"none","catcherPathFormat":"/ueditor/jsp/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}","catcherMaxSize":2048000,"snapscreenUrlPrefix":"","imagePathFormat":"/ueditor/jsp/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}","imageManagerUrlPrefix":"","scrawlUrlPrefix":"","scrawlFieldName":"upfile","imageMaxSize":2048000,"imageAllowFiles":[".png",".jpg",".jpeg",".gif",".bmp"],"snapscreenActionName":"uploadimage","catcherActionName":"catchimage","fileFieldName":"upfile","fileUrlPrefix":"","imageManagerInsertAlign":"none","catcherLocalDomain":["127.0.0.1","localhost","img.baidu.com"],"filePathFormat":"/ueditor/jsp/upload/file/{yyyy}{mm}{dd}/{time}{rand:6}","videoPathFormat":"/ueditor/jsp/upload/video/{yyyy}{mm}{dd}/{time}{rand:6}","fileManagerListSize":20,"imageActionName":"uploadimage","imageFieldName":"upfile","imageUrlPrefix":"","scrawlInsertAlign":"none","fileAllowFiles":[".png",".jpg",".jpeg",".gif",".bmp",".flv",".swf",".mkv",".avi",".rm",".rmvb",".mpeg",".mpg",".ogg",".ogv",".mov",".wmv",".mp4",".webm",".mp3",".wav",".mid",".rar",".zip",".tar",".gz",".7z",".bz2",".cab",".iso",".doc",".docx",".xls",".xlsx",".ppt",".pptx",".pdf",".txt",".md",".xml"],"catcherUrlPrefix":"","imageManagerListSize":20,"catcherFieldName":"source","videoAllowFiles":[".flv",".swf",".mkv",".avi",".rm",".rmvb",".mpeg",".mpg",".ogg",".ogv",".mov",".wmv",".mp4",".webm",".mp3",".wav",".mid"]}';
+                        	//http://localhost:8080/ueditor/jsp/controller.gsp?action=config
+                        	var configJson = r.responseText.replace(/&quot;/g, "'");
                         	var config = isJsonp ? r:eval("("+configJson+")");
                         	
                             utils.extend(me.options, config);
@@ -11993,8 +11993,6 @@ UE.plugins['insertframe'] = function() {
     });
 
 };
-
-
 
 // plugins/scrawl.js
 ///import core
@@ -23249,12 +23247,12 @@ UE.plugin.register('snapscreen', function (){
             a.href = a.href;
         }
 
-
         search = a.search;
         if (params) {
             search = search + (search.indexOf('?') == -1 ? '?':'&')+ params;
             search = search.replace(/[&]+/ig, '&');
         }
+       
         return {
             'port': a.port,
             'hostname': a.hostname,
@@ -23294,7 +23292,7 @@ UE.plugin.register('snapscreen', function (){
 
                     function onSuccess(rs){
                         try{
-                            rs = eval("("+ rs +")");
+                            rs = eval("("+ rs.replace(/&quot;/g, "'") +")");
                             if(rs.state == 'SUCCESS'){
                                 var opt = me.options;
                                 me.execCommand('insertimage', {
@@ -23738,7 +23736,6 @@ UE.plugin.register('autoupload', function (){
                 rng.moveToBookmark(bk).select();
             };
         }
-
         /* 插入loading的占位符 */
         me.execCommand('inserthtml', loadingHtml);
 
@@ -24468,6 +24465,7 @@ UE.plugin.register('simpleupload', function (){
                             result = body.innerText || body.textContent || '';
                         json = (new Function("return " + result))();
                         link = me.options.imageUrlPrefix + json.url;
+
                         if(json.state == 'SUCCESS' && json.url) {
                             loader = me.document.getElementById(loadingId);
                             loader.setAttribute('src', link);
@@ -24735,6 +24733,7 @@ UE.plugin.register('insertfile', function (){
                         html = '',
                         URL = me.getOpt('UEDITOR_HOME_URL'),
                         iconDir = URL + (URL.substr(URL.length - 1) == '/' ? '':'/') + 'dialogs/attachment/fileTypeImages/';
+                    
                     for (i = 0; i < filelist.length; i++) {
                         item = filelist[i];
                         icon = iconDir + getFileIcon(item.url);

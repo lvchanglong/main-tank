@@ -150,7 +150,23 @@ class X360Controller {
 	 * 测试
 	 */
 	def test() {
-		
+//		def root = new File("/")
+//		println "Root Path:" + root.getPath()
+//		println "Root Absolute Path:" + root.getAbsolutePath()
+//		
+//		def rootF = new File("/absoute")
+//		println "Root Folder Path:" + rootF.getPath()
+//		println "Root Folder Absolute Path:" + rootF.getAbsolutePath()
+//		
+//		def file = new File("grails-app/assets/working/LinShi/tj.png")
+//		println "File Path:" + file.getPath()
+//		println "File Absolute Path:" + file.getAbsolutePath()
+//		
+//		def fileF = new File("relative")
+//		println "File Folder Path:" + fileF.getPath()
+//		println "File Folder Absolute Path:" + fileF.getAbsolutePath()
+//
+//		println System.getProperty("user.dir")//E:\grails\workspace\main-tank
 	}
 	
 }

@@ -7,7 +7,8 @@
     request.setCharacterEncoding( "utf-8" );
 	response.setHeader("Content-Type" , "text/html");
 	
-	String rootPath = application.getRealPath( "/" );
+	String userDir = System.getProperty("user.dir");
+	String rootPath = userDir + "/";
 	
 	out.write( new ActionEnter( request, rootPath ).exec() );
 	
