@@ -84,7 +84,11 @@ public class FileManager {
 		
 		String path = file.getAbsolutePath();
 		
-		return path.replace( this.rootPath, "/" );
+		path = PathFormat.format(path);//E:/grails/workspace/main-tank/grails-app/assets/working/ueditor/jsp/upload/image/20150412/1428829472989020683.png
+		path = path.replace( this.rootPath, "/" );///grails-app/assets/working/ueditor/jsp/upload/image/20150412/1428829472989020683.png
+		path = PathFormat.toGrails(path);///assets/ueditor/jsp/upload/image/20150412/1428829472989020683.png
+		
+		return path;
 		
 	}
 	
